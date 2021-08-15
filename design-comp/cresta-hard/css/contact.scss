@@ -266,7 +266,7 @@ a:hover {
 
 .contact-form-list-item {
   &__label {
-    display: block;
+    display: inline-block;
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -299,6 +299,7 @@ a:hover {
     line-height: 30px;
     padding: 0 8px;
     width: 100%;
+    resize: none;
   }
 
   &+& {
