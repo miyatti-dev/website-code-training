@@ -1,0 +1,35 @@
+【2022/03/17作業開始】
+
+Topページのコード確認
+ - html終わった  3/28
+ - CSS終わった  3/29
+
+ヘッダー 3/30
+ヘッダーメニュー 3/30
+Topページのコード確認 3/30
+ - JS
+
+About usのページ
+ - fv 3/30
+ - sectionづくり 3/31
+ - レスポンシブ 4/3
+    - tablet
+    - sp
+
+About usページのコード確認  4/3
+ - html 4/3
+ - CSS 4/3
+
+Contactのページ
+ - fv
+ - sectionづくり
+ - レスポンシブ
+    - tablet
+    - sp
+
+Contactページのコード確認
+ - html
+ - CSS
+
+
+
