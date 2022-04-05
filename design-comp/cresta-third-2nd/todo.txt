@@ -21,8 +21,8 @@ About usページのコード確認  4/3
  - CSS 4/3
 
 Contactのページ
- - fv
- - sectionづくり
+ - fv 4/5
+ - sectionづくり 4/5
  - レスポンシブ
     - tablet
     - sp

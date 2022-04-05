@@ -237,6 +237,10 @@ a:hover {
 ////////////////////
 // contact
 ////////////////////
+.section-contact {
+  margin-bottom: 130px;
+}
+
 .contact-text {
   margin-bottom: 52px;
 }
@@ -266,6 +270,7 @@ a:hover {
 
 .inquire-type-list-item {
   display: flex;
+  // TODO：ラジオボタンの上下中央は？
 
   &__input {
     margin-right: 10px;
@@ -273,6 +278,18 @@ a:hover {
 
   &+& {
     margin-left: 50px;
+  }
+}
+
+.required-item {
+  &::after {
+    margin-left: 20px;
+    content: '必須';
+    color: #fff;
+    background-color: #333;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    padding: 1px 5px;
   }
 }
 
@@ -284,7 +301,8 @@ input[type="text"] {
 }
 
 input[type="radio"] {
-  display: inline;
+  width: 20px;
+  height: 20px;
 }
 
 textarea {
@@ -294,15 +312,43 @@ textarea {
   border: 1px solid #333;
 }
 
-.privacy-policy-label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
+.privacy-policy {
+  margin-bottom: 42px;
+
+  &__label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__textarea {
+    height: 250px;
+    padding: 10px;
+  }
 }
 
-.privacy-policy-textarea {
-  height: 250px;
-  padding: 10px;
+.personal-info {
+  text-align: center;
+  margin-bottom: 41px;
+}
+
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+
+}
+
+.send-button-wrapper {
+  text-align: center;
+}
+
+.send-button {
+  width: 160px;
+  height: 36px;
+  background-color: #000;
+  font-size: 1.4rem;
+  color: #fff;
 }
 
 ////////////////////
