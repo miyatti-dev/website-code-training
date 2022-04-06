@@ -23,7 +23,7 @@ About usページのコード確認  4/3
 Contactのページ
  - fv 4/5
  - sectionづくり 4/5
- - レスポンシブ
+ - レスポンシブ 4/5
     - tablet
     - sp
 

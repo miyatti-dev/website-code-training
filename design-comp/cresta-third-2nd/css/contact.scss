@@ -31,7 +31,7 @@ a:hover {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 700px;
   padding: 0 15px;
 }
 
@@ -349,6 +349,7 @@ input[type="checkbox"] {
   background-color: #000;
   font-size: 1.4rem;
   color: #fff;
+  font-weight: bold;
 }
 
 ////////////////////
@@ -370,6 +371,10 @@ footer {
   ////////////////////
   // common
   ////////////////////
+  .content-wrapper {
+    max-width: 668px;
+    padding: 0 50px;
+  }
 
   ////////////////////
   // header
@@ -391,6 +396,36 @@ footer {
     line-height: 1;
   }
 
+  ////////////////////
+  // contact
+  ////////////////////
+  .section-contact {
+    margin-bottom: 197px;
+  }
+
+  .contact-text {
+    margin-bottom: 18px;
+  }
+
+  .contact-list-item {
+    &+& {
+      margin-top: 37px;
+    }
+  }
+
+  input[type="text"] {
+    height: 48px;
+  }
+
+  textarea {
+    height: 180px;
+  }
+
+  .privacy-policy {
+    &__textarea {
+      height: 226px;
+    }
+  }
 
   ////////////////////
   // footer
@@ -421,6 +456,53 @@ footer {
     right: 15%;
   }
 
+  .fv-title-ja {
+    text-align: right;
+  }
+
+  ////////////////////
+  // contact
+  ////////////////////
+  .section-contact {
+    margin-bottom: 80px;
+  }
+
+  .contact-text {
+    margin-bottom: 48px;
+  }
+
+  .contact-list-item {
+    &__label {
+      font-weight: bold;
+    }
+  }
+
+  .inquiry-type-list {
+    flex-direction: column;
+  }
+  
+  .inquire-type-list-item {
+    margin-left: 10px;
+
+    &+& {
+      margin-left: 10px;
+      margin-top: 14px;
+    }
+  }
+
+  textarea {
+    height: 210px;
+  }
+
+  .privacy-policy {
+    &__textarea {
+      font-size: 14px;
+    }
+  }
+
+  .personal-info {
+    font-size: 14px;
+  }
 
   ////////////////////
   // footer
