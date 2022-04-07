@@ -270,7 +270,7 @@ a:hover {
 
 .inquire-type-list-item {
   display: flex;
-  // TODO：ラジオボタンの上下中央は？
+  align-items: center;
 
   &__input {
     margin-right: 10px;
@@ -321,13 +321,15 @@ textarea {
     display: block;
   }
 
-  &__textarea {
+  &__text {
     height: 250px;
     padding: 10px;
+    overflow-y: scroll;
+    border: 1px solid #333;
   }
 }
 
-.personal-info {
+.confirm {
   text-align: center;
   margin-bottom: 41px;
 }
@@ -422,7 +424,7 @@ footer {
   }
 
   .privacy-policy {
-    &__textarea {
+    &__text {
       height: 226px;
     }
   }
@@ -480,7 +482,7 @@ footer {
   .inquiry-type-list {
     flex-direction: column;
   }
-  
+
   .inquire-type-list-item {
     margin-left: 10px;
 
@@ -495,12 +497,12 @@ footer {
   }
 
   .privacy-policy {
-    &__textarea {
+    &__text {
       font-size: 14px;
     }
   }
 
-  .personal-info {
+  .confirm {
     font-size: 14px;
   }
 
