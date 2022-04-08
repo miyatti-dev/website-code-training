@@ -42,13 +42,13 @@ a:hover {
 }
 
 .link-button {
+  background-color: #000;
+  color: #fff;
+  display: block;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 0;
-  color: #fff;
   text-align: center;
-  background-color: #000;
-  display: block;
   width: 160px;
 }
 
@@ -109,8 +109,8 @@ a:hover {
   font-weight: bold;
 
   &__image-wrapper {
-    margin: 0 auto;
     height: 45px;
+    margin: 0 auto;
     width: 42px;
   }
 
@@ -153,7 +153,7 @@ a:hover {
     &.bar-middle {
       margin-bottom: 3px;
     }
-    
+
   }
 
   &__text {
@@ -195,25 +195,25 @@ a:hover {
 // fv
 ////////////////////
 .fv {
-  height: 100vh;
   background: linear-gradient(to right, #fff 45%, #222 45%);
+  height: 100vh;
   margin-bottom: 120px;
 }
 
 .fv-image-title-wrapper {
-  width: 75%;
-  position: relative;
   background-image: url('../image/kv-img@2x.jpg');
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   height: 87%;
+  position: relative;
+  width: 75%;
 }
 
 .fv-title-wrapper {
-  position: absolute;
-  top: 50%;
-  right: 0;
   color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
   transform: translate(50%, -50%);
 }
 
@@ -257,8 +257,8 @@ a:hover {
 ////////////////////
 .section-wrapper.works-and-culture {
   background-color: #F0F0F0;
-  padding-top: 80px;
   padding-bottom: 60px;
+  padding-top: 80px;
 }
 
 .content-list {
@@ -294,9 +294,9 @@ a:hover {
 }
 
 .topics-list-item {
-  width: 63%;
-  margin-left: auto;
   border-bottom: 1px solid #DDD;
+  margin-left: auto;
+  width: 63%;
 
   &__date {
     color: #CECECE;
@@ -304,7 +304,6 @@ a:hover {
     font-weight: bold;
     letter-spacing: 1.5;
     margin-bottom: 9px;
-
   }
 
   &__topic {
@@ -327,8 +326,8 @@ a:hover {
 ////////////////////
 .section-wrapper.contact {
   background-color: #F2F2F2;
-  padding-top: 60px;
   padding-bottom: 120px;
+  padding-top: 60px;
 }
 
 .contact>.content-wrapper {
@@ -337,10 +336,10 @@ a:hover {
 }
 
 .contact-text-wrapper {
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 40%;
 }
 
 .contact-text {
@@ -357,10 +356,10 @@ a:hover {
 ////////////////////
 footer {
   background-color: #525252;
-  text-align: center;
-  padding: 18px 0;
   color: #fff;
   font-size: 1rem;
+  padding: 18px 0;
+  text-align: center;
 }
 
 ////////////////////
@@ -412,8 +411,8 @@ footer {
   // works and culture
   ////////////////////
   .section-wrapper.works-and-culture {
-    padding-top: 60px;
     padding-bottom: 40px;
+    padding-top: 60px;
   }
 
   .content-list {
@@ -448,8 +447,8 @@ footer {
   // contact
   ////////////////////
   .section-wrapper.contact {
-    padding-top: 40px;
     padding-bottom: 80px;
+    padding-top: 40px;
   }
 
   .contact>.content-wrapper {
@@ -461,8 +460,8 @@ footer {
   }
 
   .contact-image-wrapper {
-    width: 100%;
     margin-bottom: 30px;
+    width: 100%;
   }
 
   ////////////////////
@@ -513,8 +512,8 @@ footer {
   // works and culture
   ////////////////////
   .section-wrapper.works-and-culture {
-    padding-top: 40px;
     padding-bottom: 40px;
+    padding-top: 40px;
   }
 
   .content-list-item {
@@ -550,8 +549,8 @@ footer {
   // contact
   ////////////////////
   .section-wrapper.contact {
-    padding-top: 40px;
     padding-bottom: 40px;
+    padding-top: 40px;
   }
 
   ////////////////////

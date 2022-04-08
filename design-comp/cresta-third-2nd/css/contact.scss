@@ -48,13 +48,13 @@ a:hover {
 }
 
 .link-button {
+  background-color: #000;
+  color: #fff;
+  display: block;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 0;
-  color: #fff;
   text-align: center;
-  background-color: #000;
-  display: block;
   width: 160px;
 }
 
@@ -201,25 +201,25 @@ a:hover {
 // fv
 ////////////////////
 .fv {
-  height: 50vh;
   background: linear-gradient(to right, #fff 45%, #222 45%);
+  height: 50vh;
   margin-bottom: 120px;
 }
 
 .fv-image-title-wrapper {
-  width: 75%;
-  position: relative;
   background-image: url('../image/heading-img_contact@2x.jpg');
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   height: 83%;
+  position: relative;
+  width: 75%;
 }
 
 .fv-title-wrapper {
-  position: absolute;
-  top: 50%;
-  right: 0;
   color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
   transform: translate(50%, -50%);
 }
 
@@ -251,8 +251,8 @@ a:hover {
 
 .contact-list-item {
   &__label {
-    margin-bottom: 8px;
     display: block;
+    margin-bottom: 8px;
 
     &:first-of-type {
       margin-bottom: 18px;
@@ -269,8 +269,8 @@ a:hover {
 }
 
 .inquire-type-list-item {
-  display: flex;
   align-items: center;
+  display: flex;
 
   &__input {
     margin-right: 10px;
@@ -283,62 +283,60 @@ a:hover {
 
 .required-item {
   &::after {
-    margin-left: 20px;
-    content: '必須';
-    color: #fff;
     background-color: #333;
+    color: #fff;
+    content: '必須';
     font-size: 1.2rem;
-    vertical-align: middle;
+    margin-left: 20px;
     padding: 1px 5px;
+    vertical-align: middle;
   }
 }
 
 input[type="text"] {
-  width: 100%;
+  border: 1px solid #333;
   height: 40px;
   padding: 5px;
-  border: 1px solid #333;
+  width: 100%;
 }
 
 input[type="radio"] {
-  width: 20px;
   height: 20px;
+  width: 20px;
 }
 
 textarea {
-  width: 100%;
+  border: 1px solid #333;
   height: 210px;
   padding: 5px;
-  border: 1px solid #333;
+  width: 100%;
 }
 
 .privacy-policy {
   margin-bottom: 42px;
 
   &__label {
+    display: block;
     font-weight: bold;
     margin-bottom: 10px;
-    display: block;
   }
 
   &__text {
-    height: 250px;
-    padding: 10px;
-    overflow-y: scroll;
     border: 1px solid #333;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 10px;
   }
 }
 
 .confirm {
-  text-align: center;
   margin-bottom: 41px;
+  text-align: center;
 }
 
-
 input[type="checkbox"] {
-  width: 20px;
   height: 20px;
-
+  width: 20px;
 }
 
 .send-button-wrapper {
@@ -346,12 +344,12 @@ input[type="checkbox"] {
 }
 
 .send-button {
-  width: 160px;
-  height: 36px;
+  color: #fff;
   background-color: #000;
   font-size: 1.4rem;
-  color: #fff;
   font-weight: bold;
+  height: 36px;
+  width: 160px;
 }
 
 ////////////////////
@@ -359,10 +357,10 @@ input[type="checkbox"] {
 ////////////////////
 footer {
   background-color: #525252;
-  text-align: center;
-  padding: 18px 0;
   color: #fff;
   font-size: 1rem;
+  padding: 18px 0;
+  text-align: center;
 }
 
 ////////////////////

@@ -46,13 +46,13 @@ a:hover {
 }
 
 .link-button {
+  background-color: #000;
+  color: #fff;
+  display: block;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 0;
-  color: #fff;
   text-align: center;
-  background-color: #000;
-  display: block;
   width: 160px;
 }
 
@@ -188,25 +188,25 @@ a:hover {
 }
 
 .fv {
-  height: 50vh;
   background: linear-gradient(to right, #fff 45%, #222 45%);
+  height: 50vh;
   margin-bottom: 120px;
 }
 
 .fv-image-title-wrapper {
-  width: 75%;
-  position: relative;
   background-image: url("../image/heading-img@2x.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   height: 83%;
+  position: relative;
+  width: 75%;
 }
 
 .fv-title-wrapper {
-  position: absolute;
-  top: 50%;
-  right: 15%;
   color: #fff;
+  position: absolute;
+  right: 15%;
+  top: 50%;
   transform: translate(50%, -50%);
 }
 
@@ -234,21 +234,21 @@ a:hover {
 }
 
 .section-ceo-message .content-wrapper {
-  position: relative;
   padding-top: 144px;
+  position: relative;
 }
 
 .ceo-image-wrapper {
   position: absolute;
-  width: 40%;
   top: -144px;
   transform: translate(0, 50%);
+  width: 40%;
 }
 
 .ceo-message-text-wrapper {
-  max-width: 70%;
   background-color: #F0F0F0;
   margin-left: auto;
+  max-width: 70%;
   padding: 120px 185px 90px 185px;
 }
 
@@ -258,23 +258,23 @@ a:hover {
 
 .company-data-list {
   border-top: 1px solid #ddd;
-  padding-left: 25%;
-  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-left: 25%;
 }
 
 .company-data-key {
-  font-weight: bold;
-  width: 20%;
-  padding: 18px 0;
   border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  padding: 18px 0;
+  width: 20%;
 }
 
 .company-data-value {
-  width: 80%;
-  padding: 18px 0;
   border-bottom: 1px solid #ddd;
+  padding: 18px 0;
+  width: 80%;
 }
 
 .map {
@@ -283,10 +283,10 @@ a:hover {
 
 footer {
   background-color: #525252;
-  text-align: center;
-  padding: 18px 0;
   color: #fff;
   font-size: 1rem;
+  padding: 18px 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -316,8 +316,8 @@ footer {
     padding-top: 131px;
   }
   .ceo-image-wrapper {
-    width: 40%;
     top: -131px;
+    width: 45%;
   }
   .ceo-message-text-wrapper {
     padding: 109px 33px 78px 40px;
@@ -341,28 +341,28 @@ footer {
     padding: 0 15px;
   }
   .ceo-image-wrapper {
-    width: calc(100% - 35px);
     left: -15px;
     height: 230px;
+    width: calc(100% - 35px);
   }
   .ceo-image {
     height: 100%;
   }
   .ceo-message-text-wrapper {
-    width: 100%;
     padding: 126px 29px 80px 29px;
+    width: 100%;
   }
   .company-data-list {
     padding-left: 0;
   }
   .company-data-key {
-    width: 40%;
     font-size: 1.4rem;
     font-weight: normal;
+    width: 40%;
   }
   .company-data-value {
-    width: 60%;
     font-size: 1.4rem;
+    width: 60%;
   }
 }
 /*# sourceMappingURL=about.css.map */

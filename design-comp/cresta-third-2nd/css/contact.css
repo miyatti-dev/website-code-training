@@ -1,1 +1,417 @@
-/* No CSS *//*# sourceMappingURL=contact.css.map */
+@charset "UTF-8";
+html {
+  /* ルートのフォントサイズを10pxに設定 */
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  /* bodyのフォントサイズを1.6em（16px）に設定 */
+  font-size: 1.6em;
+  letter-spacing: 0.05em;
+}
+
+img {
+  object-fit: cover;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+a:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.section-wrapper {
+  padding: 0;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.section-sub-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.link-button {
+  background-color: #000;
+  color: #fff;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+  width: 160px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding: 20px 15px;
+  position: fixed;
+  transition: .3s;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-title {
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.header-nav {
+  background-color: #282F35;
+  display: none;
+  height: 100vh;
+  left: 0;
+  padding-top: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.header-title-image-black path {
+  fill: #333;
+  transition: filter .3s;
+}
+
+.header-nav-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-nav-list-item {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header-nav-list-item__image-wrapper {
+  margin: 0 auto;
+  height: 45px;
+  width: 42px;
+}
+
+.header-nav-list-item__link:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.header-nav-list-item:first-child + .header-nav-list-item {
+  margin-top: 40px;
+}
+
+.header-nav-list-item:not(:first-child) + .header-nav-list-item {
+  margin-top: 30px;
+}
+
+.burger-button {
+  align-items: center;
+  display: flex;
+  transition: all .3s;
+  z-index: 3;
+}
+
+.burger-button__bar-container {
+  margin-right: 7px;
+}
+
+.burger-button__bar {
+  background-color: #fff;
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  transition: .3s;
+  width: 22px;
+}
+
+.burger-button__bar.bar-top {
+  margin-bottom: 3px;
+}
+
+.burger-button__bar.bar-middle {
+  margin-bottom: 3px;
+}
+
+.burger-button__text {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  line-height: 15px;
+}
+
+.burger-button.open .burger-button__bar {
+  transition: .3s;
+}
+
+.burger-button.open .burger-button__bar.bar-top {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.burger-button.open .burger-button__bar.bar-middle {
+  opacity: 0;
+}
+
+.burger-button.open .burger-button__bar.bar-bottom {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+.burger-button-black {
+  color: #333;
+}
+
+.burger-button-black__bar {
+  background-color: #333;
+}
+
+.fv {
+  background: linear-gradient(to right, #fff 45%, #222 45%);
+  height: 50vh;
+  margin-bottom: 120px;
+}
+
+.fv-image-title-wrapper {
+  background-image: url("../image/heading-img_contact@2x.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 83%;
+  position: relative;
+  width: 75%;
+}
+
+.fv-title-wrapper {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.fv-title-ja {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.fv-title-en {
+  font-size: 7.2rem;
+  font-weight: 800;
+  line-height: 1.19;
+}
+
+.section-contact {
+  margin-bottom: 130px;
+}
+
+.contact-text {
+  margin-bottom: 52px;
+}
+
+.contact-list {
+  margin-bottom: 40px;
+}
+
+.contact-list-item__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-list-item__label:first-of-type {
+  margin-bottom: 18px;
+}
+
+.contact-list-item + .contact-list-item {
+  margin-top: 42px;
+}
+
+.inquiry-type-list {
+  display: flex;
+}
+
+.inquire-type-list-item {
+  align-items: center;
+  display: flex;
+}
+
+.inquire-type-list-item__input {
+  margin-right: 10px;
+}
+
+.inquire-type-list-item + .inquire-type-list-item {
+  margin-left: 50px;
+}
+
+.required-item::after {
+  background-color: #333;
+  color: #fff;
+  content: '必須';
+  font-size: 1.2rem;
+  margin-left: 20px;
+  padding: 1px 5px;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  border: 1px solid #333;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+}
+
+input[type="radio"] {
+  height: 20px;
+  width: 20px;
+}
+
+textarea {
+  border: 1px solid #333;
+  height: 210px;
+  padding: 5px;
+  width: 100%;
+}
+
+.privacy-policy {
+  margin-bottom: 42px;
+}
+
+.privacy-policy__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.privacy-policy__text {
+  border: 1px solid #333;
+  height: 250px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.confirm {
+  margin-bottom: 41px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+}
+
+.send-button-wrapper {
+  text-align: center;
+}
+
+.send-button {
+  color: #fff;
+  background-color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: 36px;
+  width: 160px;
+}
+
+footer {
+  background-color: #525252;
+  color: #fff;
+  font-size: 1rem;
+  padding: 18px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    max-width: 668px;
+    padding: 0 50px;
+  }
+  .fv {
+    margin-bottom: 80px;
+  }
+  .fv-title-ja {
+    font-size: 1.6rem;
+  }
+  .fv-title-en {
+    font-size: 5.2rem;
+    line-height: 1;
+  }
+  .section-contact {
+    margin-bottom: 197px;
+  }
+  .contact-text {
+    margin-bottom: 18px;
+  }
+  .contact-list-item + .contact-list-item {
+    margin-top: 37px;
+  }
+  input[type="text"] {
+    height: 48px;
+  }
+  textarea {
+    height: 180px;
+  }
+  .privacy-policy__text {
+    height: 226px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-title {
+    font-size: 2.8rem;
+  }
+  .fv-title-wrapper {
+    right: 15%;
+  }
+  .fv-title-ja {
+    text-align: right;
+  }
+  .section-contact {
+    margin-bottom: 80px;
+  }
+  .contact-text {
+    margin-bottom: 48px;
+  }
+  .contact-list-item__label {
+    font-weight: bold;
+  }
+  .inquiry-type-list {
+    flex-direction: column;
+  }
+  .inquire-type-list-item {
+    margin-left: 10px;
+  }
+  .inquire-type-list-item + .inquire-type-list-item {
+    margin-left: 10px;
+    margin-top: 14px;
+  }
+  textarea {
+    height: 210px;
+  }
+  .privacy-policy__text {
+    font-size: 14px;
+  }
+  .confirm {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
