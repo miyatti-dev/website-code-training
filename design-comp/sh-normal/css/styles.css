@@ -34,9 +34,17 @@ a:hover {
 }
 
 .section-title {
+  text-align: center;
   font-size: 3.2rem;
-  font-weight: 800;
-  margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.section-sub-title {
+  text-align: center;
+  color: #3BA6C9;
+  margin-bottom: 60px;
+  font-weight: bold;
 }
 
 .link-button {
@@ -208,6 +216,52 @@ a:hover {
 .fv-image {
   width: 518px;
   height: 430px;
+}
+
+.section-feature {
+  padding-top: 73px;
+  padding-bottom: 155px;
+}
+
+.feature-list-item__title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.feature-list-item__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feature-list-item__text-wrapper {
+  width: 50%;
+}
+
+.feature-list-item__overview {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 48px;
+}
+
+.feature-list-item__description {
+  font-weight: bold;
+  line-height: 1.625;
+}
+
+.feature-list-item__image-wrapper {
+  width: 380px;
+}
+
+.feature-list-item:nth-of-type(2n+1) > .feature-list-item__content {
+  flex-direction: row-reverse;
+}
+
+.feature-list-item + .feature-list-item {
+  margin-top: 50px;
 }
 
 footer {
