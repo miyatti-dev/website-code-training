@@ -50,6 +50,7 @@ a:hover {
   width: 155px;
   line-height: 37px;
   text-align: center;
+  display: block;
 }
 
 .no-scroll {
@@ -63,9 +64,11 @@ a:hover {
   height: 96px;
   z-index: 1;
   padding: 0 172px;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .header-title-wrapper__link {
@@ -154,6 +157,57 @@ a:hover {
 
 .burger-button-black__bar {
   background-color: #333;
+}
+
+.fv-wrapper {
+  height: 100vh;
+}
+
+.fv-wrapper > .content-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.fv-bg {
+  background-image: url("../image/fv-bg.png");
+  background-position: center;
+  width: 708px;
+  height: 711px;
+  position: absolute;
+  top: -124px;
+  right: -85px;
+  z-index: -1;
+  background-size: cover;
+}
+
+.fv-text-wrapper {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.fv-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1.34375;
+  margin-bottom: 53px;
+}
+
+.fv-sub-title {
+  font-weight: bold;
+  line-height: 1.3125;
+  margin-bottom: 55px;
+}
+
+.fv-image-wrapper {
+  width: 50%;
+}
+
+.fv-image {
+  width: 518px;
+  height: 430px;
 }
 
 footer {
