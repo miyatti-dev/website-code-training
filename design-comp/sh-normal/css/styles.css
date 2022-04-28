@@ -264,6 +264,117 @@ a:hover {
   margin-top: 50px;
 }
 
+.section-price {
+  background-color: #EEFBFB;
+  padding-top: 57px;
+  padding-bottom: 69px;
+}
+
+.price-list {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.price-list-item__term {
+  width: 31%;
+  padding: 37px 0 35.5px 19px;
+  font-weight: bold;
+  border-right: 1px solid #E5E5E5;
+}
+
+.price-list-item__term:not(:last-of-type) {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.price-list-item__description {
+  width: 69%;
+  padding: 37px 0 35.5px 30.5px;
+  font-weight: bold;
+}
+
+.price-list-item__description:not(:last-of-type) {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.price-caution {
+  text-align: center;
+  font-weight: bold;
+}
+
+.section-faq {
+  background-color: #EEFBFB;
+  padding-top: 57px;
+  padding-bottom: 86px;
+}
+
+.faq-list {
+  border: 1px solid #E5E5E5;
+}
+
+.faq-list-item__term {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 19px 0 20px;
+  position: relative;
+}
+
+.faq-list-item__term:not(:last-of-type) {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.faq-list-item__term::before, .faq-list-item__term::after {
+  content: '';
+  display: block;
+  background-color: #010327;
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 2px;
+  right: 25px;
+}
+
+.faq-list-item__term::after {
+  transform: rotate(90deg);
+  transition-duration: .3s;
+}
+
+.faq-list-item__term.open::before {
+  opacity: 0;
+}
+
+.faq-list-item__term.open::after {
+  transform: rotate(0);
+}
+
+.faq-list-item__term:hover {
+  text-decoration: underline;
+}
+
+.faq-list-item__description {
+  color: #444;
+  background-color: #E5E5E5;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 0 18px;
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.faq-list-item__description.active {
+  padding: 25px 37px;
+  line-height: 1.85;
+  height: auto;
+  opacity: 1;
+}
+
 footer {
   background-color: #525252;
   color: #fff;

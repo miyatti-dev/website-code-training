@@ -55,4 +55,9 @@ $(function () {
         $('.header-nav').fadeOut(300);
         $('body').removeClass('no-scroll');
     })
+
+    $('.faq-list-item__term').click(function () {
+        $(this).toggleClass('open');
+        $(this).next().toggleClass('active');
+    });
 })
