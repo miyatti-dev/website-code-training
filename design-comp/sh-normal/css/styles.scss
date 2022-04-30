@@ -255,7 +255,6 @@ header {
 
   &__text-wrapper {
     width: 50%;
-    background-color: blue;
   }
 
   &__text-wrapper.text2 {
@@ -278,14 +277,15 @@ header {
     width: 380px;
     margin-left: 20px;
   }
+
   &__image-wrapper.image2 {
     width: 479px;
-    background-color: #05A5FA;
-    margin-right: -37px;
+    margin-right: -2vw;
+    overflow-x: hidden;
   }
+
   &__image-wrapper.image3 {
     width: 400px;
-    background-color: #05A5FA;
     margin-left: 49px;
   }
 
@@ -318,14 +318,14 @@ header {
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 38px;
+  margin: 0 49px 38px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .price-list-item {
   &__term {
-    width: 31%;
-    padding: 37px 0 35.5px 19px;
+    width: 32%;
+    padding: 37px 19px;
     font-weight: bold;
 
     &:not(:last-of-type) {
@@ -336,8 +336,8 @@ header {
   }
 
   &__description {
-    width: 69%;
-    padding: 37px 0 35.5px 30.5px;
+    width: 68%;
+    padding: 37px 30.5px;
     font-weight: bold;
 
     &:not(:last-of-type) {
@@ -364,7 +364,9 @@ header {
 }
 
 .faq-list {
-  border: 1px solid #E5E5E5;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+  margin: 0 49px;
 }
 
 .faq-list-item {
@@ -375,9 +377,10 @@ header {
     padding: 19px 0 20px;
     position: relative;
 
-    &:not(:last-of-type) {
-      border-bottom: 1px solid #E5E5E5;
+    &:first-of-type {
+      border-top: 1px solid #E5E5E5;
     }
+    border-bottom: 1px solid #E5E5E5;
   }
 
   &__term::before,
@@ -411,26 +414,24 @@ header {
 
   &__description {
     color: #444;
-    background-color: #E5E5E5;
+    background-color: #F2F2F2;
     font-size: 1.4rem;
     font-weight: bold;
     text-align: left;
 
-
-    padding: 0 18px;
+    padding: 0 37px;
     line-height: 0;
     height: 0;
-    overflow: hidden;
     opacity: 0;
     transition-duration: .3s;
   }
 
   &__description.active {
-
     padding: 25px 37px;
     line-height: 1.85;
     height: auto;
     opacity: 1;
+    border-bottom: 1px solid #E5E5E5;
   }
 }
 
