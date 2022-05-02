@@ -1,4 +1,8 @@
 $(function () {
+  AOS.init({
+    duration: 500,
+  });
+
   // ハンバーガーメニュー
   $('.burger-button').on('click', function () {
     $(this).toggleClass('open');

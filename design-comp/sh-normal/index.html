@@ -12,10 +12,13 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
     <!-- fontawesome css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
@@ -66,7 +69,7 @@
     <main>
 
       <!-- fv -->
-      <div class="fv-wrapper">
+      <div class="fv-wrapper" data-aos="fade">
         <div class="content-wrapper">
           <div class="fv-text-wrapper">
             <p class="fv-title">
@@ -92,19 +95,19 @@
       <!-- feature -->
       <section class="section-wrapper section-feature">
         <div class="content-wrapper">
-          <h2 class="section-title">
+          <h2 class="section-title" data-aos="fade-up">
             ユアコーディング3つの特徴
           </h2>
-          <p class="section-sub-title">
+          <p class="section-sub-title" data-aos="fade-up">
             FEATURES
           </p>
           <ul class="feature-list">
-            <li class="feature-list-item item1">
-              <p class="feature-list-item__title title1">
+            <li class="feature-list-item">
+              <p class="feature-list-item__title" data-aos="zoom-in">
                 高速コーディング
               </p>
-              <div class="feature-list-item__content">
-                <div class="feature-list-item__text-wrapper text1">
+              <div class="feature-list-item__content" data-aos="fade">
+                <div class="feature-list-item__text-wrapper" data-aos="fade-left">
                   <p class="feature-list-item__overview">
                     コーディングに特化したフリーランスのため、<br>
                     スピード感を持った開発が可能。
@@ -116,17 +119,17 @@
                     する助けとなります。
                   </p>
                 </div>
-                <div class="feature-list-item__image-wrapper image1">
+                <div class="feature-list-item__image-wrapper" data-aos="fade-right">
                   <img src="./image/feature-fast-coding.png" alt="" class="feature-list-item__image">
                 </div>
               </div>
             </li>
-            <li class="feature-list-item item2">
-              <p class="feature-list-item__title title2">
+            <li class="feature-list-item">
+              <p class="feature-list-item__title" data-aos="zoom-in">
                 高品質
               </p>
               <div class="feature-list-item__content">
-                <div class="feature-list-item__text-wrapper text2">
+                <div class="feature-list-item__text-wrapper" data-aos="fade-right">
                   <p class="feature-list-item__overview">
                     正しいマークアップで、<br>
                     内部SEOに強いコーディングを<br>
@@ -138,17 +141,17 @@
                     きちんとコーディングを行うため、納品後も安心です。
                   </p>
                 </div>
-                <div class="feature-list-item__image-wrapper image2">
+                <div class="feature-list-item__image-wrapper" data-aos="fade-left">
                   <img src="./image/feature-high-quality.png" alt="" class="feature-list-item__image">
                 </div>
               </div>
             </li>
-            <li class="feature-list-item item3">
-              <p class="feature-list-item__title title3">
+            <li class="feature-list-item">
+              <p class="feature-list-item__title" data-aos="zoom-in">
                 迅速なレスポンス
               </p>
               <div class="feature-list-item__content">
-                <div class="feature-list-item__text-wrapper text3">
+                <div class="feature-list-item__text-wrapper" data-aos="fade-left">
                   <p class="feature-list-item__overview">
                     原則いただいたメッセージは、<br>
                     業務時間内であれば6時間以内に<br>
@@ -161,7 +164,7 @@
                     おります。
                   </p>
                 </div>
-                <div class="feature-list-item__image-wrapper image3">
+                <div class="feature-list-item__image-wrapper" data-aos="fade-right">
                   <img src="./image/feature-response.png" alt="" class="feature-list-item__image">
                 </div>
               </div>
@@ -174,13 +177,13 @@
       <!-- price -->
       <section class="section-wrapper section-price">
         <div class="content-wrapper">
-          <h2 class="section-title">
+          <h2 class="section-title" data-aos="fade-up">
             価格
           </h2>
-          <p class="section-sub-title">
+          <p class="section-sub-title" data-aos="fade-up">
             PRICE
           </p>
-          <dl class="price-list">
+          <dl class="price-list" data-aos="fade-up">
             <dt class="price-list-item__term">
               HTMLコーディングトップページ
             </dt>
@@ -206,7 +209,7 @@
               15.000円〜
             </dd>
           </dl>
-          <p class="price-caution">
+          <p class="price-caution" data-aos="fade-up">
             ＊詳細な価格はページや仕様によって異なります
           </p>
         </div>
@@ -216,13 +219,13 @@
       <!-- faq -->
       <section class="section-wrapper section-faq">
         <div class="content-wrapper">
-          <h2 class="section-title">
+          <h2 class="section-title" data-aos="fade-up">
             よくある質問
           </h2>
-          <p class="section-sub-title">
+          <p class="section-sub-title" data-aos="fade-up">
             FAQ
           </p>
-          <dl class="faq-list">
+          <dl class="faq-list" data-aos="fade-up">
             <dt class="faq-list-item__term open">
               デザインから一貫してお願いすることは可能でしょうか
             </dt>
@@ -251,13 +254,13 @@
       <!-- blog -->
       <section class="section-wrapper section-blog">
         <div class="content-wrapper">
-          <h2 class="section-title">
+          <h2 class="section-title" data-aos="fade-up">
             ブログ
           </h2>
-          <p class="section-sub-title">
+          <p class="section-sub-title" data-aos="fade-up">
             BLOG
           </p>
-          <ul class="blog-list">
+          <ul class="blog-list" data-aos="fade-up">
             <li class="blog-list-item">
               <div class="blog-list-item__image-wrapper">
                 <img src="./image/blog-site-renewal.png" alt="" class="blog-list-item__image">
@@ -293,15 +296,15 @@
       <!-- work -->
       <section class="section-wrapper section-work">
         <div class="content-wrapper">
-          <h2 class="section-title">
+          <h2 class="section-title" data-aos="fade-up">
             制作実績
           </h2>
-          <p class="section-sub-title">
+          <p class="section-sub-title" data-aos="fade-up">
             WORKS
           </p>
         </div>
         <!-- スライダーのコンテナ -->
-        <ul class="works-list swiper">
+        <ul class="works-list swiper" data-aos="fade-up">
           <div class="works-list-wrapper swiper-wrapper">
             <li class="works-list-item swiper-slide">
               <div class="works-list-item__image-wrapper">
@@ -368,7 +371,6 @@
                 担当コーダー：石井
               </p>
             </li>
-
           </div>
         </ul>
       </section>
@@ -377,17 +379,17 @@
       <!-- contact -->
       <section class="section-wrapper section-contact" id="contact">
         <div class="content-wrapper">
-          <h2 class="section-title">
+          <h2 class="section-title" data-aos="fade-up">
             お問い合わせ
           </h2>
-          <p class="section-sub-title">
+          <p class="section-sub-title" data-aos="fade-up">
             CONTACT
           </p>
-          <p class="contact-help-you">
+          <p class="contact-help-you" data-aos="fade-up">
             コーディングの人出が足りないとき、<br>
             あなたの力になります
           </p>
-          <form action="" class="form-wrapper">
+          <form action="" class="form-wrapper" data-aos="fade-up">
             <ul class="form-list">
               <li class="form-list-item">
                 <label for="input-name" class="form-list-item__label">お名前</label>
@@ -432,6 +434,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
 
 </html>
