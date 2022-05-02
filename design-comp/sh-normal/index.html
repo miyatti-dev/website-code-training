@@ -26,7 +26,7 @@
 
   <body>
     <!-- header -->
-    <header>
+    <header class="header">
       <div class="header-wrapper">
         <h1 class="header-title-wrapper">
           <a href="./" class="header-title-wrapper__link">
@@ -47,7 +47,7 @@
             </li>
           </ul>
         </nav>
-        <a href="" class="header-link link-button">お問い合わせ</a>
+        <a href="" class="header-link contact-button">お問い合わせ</a>
         <!--
         <button class="burger-button">
           <div class="burger-button__bar-container">
@@ -68,7 +68,6 @@
       <!-- fv -->
       <div class="fv-wrapper">
         <div class="content-wrapper">
-          <div class="fv-bg"></div>
           <div class="fv-text-wrapper">
             <p class="fv-title">
               コーディングの手間を<br>
@@ -81,7 +80,7 @@
               デザインに注力されたい方の<br>
               助けになります
             </p>
-            <a href="" class="fv-link link-button">お問い合わせ</a>
+            <a href="" class="fv-link contact-button">お問い合わせ</a>
           </div>
           <div class="fv-image-wrapper">
             <img src="./image/manager.png" alt="" class="fv-image">
@@ -107,13 +106,13 @@
               <div class="feature-list-item__content">
                 <div class="feature-list-item__text-wrapper text1">
                   <p class="feature-list-item__overview">
-                    コーディングに特化したフリーランスのため、
+                    コーディングに特化したフリーランスのため、<br>
                     スピード感を持った開発が可能。
                   </p>
                   <p class="feature-list-item__description">
                     開発は常にスピードとの勝負です。<br>
-                    ユアコーディングはコーディングに特化しているため、
-                    素早く納品することで、クライアントがデザインに注力
+                    ユアコーディングはコーディングに特化しているため、<br>
+                    素早く納品することで、クライアントがデザインに注力<br>
                     する助けとなります。
                   </p>
                 </div>
@@ -134,8 +133,8 @@
                     デフォルトで行います。
                   </p>
                   <p class="feature-list-item__description">
-                    ユアコーディングでは、「予測しやすい」「再利用しやすい」
-                    「保守しやすい」「拡張しやすい」と言った設計をもとに
+                    ユアコーディングでは、「予測しやすい」「再利用しやすい」<br>
+                    「保守しやすい」「拡張しやすい」と言った設計をもとに<br>
                     きちんとコーディングを行うため、納品後も安心です。
                   </p>
                 </div>
@@ -152,13 +151,13 @@
                 <div class="feature-list-item__text-wrapper text3">
                   <p class="feature-list-item__overview">
                     原則いただいたメッセージは、<br>
-                    業務時間内であれば6時間以内に
+                    業務時間内であれば6時間以内に<br>
                     お返しいたします。
                   </p>
                   <p class="feature-list-item__description">
-                    連絡を返さないフリーランスが多い中、
-                    ユアコーディングでは定期的な進捗報告など、
-                    社会人としての基本を踏まえて仕事を行なって
+                    連絡を返さないフリーランスが多い中、<br>
+                    ユアコーディングでは定期的な進捗報告など、<br>
+                    社会人としての基本を踏まえて仕事を行なって<br>
                     おります。
                   </p>
                 </div>
@@ -282,8 +281,7 @@
                 <img src="./image/blog-designer.png" alt="" class="blog-list-item__image">
               </div>
               <p class="blog-list-item__text">
-                ユアコーディングではデザイナーの方を
-                広く募集しています。
+                ユアコーディングではデザイナーの方を広く募集しています。
               </p>
               <time datetime="2020-01-25" class="blog-list-item__time">2020.01.25</time>
             </li>
@@ -396,12 +394,12 @@
                 <input id="input-name" type="text" class="form-list-item__input input-name">
               </li>
               <li class="form-list-item">
-                <label for="" class="form-list-item__label">メールアドレス</label>
-                <input type="text" class="form-list-item__input input-mail-address">
+                <label for="input-mail-address" class="form-list-item__label">メールアドレス</label>
+                <input id="input-mail-address" type="text" class="form-list-item__input input-mail-address">
               </li>
               <li class="form-list-item">
-                <label for="" class="form-list-item__label">お問い合わせ内容</label>
-                <textarea name="" id="" cols="30" rows="10"
+                <label for="textarea-inquiry" class="form-list-item__label">お問い合わせ内容</label>
+                <textarea name="" id="textarea-inquiry" cols="30" rows="10"
                   class="form-list-item__textarea textarea-inquiry"></textarea>
               </li>
             </ul>
@@ -409,7 +407,7 @@
               <input type="checkbox" class="privacy-policy__input">
               <p class="privacy-policy__text">プライバシーポリシーに同意する</p>
             </div>
-            <input type="submit" class="form-submit-button link-button" value="送信する">
+            <input type="submit" class="form-submit-button submit-button" value="送信する">
           </form>
         </div>
       </section>
@@ -419,7 +417,7 @@
     <!-- //main -->
 
     <!-- footer -->
-    <footer>
+    <footer class="footer">
       <p class="footer-title">
         ユアコーディング
       </p>
@@ -427,7 +425,7 @@
         <p href="" class="footer-text__privacy-policy">プライバシーポリシー</p>
         <p href="" class="footer-text__labels">個人商取引法に基づく表記</p>
       </div>
-      <p class="footer-copy-right">&copy;ユアコーディング, All Rights Reserved.</p>
+      <small class="footer-copy-right">&copy;ユアコーディング, All Rights Reserved.</small>
     </footer>
     <!-- //footer -->
   </body>
