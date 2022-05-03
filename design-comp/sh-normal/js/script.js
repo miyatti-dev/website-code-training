@@ -28,14 +28,21 @@ $(function () {
     $(this).next().toggleClass('active');
   });
 
-  // contactへのスクロール
+  //////////////////////////////////////////////////
+  // スムーススクロール(ページ内リンクのイベント)
+  //////////////////////////////////////////////////
   let headerHeight = $('.header').outerHeight(); // headerの高さ
-  let sectionContactPosition = $('.section-contact').offset().top - headerHeight;
-  console.log("## headerHeight = ", headerHeight);
-  console.log("## sectionContactPosition = ", sectionContactPosition);
-  $('.contact-button').click(function () {
-    $('body,html').animate({
-      scrollTop: sectionContactPosition
+  $('a[href^="#"]').click(function () {
+    // リンクを取得
+    let href = $(this).attr("href");
+    // ジャンプ先のid名をセット
+    let target = $(href == "#" || href == "" ? 'html' : href);
+    // トップからジャンプ先の要素までの距離を取得
+    let position = target.offset().top - headerHeight;
+    // animateでスムーススクロールを行う
+    $("html, body").animate({
+      scrollTop: position
     }, 500);
+    return false;
   });
 })
