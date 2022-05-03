@@ -584,6 +584,15 @@ a:hover {
 .form-submit-button {
   display: block;
   margin: 0 auto;
+  transition: .3s;
+
+  &:hover {
+    opacity: .7;
+    transition: .3s;
+  }
+  &:disabled {
+    background: #ccc;
+  }
 }
 
 

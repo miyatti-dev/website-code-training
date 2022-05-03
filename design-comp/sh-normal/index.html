@@ -391,27 +391,27 @@
             コーディングの人出が足りないとき、<br>
             あなたの力になります
           </p>
-          <form action="" class="form-wrapper" data-aos="fade-up">
+          <form id="form" action="" class="form-wrapper" data-aos="fade-up">
             <ul class="form-list">
               <li class="form-list-item">
                 <label for="input-name" class="form-list-item__label">お名前</label>
-                <input id="input-name" type="text" class="form-list-item__input input-name" placeholder="お名前">
+                <input id="input-name" type="text" class="form-list-item__input input-name" placeholder="お名前" required>
               </li>
               <li class="form-list-item">
                 <label for="input-mail-address" class="form-list-item__label">メールアドレス</label>
-                <input id="input-mail-address" type="text" class="form-list-item__input input-mail-address" placeholder="メールアドレス">
+                <input id="input-mail-address" type="email" class="form-list-item__input input-mail-address" placeholder="メールアドレス" required>
               </li>
               <li class="form-list-item">
                 <label for="textarea-inquiry" class="form-list-item__label">お問い合わせ内容</label>
                 <textarea name="" id="textarea-inquiry" cols="30" rows="10"
-                  class="form-list-item__textarea textarea-inquiry" placeholder="お問い合わせ内容"></textarea>
+                  class="form-list-item__textarea textarea-inquiry" placeholder="お問い合わせ内容" required></textarea>
               </li>
             </ul>
             <div class="privacy-policy">
-              <input id="checkbox-privacy-policy" type="checkbox" class="privacy-policy__input">
+              <input id="checkbox-privacy-policy" type="checkbox" class="privacy-policy__input" required>
               <label for="checkbox-privacy-policy" class="privacy-policy__text">プライバシーポリシーに同意する</label>
             </div>
-            <input type="submit" class="form-submit-button submit-button" value="送信する">
+            <input type="submit" class="form-submit-button submit-button" value="送信する" disabled>
           </form>
         </div>
       </section>

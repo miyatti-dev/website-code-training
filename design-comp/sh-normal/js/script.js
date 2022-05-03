@@ -45,4 +45,22 @@ $(function () {
     }, 500);
     return false;
   });
+
+  //////////////////////////////////////////////////
+  // contact submit button
+  //////////////////////////////////////////////////
+  const $submitButton = $('.form-submit-button')
+  $('#form input,#form textarea').on('input', function () {
+    if (
+      $('#form input[type="text"]').val() !== "" &&
+      $('#form input[type="email"]').val() !== "" &&
+      $('#form textarea').val() !== "" &&
+      $('#form input[type="checkbox"]').val() !== "" &&
+      $('#form .privacy-policy__input').prop('checked') === true
+    ) {
+      $submitButton.prop('disabled', false);
+    } else {
+      $submitButton.prop('disabled', true);
+    }
+  });
 })
