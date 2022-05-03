@@ -63,4 +63,28 @@ $(function () {
       $submitButton.prop('disabled', true);
     }
   });
+
+  const $form = $('#form')
+  $form.submit(function (event) {
+    var formData = $form.serialize();
+    $.ajax({
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScUHZZUhqYk7q4Cfytqu0Y02PibNbtnJyA0g-5NsJK7C6XQYQ/formResponse",
+      data: formData,
+      type: "POST",
+      dataType: "xml",
+      statusCode: {
+        0: function () {
+          $form.fadeOut(500, function () {
+            $(".form-submit-success-message").slideDown();
+          });
+        },
+        200: function () {
+          $form.fadeOut(500, function () {
+            $(".form-submit-fail-message").slideDown();
+          });
+        }
+      }
+    });
+    event.preventDefault();
+  });
 })

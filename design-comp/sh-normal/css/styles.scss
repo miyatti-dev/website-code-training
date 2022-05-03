@@ -595,6 +595,17 @@ a:hover {
   }
 }
 
+.form-submit-success-message {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-submit-fail-message {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+}
 
 ////////////////////
 // footer

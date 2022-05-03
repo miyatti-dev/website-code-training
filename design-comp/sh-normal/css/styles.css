@@ -550,6 +550,18 @@ a:hover {
   background: #ccc;
 }
 
+.form-submit-success-message {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-submit-fail-message {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+}
+
 .footer {
   text-align: center;
   padding-top: 45px;
