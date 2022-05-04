@@ -248,6 +248,10 @@ a:hover {
   padding-bottom: 69px;
 }
 
+.section-price > .content-wrapper {
+  max-width: 926px;
+}
+
 .section-price .section-sub-title {
   margin-bottom: 71px;
 }
@@ -256,7 +260,7 @@ a:hover {
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 49px 38px;
+  margin-bottom: 38px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -291,6 +295,10 @@ a:hover {
   padding-bottom: 86px;
 }
 
+.section-price > .content-wrapper {
+  max-width: 926px;
+}
+
 .section-faq .section-sub-title {
   margin-bottom: 33px;
 }
@@ -298,7 +306,6 @@ a:hover {
 .faq-list {
   border-left: 1px solid #E5E5E5;
   border-right: 1px solid #E5E5E5;
-  margin: 0 49px;
 }
 
 .faq-list-item__term {

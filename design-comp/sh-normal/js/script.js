@@ -27,6 +27,10 @@ $(function () {
     $(this).toggleClass('open');
     $(this).next().toggleClass('active');
   });
+  $('.faq-list-item__description').click(function () {
+    $(this).prev().toggleClass('open');
+    $(this).toggleClass('active');
+  });
 
   //////////////////////////////////////////////////
   // スムーススクロール(ページ内リンクのイベント)
