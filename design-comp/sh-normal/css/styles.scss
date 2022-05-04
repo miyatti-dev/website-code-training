@@ -123,38 +123,23 @@ a:hover {
 }
 
 .burger-button {
-  align-items: center;
-  display: flex;
   transition: all .3s;
-  z-index: 3;
-
-  &__bar-container {
-    margin-right: 7px;
-  }
 
   &__bar {
-    background-color: #fff;
-    border-radius: 1px;
+    background-color: #05A5FA;
+    border-radius: 2.5px;
     display: block;
-    height: 2px;
+    height: 5px;
     transition: .3s;
-    width: 22px;
+    width: 30px;
 
     &.bar-top {
-      margin-bottom: 3px;
+      margin-bottom: 5px;
     }
 
     &.bar-middle {
-      margin-bottom: 3px;
+      margin-bottom: 5px;
     }
-
-  }
-
-  &__text {
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 0.005em;
-    line-height: 15px;
   }
 
   &.open {
@@ -346,7 +331,7 @@ a:hover {
     text-align: center;
     font-size: 1.4rem;
     font-weight: bold;
-    padding: 19px 0 20px;
+    padding: 19px 37px 20px;
     position: relative;
 
     &:first-of-type {
@@ -508,6 +493,11 @@ a:hover {
   background: linear-gradient(to right, #05a5fa 0%, #63fbd7 100%, #67ffd6 100%);
 }
 
+.section-contact>.content-wrapper {
+  max-width: 910px;
+  padding: 0 40px;
+}
+
 .section-contact .section-sub-title {
   margin-bottom: 39px;
 }
@@ -527,7 +517,6 @@ a:hover {
 .form-wrapper {
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  margin: 0 57px;
   padding: 35px 63px;
 }
 
@@ -733,6 +722,7 @@ a:hover {
     &:nth-of-type(2n+1) &__image-wrapper {
       margin-right: 20px;
     }
+
     &:nth-of-type(2n) &__image-wrapper {
       margin-left: 20px;
     }
@@ -758,8 +748,6 @@ a:hover {
   // blog
   ////////////////////
   .blog-list {
-    display: flex;
-
     &-item {
       &__text {
         font-size: 1.6rem;
@@ -852,9 +840,171 @@ a:hover {
 // @media screen(sp)
 ////////////////////
 @media screen and (max-width: 576px) {
+
   ////////////////////
   // common
   ////////////////////
 
+  ////////////////////
+  // header
+  ////////////////////
+  .header-title-wrapper {
+    &__title {
+      font-size: 2rem;
+    }
+  }
 
+  .header-nav-list {
+    display: none;
+  }
+
+  .header-link {
+    display: none;
+  }
+
+  ////////////////////
+  // fv
+  ////////////////////
+  .fv-wrapper {
+    background-position: center;
+    background-size: auto calc(100vh + 94px);
+  }
+
+  .fv-wrapper>.content-wrapper {
+    flex-direction: column;
+    height: calc(100vh + 188px);
+    justify-content: center;
+    padding-top: 94px;
+  }
+
+  .fv-text-wrapper {
+    width: 100%;
+  }
+
+  .fv-title {
+    margin-bottom: 20px;
+  }
+
+  .fv-sub-title {
+    margin-bottom: 20px;
+  }
+
+  .fv-image-wrapper {
+    width: 80%;
+  }
+
+  ////////////////////
+  // feature
+  ////////////////////
+  .feature-list-item {
+    &__content {
+      flex-direction: column-reverse;
+    }
+
+    &__text-wrapper {
+      width: 100%;
+    }
+
+    &:nth-of-type(2n+1) &__content {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-of-type(2n+1) &__image-wrapper {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &:nth-of-type(2n) &__image-wrapper {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  ////////////////////
+  // price
+  ////////////////////
+  .section-price>.content-wrapper {
+    padding: 0 20px;
+  }
+
+  .price-list-item {
+    &__term {
+      width: 100%;
+      text-align: center;
+
+      border-bottom: 1px solid #E5E5E5;
+      border-right: none;
+    }
+
+    &__description {
+      width: 100%;
+      text-align: center;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #E5E5E5;
+      }
+    }
+  }
+
+  ////////////////////
+  // faq
+  ////////////////////
+  .section-faq>.content-wrapper {
+    padding: 0 20px;
+  }
+
+  .faq-list-item {
+    &__term {
+      padding-right: 60px;
+    }
+  }
+
+  ////////////////////
+  // blog
+  ////////////////////
+  .blog-list {
+    flex-direction: column;
+
+    &-item {
+      width: 100%;
+
+      &__text {
+        margin-bottom: 20px;
+      }
+
+      &+& {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  ////////////////////
+  // work
+  ////////////////////
+
+  ////////////////////
+  // contact
+  ////////////////////
+  .section-contact>.content-wrapper {
+    padding: 0 20px;
+  }
+
+  .form-wrapper {
+    padding: 35px 20px;
+  }
+
+  .form-list-item {
+    &__label {
+      margin-bottom: 20px;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+
+  ////////////////////
+  // footer
+  ////////////////////
 }

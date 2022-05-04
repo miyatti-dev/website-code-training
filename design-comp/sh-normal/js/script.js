@@ -1,9 +1,9 @@
 // swiper
 const swiper = new Swiper(".works-list", {
   loop: true, //ループ可能（ループモードを有効に）
-  slidesPerView: 1, //スライドを1個分表示
+  slidesPerView: 1.5, //スライドを1個分表示
   centeredSlides: true, //アクティブなスライドを中央に表示
-  spaceBetween: 56,
+  spaceBetween: 20,
   autoplay: {
     delay: 5000,
   },
