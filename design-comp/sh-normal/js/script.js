@@ -28,13 +28,38 @@ AOS.init({
 
 // ready
 $(function () {
+  //////////////////////////////////////////////////
   // ハンバーガーメニュー
-  $('.burger-button').on('click', function () {
+  //////////////////////////////////////////////////
+  const $burgerButton = $('.burger-button');
+  const $headerNav = $('.header-nav');
+  $burgerButton.on('click', function () {
     $(this).toggleClass('open');
-    $('.header-nav').fadeToggle(300);
+    $headerNav.fadeToggle(300);
     $('body').toggleClass('no-scroll');
+
+    if ($(this).attr('aria-expanded') == 'true') {
+      // メニュー非表示
+      $(this).attr('aria-expanded', false);
+      $headerNav.attr('area-hidden', 'true');
+    } else {
+      // メニュー表示
+      $(this).attr('aria-expanded', true);
+      $headerNav.attr('area-hidden', 'false');
+    }
+  });
+
+  // メニュー選択時
+  $('.header-nav-list-item__link').on('click', function () {
+    $burgerButton.removeClass('open');
+    $burgerButton.attr('aria-expanded', false);
+    $headerNav.fadeToggle(300);
+    $headerNav.attr('area-hidden', 'true');
   })
 
+  //////////////////////////////////////////////////
+  // faq アコーディオン
+  //////////////////////////////////////////////////
   $('.faq-list-item__term').click(function () {
     $(this).toggleClass('open');
     $(this).next().toggleClass('active');
@@ -47,14 +72,14 @@ $(function () {
   //////////////////////////////////////////////////
   // スムーススクロール(ページ内リンクのイベント)
   //////////////////////////////////////////////////
-  let headerHeight = $('.header').outerHeight(); // headerの高さ
+  const headerHeight = $('.header').outerHeight(); // headerの高さ
   $('a[href^="#"]').click(function () {
     // リンクを取得
-    let href = $(this).attr("href");
+    const href = $(this).attr("href");
     // ジャンプ先のid名をセット
-    let target = $(href == "#" || href == "" ? 'html' : href);
+    const target = $(href == "#" || href == "" ? 'html' : href);
     // トップからジャンプ先の要素までの距離を取得
-    let position = target.offset().top - headerHeight;
+    const position = target.offset().top - headerHeight;
     // animateでスムーススクロールを行う
     $("html, body").animate({
       scrollTop: position
@@ -65,7 +90,7 @@ $(function () {
   //////////////////////////////////////////////////
   // contact submit button
   //////////////////////////////////////////////////
-  const $submitButton = $('.form-submit-button')
+  const $submitButton = $('.form-submit-button');
   $('#form input,#form textarea').on('input', function () {
     if (
       $('#form input[type="text"]').val() !== "" &&
@@ -82,7 +107,7 @@ $(function () {
 
   const $form = $('#form')
   $form.submit(function (event) {
-    var formData = $form.serialize();
+    const formData = $form.serialize();
     $.ajax({
       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScUHZZUhqYk7q4Cfytqu0Y02PibNbtnJyA0g-5NsJK7C6XQYQ/formResponse",
       data: formData,

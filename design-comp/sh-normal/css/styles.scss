@@ -123,31 +123,38 @@ a:hover {
 }
 
 .burger-button {
+  display: none;
   transition: all .3s;
+  position: relative;
+  width: 30px;
+  height: 25px;
+  z-index: 100;
 
   &__bar {
     background-color: #05A5FA;
     border-radius: 2.5px;
-    display: block;
     height: 5px;
     transition: .3s;
-    width: 30px;
-
-    &.bar-top {
-      margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+  
+    &.bar-middle {
+      top: 10px;
     }
 
-    &.bar-middle {
-      margin-bottom: 5px;
+    &.bar-bottom {
+      top : 20px;
     }
   }
 
   &.open {
     .burger-button__bar {
-      transition: .3s;
 
       &.bar-top {
-        transform: rotate(45deg) translate(4px, 4px);
+        top: 10px;
+        transform: rotate(45deg);
       }
 
       &.bar-middle {
@@ -155,7 +162,8 @@ a:hover {
       }
 
       &.bar-bottom {
-        transform: rotate(-45deg) translate(3px, -3px);
+        top: 10px;
+        transform: rotate(-45deg);
       }
     }
   }
@@ -659,6 +667,7 @@ a:hover {
   .contact-button,
   .submit-button {
     font-weight: normal;
+    width: 120px;
   }
 
   .br-pc {
@@ -674,12 +683,16 @@ a:hover {
     }
   }
 
+  .header-nav {
+    display: block;
+  }
+
   .header-nav-list {
     &-item {
       font-size: 1.4rem;
 
       &+& {
-        margin-left: 30px;
+        margin-left: 15px;
       }
     }
   }
@@ -854,8 +867,32 @@ a:hover {
     }
   }
 
-  .header-nav-list {
+  .header-nav {
     display: none;
+    position: fixed;
+    z-index: 50;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: lightblue;
+  }
+
+  .header-nav-list {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+    &-item {
+      font-size: 1.4rem;
+
+      &+& {
+        margin-top: 15px;
+        margin-left: 0;
+      }
+    }
   }
 
   .header-link {

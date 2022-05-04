@@ -116,32 +116,36 @@ a:hover {
 }
 
 .burger-button {
+  display: none;
   transition: all .3s;
+  position: relative;
+  width: 30px;
+  height: 25px;
+  z-index: 100;
 }
 
 .burger-button__bar {
   background-color: #05A5FA;
   border-radius: 2.5px;
-  display: block;
   height: 5px;
   transition: .3s;
-  width: 30px;
-}
-
-.burger-button__bar.bar-top {
-  margin-bottom: 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
 
 .burger-button__bar.bar-middle {
-  margin-bottom: 5px;
+  top: 10px;
 }
 
-.burger-button.open .burger-button__bar {
-  transition: .3s;
+.burger-button__bar.bar-bottom {
+  top: 20px;
 }
 
 .burger-button.open .burger-button__bar.bar-top {
-  transform: rotate(45deg) translate(4px, 4px);
+  top: 10px;
+  transform: rotate(45deg);
 }
 
 .burger-button.open .burger-button__bar.bar-middle {
@@ -149,7 +153,8 @@ a:hover {
 }
 
 .burger-button.open .burger-button__bar.bar-bottom {
-  transform: rotate(-45deg) translate(3px, -3px);
+  top: 10px;
+  transform: rotate(-45deg);
 }
 
 .fv-wrapper {
@@ -603,6 +608,7 @@ a:hover {
   .contact-button,
   .submit-button {
     font-weight: normal;
+    width: 120px;
   }
   .br-pc {
     display: none;
@@ -610,11 +616,14 @@ a:hover {
   .header-title-wrapper__title {
     font-size: 2rem;
   }
+  .header-nav {
+    display: block;
+  }
   .header-nav-list-item {
     font-size: 1.4rem;
   }
   .header-nav-list-item + .header-nav-list-item {
-    margin-left: 30px;
+    margin-left: 15px;
   }
   .fv-wrapper {
     background-position: top -150px right -180px;
@@ -708,11 +717,35 @@ a:hover {
   .header-title-wrapper__title {
     font-size: 2rem;
   }
-  .header-nav-list {
+  .header-nav {
     display: none;
+    position: fixed;
+    z-index: 50;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: lightblue;
+  }
+  .header-nav-list {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+  .header-nav-list-item {
+    font-size: 1.4rem;
+  }
+  .header-nav-list-item + .header-nav-list-item {
+    margin-top: 15px;
+    margin-left: 0;
   }
   .header-link {
     display: none;
+  }
+  .burger-button {
+    display: block;
   }
   .fv-wrapper {
     background-position: center;
