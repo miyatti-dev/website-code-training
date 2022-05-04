@@ -50,7 +50,8 @@ a:hover {
   text-align: center;
 }
 
-.contact-button, .submit-button {
+.contact-button,
+.submit-button {
   background: linear-gradient(to right, #FA41CC 0%, #6020B0 100%);
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -190,7 +191,7 @@ a:hover {
 .fv-wrapper>.content-wrapper {
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: calc(100vh + 94px);
 }
 
 .fv-text-wrapper {
@@ -223,6 +224,8 @@ a:hover {
 }
 
 .feature-list-item {
+  overflow-x: hidden;
+
   &__title {
     text-align: center;
     font-size: 2.8rem;
@@ -270,8 +273,9 @@ a:hover {
   padding-bottom: 69px;
 }
 
-.section-price >.content-wrapper {
+.section-price>.content-wrapper {
   max-width: 926px;
+  padding: 0 40px;
 }
 
 .section-price .section-sub-title {
@@ -323,8 +327,9 @@ a:hover {
   padding-bottom: 86px;
 }
 
-.section-price >.content-wrapper {
+.section-faq>.content-wrapper {
   max-width: 926px;
+  padding: 0 40px;
 }
 
 .section-faq .section-sub-title {
@@ -597,6 +602,7 @@ a:hover {
     opacity: .7;
     transition: .3s;
   }
+
   &:disabled {
     background: #ccc;
   }
@@ -645,14 +651,202 @@ a:hover {
 }
 
 
-
-
-
-
 ////////////////////
 // @media screen(tablet)
 ////////////////////
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+
+  ////////////////////
+  // common
+  ////////////////////
+  .section-title {
+    font-size: 2.6rem;
+  }
+
+  .section-sub-title {
+    font-size: 1.4rem;
+  }
+
+  .contact-button,
+  .submit-button {
+    font-weight: normal;
+  }
+
+  .br-pc {
+    display: none;
+  }
+
+  ////////////////////
+  // header
+  ////////////////////
+  .header-title-wrapper {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .header-nav-list {
+    &-item {
+      font-size: 1.4rem;
+
+      &+& {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  ////////////////////
+  // fv
+  ////////////////////
+  .fv-wrapper {
+    background-position: top -150px right -180px;
+  }
+
+  .fv-title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+
+  .fv-sub-title {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  ////////////////////
+  // feature
+  ////////////////////
+  .feature-list-item {
+    &__title {
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+    }
+
+    &__overview {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+
+    &__description {
+      font-size: 1.4rem;
+    }
+
+    &:nth-of-type(2n+1) &__image-wrapper {
+      margin-right: 20px;
+    }
+    &:nth-of-type(2n) &__image-wrapper {
+      margin-left: 20px;
+    }
+
+    &+& {
+      margin-top: 60px;
+    }
+  }
+
+  ////////////////////
+  // price
+  ////////////////////
+  .price-caution {
+    font-weight: normal;
+  }
+
+  ////////////////////
+  // faq
+  ////////////////////
+
+
+  ////////////////////
+  // blog
+  ////////////////////
+  .blog-list {
+    display: flex;
+
+    &-item {
+      &__text {
+        font-size: 1.6rem;
+      }
+
+      &__time {
+        font-size: 1.4rem;
+      }
+
+      &+& {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  ////////////////////
+  // work
+  ////////////////////
+  .works-list-item {
+    &__summary {
+      font-size: 1.4rem;
+    }
+
+    &__description {
+      font-size: 1.2rem;
+    }
+  }
+
+  ////////////////////
+  // contact
+  ////////////////////
+  .contact-help-you {
+    font-size: 1.4rem;
+  }
+
+  .form-list-item {
+    &__label {
+      font-size: 1.4rem;
+
+      &::after {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__input {
+      width: 90%;
+    }
+
+    &+& {
+      margin-top: 29px;
+    }
+  }
+
+  .privacy-policy {
+    &__input {
+      height: 15px;
+      width: 15px;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+    }
+  }
+
+  .form-submit-success-message {
+    font-size: 1.4rem;
+  }
+
+  .form-submit-fail-message {
+    font-size: 1.4rem;
+  }
+
+  ////////////////////
+  // footer
+  ////////////////////
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footer-text {
+    margin-bottom: 40px;
+
+    &__privacy-policy {
+      margin-right: 40px;
+    }
+  }
+}
 
 ////////////////////
 // @media screen(sp)

@@ -1,11 +1,23 @@
 // swiper
 const swiper = new Swiper(".works-list", {
   loop: true, //ループ可能（ループモードを有効に）
-  slidesPerView: 3.8, //スライドを3.8個分表示
+  slidesPerView: 1, //スライドを1個分表示
   centeredSlides: true, //アクティブなスライドを中央に表示
   spaceBetween: 56,
   autoplay: {
     delay: 5000,
+  },
+  breakpoints: {
+    // 576px以上(tablet)
+    576: {
+      slidesPerView: 3, //スライドを3.8個分表示
+      spaceBetween: 40,
+    },
+    // 768px以上(PC)
+    768: {
+      slidesPerView: 3.8, //スライドを3.8個分表示
+      spaceBetween: 56,
+    }
   },
 });
 
