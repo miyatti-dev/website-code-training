@@ -36,10 +36,13 @@ $(function () {
     const $burgerButton = $('.burger-button');
     const $headerNav = $('.header-nav');
     if ($burgerButton.attr('aria-expanded') == 'false') {
+      // burgerButton
       if (resize != true) {
         $burgerButton.addClass('open');
       }
       $burgerButton.attr('aria-expanded', true);
+
+      // headerNav
       $headerNav.fadeIn(300);
       $headerNav.attr('area-hidden', 'false');
     }
@@ -49,8 +52,11 @@ $(function () {
     const $burgerButton = $('.burger-button');
     const $headerNav = $('.header-nav');
     if ($burgerButton.attr('aria-expanded') == 'true') {
+      // burgerButton
       $burgerButton.removeClass('open');
       $burgerButton.attr('aria-expanded', false);
+      
+      // headerNav
       if (resize == true) {
         // リサイズ時はすぐ閉じる
         $headerNav.fadeOut(0);
@@ -62,7 +68,7 @@ $(function () {
   }
 
   function resize() {
-    const windowWidth = screen.width;
+    const windowWidth = window.innerWidth;
     if (windowWidth <= 576) {
       // メニュー非表示(sp)
       hideNavMenu(true);
@@ -89,7 +95,7 @@ $(function () {
 
   // メニュー選択時
   $('.header-nav-list-item__link').on('click', function () {
-    const windowWidth = $(window).innerWidth();
+    const windowWidth = window.innerWidth;
     if (windowWidth <= 576) {
       // sp
       hideNavMenu();

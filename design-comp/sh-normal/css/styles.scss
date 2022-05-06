@@ -288,6 +288,7 @@ a:hover {
     width: 32%;
     padding: 37px 19px;
     font-weight: bold;
+    overflow-wrap: break-word;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid #E5E5E5;
@@ -897,6 +898,10 @@ a:hover {
 
   .header-link {
     display: none;
+  }
+
+  .burger-button {
+    display: block;
   }
 
   ////////////////////
