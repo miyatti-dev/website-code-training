@@ -31,31 +31,75 @@ $(function () {
   //////////////////////////////////////////////////
   // ハンバーガーメニュー
   //////////////////////////////////////////////////
+
+  function showNavMenu(resize) {
+    const $burgerButton = $('.burger-button');
+    const $headerNav = $('.header-nav');
+    if ($burgerButton.attr('aria-expanded') == 'false') {
+      if (resize != true) {
+        $burgerButton.addClass('open');
+      }
+      $burgerButton.attr('aria-expanded', true);
+      $headerNav.fadeIn(300);
+      $headerNav.attr('area-hidden', 'false');
+    }
+  }
+
+  function hideNavMenu(resize) {
+    const $burgerButton = $('.burger-button');
+    const $headerNav = $('.header-nav');
+    if ($burgerButton.attr('aria-expanded') == 'true') {
+      $burgerButton.removeClass('open');
+      $burgerButton.attr('aria-expanded', false);
+      if (resize == true) {
+        // リサイズ時はすぐ閉じる
+        $headerNav.fadeOut(0);
+      } else {
+        $headerNav.fadeOut(300);
+      }
+      $headerNav.attr('area-hidden', 'true');
+    }
+  }
+
+  function resize() {
+    const windowWidth = screen.width;
+    if (windowWidth <= 576) {
+      // メニュー非表示(sp)
+      hideNavMenu(true);
+    } else {
+      // メニュー表示(pc、tablet)
+      showNavMenu(true);
+    }
+  }
+
+  // 読み込み時の初回設定
+  resize();
+
   const $burgerButton = $('.burger-button');
   const $headerNav = $('.header-nav');
   $burgerButton.on('click', function () {
-    $(this).toggleClass('open');
-    $headerNav.fadeToggle(300);
-    $('body').toggleClass('no-scroll');
-
     if ($(this).attr('aria-expanded') == 'true') {
       // メニュー非表示
-      $(this).attr('aria-expanded', false);
-      $headerNav.attr('area-hidden', 'true');
+      hideNavMenu();
     } else {
       // メニュー表示
-      $(this).attr('aria-expanded', true);
-      $headerNav.attr('area-hidden', 'false');
+      showNavMenu();
     }
   });
 
   // メニュー選択時
   $('.header-nav-list-item__link').on('click', function () {
-    $burgerButton.removeClass('open');
-    $burgerButton.attr('aria-expanded', false);
-    $headerNav.fadeToggle(300);
-    $headerNav.attr('area-hidden', 'true');
+    const windowWidth = $(window).innerWidth();
+    if (windowWidth <= 576) {
+      // sp
+      hideNavMenu();
+    }
   })
+
+  // リサイズ
+  $(window).resize(function () {
+    resize();
+  });
 
   //////////////////////////////////////////////////
   // faq アコーディオン
