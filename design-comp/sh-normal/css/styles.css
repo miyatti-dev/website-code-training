@@ -23,8 +23,8 @@ a:hover {
 }
 
 .section-wrapper {
-  padding-top: 57px;
   padding-bottom: 70px;
+  padding-top: 57px;
 }
 
 .content-wrapper {
@@ -193,8 +193,8 @@ a:hover {
 }
 
 .section-feature {
-  padding-top: 73px;
   padding-bottom: 155px;
+  padding-top: 73px;
 }
 
 .feature-list-item {
@@ -202,15 +202,15 @@ a:hover {
 }
 
 .feature-list-item__title {
-  text-align: center;
   font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .feature-list-item__content {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -240,8 +240,8 @@ a:hover {
 
 .section-price {
   background-color: #EEFBFB;
-  padding-top: 57px;
   padding-bottom: 69px;
+  padding-top: 57px;
 }
 
 .section-price > .content-wrapper {
@@ -255,17 +255,17 @@ a:hover {
 
 .price-list {
   background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 38px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .price-list-item__term {
-  width: 32%;
-  padding: 37px 19px;
   font-weight: bold;
   overflow-wrap: break-word;
+  padding: 37px 19px;
+  width: 32%;
   border-right: 1px solid #E5E5E5;
 }
 
@@ -274,9 +274,9 @@ a:hover {
 }
 
 .price-list-item__description {
-  width: 68%;
-  padding: 37px 30.5px;
   font-weight: bold;
+  padding: 37px 30.5px;
+  width: 68%;
 }
 
 .price-list-item__description:not(:last-of-type) {
@@ -284,13 +284,13 @@ a:hover {
 }
 
 .price-caution {
-  text-align: center;
   font-weight: bold;
+  text-align: center;
 }
 
 .section-faq {
-  padding-top: 57px;
   padding-bottom: 86px;
+  padding-top: 57px;
 }
 
 .section-faq > .content-wrapper {
@@ -308,11 +308,11 @@ a:hover {
 }
 
 .faq-list-item__term {
-  text-align: center;
   font-size: 1.4rem;
   font-weight: bold;
   padding: 19px 37px 20px;
   position: relative;
+  text-align: center;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -321,14 +321,14 @@ a:hover {
 }
 
 .faq-list-item__term::before, .faq-list-item__term::after {
+  background-color: #010327;
   content: '';
   display: block;
-  background-color: #010327;
   position: absolute;
-  top: 50%;
-  width: 15px;
   height: 2px;
   right: 25px;
+  top: 50%;
+  width: 15px;
 }
 
 .faq-list-item__term::after {
@@ -349,30 +349,30 @@ a:hover {
 }
 
 .faq-list-item__description {
-  color: #444;
   background-color: #F2F2F2;
+  color: #444;
   font-size: 1.4rem;
   font-weight: bold;
   text-align: left;
-  padding: 0 37px;
   line-height: 0;
   height: 0;
   opacity: 0;
+  padding: 0 37px;
   transition-duration: .3s;
 }
 
 .faq-list-item__description.active {
-  padding: 25px 37px;
+  border-bottom: 1px solid #E5E5E5;
   line-height: 1.85;
   height: auto;
   opacity: 1;
-  border-bottom: 1px solid #E5E5E5;
+  padding: 25px 37px;
 }
 
 .section-blog {
   background-color: #EEFBFB;
-  padding-top: 57px;
   padding-bottom: 91px;
+  padding-top: 57px;
 }
 
 .section-blog > .content-wrapper {
@@ -388,11 +388,11 @@ a:hover {
 }
 
 .blog-list-item {
-  width: calc(100%/3);
   background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  width: calc(100%/3);
 }
 
 .blog-list-item__image-wrapper {
@@ -400,19 +400,19 @@ a:hover {
 }
 
 .blog-list-item__text {
+  flex: 1;
   font-size: 1.8rem;
   font-weight: bold;
-  padding: 0 18px;
-  margin-bottom: 3px;
-  flex: 1;
   line-height: 1.44;
+  margin-bottom: 3px;
+  padding: 0 18px;
 }
 
 .blog-list-item__time {
   font-weight: bold;
-  text-align: right;
   margin-bottom: 11px;
   margin-right: 36px;
+  text-align: right;
 }
 
 .blog-list-item + .blog-list-item {
@@ -420,8 +420,8 @@ a:hover {
 }
 
 .section-work {
-  padding-top: 57px;
   padding-bottom: 90px;
+  padding-top: 57px;
 }
 
 .section-work .section-sub-title {
@@ -438,24 +438,24 @@ a:hover {
 }
 
 .works-list-item__summary {
-  padding: 0 18px;
-  margin-bottom: 35px;
   font-weight: bold;
+  margin-bottom: 35px;
+  padding: 0 18px;
 }
 
 .works-list-item__description {
-  padding: 0 18px;
-  margin-bottom: 42px;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.35;
+  margin-bottom: 42px;
+  padding: 0 18px;
 }
 
 .section-contact {
-  padding-top: 65px;
-  padding-bottom: 70px;
-  background-color: #05A5FA;
   background: linear-gradient(to right, #05a5fa 0%, #63fbd7 100%, #67ffd6 100%);
+  background-color: #05A5FA;
+  padding-bottom: 70px;
+  padding-top: 65px;
 }
 
 .section-contact > .content-wrapper {
@@ -474,9 +474,9 @@ a:hover {
 
 .contact-help-you {
   color: #fff;
-  text-align: center;
-  margin-bottom: 48px;
   font-weight: bold;
+  margin-bottom: 48px;
+  text-align: center;
 }
 
 .form-wrapper {
@@ -491,37 +491,37 @@ a:hover {
 
 .form-list-item__label {
   display: block;
-  margin-bottom: 40px;
   font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .form-list-item__label::after {
-  content: '必須';
   background-color: #0C449B;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.4rem;
-  padding: 5px 16px;
-  margin-left: 26px;
   border-radius: 10px;
+  color: #fff;
+  content: '必須';
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-left: 26px;
+  padding: 5px 16px;
 }
 
 .form-list-item__input {
-  width: 63%;
   background-color: #EEFBFB;
-  display: block;
   border-radius: 3px;
-  padding: 3px;
+  display: block;
   height: 43px;
+  padding: 3px;
+  width: 63%;
 }
 
 .form-list-item__textarea {
-  width: 100%;
   background-color: #EEFBFB;
-  display: block;
   border-radius: 3px;
-  padding: 3px;
+  display: block;
   height: 180px;
+  padding: 3px;
+  width: 100%;
 }
 
 .form-list-item + .form-list-item {
@@ -529,16 +529,16 @@ a:hover {
 }
 
 .privacy-policy {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 31px;
 }
 
 .privacy-policy__input {
+  height: 20px;
   margin-right: 10px;
   width: 20px;
-  height: 20px;
 }
 
 .privacy-policy__text {
@@ -562,20 +562,20 @@ a:hover {
 
 .form-submit-success-message {
   display: none;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
 }
 
 .form-submit-fail-message {
   display: none;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
 }
 
 .footer {
-  text-align: center;
-  padding-top: 45px;
   padding-bottom: 49px;
+  padding-top: 45px;
+  text-align: center;
 }
 
 .footer-title {
@@ -586,8 +586,8 @@ a:hover {
 
 .footer-text {
   display: flex;
-  justify-content: center;
   font-weight: bold;
+  justify-content: center;
   margin-bottom: 54px;
 }
 
@@ -719,20 +719,20 @@ a:hover {
     font-size: 2rem;
   }
   .header-nav {
-    display: none;
-    position: fixed;
-    z-index: 50;
-    width: 100vw;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    height: 100vh;
     background-color: lightblue;
+    bottom: 0;
+    display: none;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 50;
   }
   .header-nav-list {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     padding-top: 50px;
   }
   .header-nav-list-item {
@@ -780,25 +780,25 @@ a:hover {
     flex-direction: column-reverse;
   }
   .feature-list-item:nth-of-type(2n+1) .feature-list-item__image-wrapper {
-    margin-right: 0;
     margin-bottom: 20px;
+    margin-right: 0;
   }
   .feature-list-item:nth-of-type(2n) .feature-list-item__image-wrapper {
-    margin-left: 0;
     margin-bottom: 20px;
+    margin-left: 0;
   }
   .section-price > .content-wrapper {
     padding: 0 20px;
   }
   .price-list-item__term {
-    width: 100%;
-    text-align: center;
     border-bottom: 1px solid #E5E5E5;
     border-right: none;
+    text-align: center;
+    width: 100%;
   }
   .price-list-item__description {
-    width: 100%;
     text-align: center;
+    width: 100%;
   }
   .price-list-item__description:not(:last-of-type) {
     border-bottom: 1px solid #E5E5E5;
