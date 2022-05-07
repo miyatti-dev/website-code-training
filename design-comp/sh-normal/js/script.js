@@ -10,7 +10,7 @@ const swiper = new Swiper(".works-list", {
   breakpoints: {
     // 576px以上(tablet)
     576: {
-      slidesPerView: 3, //スライドを3.8個分表示
+      slidesPerView: 3, //スライドを3個分表示
       spaceBetween: 40,
     },
     // 768px以上(PC)
