@@ -176,9 +176,9 @@ a:hover {
 .fv-wrapper {
   // background
   background-image: url('../image/fv-bg.png');
-  background-position: top -150px right -120px;
+  background-position: top -15vmax right -15vmin;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 60vmax auto;
   z-index: 10;
 }
 
@@ -716,6 +716,7 @@ a:hover {
   ////////////////////
   .fv-wrapper {
     background-position: top -150px right -180px;
+    background-size: auto;
   }
 
   .fv-title {
