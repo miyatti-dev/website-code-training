@@ -548,10 +548,48 @@ a:hover {
 }
 
 .privacy-policy__input {
-  border: 1px solid red;
+  display: none;
+}
+
+.privacy-policy__input + label {
+  font-weight: bold;
+  padding-left: 10px;
+  position: relative;
+}
+
+.privacy-policy__input + label::before, .privacy-policy__input + label::after {
+  content: '';
+  display: block;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+}
+
+.privacy-policy__input + label::before {
+  border: 1px solid #707070;
+  border-radius: 2px;
+  left: -20px;
   height: 20px;
-  margin-right: 10px;
   width: 20px;
+}
+
+.privacy-policy__input + label::after {
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  height: 15px;
+  left: -15px;
+  margin-top: -10px;
+  opacity: 0;
+  transform: rotate(45deg);
+  width: 10px;
+}
+
+.privacy-policy__input:checked + label::before {
+  background-color: #05a5fa;
+}
+
+.privacy-policy__input:checked + label::after {
+  opacity: 1;
 }
 
 .privacy-policy__text {
@@ -703,10 +741,6 @@ a:hover {
   }
   .form-list-item + .form-list-item {
     margin-top: 29px;
-  }
-  .privacy-policy__input {
-    height: 15px;
-    width: 15px;
   }
   .privacy-policy__text {
     font-size: 1.4rem;
