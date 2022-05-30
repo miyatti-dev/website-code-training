@@ -1,0 +1,160 @@
+@charset "UTF-8";
+html {
+  /* ルートのフォントサイズを10pxに設定 */
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
+  /* bodyのフォントサイズを1.6em（16px）に設定 */
+  font-size: 1.6em;
+}
+
+img {
+  object-fit: cover;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+a:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.section-wrapper {
+  padding-bottom: 70px;
+  padding-top: 57px;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1.34;
+  text-align: center;
+}
+
+.section-sub-title {
+  color: #3bA6C9;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  padding-top: 14px;
+  text-align: center;
+}
+
+.contact-button,
+.submit-button {
+  background: linear-gradient(to right, #FA41CC 0%, #6020B0 100%);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 37px;
+  text-align: center;
+  width: 155px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  height: 94px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1024px;
+  transition: .3s;
+  padding: 0 20px;
+}
+
+.header-title-wrapper__link {
+  align-items: center;
+  display: flex;
+}
+
+.header-title-wrapper__logo {
+  margin-right: 16px;
+  height: 47px;
+  width: 47px;
+}
+
+.header-title-wrapper__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-nav-list-item {
+  font-weight: bold;
+}
+
+.header-nav-list-item + .header-nav-list-item {
+  margin-left: 46px;
+}
+
+.burger-button {
+  display: none;
+  transition: all .3s;
+  position: relative;
+  width: 30px;
+  height: 25px;
+  z-index: 100;
+}
+
+.burger-button__bar {
+  background-color: #05A5FA;
+  border-radius: 2.5px;
+  height: 5px;
+  transition: .3s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.burger-button__bar.bar-middle {
+  top: 10px;
+}
+
+.burger-button__bar.bar-bottom {
+  top: 20px;
+}
+
+.burger-button.open .burger-button__bar.bar-top {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.burger-button.open .burger-button__bar.bar-middle {
+  opacity: 0;
+}
+
+.burger-button.open .burger-button__bar.bar-bottom {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+/*# sourceMappingURL=styles.css.map */
