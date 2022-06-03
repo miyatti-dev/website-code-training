@@ -68,6 +68,7 @@ a:hover {
 }
 
 .header {
+  display: none;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   height: 94px;
@@ -156,5 +157,76 @@ a:hover {
 .burger-button.open .burger-button__bar.bar-bottom {
   top: 10px;
   transform: rotate(-45deg);
+}
+
+.fv {
+  height: 100vh;
+  position: relative;
+}
+
+.fv-inner {
+  height: 100vh;
+  max-width: 1024px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 25%;
+}
+
+.fv-title {
+  writing-mode: vertical-rl;
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.235;
+  color: #fff;
+}
+
+.fv-image-list-item {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  /* 最初は3枚の画像を非表示にしておく */
+  opacity: 0;
+  /* アニメーション設定 */
+  animation: fade 15s infinite;
+}
+
+.fv-image-list-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fv-image-list-item:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.fv-image-list-item:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.fv-image-list-item__image {
+  height: 100vh;
+}
+
+/*
+  アニメーション処理  
+*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
