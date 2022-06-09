@@ -1,10 +1,12 @@
 ﻿【2022/05/30作業開始】
 
 6/3 1.5時間
+6/8 1時間
+6/9 0.5時間
 
 topページsectionづくり
- fv 6/3 1.5時間
- about 
+ fv 6/3 
+ about  6/9
  feature 
  plan
  news

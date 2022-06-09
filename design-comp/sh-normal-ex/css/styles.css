@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  color: #333;
+  color: #000;
   font-family: 'Noto Sans JP', sans-serif;
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
@@ -20,11 +20,6 @@ img {
 a:hover {
   opacity: .7;
   transition: .3s;
-}
-
-.section-wrapper {
-  padding-bottom: 70px;
-  padding-top: 57px;
 }
 
 .content-wrapper {
@@ -171,6 +166,7 @@ a:hover {
   justify-content: flex-end;
   align-items: center;
   padding-right: 25%;
+  margin: 0 auto;
 }
 
 .fv-title {
@@ -179,6 +175,7 @@ a:hover {
   font-weight: 800;
   line-height: 1.235;
   color: #fff;
+  text-shadow: 3px 3px 0 #000;
 }
 
 .fv-image-list-item {
@@ -228,5 +225,50 @@ a:hover {
   100% {
     opacity: 0;
   }
+}
+
+.section-about {
+  background-image: url("../image/bg.jpg");
+  padding-bottom: 50px;
+  padding-top: 146px;
+}
+
+.section-about > .content-wrapper {
+  writing-mode: vertical-rl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-left: 118px;
+  letter-spacing: 0.42rem;
+}
+
+.about-title > span {
+  margin-top: -85px;
+  margin-left: 33px;
+  display: block;
+}
+
+.about-text {
+  font-weight: 500;
+  line-height: 1.375;
+  letter-spacing: 0.22em;
+  margin-left: 22px;
+  text-orientation: upright;
+}
+
+.about-text:nth-child(3n + 1) {
+  margin-left: 118px;
+}
+
+.about-name {
+  font-size: 2.2rem;
+  text-align: right;
+  font-weight: 500;
+  letter-spacing: 0.32em;
 }
 /*# sourceMappingURL=styles.css.map */
