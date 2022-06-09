@@ -297,6 +297,65 @@ a:hover {
   letter-spacing: 0.32em;
 }
 
+////////////////////
+// feature
+////////////////////
+.section-feature {
+  padding-bottom: 78px;
+  padding-top: 106px;
+}
+
+.section-feature>.content-wrapper {
+  max-width: 1920px;
+}
+
+.feature-list-item {
+  display: flex;
+
+  &__image-wrapper {
+    width: 55%;
+    margin-right: 8%;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 1.72;
+    margin-bottom: 67px;
+  }
+
+  &__text {
+    line-height: 2;
+    font-weight: 500;
+    margin-bottom: 70px;
+  }
+
+  &+& {
+    margin-top: 122px;
+  }
+
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
+
+    .feature-list-item {
+      &__image-wrapper {
+        margin-left: 8%;
+        margin-right: 0;
+      }
+    }
+
+  }
+}
+
+
+
+
 
 ////////////////////
 // @media screen(tablet)
