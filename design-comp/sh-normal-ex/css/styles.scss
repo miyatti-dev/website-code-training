@@ -260,9 +260,6 @@ a:hover {
 
 .section-about>.content-wrapper {
   writing-mode: vertical-rl;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .about-title {
@@ -280,14 +277,10 @@ a:hover {
 
 .about-text {
   font-weight: 500;
-  line-height: 1.375;
+  line-height: 2.375;
   letter-spacing: 0.22em;
-  margin-left: 22px;
+  margin-left: 118px;
   text-orientation: upright;
-
-  &:nth-child(3n + 1) {
-    margin-left: 118px;
-  }
 }
 
 .about-name {
@@ -307,10 +300,12 @@ a:hover {
 
 .section-feature>.content-wrapper {
   max-width: 1920px;
+  padding: 0;
 }
 
 .feature-list-item {
   display: flex;
+  align-items: center;
 
   &__image-wrapper {
     width: 55%;
@@ -321,6 +316,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 20px;
   }
 
   &__title {
@@ -333,7 +329,15 @@ a:hover {
   &__text {
     line-height: 2;
     font-weight: 500;
-    margin-bottom: 70px;
+    margin-bottom: 73px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 200px;
+    line-height: 56px;
+    border: 1px solid #707070;
+    text-align: center;
   }
 
   &+& {
@@ -348,13 +352,49 @@ a:hover {
         margin-left: 8%;
         margin-right: 0;
       }
-    }
 
+      &__text-wrapper {
+        margin-right: 0;
+      }
+
+      &__text {
+        margin-bottom: 41px;
+      }
+    }
   }
 }
 
 
+////////////////////
+// @media screen(pc)
+////////////////////
+@media screen and (max-width: 1280px) {
 
+  ////////////////////
+  // feature
+  ////////////////////
+  .feature-list-item {
+    &__title {
+      font-size: 2.265rem;
+      line-height: 1.22;
+      margin-bottom: 42px;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 46px;
+    }
+
+    &:nth-of-type(2n) {
+      .feature-list-item {
+        &__text {
+          margin-bottom: 26px;
+        }
+      }
+    }
+  }
+}
 
 
 ////////////////////

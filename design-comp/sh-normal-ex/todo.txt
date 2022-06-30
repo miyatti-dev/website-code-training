@@ -3,11 +3,13 @@
 6/3 1.5時間
 6/8 1時間
 6/9 1.5時間
+6/29 0.5時間
+6/30 0.5時間
 
 topページsectionづくり
  fv 6/3 
- about  6/9
- feature 
+ about  6/9 6/29 6/30
+ feature  6/30
  plan
  news
  access
