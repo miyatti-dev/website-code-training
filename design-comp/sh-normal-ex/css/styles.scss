@@ -28,7 +28,7 @@ a:hover {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1180px;
   padding: 0 20px;
 }
 
@@ -60,6 +60,16 @@ a:hover {
   line-height: 37px;
   text-align: center;
   width: 155px;
+}
+
+.logo-icon-wrapper {
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .no-scroll {
@@ -363,6 +373,56 @@ a:hover {
     }
   }
 }
+
+////////////////////
+// plan
+////////////////////
+.section-plan {
+  background-image: url('../image/bg02.jpg');
+  background-position: center;
+  background-size: cover;
+
+  padding-top: 60px;
+  padding-bottom: 142px;
+
+  & .section-title {
+    margin-bottom: 61px;
+  }
+}
+
+
+.plan-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &-item {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+
+    &__image-wrapper {
+      margin-bottom: 28px;
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      font-weight: 500;
+      line-height: 2;
+    }
+
+    &+& {
+      margin-left: 94px;
+    }
+  }
+}
+
 
 
 ////////////////////
