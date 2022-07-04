@@ -108,16 +108,20 @@ $(function () {
   });
 
   //////////////////////////////////////////////////
-  // faq アコーディオン
+  // news tab
   //////////////////////////////////////////////////
-  $('.faq-list-item__term').click(function () {
-    $(this).toggleClass('open');
-    $(this).next().toggleClass('active');
-  });
-  $('.faq-list-item__description').click(function () {
-    $(this).prev().toggleClass('open');
-    $(this).toggleClass('active');
-  });
+  $('.js-news-tab-trigger').click(function () {
+    // 全てactiveを外す
+    $('.js-news-tab-trigger').removeClass('is-active');
+    $('.js-news-tab-target').removeClass('is-active');
+
+    // activeにする
+    $(this).addClass('is-active');
+
+    let id = $(this).data("id");
+    //data属性値=idが等しいものにclass付与
+    $('#' + id).addClass('is-active')
+  })
 
   //////////////////////////////////////////////////
   // スムーススクロール(ページ内リンクのイベント)

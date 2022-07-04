@@ -7,13 +7,14 @@
 6/30 0.5時間
 7/1 0.5時間
 7/2 2.5時間
+7/4 0.5時間
 
 topページsectionづくり
  fv 6/3 
  about  6/9 6/29 6/30
  feature  6/30
  plan 7/1 7/1
- news 7/2
+ news 7/2 7/4
  access
  footer
 

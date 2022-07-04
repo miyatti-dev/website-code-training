@@ -439,16 +439,32 @@ a:hover {
   &-item {
     font-weight: 500;
 
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    background-color: #F6F6F6;
+
     &+& {
       margin-left: 53px;
+    }
+
+    &.is-active {
+      background-color: lightgray;
+      text-decoration: underline;
     }
   }
 }
 
 .news-list {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  &.is-active {
+    display: flex;
+    animation: fade .5s;
+  }
 
   &-item {
     width: 48%;
@@ -462,8 +478,13 @@ a:hover {
       height: 100px;
     }
 
+    &__image {
+      height: 100%;
+      object-fit: contain;
+    }
+
     &__text-wrapper {
-      width: calc(100% - 103px);  // image分を引く
+      width: calc(100% - 103px); // image分を引く
       padding: 0 30px;
     }
 
@@ -481,10 +502,18 @@ a:hover {
     &:nth-of-type(n+3) {
       margin-top: 20px;
     }
-  
   }
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 ////////////////////
 // @media screen(pc)
