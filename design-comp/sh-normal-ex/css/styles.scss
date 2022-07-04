@@ -28,7 +28,7 @@ a:hover {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1200px;
   padding: 0 20px;
 }
 
@@ -513,6 +513,69 @@ a:hover {
   to {
     opacity: 1;
   }
+}
+
+////////////////////
+// access
+////////////////////
+.section-access {
+  padding-top: 60px;
+  padding-bottom: 110px;
+  background-image: url('../image/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-access .section-title {
+  margin-bottom: 79px;
+}
+
+.access-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 69px;
+
+
+  &__image-wrapper {
+    width: 55%;
+    margin-right: 7%;
+    height: 370px;
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__text-wrapper {
+    width: 45%;
+
+  }
+
+  &-item {
+    &__title {
+      margin-bottom: 19px;
+      font-weight: 800;
+    }
+
+    &__text {
+
+      font-weight: 500;
+      line-height: 2;
+
+      &:not(:last-of-type) {
+        margin-bottom: 19px;
+      }
+    }
+  }
+}
+
+.access-map-wrapper {
+  text-align: center;
+}
+
+.map {
+  width: 67%;
 }
 
 ////////////////////

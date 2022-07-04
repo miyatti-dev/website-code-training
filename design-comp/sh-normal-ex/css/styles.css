@@ -24,7 +24,7 @@ a:hover {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1200px;
   padding: 0 20px;
 }
 
@@ -421,7 +421,6 @@ a:hover {
   display: none;
   flex-wrap: wrap;
   justify-content: space-between;
-  transition: 5s;
 }
 
 .news-list.is-active {
@@ -432,7 +431,6 @@ a:hover {
 .news-list-item {
   width: 48%;
   display: flex;
-  flex-direction: wrap;
   padding: 15px 10px;
   background-color: #F6F6F6;
 }
@@ -474,6 +472,61 @@ a:hover {
   to {
     opacity: 1;
   }
+}
+
+.section-access {
+  padding-top: 60px;
+  padding-bottom: 110px;
+  background-image: url("../image/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-access .section-title {
+  margin-bottom: 79px;
+}
+
+.access-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 69px;
+}
+
+.access-info__image-wrapper {
+  width: 55%;
+  margin-right: 7%;
+  height: 370px;
+}
+
+.access-info__image {
+  height: 100%;
+}
+
+.access-info__text-wrapper {
+  width: 45%;
+}
+
+.access-info-item__title {
+  margin-bottom: 19px;
+  font-weight: 800;
+}
+
+.access-info-item__text {
+  font-weight: 500;
+  line-height: 2;
+}
+
+.access-info-item__text:not(:last-of-type) {
+  margin-bottom: 19px;
+}
+
+.access-map-wrapper {
+  text-align: center;
+}
+
+.map {
+  width: 67%;
 }
 
 @media screen and (max-width: 1280px) {
