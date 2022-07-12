@@ -186,26 +186,27 @@ a:hover {
   right: 0;
   top: 0;
   z-index: -1;
-  /* 最初は3枚の画像を非表示にしておく */
-  opacity: 0;
-  /* アニメーション設定 */
-  animation: fadeFv 15s infinite;
-}
-
-.fv-image-list-item:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.fv-image-list-item:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.fv-image-list-item:nth-child(3) {
-  animation-delay: 10s;
+  overflow: hidden;
 }
 
 .fv-image-list-item__image {
   height: 100vh;
+  /* 最初は3枚の画像を非表示にしておく */
+  opacity: 0;
+  /* アニメーション設定 */
+  animation: fadeFv 15s infinite linear;
+}
+
+.fv-image-list-item:nth-child(1) > .fv-image-list-item__image {
+  animation-delay: 0s;
+}
+
+.fv-image-list-item:nth-child(2) > .fv-image-list-item__image {
+  animation-delay: 5s;
+}
+
+.fv-image-list-item:nth-child(3) > .fv-image-list-item__image {
+  animation-delay: 10s;
 }
 
 /*
@@ -214,18 +215,17 @@ a:hover {
 @keyframes fadeFv {
   0% {
     opacity: 0;
+    transform: scale(1);
   }
   5% {
     opacity: 1;
   }
-  30% {
+  35% {
     opacity: 1;
   }
-  35% {
+  40% {
     opacity: 0;
-  }
-  100% {
-    opacity: 0;
+    transform: scale(1.1);
   }
 }
 
