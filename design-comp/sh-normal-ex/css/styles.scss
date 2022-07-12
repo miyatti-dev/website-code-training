@@ -8,7 +8,9 @@ html {
 
 body {
   color: #000;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
+    "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E",
+    "ＭＳ Ｐ明朝", "MS PMincho", serif;
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
 }
@@ -57,11 +59,12 @@ a:hover {
 // header
 ////////////////////
 .header {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  display: none;
   height: 80px;
   position: fixed;
   width: 100%;
   z-index: 100;
+  background-color: rgba(0,0,0,0.5);
 
   &-wrapper {
     align-items: center;
@@ -91,6 +94,7 @@ a:hover {
   &-item {
     font-weight: bold;
     color: #fff;
+    text-shadow: 1px 1px 0 #000;
 
     &+& {
       margin-left: 33px;
@@ -98,18 +102,26 @@ a:hover {
   }
 }
 
-.contact-button,
-.submit-button {
+.header-booking-link {
   background-color: #978F10;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  color: #fff;
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 800;
-  line-height: 54px;
-  text-align: center;
+  height: 54px;
   width: 170px;
   margin-left: auto;
+
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    background-image: url('../image/calender.png');
+  }
 }
 
 .burger-button {
@@ -196,7 +208,7 @@ a:hover {
   /* 最初は3枚の画像を非表示にしておく */
   opacity: 0;
   /* アニメーション設定 */
-  animation: fade 15s infinite;
+  animation: fadeFv 15s infinite;
 
   &:nth-child(1) {
     animation-delay: 0s;
@@ -218,12 +230,12 @@ a:hover {
 /*
   アニメーション処理  
 */
-@keyframes fade {
+@keyframes fadeFv {
   0% {
     opacity: 0;
   }
 
-  15% {
+  5% {
     opacity: 1;
   }
 
@@ -231,7 +243,7 @@ a:hover {
     opacity: 1;
   }
 
-  45% {
+  35% {
     opacity: 0;
   }
 
@@ -444,7 +456,7 @@ a:hover {
 
   &.is-active {
     display: flex;
-    animation: fade .5s;
+    animation: fadeInNews .5s;
   }
 
   &-item {
@@ -487,7 +499,7 @@ a:hover {
   }
 }
 
-@keyframes fade {
+@keyframes fadeInNews {
   from {
     opacity: 0;
   }

@@ -1,26 +1,3 @@
-// swiper
-const swiper = new Swiper(".works-list", {
-  loop: true, //ループ可能（ループモードを有効に）
-  slidesPerView: 1.5, //スライドを1個分表示
-  centeredSlides: true, //アクティブなスライドを中央に表示
-  spaceBetween: 20,
-  autoplay: {
-    delay: 5000,
-  },
-  breakpoints: {
-    // 576px以上(tablet)
-    576: {
-      slidesPerView: 3, //スライドを3個分表示
-      spaceBetween: 40,
-    },
-    // 768px以上(PC)
-    768: {
-      slidesPerView: 3.8, //スライドを3.8個分表示
-      spaceBetween: 56,
-    }
-  },
-});
-
 // aos
 AOS.init({
   duration: 500,
@@ -80,6 +57,16 @@ $(function () {
 
   // 読み込み時の初回設定
   resize();
+
+  $(window).scroll(function () {
+    // windowがスクロールされた時に実行する処理
+    var scrollValue = $(this).scrollTop();
+    if (scrollValue == 0) {
+      $('.header').fadeOut(500);
+    }else{
+      $('.header').fadeIn(500);
+    }
+  });
 
   const $burgerButton = $('.burger-button');
   const $headerNav = $('.header-nav');
