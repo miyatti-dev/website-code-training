@@ -11,6 +11,7 @@
 7/7 1時間 計10.5時間
 7/12 1.5時間
 7/13 1時間
+7/14 1時間
 
 topページsectionづくり
  fv 6/3 
@@ -34,7 +35,8 @@ topページ詳細部分
     plan 
     news 
     access 
-    footer 
+    footer
+    ヘッダー
 
 
 
