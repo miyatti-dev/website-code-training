@@ -1,0 +1,115 @@
+////////////////////
+// header
+////////////////////
+.header {
+  display: none;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    transition: .3s;
+    padding: 0 20px;
+  }
+}
+
+.header-title-wrapper {
+  margin-right: 120px;
+
+  &__link {
+    align-items: center;
+    display: flex;
+  }
+
+  &__logo {
+    margin-right: 16px;
+  }
+}
+
+.header-nav-list {
+  display: flex;
+
+  &-item {
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+
+    &+& {
+      margin-left: 33px;
+    }
+  }
+}
+
+.header-booking-link {
+  background-color: #978F10;
+  height: 54px;
+  width: 170px;
+  margin-left: auto;
+
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    background-image: url('../image/calender.png');
+  }
+}
+
+.burger-button {
+  display: none;
+  transition: all .3s;
+  position: relative;
+  width: 30px;
+  height: 25px;
+  z-index: 100;
+
+  &__bar {
+    background-color: #05A5FA;
+    border-radius: 2.5px;
+    height: 5px;
+    transition: .3s;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    &.bar-middle {
+      top: 10px;
+    }
+
+    &.bar-bottom {
+      top: 20px;
+    }
+  }
+
+  &.open {
+    .burger-button__bar {
+
+      &.bar-top {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+
+      &.bar-middle {
+        opacity: 0;
+      }
+
+      &.bar-bottom {
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
