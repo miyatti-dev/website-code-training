@@ -2,19 +2,19 @@
 // header
 ////////////////////
 .header {
+  background-color: rgba(0, 0, 0, .5);
   display: none;
   height: 80px;
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.5);
 
   &-wrapper {
     align-items: center;
     display: flex;
     height: 100%;
-    transition: .3s;
     padding: 0 20px;
+    transition: .3s;
   }
 }
 
@@ -35,55 +35,54 @@
   display: flex;
 
   &-item {
-    font-weight: bold;
     color: #fff;
+    font-weight: bold;
     text-shadow: 1px 1px 0 #000;
 
-    &+& {
+    & + & {
       margin-left: 33px;
     }
   }
 }
 
 .header-booking-link {
-  background-color: #978F10;
-  height: 54px;
-  width: 170px;
-  margin-left: auto;
-
-  color: #fff;
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #978f10;
+  color: #fff;
+  display: flex;
+  font-weight: 800;
+  height: 54px;
+  justify-content: center;
+  margin-left: auto;
+  width: 170px;
 
   &::before {
+    background-image: url('../image/calender.png');
     content: '';
     display: inline-block;
-    width: 22px;
     height: 22px;
     margin-right: 10px;
-    background-image: url('../image/calender.png');
+    width: 22px;
   }
 }
 
 .burger-button {
   display: none;
-  transition: all .3s;
-  position: relative;
-  width: 30px;
   height: 25px;
+  position: relative;
+  transition: all .3s;
+  width: 30px;
   z-index: 100;
 
   &__bar {
-    background-color: #05A5FA;
+    background-color: #05a5fa;
     border-radius: 2.5px;
     height: 5px;
-    transition: .3s;
+    left: 0;
     position: absolute;
     top: 0;
+    transition: .3s;
     width: 100%;
-    left: 0;
 
     &.bar-middle {
       top: 10px;
@@ -96,7 +95,6 @@
 
   &.open {
     .burger-button__bar {
-
       &.bar-top {
         top: 10px;
         transform: rotate(45deg);
