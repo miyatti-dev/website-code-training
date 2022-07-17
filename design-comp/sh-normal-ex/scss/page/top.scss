@@ -8,52 +8,51 @@
   position: relative;
 
   &-inner {
-    height: 100vh;
-    max-width: 1024px;
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding-right: 25%;
+    display: flex;
+    height: 100vh;
+    justify-content: flex-end;
     margin: 0 auto;
+    max-width: 1024px;
+    padding-right: 25%;
   }
 
   &-title {
-    writing-mode: vertical-rl;
+    color: #fff;
     font-size: 3.4rem;
     font-weight: 800;
     line-height: 1.235;
-    color: #fff;
     text-shadow: 3px 3px 0 #000;
+    writing-mode: vertical-rl;
   }
 }
 
 .fv-image-list-item {
-  width: 100%;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
+  width: 100%;
   z-index: -1;
-  overflow: hidden;
 
   &__image {
+/* アニメーション設定 */
+    animation: fadeFv 15s infinite linear;
     height: 100vh;
 
-    /* 最初は3枚の画像を非表示にしておく */
+/* 最初は3枚の画像を非表示にしておく */
     opacity: 0;
-
-    /* アニメーション設定 */
-    animation: fadeFv 15s infinite linear;
   }
 
-  &:nth-child(1)>&__image {
+  &:nth-child(1) > &__image {
     animation-delay: 0s;
   }
 
-  &:nth-child(2)>&__image {
+  &:nth-child(2) > &__image {
     animation-delay: 5s;
   }
 
-  &:nth-child(3)>&__image {
+  &:nth-child(3) > &__image {
     animation-delay: 10s;
   }
 }
@@ -107,7 +106,7 @@
   font-size: 2.8rem;
   font-weight: 500;
   margin-left: 118px;
-  letter-spacing: 0.42rem;
+  letter-spacing: .42rem;
 
   @include mixin.mediaQuery("lg") {
     margin-left: 70px;
@@ -143,8 +142,8 @@
 
 .about-text {
   font-weight: 500;
-  line-height: 2.375;
   letter-spacing: 0.22rem;
+  line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
 
@@ -153,31 +152,32 @@
   }
 
   @include mixin.mediaQuery("md") {
-    margin-left: 40px;
     line-height: 1.7;
+    margin-left: 40px;
   }
 
   @include mixin.mediaQuery("sm") {
-    margin-left: 20px;
     margin-bottom: 20px;
+    margin-left: 20px;
   }
 
   @include mixin.mediaQuery("xs") {
-    margin-left: 10px;
     font-size: 1.4rem;
+    margin-left: 10px;
   }
 }
 
 .about-name {
   font-size: 2.2rem;
-  text-align: right;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: .32em;
+  text-align: right;
 
   @include mixin.mediaQuery("md") {
     font-size: 1.8rem;
   }
 }
+
 
 ////////////////////
 // feature
@@ -187,18 +187,18 @@
   padding-top: 106px;
 }
 
-.section-feature>.content-wrapper {
+.section-feature > .content-wrapper {
   max-width: 1920px;
   padding: 0;
 }
 
 .feature-list-item {
-  display: flex;
   align-items: center;
+  display: flex;
 
   &__image-wrapper {
-    width: 55%;
     margin-right: 8%;
+    width: 55%;
   }
 
   &__text-wrapper {
@@ -216,20 +216,20 @@
   }
 
   &__text {
-    line-height: 2;
     font-weight: 500;
+    line-height: 2;
     margin-bottom: 73px;
   }
 
   &__link {
-    display: inline-block;
-    width: 200px;
-    line-height: 56px;
     border: 1px solid #707070;
+    display: inline-block;
+    line-height: 56px;
     text-align: center;
+    width: 200px;
   }
 
-  &+& {
+  & + & {
     margin-top: 122px;
   }
 
@@ -260,9 +260,8 @@
   background-image: url('../image/bg02.jpg');
   background-position: center;
   background-size: cover;
-
-  padding-top: 60px;
   padding-bottom: 142px;
+  padding-top: 60px;
 
   & .section-title {
     margin-bottom: 61px;
@@ -271,14 +270,14 @@
 
 
 .plan-list {
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   &-item {
-    width: calc(100% / 3);
     display: flex;
     flex-direction: column;
+    width: calc(100% / 3);
 
     &__image-wrapper {
       margin-bottom: 28px;
@@ -296,7 +295,7 @@
       line-height: 2;
     }
 
-    &+& {
+    & + & {
       margin-left: 94px;
     }
   }
@@ -312,19 +311,18 @@
 .news-tab-list {
   display: flex;
   justify-content: center;
-  padding-top: 38px;
   padding-bottom: 47px;
+  padding-top: 38px;
 
   &-item {
-    font-weight: 500;
-
+    background-color: #f6f6f6;
     border: 1px solid #ccc;
-    padding: 10px 20px;
     border-radius: 5px 5px 0 0;
+    font-weight: 500;
     overflow: hidden;
-    background-color: #F6F6F6;
+    padding: 10px 20px;
 
-    &+& {
+    & + & {
       margin-left: 53px;
     }
 
@@ -341,37 +339,36 @@
   justify-content: space-between;
 
   &.is-active {
-    display: flex;
     animation: fadeInNews .5s;
+    display: flex;
   }
 
   &-item {
-    width: 48%;
+    background-color: #f6f6f6;
     display: flex;
     padding: 15px 10px;
-    background-color: #F6F6F6;
+    width: 48%;
 
 
     &__image-wrapper {
-      width: 103px;
       height: 100px;
+      width: 103px;
     }
 
     &__image {
+      background-color: #fff;
       height: 100%;
       object-fit: contain;
-      background-color: #fff;
     }
 
-    &__text-wrapper {
-      width: calc(100% - 103px); // image分を引く
-      padding: 0 30px;
+    &__text-wrapper { padding: 0 30px;
+      width: calc(100% - 103px); // image分を引く 
     }
 
     &__time {
       font-size: 1.4rem;
-      margin-bottom: 5px;
       font-weight: 500;
+      margin-bottom: 5px;
     }
 
     &__text {
@@ -399,12 +396,12 @@
 // access
 ////////////////////
 .section-access {
-  padding-top: 60px;
-  padding-bottom: 110px;
   background-image: url('../image/bg.jpg');
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 110px;
+  padding-top: 60px;
 }
 
 .section-access .section-title {
@@ -412,15 +409,15 @@
 }
 
 .access-info {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 69px;
 
 
   &__image-wrapper {
-    width: 55%;
-    margin-right: 7%;
     height: 370px;
+    margin-right: 7%;
+    width: 55%;
   }
 
   &__image {
@@ -429,17 +426,15 @@
 
   &__text-wrapper {
     width: 45%;
-
   }
 
   &-item {
     &__title {
-      margin-bottom: 19px;
       font-weight: 800;
+      margin-bottom: 19px;
     }
 
     &__text {
-
       font-weight: 500;
       line-height: 2;
 
@@ -462,7 +457,6 @@
 // @media screen(pc)
 ////////////////////
 @media screen and (max-width: 1280px) {
-
   ////////////////////
   // feature
   ////////////////////
