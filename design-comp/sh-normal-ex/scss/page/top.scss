@@ -36,23 +36,23 @@
   z-index: -1;
 
   &__image {
-/* アニメーション設定 */
+    /* アニメーション設定 */
     animation: fadeFv 15s infinite linear;
     height: 100vh;
 
-/* 最初は3枚の画像を非表示にしておく */
+    /* 最初は3枚の画像を非表示にしておく */
     opacity: 0;
   }
 
-  &:nth-child(1) > &__image {
+  &:nth-child(1)>&__image {
     animation-delay: 0s;
   }
 
-  &:nth-child(2) > &__image {
+  &:nth-child(2)>&__image {
     animation-delay: 5s;
   }
 
-  &:nth-child(3) > &__image {
+  &:nth-child(3)>&__image {
     animation-delay: 10s;
   }
 }
@@ -185,20 +185,39 @@
 .section-feature {
   padding-bottom: 78px;
   padding-top: 106px;
+
+  @include mixin.mediaQuery("md") {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
 }
 
-.section-feature > .content-wrapper {
+.section-feature>.content-wrapper {
   max-width: 1920px;
   padding: 0;
+
+  @include mixin.mediaQuery("md") {
+    width: 90%;
+  }
+
+  @include mixin.mediaQuery("sm") {
+    width: 100%;
+  }
 }
 
 .feature-list-item {
   align-items: center;
   display: flex;
+  position: relative;
 
   &__image-wrapper {
     margin-right: 8%;
     width: 55%;
+
+    @include mixin.mediaQuery("md") {
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
   &__text-wrapper {
@@ -206,6 +225,24 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 20px;
+
+    @include mixin.mediaQuery("md") {
+      color: #fff;
+      height: 100%;
+      padding: 10px;
+      position: absolute;
+      /* 文字の影 */
+      text-shadow:
+        1px 1px 1px #000000,
+        -1px 1px 1px #000000,
+        1px -1px 1px #000000,
+        -1px -1px 1px #000000,
+        1px 0px 1px #000000,
+        0px 1px 1px #000000,
+        -1px 0px 1px #000000,
+        0px -1px 1px #000000;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -213,12 +250,33 @@
     font-weight: 500;
     line-height: 1.72;
     margin-bottom: 67px;
+
+    @include mixin.mediaQuery("xl") {
+      font-size: 3rem;
+      margin-bottom: 42px;
+    }
+
+    @include mixin.mediaQuery("lg") {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     font-weight: 500;
     line-height: 2;
     margin-bottom: 73px;
+
+    @include mixin.mediaQuery("xl") {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 46px;
+    }
+
+    @include mixin.mediaQuery("lg") {
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
@@ -227,10 +285,44 @@
     line-height: 56px;
     text-align: center;
     width: 200px;
+
+    @include mixin.mediaQuery("lg") {
+      font-size: 1.4rem;
+      line-height: 40px;
+      width: 150px;
+    }
+
+    @include mixin.mediaQuery("md") {
+      border: 1px solid white;
+    }
   }
 
-  & + & {
+  &__br-lg-show {
+    display: none;
+
+    @include mixin.mediaQuery("lg") {
+      display: block;
+    }
+  }
+
+  &__br-lg-hide {
+    display: block;
+
+    @include mixin.mediaQuery("lg") {
+      display: none;
+    }
+  }
+
+  &+& {
     margin-top: 122px;
+
+    @include mixin.mediaQuery("xl") {
+      margin-top: 90px;
+    }
+
+    @include mixin.mediaQuery("lg") {
+      margin-top: 60px;
+    }
   }
 
   &:nth-of-type(2n) {
@@ -240,6 +332,10 @@
       &__image-wrapper {
         margin-left: 8%;
         margin-right: 0;
+
+        @include mixin.mediaQuery("md") {
+          margin-left: 0;
+        }
       }
 
       &__text-wrapper {
@@ -248,6 +344,10 @@
 
       &__text {
         margin-bottom: 41px;
+
+        @include mixin.mediaQuery("xl") {
+          margin-bottom: 26px;
+        }
       }
     }
   }
@@ -295,7 +395,7 @@
       line-height: 2;
     }
 
-    & + & {
+    &+& {
       margin-left: 94px;
     }
   }
@@ -322,7 +422,7 @@
     overflow: hidden;
     padding: 10px 20px;
 
-    & + & {
+    &+& {
       margin-left: 53px;
     }
 
@@ -361,7 +461,8 @@
       object-fit: contain;
     }
 
-    &__text-wrapper { padding: 0 30px;
+    &__text-wrapper {
+      padding: 0 30px;
       width: calc(100% - 103px); // image分を引く 
     }
 
@@ -451,34 +552,4 @@
 
 .map {
   width: 67%;
-}
-
-////////////////////
-// @media screen(pc)
-////////////////////
-@media screen and (max-width: 1280px) {
-  ////////////////////
-  // feature
-  ////////////////////
-  .feature-list-item {
-    &__title {
-      font-size: 2.265rem;
-      line-height: 1.22;
-      margin-bottom: 42px;
-    }
-
-    &__text {
-      font-size: 1.4rem;
-      line-height: 1.5;
-      margin-bottom: 46px;
-    }
-
-    &:nth-of-type(2n) {
-      .feature-list-item {
-        &__text {
-          margin-bottom: 26px;
-        }
-      }
-    }
-  }
 }
