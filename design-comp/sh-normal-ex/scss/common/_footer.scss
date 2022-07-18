@@ -1,3 +1,5 @@
+@use "../mixin/mixin";
+
 ////////////////////
 // footer
 ////////////////////
@@ -8,6 +10,10 @@
   & > .content-wrapper {
     max-width: none;
     padding: 61px 0 59px;
+
+    @include mixin.mediaQuery("md") {
+      padding: 40px 0;
+    }
   }
 
   & > .footer-bg {
@@ -26,8 +32,13 @@
   justify-content: center;
   margin-bottom: 93px;
 
+  @include mixin.mediaQuery("md") {
+    margin-bottom: 50px;
+  }
+
   &-item {
     writing-mode: vertical-rl;
+    letter-spacing: 16px;
 
     & + & {
       margin-right: 34px;
@@ -38,9 +49,19 @@
 .footer .section-title {
   font-weight: 800;
   margin-bottom: 65px;
+  letter-spacing: 0.18em;
+
+  @include mixin.mediaQuery("md") {
+    margin-bottom: 40px;
+  }
+
 }
 
 .footer-access-info {
+  @include mixin.mediaQuery("sm") {
+    font-size: 1.4rem;
+  }
+
   &__address-wrapper {
     display: flex;
     justify-content: center;
@@ -49,6 +70,10 @@
 
   &__post-code {
     margin-right: 16px;
+  }
+
+  &__address {
+    letter-spacing: 0.18em;
   }
 
   &__tel-fax-wrapper {

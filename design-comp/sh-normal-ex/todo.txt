@@ -32,13 +32,13 @@ topページ詳細部分
  aos 7/13
  予約モーダル
  レスポンシブ
-    fv
+    fv 7/18
     about 7/14 7/15
     feature 7/16
     plan 7/18
     news 7/18
     access 7/18
-    footer
+    footer 7/18
     ヘッダー
 
 

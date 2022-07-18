@@ -12,6 +12,12 @@
   max-width: 1024px;
   padding-right: 25%;
 }
+@media screen and (max-width: 576px) {
+  .fv-inner {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
 .fv-title {
   color: #fff;
   font-size: 3.4rem;
