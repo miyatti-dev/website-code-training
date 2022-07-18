@@ -68,6 +68,11 @@ a:hover {
   width: 100%;
   z-index: 100;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+}
 .header-wrapper {
   align-items: center;
   display: flex;
@@ -79,16 +84,47 @@ a:hover {
 .header-title-wrapper {
   margin-right: 120px;
 }
+@media screen and (max-width: 1024px) {
+  .header-title-wrapper {
+    margin-right: 100px;
+  }
+}
 .header-title-wrapper__link {
   align-items: center;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .header-title-wrapper__link {
+    height: 36px;
+  }
+}
 .header-title-wrapper__logo {
   margin-right: 16px;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 50;
+  }
 }
 
 .header-nav-list {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .header-nav-list {
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+  }
 }
 .header-nav-list-item {
   color: #fff;
@@ -97,6 +133,12 @@ a:hover {
 }
 .header-nav-list-item + .header-nav-list-item {
   margin-left: 33px;
+}
+@media screen and (max-width: 768px) {
+  .header-nav-list-item + .header-nav-list-item {
+    margin-left: 0;
+    margin-top: 15px;
+  }
 }
 
 .header-booking-link {
@@ -110,6 +152,12 @@ a:hover {
   margin-left: auto;
   width: 170px;
 }
+@media screen and (max-width: 1024px) {
+  .header-booking-link {
+    height: 36px;
+    width: 140px;
+  }
+}
 .header-booking-link::before {
   background-image: url("../image/calender.png");
   content: "";
@@ -121,16 +169,22 @@ a:hover {
 
 .burger-button {
   display: none;
-  height: 25px;
+  height: 36px;
   position: relative;
   transition: all 0.3s;
-  width: 30px;
+  width: 40px;
   z-index: 100;
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .burger-button {
+    display: block;
+  }
 }
 .burger-button__bar {
-  background-color: #05a5fa;
+  background-color: #fff;
   border-radius: 2.5px;
-  height: 5px;
+  height: 2px;
   left: 0;
   position: absolute;
   top: 0;
@@ -138,20 +192,20 @@ a:hover {
   width: 100%;
 }
 .burger-button__bar.bar-middle {
-  top: 10px;
+  top: 17px;
 }
 .burger-button__bar.bar-bottom {
-  top: 20px;
+  top: 34px;
 }
 .burger-button.open .burger-button__bar.bar-top {
-  top: 10px;
+  top: 18px;
   transform: rotate(45deg);
 }
 .burger-button.open .burger-button__bar.bar-middle {
   opacity: 0;
 }
 .burger-button.open .burger-button__bar.bar-bottom {
-  top: 10px;
+  top: 18px;
   transform: rotate(-45deg);
 }
 

@@ -20,7 +20,7 @@ $(function () {
       $burgerButton.attr('aria-expanded', true);
 
       // headerNav
-      $headerNav.fadeIn(300);
+      $headerNav.slideDown(300);
       $headerNav.attr('area-hidden', 'false');
     }
   }
@@ -36,9 +36,9 @@ $(function () {
       // headerNav
       if (resize == true) {
         // リサイズ時はすぐ閉じる
-        $headerNav.fadeOut(0);
+        $headerNav.slideUp(0);
       } else {
-        $headerNav.fadeOut(300);
+        $headerNav.slideUp(300);
       }
       $headerNav.attr('area-hidden', 'true');
     }
@@ -46,8 +46,8 @@ $(function () {
 
   function resize() {
     const windowWidth = window.innerWidth;
-    if (windowWidth <= 576) {
-      // メニュー非表示(sp)
+    if (windowWidth <= 768) {
+      // メニュー非表示(sp/tablet)
       hideNavMenu(true);
     } else {
       // メニュー表示(pc、tablet)
@@ -83,8 +83,8 @@ $(function () {
   // メニュー選択時
   $('.header-nav-list-item__link').on('click', function () {
     const windowWidth = window.innerWidth;
-    if (windowWidth <= 576) {
-      // sp
+    if (windowWidth <= 768) {
+      // sp/tablet
       hideNavMenu();
     }
   })
