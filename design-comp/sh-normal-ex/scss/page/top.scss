@@ -261,6 +261,15 @@
       line-height: 1.5;
       margin-bottom: 15px;
     }
+
+    @include mixin.mediaQuery("md") {
+      font-size: 1.6rem;
+    }
+
+    @include mixin.mediaQuery("xs") {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -276,6 +285,11 @@
 
     @include mixin.mediaQuery("lg") {
       margin-bottom: 15px;
+    }
+
+    @include mixin.mediaQuery("xs") {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
   }
 
@@ -294,6 +308,12 @@
 
     @include mixin.mediaQuery("md") {
       border: 1px solid white;
+    }
+
+    @include mixin.mediaQuery("xs") {
+      font-size: 1.2rem;
+      line-height: 30px;
+      margin-bottom: 10px;
     }
   }
 
@@ -323,6 +343,10 @@
     @include mixin.mediaQuery("lg") {
       margin-top: 60px;
     }
+
+    @include mixin.mediaQuery("sm") {
+      margin-top: 30px;
+    }
   }
 
   &:nth-of-type(2n) {
@@ -348,6 +372,10 @@
         @include mixin.mediaQuery("xl") {
           margin-bottom: 26px;
         }
+
+        @include mixin.mediaQuery("xs") {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -363,6 +391,10 @@
   padding-bottom: 142px;
   padding-top: 60px;
 
+  @include mixin.mediaQuery("md") {
+    padding-bottom: 60px;
+  }
+
   & .section-title {
     margin-bottom: 61px;
   }
@@ -374,13 +406,27 @@
   justify-content: space-between;
   width: 100%;
 
+  @include mixin.mediaQuery("md") {
+    flex-direction: column;
+  }
+
   &-item {
     display: flex;
     flex-direction: column;
     width: calc(100% / 3);
 
+    @include mixin.mediaQuery("md") {
+      width: 100%;
+    }
+
     &__image-wrapper {
       margin-bottom: 28px;
+    }
+
+    &__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      background-color: skyblue;
     }
 
     &__title {
@@ -388,15 +434,32 @@
       font-weight: 500;
       line-height: 1.6;
       margin-bottom: 30px;
+
+      @include mixin.mediaQuery("md") {
+        font-size: 1.6rem;
+      }
     }
 
     &__text {
       font-weight: 500;
       line-height: 2;
+
+      @include mixin.mediaQuery("md") {
+        font-size: 1.4rem;
+      }
     }
 
     &+& {
       margin-left: 94px;
+
+      @include mixin.mediaQuery("xl") {
+        margin-left: 60px;
+      }
+
+      @include mixin.mediaQuery("md") {
+        margin-left: 0;
+        margin-top: 40px;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "../mixin/mixin";
+
 ////////////////////
 // common
 ////////////////////
@@ -39,6 +41,14 @@ a:hover {
   font-weight: 500;
   line-height: 1.34;
   text-align: center;
+
+  @include mixin.mediaQuery("lg") {
+    font-size: 2.8rem;
+  }
+
+  @include mixin.mediaQuery("md") {
+    font-size: 2.4rem;
+  }
 }
 
 .logo-icon-wrapper {
