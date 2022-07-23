@@ -442,6 +442,7 @@
 
       @include mixin.mediaQuery("md") {
         font-size: 1.6rem;
+        margin-bottom: 15px;
       }
     }
 

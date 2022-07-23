@@ -453,6 +453,7 @@
 @media screen and (max-width: 768px) {
   .plan-list-item__title {
     font-size: 1.6rem;
+    margin-bottom: 15px;
   }
 }
 .plan-list-item__text {
