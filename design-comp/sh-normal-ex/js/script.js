@@ -3,6 +3,16 @@ AOS.init({
   duration: 1000,
 });
 
+// flatpickr
+flatpickr('#js-datepicker', {
+  locale: 'ja',
+  dateFormat: 'Y.m.d（D）H:i', // [2021.05.24（月）08:00]の形式で表示
+  minDate: "today",
+  enableTime: true,
+  mode: "range",
+  allowInput: true
+});
+
 // ready
 $(function () {
   // 読み込み時の初回設定

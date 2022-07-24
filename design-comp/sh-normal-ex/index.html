@@ -24,6 +24,9 @@
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
+    <!-- flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!-- fontawesome css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
 
@@ -522,10 +525,10 @@
                 </select>
               </li>
               <li class="reserve-form-list-item">
-                <label for="" class="reserve-form-list-item__label">
+                <label for="js-datepicker" class="reserve-form-list-item__label">
                   日時選択
                 </label>
-                <input type="text" class="reserve-form-list-item__input">
+                <input type="text" class="reserve-form-list-item__input" name="datepicker" id="js-datepicker" required placeholder="日時を選択してください">
               </li>
             </ul>
             <div class="form-submit-button-wrapper">
@@ -534,7 +537,8 @@
           </form>
         </div>
         <div id="js-close-reserve-modal" class="close-reserve-modal">
-          ×
+          <span class="close-reserve-modal__bar close-modal-bar-top"></span>
+          <span class="close-reserve-modal__bar close-modal-bar-bottom"></span>
         </div>
       </div>
     </section>
@@ -544,6 +548,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
 
 </html>
