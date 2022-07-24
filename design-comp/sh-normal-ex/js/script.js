@@ -14,6 +14,9 @@ $(function () {
   // window resize event
   $(window).resize(windowResizeEvent);
 
+  // reserve modal
+  reserveModalSetup();
+
   // burger button click
   $('.burger-button').on('click', function () {
     if ($(this).attr('aria-expanded') == 'true') {
@@ -50,6 +53,29 @@ $(function () {
     $('#' + id).addClass('is-active')
   })
 })
+
+//////////////////////////////////////////////////
+// reserve modal
+//////////////////////////////////////////////////
+function reserveModalSetup() {
+  var $openModalButton = $('#js-open-reserve-modal');
+  var $closeModalButton = $('#js-close-reserve-modal');
+  var $modal = $('#js-reserve-modal');
+  var $modalBg = $('#js-reserve-modal-bg');
+
+  // modal表示
+  $openModalButton.click(function () {
+    $modal.addClass('reserve-modal-show');
+  });
+
+  // modal非表示
+  $closeModalButton.click(function () {
+    $modal.removeClass('reserve-modal-show');
+  });
+  $modalBg.click(function () {
+    $modal.removeClass('reserve-modal-show');
+  });
+}
 
 //////////////////////////////////////////////////
 // ハンバーガーメニュー

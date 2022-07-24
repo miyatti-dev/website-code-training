@@ -15,7 +15,7 @@
     margin: 0 auto;
     max-width: 1024px;
     padding-right: 25%;
-  
+
     @include mixin.mediaQuery("sm") {
       justify-content: center;
       padding-right: 0;
@@ -660,4 +660,102 @@
   @include mixin.mediaQuery("md") {
     width: 100%;
   }
+}
+
+////////////////////
+// reserve modal
+////////////////////
+.reserve-modal {
+  visibility: hidden;
+
+  opacity: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+}
+
+.reserve-modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+.reserve-modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+
+  padding: 25px 60px 90px;
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+
+.close-reserve-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.reserve-modal-show {
+  /* モーダル表示用クラス */
+  visibility: visible;
+  opacity: 1;
+}
+
+.reserve-modal-title {
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 26.5px;
+  margin-bottom: 32.5px;
+  border-bottom: 1px solid #E7E7E7;
+
+
+}
+
+.reserve-form-list {
+  margin-bottom: 64px;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+      margin-bottom: 12px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    &__input, &__plan-list {
+      border: 1px solid #E7E7E7;
+      height: 32px;
+      padding: 6px 10px 7px;
+      font-size: 1.4rem;
+    }
+
+    &__plan-list {
+      appearance: auto;
+    }
+
+    &+& {
+      margin-top: 11px;
+    }
+  }
+}
+
+.form-submit-button-wrapper {
+  text-align: center;
+}
+
+.form-submit-button {
+  height: 42px;
+  width: 198px;
+  border: 1px solid #707070;
+  font-weight: 500;
 }

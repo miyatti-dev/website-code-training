@@ -141,7 +141,7 @@ a:hover {
   }
 }
 
-.header-booking-link {
+.header-reserve-button {
   align-items: center;
   background-color: #978f10;
   color: #fff;
@@ -153,12 +153,12 @@ a:hover {
   width: 170px;
 }
 @media screen and (max-width: 1024px) {
-  .header-booking-link {
+  .header-reserve-button {
     height: 36px;
     width: 140px;
   }
 }
-.header-booking-link::before {
+.header-reserve-button::before {
   background-image: url("../image/calender.png");
   content: "";
   display: inline-block;
