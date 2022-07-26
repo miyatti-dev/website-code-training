@@ -1,0 +1,75 @@
+.fv {
+  height: 500px;
+  background-image: url("../image/oheya-header.png");
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+.fv-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.4rem;
+  font-weight: 800;
+  text-shadow: 3px 3px 0 #000;
+}
+
+.section-room {
+  margin-bottom: 150px;
+}
+
+.section-room > .content-wrapper {
+  padding: 0 10px;
+}
+
+.room-title {
+  text-align: center;
+  line-height: 2;
+  font-weight: 500;
+  margin-bottom: 133px;
+}
+
+.room-list-item {
+  position: relative;
+}
+.room-list-item__image-wrapper {
+  position: absolute;
+  width: 45%;
+  left: 0;
+  top: -57px;
+}
+.room-list-item__text-wrapper {
+  background-image: url("../image/bg.jpg");
+  width: 70%;
+  height: 381px;
+  background-color: blue;
+  padding: 55px 60px;
+}
+.room-list-item__title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 46px;
+}
+.room-list-item__text {
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 47px;
+}
+.room-list-item__caution {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.room-list-item:nth-of-type(2n+1) .room-list-item__text-wrapper {
+  margin-left: auto;
+  padding-left: 238px;
+}
+.room-list-item:nth-of-type(2n) .room-list-item__image-wrapper {
+  right: 0;
+  left: initial;
+}
+.room-list-item + .room-list-item {
+  margin-top: 141px;
+}
