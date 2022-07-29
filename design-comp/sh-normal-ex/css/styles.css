@@ -168,6 +168,29 @@ a:hover {
   font-weight: 500;
 }
 
+.breadcrumb-list {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin-bottom: 93px;
+}
+@media screen and (max-width: 768px) {
+  .breadcrumb-list {
+    margin-bottom: 50px;
+  }
+}
+.breadcrumb-list-item {
+  display: inline;
+}
+.breadcrumb-list-item:not(:last-of-type)::after {
+  content: ">";
+  padding: 0 5px;
+  color: #555;
+}
+.breadcrumb-list-item__link {
+  font-weight: 500;
+}
+
 .header {
   background-color: rgba(0, 0, 0, 0.5);
   display: none;

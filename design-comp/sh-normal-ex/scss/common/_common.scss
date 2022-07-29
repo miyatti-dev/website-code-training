@@ -184,3 +184,32 @@ a:hover {
   border: 1px solid #707070;
   font-weight: 500;
 }
+
+////////////////////
+// breadcrumb
+////////////////////
+.breadcrumb-list {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin-bottom: 93px;
+
+  @include mixin.mediaQuery("md") {
+    margin-bottom: 50px;
+  }
+
+  &-item {
+    // 横に並ぶように
+    display: inline;
+
+    &:not(:last-of-type)::after {
+      content: '>';
+      padding: 0 5px;
+      color: #555;
+    }
+
+    &__link {
+      font-weight: 500;
+    }
+  }
+}
