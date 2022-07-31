@@ -13,11 +13,15 @@
   margin-bottom: 33px;
 
   @include mixin.mediaQuery("lg") {
-    height: 50vh;
+    height: 300px;
   }
 
   @include mixin.mediaQuery("md") {
-    height: 30vh;
+    height: 250px;
+  }
+
+  @include mixin.mediaQuery("sm") {
+    height: 200px;
   }
 
   &-title {
@@ -37,7 +41,7 @@
 // spa
 ////////////////////
 .section-spa {
-  margin-bottom: 150px;
+  margin-bottom: 156.5px;
 
   @include mixin.mediaQuery("md") {
     margin-bottom: 70px;
@@ -72,14 +76,6 @@
 .spa-list {
   &-item {
     position: relative;
-
-    &__br-xl-show {
-      display: none;
-  
-      @include mixin.mediaQuery("xl") {
-        display: block;
-      }
-    }
 
     &__image-wrapper {
       position: absolute;
@@ -195,6 +191,14 @@
 
         &__text-wrapper {
           padding-right: 150px;
+
+          @include mixin.mediaQuery("md") {
+            padding-right: 40px;
+          }
+
+          @include mixin.mediaQuery("xs") {
+            padding-right: 10px;
+          }
         }
       }
     }
@@ -208,6 +212,68 @@
 
       @include mixin.mediaQuery("sm") {
         margin-top: 40px;
+      }
+    }
+  }
+}
+
+////////////////////
+// efficacy
+////////////////////
+.section-efficacy>.content-wrapper {
+  &::before, &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #E7E7E7;
+  }
+  &::before {
+    margin-bottom: 90.5px;
+  }
+  &::after {
+    margin-bottom: 96.5px;
+  }
+}
+
+.section-efficacy .section-title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin-bottom: 47.5px;
+}
+
+.efficacy-list {
+  padding: 0 150px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 74px;
+
+  @include mixin.mediaQuery("md") {
+    padding: 0 50px;
+  }
+
+  @include mixin.mediaQuery("sm") {
+    padding: 0 10px;
+  }
+
+  &-item {
+    &__title {
+      width: 30%;
+      padding: 15px 0;
+      border-top: 1px solid #E7E7E7;
+
+      &:last-of-type {
+        border-bottom: 1px solid #E7E7E7;
+      }
+    }
+
+    &__description {
+      width: 70%;
+      padding: 15px 0;
+      border-top: 1px solid #E7E7E7;
+
+      &:last-of-type {
+        border-bottom: 1px solid #E7E7E7;
       }
     }
   }

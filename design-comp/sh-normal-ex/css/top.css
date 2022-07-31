@@ -337,22 +337,6 @@
     margin-bottom: 10px;
   }
 }
-.feature-list-item__br-lg-show {
-  display: none;
-}
-@media screen and (max-width: 1024px) {
-  .feature-list-item__br-lg-show {
-    display: block;
-  }
-}
-.feature-list-item__br-lg-hide {
-  display: block;
-}
-@media screen and (max-width: 1024px) {
-  .feature-list-item__br-lg-hide {
-    display: none;
-  }
-}
 .feature-list-item + .feature-list-item {
   margin-top: 122px;
 }

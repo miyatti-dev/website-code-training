@@ -10,12 +10,17 @@
 }
 @media screen and (max-width: 1024px) {
   .fv {
-    height: 50vh;
+    height: 300px;
   }
 }
 @media screen and (max-width: 768px) {
   .fv {
-    height: 30vh;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .fv {
+    height: 200px;
   }
 }
 .fv-title {
@@ -171,6 +176,16 @@
 }
 .meal-list-item:nth-of-type(2n) .meal-list-item__text-wrapper {
   padding-right: 150px;
+}
+@media screen and (max-width: 768px) {
+  .meal-list-item:nth-of-type(2n) .meal-list-item__text-wrapper {
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .meal-list-item:nth-of-type(2n) .meal-list-item__text-wrapper {
+    padding-right: 10px;
+  }
 }
 .meal-list-item + .meal-list-item {
   margin-top: 141px;

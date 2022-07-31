@@ -13,11 +13,15 @@
   margin-bottom: 33px;
 
   @include mixin.mediaQuery("lg") {
-    height: 50vh;
+    height: 300px;
   }
 
   @include mixin.mediaQuery("md") {
-    height: 30vh;
+    height: 250px;
+  }
+
+  @include mixin.mediaQuery("sm") {
+    height: 200px;
   }
 
   &-title {

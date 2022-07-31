@@ -10,12 +10,17 @@
 }
 @media screen and (max-width: 1024px) {
   .fv {
-    height: 50vh;
+    height: 300px;
   }
 }
 @media screen and (max-width: 768px) {
   .fv {
-    height: 30vh;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .fv {
+    height: 200px;
   }
 }
 .fv-title {

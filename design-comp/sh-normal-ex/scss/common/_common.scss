@@ -65,6 +65,37 @@ a:hover {
   overflow: hidden;
 }
 
+.br-xl-show {
+  display: none;
+
+  @include mixin.mediaQuery("xl") {
+    display: block;
+  }
+}
+
+.br-lg-show {
+  display: none;
+
+  @include mixin.mediaQuery("lg") {
+    display: block;
+  }
+}
+
+.br-lg-hide {
+  display: block;
+
+  @include mixin.mediaQuery("lg") {
+    display: none;
+  }
+}
+
+.br-sm-show {
+  display: none;
+
+  @include mixin.mediaQuery("sm") {
+    display: block;
+  }
+}
 
 ////////////////////
 // reserve modal

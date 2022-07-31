@@ -322,22 +322,6 @@
     }
   }
 
-  &__br-lg-show {
-    display: none;
-
-    @include mixin.mediaQuery("lg") {
-      display: block;
-    }
-  }
-
-  &__br-lg-hide {
-    display: block;
-
-    @include mixin.mediaQuery("lg") {
-      display: none;
-    }
-  }
-
   &+& {
     margin-top: 122px;
 

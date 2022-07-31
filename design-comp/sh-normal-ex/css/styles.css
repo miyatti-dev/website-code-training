@@ -60,6 +60,42 @@ a:hover {
   overflow: hidden;
 }
 
+.br-xl-show {
+  display: none;
+}
+@media screen and (max-width: 1280px) {
+  .br-xl-show {
+    display: block;
+  }
+}
+
+.br-lg-show {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .br-lg-show {
+    display: block;
+  }
+}
+
+.br-lg-hide {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .br-lg-hide {
+    display: none;
+  }
+}
+
+.br-sm-show {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .br-sm-show {
+    display: block;
+  }
+}
+
 .reserve-modal {
   visibility: hidden;
   opacity: 0;
