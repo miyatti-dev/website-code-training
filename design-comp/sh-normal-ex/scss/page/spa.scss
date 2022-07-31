@@ -6,7 +6,7 @@
 .fv {
   height: 80vh;
   max-height: 500px;
-  background-image: url('../image/oheya-header.png');
+  background-image: url('../image/onsen-header.png');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -34,9 +34,9 @@
 }
 
 ////////////////////
-// room
+// spa
 ////////////////////
-.section-room {
+.section-spa {
   margin-bottom: 150px;
 
   @include mixin.mediaQuery("md") {
@@ -44,7 +44,7 @@
   }
 }
 
-.section-room>.content-wrapper {
+.section-spa>.content-wrapper {
   padding: 0 10px;
 
   @include mixin.mediaQuery("md") {
@@ -57,7 +57,7 @@
   }
 }
 
-.room-title {
+.spa-title {
   text-align: center;
   line-height: 2;
   font-weight: 500;
@@ -69,9 +69,17 @@
   }
 }
 
-.room-list {
+.spa-list {
   &-item {
     position: relative;
+
+    &__br-xl-show {
+      display: none;
+  
+      @include mixin.mediaQuery("xl") {
+        display: block;
+      }
+    }
 
     &__image-wrapper {
       position: absolute;
@@ -147,40 +155,18 @@
     &__text {
       font-weight: 500;
       line-height: 2;
-      margin-bottom: 47px;
 
       @include mixin.mediaQuery("md") {
         line-height: 1.5;
-        margin-bottom: 25px;
-      }
-
-      @include mixin.mediaQuery("sm") {
-        margin-bottom: 15px;
       }
 
       @include mixin.mediaQuery("xs") {
         font-size: 1.4rem;
-        margin-bottom: 10px;
-      }
-    }
-
-    &__caution {
-      font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 1.5;
-
-      @include mixin.mediaQuery("sm") {
-        line-height: 1.3;
-      }
-
-      @include mixin.mediaQuery("xs") {
-        font-size: 1.2rem;
-        line-height: 1.2;
       }
     }
 
     &:nth-of-type(2n+1) {
-      .room-list-item {
+      .spa-list-item {
         &__text-wrapper {
           margin-left: auto;
           padding-left: 238px;
@@ -201,10 +187,14 @@
     }
 
     &:nth-of-type(2n) {
-      .room-list-item {
+      .spa-list-item {
         &__image-wrapper {
           right: 0;
           left: initial;
+        }
+
+        &__text-wrapper {
+          padding-right: 150px;
         }
       }
     }

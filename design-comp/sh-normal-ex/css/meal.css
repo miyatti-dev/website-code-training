@@ -1,11 +1,22 @@
 @charset "UTF-8";
 .fv {
-  height: 500px;
+  height: 80vh;
+  max-height: 500px;
   background-image: url("../image/menu-header.png");
   background-position: center;
   background-size: cover;
   position: relative;
   margin-bottom: 33px;
+}
+@media screen and (max-width: 1024px) {
+  .fv {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fv {
+    height: 30vh;
+  }
 }
 .fv-title {
   position: absolute;
@@ -47,6 +58,7 @@
   line-height: 2;
   font-weight: 500;
   margin-bottom: 133px;
+  padding: 0 10px;
 }
 @media screen and (max-width: 768px) {
   .meal-title {

@@ -4,12 +4,21 @@
 // fv
 ////////////////////
 .fv {
-  height: 500px;
+  height: 80vh;
+  max-height: 500px;
   background-image: url('../image/menu-header.png');
   background-position: center;
   background-size: cover;
   position: relative;
   margin-bottom: 33px;
+
+  @include mixin.mediaQuery("lg") {
+    height: 50vh;
+  }
+
+  @include mixin.mediaQuery("md") {
+    height: 30vh;
+  }
 
   &-title {
     position: absolute;
@@ -53,6 +62,7 @@
   line-height: 2;
   font-weight: 500;
   margin-bottom: 133px;
+  padding: 0 10px;
 
   @include mixin.mediaQuery("md") {
     margin-bottom: 60px;
