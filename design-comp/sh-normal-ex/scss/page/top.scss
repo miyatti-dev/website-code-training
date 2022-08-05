@@ -415,7 +415,7 @@
     &__text-wrapper {
       display: flex;
       flex-direction: column;
-      background-color: skyblue;
+      flex: 1;
     }
 
     &__title {
@@ -423,6 +423,12 @@
       font-weight: 500;
       line-height: 1.6;
       margin-bottom: 30px;
+
+      @include mixin.mediaQuery("lg") {
+        flex: 1;
+        min-height: 0;
+        margin-bottom: 40px;
+      }
 
       @include mixin.mediaQuery("md") {
         font-size: 1.6rem;
@@ -434,6 +440,10 @@
       font-weight: 500;
       line-height: 2;
 
+      @include mixin.mediaQuery("lg") {
+        flex: 2;
+      }
+
       @include mixin.mediaQuery("md") {
         font-size: 1.4rem;
       }
@@ -444,6 +454,10 @@
 
       @include mixin.mediaQuery("xl") {
         margin-left: 60px;
+      }
+
+      @include mixin.mediaQuery("lg") {
+        margin-left: 30px;
       }
 
       @include mixin.mediaQuery("md") {
@@ -541,7 +555,7 @@
       margin-top: 20px;
     }
 
-    & + & {
+    &+& {
       @include mixin.mediaQuery("md") {
         margin-top: 20px;
       }
