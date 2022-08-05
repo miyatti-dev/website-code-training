@@ -2,14 +2,15 @@
 .fv {
   height: 100vh;
   position: relative;
+  max-height: 1079px;
 }
 .fv-inner {
   align-items: center;
   display: flex;
   height: 100vh;
+  max-height: 1079px;
   justify-content: flex-end;
   margin: 0 auto;
-  max-width: 1024px;
   padding-right: 25%;
 }
 @media screen and (max-width: 576px) {
@@ -22,10 +23,11 @@
   color: #fff;
   font-size: 3.4rem;
   font-weight: 800;
-  line-height: 1.235;
+  line-height: 85px;
   text-shadow: 3px 3px 0 #000;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+  letter-spacing: 11px;
 }
 
 .fv-image-list-item {
@@ -119,7 +121,7 @@
   font-size: 2.8rem;
   font-weight: 500;
   margin-left: 118px;
-  letter-spacing: 0.42rem;
+  letter-spacing: 16px;
 }
 @media screen and (max-width: 1024px) {
   .about-title {
@@ -137,6 +139,7 @@
     margin-left: 0;
     line-height: 2;
     margin-bottom: 10px;
+    letter-spacing: 10px;
   }
 }
 .about-title > span {
@@ -159,7 +162,7 @@
 
 .about-text {
   font-weight: 500;
-  letter-spacing: 0.22rem;
+  letter-spacing: 6px;
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
@@ -179,6 +182,7 @@
   .about-text {
     margin-bottom: 20px;
     margin-left: 20px;
+    letter-spacing: 4px;
   }
 }
 @media screen and (max-width: 399px) {
@@ -191,12 +195,17 @@
 .about-name {
   font-size: 2.2rem;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: 16px;
   text-align: right;
 }
 @media screen and (max-width: 768px) {
   .about-name {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about-name {
+    letter-spacing: 6px;
   }
 }
 
@@ -317,6 +326,7 @@
   line-height: 56px;
   text-align: center;
   width: 200px;
+  font-weight: 500;
 }
 @media screen and (max-width: 1024px) {
   .feature-list-item__link {
@@ -504,7 +514,8 @@
 }
 .news-tab-list-item.is-active {
   background-color: lightgray;
-  text-decoration: underline;
+  -webkit-text-decoration: underline #707070;
+          text-decoration: underline #707070;
 }
 
 .news-list {

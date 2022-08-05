@@ -6,14 +6,15 @@
 .fv {
   height: 100vh;
   position: relative;
+  max-height: 1079px;
 
   &-inner {
     align-items: center;
     display: flex;
     height: 100vh;
+    max-height: 1079px;
     justify-content: flex-end;
     margin: 0 auto;
-    max-width: 1024px;
     padding-right: 25%;
 
     @include mixin.mediaQuery("sm") {
@@ -26,9 +27,10 @@
     color: #fff;
     font-size: 3.4rem;
     font-weight: 800;
-    line-height: 1.235;
+    line-height: 51px + 34px;
     text-shadow: 3px 3px 0 #000;
     writing-mode: vertical-rl;
+    letter-spacing: 11px;
   }
 }
 
@@ -111,7 +113,7 @@
   font-size: 2.8rem;
   font-weight: 500;
   margin-left: 118px;
-  letter-spacing: .42rem;
+  letter-spacing: 16px;
 
   @include mixin.mediaQuery("lg") {
     margin-left: 70px;
@@ -126,6 +128,7 @@
     margin-left: 0;
     line-height: 2;
     margin-bottom: 10px;
+    letter-spacing: 10px;
   }
 
   &>span {
@@ -147,7 +150,7 @@
 
 .about-text {
   font-weight: 500;
-  letter-spacing: 0.22rem;
+  letter-spacing: 6px;
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
@@ -164,6 +167,7 @@
   @include mixin.mediaQuery("sm") {
     margin-bottom: 20px;
     margin-left: 20px;
+    letter-spacing: 4px;
   }
 
   @include mixin.mediaQuery("xs") {
@@ -175,11 +179,14 @@
 .about-name {
   font-size: 2.2rem;
   font-weight: 500;
-  letter-spacing: .32em;
+  letter-spacing: 16px;
   text-align: right;
 
   @include mixin.mediaQuery("md") {
     font-size: 1.8rem;
+  }
+  @include mixin.mediaQuery("sm") {
+    letter-spacing: 6px;
   }
 }
 
@@ -304,6 +311,7 @@
     line-height: 56px;
     text-align: center;
     width: 200px;
+    font-weight: 500;
 
     @include mixin.mediaQuery("lg") {
       font-size: 1.4rem;
@@ -495,7 +503,7 @@
 
     &.is-active {
       background-color: lightgray;
-      text-decoration: underline;
+      text-decoration: underline #707070;
     }
   }
 }

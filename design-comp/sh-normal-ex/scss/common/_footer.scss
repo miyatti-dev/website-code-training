@@ -37,6 +37,8 @@
   }
 
   &-item {
+    font-size: 1.8rem;
+    font-weight: 500;
     writing-mode: vertical-rl;
     letter-spacing: 16px;
 
@@ -47,6 +49,7 @@
 }
 
 .footer .section-title {
+  font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 65px;
   letter-spacing: 0.18em;
@@ -58,6 +61,7 @@
 }
 
 .footer-access-info {
+  font-weight: 500;
   @include mixin.mediaQuery("sm") {
     font-size: 1.4rem;
   }
