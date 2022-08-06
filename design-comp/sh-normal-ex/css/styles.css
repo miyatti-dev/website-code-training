@@ -248,6 +248,11 @@ a:hover {
   padding: 0 20px;
   transition: 0.3s;
 }
+@media screen and (max-width: 576px) {
+  .header-wrapper {
+    padding: 0 10px;
+  }
+}
 .header-bg-color-white {
   background-color: #fff;
 }
@@ -260,18 +265,22 @@ a:hover {
     margin-right: 100px;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-title-wrapper {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-title-wrapper {
+    margin-right: 20px;
+  }
+}
 .header-title-wrapper__link {
   align-items: center;
   display: flex;
 }
-@media screen and (max-width: 768px) {
-  .header-title-wrapper__link {
-    height: 36px;
-  }
-}
 .header-title-wrapper__logo {
   margin-right: 16px;
-  height: 100%;
 }
 .header-title-wrapper__logo-filter {
   filter: invert(100%);
@@ -336,7 +345,12 @@ a:hover {
 @media screen and (max-width: 1024px) {
   .header-reserve-button {
     height: 36px;
-    width: 140px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-reserve-button {
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 }
 .header-reserve-button::before {
@@ -346,6 +360,11 @@ a:hover {
   height: 22px;
   margin-right: 10px;
   width: 22px;
+}
+@media screen and (max-width: 576px) {
+  .header-reserve-button::before {
+    margin-right: 5px;
+  }
 }
 
 .burger-button {

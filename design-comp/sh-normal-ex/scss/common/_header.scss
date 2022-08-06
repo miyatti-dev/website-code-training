@@ -20,6 +20,11 @@
     height: 100%;
     padding: 0 20px;
     transition: .3s;
+
+    @include mixin.mediaQuery("sm") {
+      padding: 0 10px;
+    }
+
   }
 
   &-bg-color-white {
@@ -34,17 +39,21 @@
     margin-right: 100px;
   }
 
+  @include mixin.mediaQuery("md") {
+    margin-right: 40px;
+  }
+
+  @include mixin.mediaQuery("sm") {
+    margin-right: 20px;
+  }
+
   &__link {
     align-items: center;
     display: flex;
-    @include mixin.mediaQuery("md") {
-      height: 36px;
-    }
   }
 
   &__logo {
     margin-right: 16px;
-    height: 100%;
 
     &-filter {
       filter: invert(100%);
@@ -113,7 +122,11 @@
 
   @include mixin.mediaQuery("lg") {
     height: 36px;
-    width: 140px;
+  }
+
+  @include mixin.mediaQuery("sm") {
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 
   &::before {
@@ -123,6 +136,10 @@
     height: 22px;
     margin-right: 10px;
     width: 22px;
+
+    @include mixin.mediaQuery("sm") {
+      margin-right: 5px;
+    }
   }
 }
 
