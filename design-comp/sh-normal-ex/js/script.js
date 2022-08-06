@@ -154,6 +154,8 @@ function windowScrollEvent() {
   }
 
   var scrollValue = $(this).scrollTop();
+  console.log('####### $(this).scrollTop()   = ', $(this).scrollTop());
+  console.log('####### $(window).scrollTop() = ', $(window).scrollTop());
   if (scrollValue === 0) {
     // header bg color
     $('.header').removeClass('header-bg-color-white');
