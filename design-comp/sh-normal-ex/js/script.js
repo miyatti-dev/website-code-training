@@ -154,8 +154,6 @@ function windowScrollEvent() {
   }
 
   var scrollValue = $(this).scrollTop();
-  console.log('####### $(this).scrollTop()   = ', $(this).scrollTop());
-  console.log('####### $(window).scrollTop() = ', $(window).scrollTop());
   if (scrollValue === 0) {
     // header bg color
     $('.header').removeClass('header-bg-color-white');
@@ -183,7 +181,7 @@ function windowScrollEvent() {
 
     // header nav
     $('.header-nav').addClass('header-nav-bg-color-white');
-      
+
     // header nav-list-item
     $('.header-nav-list-item').addClass('header-nav-list-item-color-black');
 
