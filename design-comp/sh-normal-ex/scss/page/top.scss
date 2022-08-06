@@ -94,6 +94,8 @@
   background-image: url('../image/bg.jpg');
   padding-bottom: 50px;
   padding-top: 146px;
+  display: flex;
+  justify-content: center;
 
   @include mixin.mediaQuery("sm") {
     padding-bottom: 50px;

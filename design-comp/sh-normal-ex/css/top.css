@@ -98,6 +98,8 @@
   background-image: url("../image/bg.jpg");
   padding-bottom: 50px;
   padding-top: 146px;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 576px) {
   .section-about {

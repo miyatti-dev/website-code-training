@@ -148,7 +148,7 @@ function windowScrollEvent() {
   var path = location.pathname;
   path = path.trim();
 
-  if (path !== '/' && path !== '/index.html') {
+  if (path.match(/\/room|meal|spa\/.*/)) {
     // topページ以外は何もしない
     return;
   }
