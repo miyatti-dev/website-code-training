@@ -17,6 +17,7 @@ flatpickr('#js-datepicker', {
 $(function () {
   // 読み込み時の初回設定
   windowResizeEvent();
+  windowScrollEvent();
 
   // window scroll event
   $(window).scroll(windowScrollEvent);
@@ -29,7 +30,7 @@ $(function () {
 
   // burger button click
   $('.burger-button').on('click', function () {
-    if ($(this).attr('aria-expanded') == 'true') {
+    if ($(this).attr('aria-expanded') === 'true') {
       // メニュー非表示
       hideNavMenu();
     } else {
@@ -93,7 +94,7 @@ function reserveModalSetup() {
 function showNavMenu(resize) {
   const $burgerButton = $('.burger-button');
   const $headerNav = $('.header-nav');
-  if ($burgerButton.attr('aria-expanded') == 'false') {
+  if ($burgerButton.attr('aria-expanded') === 'false') {
     // burgerButton
     if (resize != true) {
       $burgerButton.addClass('open');
@@ -109,7 +110,7 @@ function showNavMenu(resize) {
 function hideNavMenu(resize) {
   const $burgerButton = $('.burger-button');
   const $headerNav = $('.header-nav');
-  if ($burgerButton.attr('aria-expanded') == 'true') {
+  if ($burgerButton.attr('aria-expanded') === 'true') {
     // burgerButton
     $burgerButton.removeClass('open');
     $burgerButton.attr('aria-expanded', false);
@@ -143,13 +144,48 @@ function windowResizeEvent() {
 // window scroll event
 //////////////////////////////////////////////////
 function windowScrollEvent() {
+  // パスの取得
+  var path = location.pathname;
+  path = path.trim();
+
+  if (path !== '/' && path !== '/index.html') {
+    // topページ以外は何もしない
+    return;
+  }
+
   var scrollValue = $(this).scrollTop();
-  if (scrollValue == 0) {
-    $('.header').fadeOut(500);
+  if (scrollValue === 0) {
+    // header bg color
+    $('.header').removeClass('header-bg-color-white');
+
+    // header logo
+    $('.header-title-wrapper__logo').removeClass('header-title-wrapper__logo-filter');
+
+    // header nav
+    $('.header-nav').removeClass('header-nav-bg-color-white');
+
+    // header nav-list-item
+    $('.header-nav-list-item').removeClass('header-nav-list-item-color-black');
+
+    // burger-button
+    $('.burger-button__bar').removeClass('burger-button__bar-bg-color-black');
 
     // リサイズを読んでメニュー表示/非表示設定
     windowResizeEvent();
-  } else {
-    $('.header').fadeIn(500);
+  } else if ($('.header').hasClass('header-bg-color-white') === false) {
+    // header bg color
+    $('.header').addClass('header-bg-color-white');
+
+    // header logo
+    $('.header-title-wrapper__logo').addClass('header-title-wrapper__logo-filter');
+
+    // header nav
+    $('.header-nav').addClass('header-nav-bg-color-white');
+      
+    // header nav-list-item
+    $('.header-nav-list-item').addClass('header-nav-list-item-color-black');
+
+    // burger-button
+    $('.burger-button__bar').addClass('burger-button__bar-bg-color-black');
   }
 }

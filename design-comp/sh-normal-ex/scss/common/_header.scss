@@ -4,8 +4,7 @@
 // header
 ////////////////////
 .header {
-  background-color: rgba(0, 0, 0, .5);
-  display: none;
+  background-color: none;
   height: 80px;
   position: fixed;
   width: 100%;
@@ -21,6 +20,10 @@
     height: 100%;
     padding: 0 20px;
     transition: .3s;
+  }
+
+  &-bg-color-white {
+    background-color: #fff;
   }
 }
 
@@ -42,12 +45,20 @@
   &__logo {
     margin-right: 16px;
     height: 100%;
+
+    &-filter {
+      filter: invert(100%);
+    }
   }
 }
 
 .header-nav {
   @include mixin.mediaQuery("md") {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .95);
+    &-bg-color-white {
+      background-color: rgba(255, 255, 255, .95)
+    }
+
     display: none;
     overflow: hidden;
     position: fixed;
@@ -69,8 +80,14 @@
 
   &-item {
     color: #fff;
-    font-weight: 800;
     text-shadow: 1px 1px 0 #000;
+
+    &-color-black {
+      color: #000;
+      text-shadow: 1px 1px 0 #fff;
+    }
+
+    font-weight: 800;
 
     &+& {
       margin-left: 33px;
@@ -124,6 +141,10 @@
 
   &__bar {
     background-color: #fff;
+    &-bg-color-black {
+      background-color: #000;
+    }
+
     border-radius: 2.5px;
     height: 2px;
     left: 0;
