@@ -105,9 +105,11 @@
 
 .section-about>.content-wrapper {
   writing-mode: vertical-rl;
+  height: 450px;
 
   @include mixin.mediaQuery("sm") {
     writing-mode: horizontal-tb;
+    height: auto;
   }
 }
 

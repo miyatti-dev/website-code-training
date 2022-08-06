@@ -111,11 +111,13 @@
 .section-about > .content-wrapper {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+  height: 450px;
 }
 @media screen and (max-width: 576px) {
   .section-about > .content-wrapper {
     -ms-writing-mode: lr-tb;
         writing-mode: horizontal-tb;
+    height: auto;
   }
 }
 
