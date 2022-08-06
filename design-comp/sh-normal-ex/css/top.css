@@ -170,6 +170,7 @@
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
+  -webkit-text-orientation: upright; /*for Safari */
 }
 @media screen and (max-width: 1024px) {
   .about-text {

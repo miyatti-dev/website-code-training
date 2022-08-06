@@ -158,6 +158,7 @@
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
+  -webkit-text-orientation: upright; /*for Safari */
 
   @include mixin.mediaQuery("lg") {
     margin-left: 60px;
