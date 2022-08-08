@@ -1,3 +1,4 @@
+@use "variables" as *;
 @use "../mixin/mixin";
 
 ////////////////////
@@ -28,7 +29,7 @@
   }
 
   &-bg-color-white {
-    background-color: #fff;
+    background-color: $color-bg-white;
   }
 }
 
@@ -63,9 +64,9 @@
 
 .header-nav {
   @include mixin.mediaQuery("md") {
-    background-color: rgba(0, 0, 0, .95);
+    background-color: $color-header-nav-bg-black;
     &-bg-color-white {
-      background-color: rgba(255, 255, 255, .95)
+      background-color: $color-header-nav-bg-white;
     }
 
     display: none;
@@ -88,12 +89,12 @@
   }
 
   &-item {
-    color: #fff;
-    text-shadow: 1px 1px 0 #000;
+    color: $color-text-white;
+    text-shadow: 1px 1px 0 $color-text-black;
 
     &-color-black {
-      color: #000;
-      text-shadow: 1px 1px 0 #fff;
+      color: $color-text-black;
+      text-shadow: 1px 1px 0 $color-text-white;
     }
 
     font-weight: 800;
@@ -111,8 +112,8 @@
 
 .header-reserve-button {
   align-items: center;
-  background-color: #978f10;
-  color: #fff;
+  background-color: $color-header-reserve-button;
+  color: $color-text-white;
   display: flex;
   font-weight: 800;
   height: 54px;
@@ -157,9 +158,9 @@
   }
 
   &__bar {
-    background-color: #fff;
+    background-color: $color-burger-button-white;
     &-bg-color-black {
-      background-color: #000;
+      background-color: $color-burger-button-black;
     }
 
     border-radius: 2.5px;

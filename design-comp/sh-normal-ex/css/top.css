@@ -268,7 +268,7 @@
     padding: 10px;
     position: absolute;
     /* 文字の影 */
-    text-shadow: 1px 1px 1px #000000, -1px 1px 1px #000000, 1px -1px 1px #000000, -1px -1px 1px #000000, 1px 0px 1px #000000, 0px 1px 1px #000000, -1px 0px 1px #000000, 0px -1px 1px #000000;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0px 1px #000, 0px 1px 1px #000, -1px 0px 1px #000, 0px -1px 1px #000;
     width: 100%;
   }
 }
@@ -342,7 +342,7 @@
 }
 @media screen and (max-width: 768px) {
   .feature-list-item__link {
-    border: 1px solid white;
+    border: 1px solid #fff;
   }
 }
 @media screen and (max-width: 399px) {

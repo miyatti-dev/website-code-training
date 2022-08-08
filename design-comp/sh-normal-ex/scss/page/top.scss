@@ -1,3 +1,4 @@
+@use "../common/variables" as *;
 @use "../mixin/mixin";
 
 ////////////////////
@@ -24,11 +25,11 @@
   }
 
   &-title {
-    color: #fff;
+    color: $color-text-white;
     font-size: 3.4rem;
     font-weight: 800;
     line-height: 51px + 34px;
-    text-shadow: 3px 3px 0 #000;
+    text-shadow: 3px 3px 0 $color-text-black;
     writing-mode: vertical-rl;
     letter-spacing: 11px;
   }
@@ -244,20 +245,20 @@
     margin-right: 20px;
 
     @include mixin.mediaQuery("md") {
-      color: #fff;
+      color: $color-text-white;
       height: 100%;
       padding: 10px;
       position: absolute;
       /* 文字の影 */
       text-shadow:
-        1px 1px 1px #000000,
-        -1px 1px 1px #000000,
-        1px -1px 1px #000000,
-        -1px -1px 1px #000000,
-        1px 0px 1px #000000,
-        0px 1px 1px #000000,
-        -1px 0px 1px #000000,
-        0px -1px 1px #000000;
+        1px 1px 1px $color-text-black,
+        -1px 1px 1px $color-text-black,
+        1px -1px 1px $color-text-black,
+        -1px -1px 1px $color-text-black,
+        1px 0px 1px $color-text-black,
+        0px 1px 1px $color-text-black,
+        -1px 0px 1px $color-text-black,
+        0px -1px 1px $color-text-black;
       width: 100%;
     }
   }
@@ -311,7 +312,7 @@
   }
 
   &__link {
-    border: 1px solid #707070;
+    border: 1px solid $color-border;
     display: inline-block;
     line-height: 56px;
     text-align: center;
@@ -325,7 +326,7 @@
     }
 
     @include mixin.mediaQuery("md") {
-      border: 1px solid white;
+      border: 1px solid $color-border-white;
     }
 
     @include mixin.mediaQuery("xs") {
@@ -495,8 +496,8 @@
   padding-top: 38px;
 
   &-item {
-    background-color: #f6f6f6;
-    border: 1px solid #ccc;
+    background-color: $color-news-bg;
+    border: 1px solid $color-news-border;
     border-radius: 5px 5px 0 0;
     font-weight: 500;
     overflow: hidden;
@@ -508,7 +509,7 @@
 
     &.is-active {
       background-color: lightgray;
-      text-decoration: underline #707070;
+      text-decoration: underline $color-border;
     }
   }
 }
@@ -528,7 +529,7 @@
   }
 
   &-item {
-    background-color: #f6f6f6;
+    background-color: $color-news-bg;
     display: flex;
     padding: 15px 10px;
     width: 48%;
@@ -543,7 +544,7 @@
     }
 
     &__image {
-      background-color: #fff;
+      background-color: $color-bg-white;
       height: 100%;
       object-fit: contain;
     }

@@ -98,6 +98,7 @@ a:hover {
 
 .reserve-modal {
   visibility: hidden;
+  display: none;
   opacity: 0;
   position: fixed;
   z-index: 1000;
@@ -154,6 +155,7 @@ a:hover {
 
 .reserve-modal-show {
   /* モーダル表示用クラス */
+  display: block;
   visibility: visible;
   opacity: 1;
 }
@@ -223,7 +225,7 @@ a:hover {
 .breadcrumb-list-item:not(:last-of-type)::after {
   content: ">";
   padding: 0 5px;
-  color: #555;
+  color: #000;
 }
 .breadcrumb-list-item__link {
   font-weight: 500;
