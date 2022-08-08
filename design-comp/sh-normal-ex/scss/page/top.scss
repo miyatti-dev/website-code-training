@@ -1,4 +1,4 @@
-@use "../common/variables" as *;
+@use "../common/variables"as *;
 @use "../mixin/mixin";
 
 ////////////////////
@@ -41,7 +41,6 @@
   right: 0;
   top: 0;
   width: 100%;
-  z-index: -1;
 
   &__image {
     /* アニメーション設定 */
@@ -63,28 +62,26 @@
   &:nth-child(3)>&__image {
     animation-delay: 10s;
   }
-}
 
-/*
-  アニメーション処理  
-*/
-@keyframes fadeFv {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-  }
+  /* アニメーション処理  */
+  @keyframes fadeFv {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
 
-  5% {
-    opacity: 1;
-  }
+    5% {
+      opacity: 1;
+    }
 
-  35% {
-    opacity: 1;
-  }
+    35% {
+      opacity: 1;
+    }
 
-  40% {
-    opacity: 0;
-    transform: scale(1.1);
+    40% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -159,7 +156,8 @@
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
-  -webkit-text-orientation: upright; /*for Safari */
+  /* for Safari */
+  -webkit-text-orientation: upright;
 
   @include mixin.mediaQuery("lg") {
     margin-left: 60px;
@@ -191,6 +189,7 @@
   @include mixin.mediaQuery("md") {
     font-size: 1.8rem;
   }
+
   @include mixin.mediaQuery("sm") {
     letter-spacing: 6px;
   }
@@ -575,15 +574,15 @@
       }
     }
   }
-}
 
-@keyframes fadeInNews {
-  from {
-    opacity: 0;
-  }
+  @keyframes fadeInNews {
+    from {
+      opacity: 0;
+    }
 
-  to {
-    opacity: 1;
+    to {
+      opacity: 1;
+    }
   }
 }
 

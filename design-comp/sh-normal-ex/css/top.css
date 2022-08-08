@@ -36,7 +36,7 @@
   right: 0;
   top: 0;
   width: 100%;
-  z-index: -1;
+  /* アニメーション処理  */
 }
 .fv-image-list-item__image {
   /* アニメーション設定 */
@@ -58,10 +58,6 @@
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
 }
-
-/*
-  アニメーション処理  
-*/
 @-webkit-keyframes fadeFv {
   0% {
     opacity: 0;
@@ -94,6 +90,7 @@
     transform: scale(1.1);
   }
 }
+
 .section-about {
   background-image: url("../image/bg.jpg");
   padding-bottom: 50px;
@@ -170,7 +167,8 @@
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
-  -webkit-text-orientation: upright; /*for Safari */
+  /* for Safari */
+  -webkit-text-orientation: upright;
 }
 @media screen and (max-width: 1024px) {
   .about-text {
@@ -580,7 +578,6 @@
     margin-top: 20px;
   }
 }
-
 @-webkit-keyframes fadeInNews {
   from {
     opacity: 0;
@@ -589,7 +586,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fadeInNews {
   from {
     opacity: 0;
@@ -598,6 +594,7 @@
     opacity: 1;
   }
 }
+
 .section-access {
   background-image: url("../image/bg.jpg");
   background-position: center;

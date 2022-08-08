@@ -7,8 +7,8 @@ $color-burger-button-black: #000;
 $color-burger-button-white: #fff;
 
 // background-color
-$color-bg-black:  #000;
-$color-bg-white:  #fff;
+$color-bg-black: #000;
+$color-bg-white: #fff;
 
 // header-reserve-button色
 $color-header-reserve-button: #978f10;
@@ -33,4 +33,11 @@ $breakpoints: (
   "md": "screen and (max-width: 768px)",
   "lg": "screen and (max-width: 1024px)",
   "xl": "screen and (max-width: 1280px)",
-) !default;
+);
+
+$layer: (
+  reserve-modal: 100,
+  header-nav: 20,
+  burger-button: 20,
+  header: 10,
+);

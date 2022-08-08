@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "variables"as *;
 @use "../mixin/mixin";
 
 ////////////////////
@@ -9,7 +9,7 @@
   height: 80px;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  @include mixin.z-index(header);
 
   @include mixin.mediaQuery("md") {
     height: 60px;
@@ -65,6 +65,7 @@
 .header-nav {
   @include mixin.mediaQuery("md") {
     background-color: $color-header-nav-bg-black;
+
     &-bg-color-white {
       background-color: $color-header-nav-bg-white;
     }
@@ -75,7 +76,7 @@
     left: 0;
     top: 0;
     width: 100vw;
-    z-index: 50;
+    @include mixin.z-index(header-nav);
   }
 }
 
@@ -150,7 +151,7 @@
   position: relative;
   transition: all .3s;
   width: 40px;
-  z-index: 100;
+  @include mixin.z-index(burger-button);
   margin-left: 20px;
 
   @include mixin.mediaQuery("md") {
@@ -159,6 +160,7 @@
 
   &__bar {
     background-color: $color-burger-button-white;
+
     &-bg-color-black {
       background-color: $color-burger-button-black;
     }

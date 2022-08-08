@@ -1,7 +1,11 @@
-@use "../common/variables" as *;
+@use "../common/variables"as *;
 
 @mixin mediaQuery($breakpoint) {
   @media #{map-get($breakpoints, $breakpoint)} {
-      @content;
+    @content;
   }
+}
+
+@mixin z-index($key) {
+  z-index: map-get($layer, $key);
 }

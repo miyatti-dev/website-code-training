@@ -79,19 +79,16 @@
   width: 45%;
   left: 0;
   top: -57px;
-  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .spa-list-item__image-wrapper {
     position: relative;
     width: 100%;
     top: 0;
-    z-index: 1;
   }
 }
 .spa-list-item__text-wrapper {
   background-image: url("../image/bg.jpg");
-  z-index: 1;
   width: 70%;
   height: 381px;
   padding: 55px 60px;
@@ -99,7 +96,6 @@
 @media screen and (max-width: 768px) {
   .spa-list-item__text-wrapper {
     background-image: none;
-    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
