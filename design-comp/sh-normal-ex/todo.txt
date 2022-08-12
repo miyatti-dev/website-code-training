@@ -89,7 +89,3 @@ Sass
 ・Safari 8/6
 ・スマホ実機 8/6
 
-----------
-バグ
-環境
-・CSScomb include があると validation error になる
