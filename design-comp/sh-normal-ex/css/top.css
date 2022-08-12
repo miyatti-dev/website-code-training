@@ -40,8 +40,8 @@
 }
 .fv-image-list-item__image {
   /* アニメーション設定 */
-  -webkit-animation: fadeFv 15s infinite linear;
-          animation: fadeFv 15s infinite linear;
+  -webkit-animation: fade-fv 15s infinite linear;
+          animation: fade-fv 15s infinite linear;
   height: 100vh;
   /* 最初は3枚の画像を非表示にしておく */
   opacity: 0;
@@ -58,7 +58,7 @@
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
 }
-@-webkit-keyframes fadeFv {
+@-webkit-keyframes fade-fv {
   0% {
     opacity: 0;
     transform: scale(1);
@@ -74,7 +74,7 @@
     transform: scale(1.1);
   }
 }
-@keyframes fadeFv {
+@keyframes fade-fv {
   0% {
     opacity: 0;
     transform: scale(1);
@@ -266,7 +266,7 @@
     padding: 10px;
     position: absolute;
     /* 文字の影 */
-    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0px 1px #000, 0px 1px 1px #000, -1px 0px 1px #000, 0px -1px 1px #000;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
     width: 100%;
   }
 }
@@ -532,8 +532,8 @@
   }
 }
 .news-list.is-active {
-  -webkit-animation: fadeInNews 0.5s;
-          animation: fadeInNews 0.5s;
+  -webkit-animation: fade-in-news 0.5s;
+          animation: fade-in-news 0.5s;
   display: flex;
 }
 .news-list-item {
@@ -578,7 +578,7 @@
     margin-top: 20px;
   }
 }
-@-webkit-keyframes fadeInNews {
+@-webkit-keyframes fade-in-news {
   from {
     opacity: 0;
   }
@@ -586,7 +586,7 @@
     opacity: 1;
   }
 }
-@keyframes fadeInNews {
+@keyframes fade-in-news {
   from {
     opacity: 0;
   }

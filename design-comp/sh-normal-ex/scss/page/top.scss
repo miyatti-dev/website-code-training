@@ -44,27 +44,27 @@
 
   &__image {
     /* アニメーション設定 */
-    animation: fadeFv 15s infinite linear;
+    animation: fade-fv 15s infinite linear;
     height: 100vh;
 
     /* 最初は3枚の画像を非表示にしておく */
     opacity: 0;
   }
 
-  &:nth-child(1)>&__image {
+  &:nth-child(1) > &__image {
     animation-delay: 0s;
   }
 
-  &:nth-child(2)>&__image {
+  &:nth-child(2) > &__image {
     animation-delay: 5s;
   }
 
-  &:nth-child(3)>&__image {
+  &:nth-child(3) > &__image {
     animation-delay: 10s;
   }
 
   /* アニメーション処理  */
-  @keyframes fadeFv {
+  @keyframes fade-fv {
     0% {
       opacity: 0;
       transform: scale(1);
@@ -89,7 +89,7 @@
 // about
 ////////////////////
 .section-about {
-  background-image: url('../image/bg.jpg');
+  background-image: url("../image/bg.jpg");
   padding-bottom: 50px;
   padding-top: 146px;
   display: flex;
@@ -101,7 +101,7 @@
   }
 }
 
-.section-about>.content-wrapper {
+.section-about > .content-wrapper {
   writing-mode: vertical-rl;
   height: 450px;
 
@@ -133,7 +133,7 @@
     letter-spacing: 10px;
   }
 
-  &>span {
+  & > span {
     margin-top: -85px;
     margin-left: 33px;
     display: block;
@@ -156,6 +156,7 @@
   line-height: 2.375;
   margin-left: 118px;
   text-orientation: upright;
+
   /* for Safari */
   -webkit-text-orientation: upright;
 
@@ -195,7 +196,6 @@
   }
 }
 
-
 ////////////////////
 // feature
 ////////////////////
@@ -209,7 +209,7 @@
   }
 }
 
-.section-feature>.content-wrapper {
+.section-feature > .content-wrapper {
   max-width: 1920px;
   padding: 0;
 
@@ -248,16 +248,17 @@
       height: 100%;
       padding: 10px;
       position: absolute;
+
       /* 文字の影 */
       text-shadow:
         1px 1px 1px $color-text-black,
         -1px 1px 1px $color-text-black,
         1px -1px 1px $color-text-black,
         -1px -1px 1px $color-text-black,
-        1px 0px 1px $color-text-black,
-        0px 1px 1px $color-text-black,
-        -1px 0px 1px $color-text-black,
-        0px -1px 1px $color-text-black;
+        1px 0 1px $color-text-black,
+        0 1px 1px $color-text-black,
+        -1px 0 1px $color-text-black,
+        0 -1px 1px $color-text-black;
       width: 100%;
     }
   }
@@ -335,7 +336,7 @@
     }
   }
 
-  &+& {
+  & + & {
     margin-top: 122px;
 
     @include mixin.mediaQuery("xl") {
@@ -387,7 +388,7 @@
 // plan
 ////////////////////
 .section-plan {
-  background-image: url('../image/bg02.jpg');
+  background-image: url("../image/bg02.jpg");
   background-position: center;
   background-size: cover;
   padding-bottom: 142px;
@@ -401,7 +402,6 @@
     margin-bottom: 61px;
   }
 }
-
 
 .plan-list {
   display: flex;
@@ -462,7 +462,7 @@
       }
     }
 
-    &+& {
+    & + & {
       margin-left: 94px;
 
       @include mixin.mediaQuery("xl") {
@@ -502,7 +502,7 @@
     overflow: hidden;
     padding: 10px 20px;
 
-    &+& {
+    & + & {
       margin-left: 53px;
     }
 
@@ -523,7 +523,7 @@
   }
 
   &.is-active {
-    animation: fadeInNews .5s;
+    animation: fade-in-news 0.5s;
     display: flex;
   }
 
@@ -550,7 +550,7 @@
 
     &__text-wrapper {
       padding: 0 30px;
-      width: calc(100% - 103px); // image分を引く 
+      width: calc(100% - 103px); // image分を引く
     }
 
     &__time {
@@ -568,14 +568,14 @@
       margin-top: 20px;
     }
 
-    &+& {
+    & + & {
       @include mixin.mediaQuery("md") {
         margin-top: 20px;
       }
     }
   }
 
-  @keyframes fadeInNews {
+  @keyframes fade-in-news {
     from {
       opacity: 0;
     }
@@ -590,7 +590,7 @@
 // access
 ////////////////////
 .section-access {
-  background-image: url('../image/bg.jpg');
+  background-image: url("../image/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
