@@ -103,7 +103,7 @@
     width: 100%;
     color: white;
     /* 文字の影 */
-    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0px 1px #000, 0px 1px 1px #000, -1px 0px 1px #000, 0px -1px 1px #000;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
   }
 }
 @media screen and (max-width: 399px) {
@@ -171,6 +171,19 @@
     line-height: 1.2;
   }
 }
+.room-list-item + .room-list-item {
+  margin-top: 141px;
+}
+@media screen and (max-width: 768px) {
+  .room-list-item + .room-list-item {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .room-list-item + .room-list-item {
+    margin-top: 40px;
+  }
+}
 .room-list-item:nth-of-type(2n+1) .room-list-item__text-wrapper {
   margin-left: auto;
   padding-left: 238px;
@@ -193,17 +206,4 @@
 .room-list-item:nth-of-type(2n) .room-list-item__image-wrapper {
   right: 0;
   left: initial;
-}
-.room-list-item + .room-list-item {
-  margin-top: 141px;
-}
-@media screen and (max-width: 768px) {
-  .room-list-item + .room-list-item {
-    margin-top: 70px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .room-list-item + .room-list-item {
-    margin-top: 40px;
-  }
 }

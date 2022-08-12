@@ -103,7 +103,7 @@
     width: 100%;
     color: white;
     /* 文字の影 */
-    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0px 1px #000, 0px 1px 1px #000, -1px 0px 1px #000, 0px -1px 1px #000;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
   }
 }
 @media screen and (max-width: 399px) {
@@ -147,6 +147,19 @@
     font-size: 1.4rem;
   }
 }
+.spa-list-item + .spa-list-item {
+  margin-top: 141px;
+}
+@media screen and (max-width: 768px) {
+  .spa-list-item + .spa-list-item {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .spa-list-item + .spa-list-item {
+    margin-top: 40px;
+  }
+}
 .spa-list-item:nth-of-type(2n+1) .spa-list-item__text-wrapper {
   margin-left: auto;
   padding-left: 238px;
@@ -181,19 +194,6 @@
 @media screen and (max-width: 399px) {
   .spa-list-item:nth-of-type(2n) .spa-list-item__text-wrapper {
     padding-right: 10px;
-  }
-}
-.spa-list-item + .spa-list-item {
-  margin-top: 141px;
-}
-@media screen and (max-width: 768px) {
-  .spa-list-item + .spa-list-item {
-    margin-top: 70px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .spa-list-item + .spa-list-item {
-    margin-top: 40px;
   }
 }
 
