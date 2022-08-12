@@ -1,6 +1,7 @@
 ﻿module.exports = {
   extends: [
     'stylelint-config-standard-scss',
+    'stylelint-config-recess-order'
   ],
   rules: {
     "property-no-vendor-prefix": null,
