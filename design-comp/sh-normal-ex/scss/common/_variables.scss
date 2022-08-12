@@ -14,19 +14,20 @@ $color-bg-white: #fff;
 $color-header-reserve-button: #978f10;
 
 // header-nav-bg色
-$color-header-nav-bg-black: rgba(0, 0, 0, .95);
-$color-header-nav-bg-white: rgba(255, 255, 255, .95);
+$color-header-nav-bg-black: rgb(0 0 0 / 95%);
+$color-header-nav-bg-white: rgb(255 255 255 / 95%);
 
 // border
 $color-border: #707070;
 $color-border-white: #fff;
-$color-border-reserve-dialog: #E7E7E7;
-$color-border-spa-efficacy: #E7E7E7;
+$color-border-reserve-dialog: #e7e7e7;
+$color-border-spa-efficacy: #e7e7e7;
 
 // news
 $color-news-bg: #f6f6f6;
 $color-news-border: #ccc;
 
+// breakpoints
 $breakpoints: (
   "xs": "screen and (max-width: 399px)",
   "sm": "screen and (max-width: 576px)",
@@ -35,6 +36,7 @@ $breakpoints: (
   "xl": "screen and (max-width: 1280px)",
 );
 
+// layer z-index
 $layer: (
   reserve-modal: 100,
   header-nav: 20,

@@ -11,14 +11,23 @@ html {
 
 body {
   color: $color-text-black;
-  font-family: 'Times New Roman', '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho',
-    'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'HiraMinProN-W3', 'HGS明朝E',
-    'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+  font-family:
+    "Times New Roman",
+    "游明朝",
+    "Yu Mincho",
+    "游明朝体",
+    YuMincho,
+    "ヒラギノ明朝 Pro W3",
+    "Hiragino Mincho Pro",
+    "HiraMinProN-W3",
+    "HGS明朝E",
+    "ＭＳ Ｐ明朝",
+    "MS PMincho",
+    serif;
 
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
 }
-
 
 img {
   object-fit: cover;
@@ -27,8 +36,8 @@ img {
 }
 
 a:hover {
-  opacity: .7;
-  transition: .3s;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 .content-wrapper {
@@ -106,18 +115,20 @@ a:hover {
   display: none;
   opacity: 0;
   position: fixed;
+
   @include mixin.z-index(reserve-modal);
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .reserve-modal-bg {
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 30, 30, 0.8);
+  background-color: rgb(30 30 30 / 80%);
 }
 
 .reserve-modal-wrapper {
@@ -204,7 +215,7 @@ a:hover {
       appearance: auto;
     }
 
-    &+& {
+    & + & {
       margin-top: 11px;
     }
   }
@@ -239,7 +250,7 @@ a:hover {
     display: inline;
 
     &:not(:last-of-type)::after {
-      content: '>';
+      content: ">";
       padding: 0 5px;
       color: $color-text-black;
     }

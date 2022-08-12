@@ -9,6 +9,7 @@
   height: 80px;
   position: fixed;
   width: 100%;
+
   @include mixin.z-index(header);
 
   @include mixin.mediaQuery("md") {
@@ -20,12 +21,11 @@
     display: flex;
     height: 100%;
     padding: 0 20px;
-    transition: .3s;
+    transition: 0.3s;
 
     @include mixin.mediaQuery("sm") {
       padding: 0 10px;
     }
-
   }
 
   &-bg-color-white {
@@ -76,6 +76,7 @@
     left: 0;
     top: 0;
     width: 100vw;
+
     @include mixin.z-index(header-nav);
   }
 }
@@ -100,7 +101,7 @@
 
     font-weight: 800;
 
-    &+& {
+    & + & {
       margin-left: 33px;
 
       @include mixin.mediaQuery("md") {
@@ -132,8 +133,8 @@
   }
 
   &::before {
-    background-image: url('../image/calender.png');
-    content: '';
+    background-image: url("../image/calender.png");
+    content: "";
     display: inline-block;
     height: 22px;
     margin-right: 10px;
@@ -149,9 +150,11 @@
   display: none;
   height: 36px;
   position: relative;
-  transition: all .3s;
+  transition: all 0.3s;
   width: 40px;
+
   @include mixin.z-index(burger-button);
+
   margin-left: 20px;
 
   @include mixin.mediaQuery("md") {
@@ -170,7 +173,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    transition: .3s;
+    transition: 0.3s;
     width: 100%;
 
     &.bar-middle {
@@ -182,8 +185,8 @@
     }
   }
 
-  &.open {
-    .burger-button__bar {
+  &.open & {
+    &__bar {
       &.bar-top {
         top: 18px;
         transform: rotate(45deg);
