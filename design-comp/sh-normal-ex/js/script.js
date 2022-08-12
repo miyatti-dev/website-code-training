@@ -159,7 +159,7 @@ function windowScrollEvent() {
     $('.header').removeClass('header-bg-color-white');
 
     // header logo
-    $('.header-title-wrapper__logo').removeClass('header-title-wrapper__logo-filter');
+    $('.header-title-wrapper__logo').attr('src', './image/top-header-logo.png');
 
     // header nav
     $('.header-nav').removeClass('header-nav-bg-color-white');
@@ -177,7 +177,7 @@ function windowScrollEvent() {
     $('.header').addClass('header-bg-color-white');
 
     // header logo
-    $('.header-title-wrapper__logo').addClass('header-title-wrapper__logo-filter');
+    $('.header-title-wrapper__logo').attr('src', './image/sub-header-logo.png');
 
     // header nav
     $('.header-nav').addClass('header-nav-bg-color-white');

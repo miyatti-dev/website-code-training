@@ -284,9 +284,6 @@ a:hover {
 .header-title-wrapper__logo {
   margin-right: 16px;
 }
-.header-title-wrapper__logo-filter {
-  filter: invert(100%);
-}
 
 @media screen and (max-width: 768px) {
   .header-nav {
