@@ -18,7 +18,7 @@
     margin: 0 auto;
     padding-right: 25%;
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       justify-content: center;
       padding-right: 0;
     }
@@ -97,7 +97,7 @@
   display: flex;
   justify-content: center;
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     padding-bottom: 50px;
     padding-top: 50px;
   }
@@ -107,7 +107,7 @@
   writing-mode: vertical-rl;
   height: 450px;
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     writing-mode: horizontal-tb;
     height: auto;
   }
@@ -119,16 +119,16 @@
   margin-left: 118px;
   letter-spacing: 16px;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     margin-left: 70px;
   }
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     font-size: 1.8rem;
     margin-left: 50px;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     margin-left: 0;
     line-height: 2;
     margin-bottom: 10px;
@@ -140,12 +140,12 @@
     margin-left: 33px;
     display: block;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       margin-top: -55px;
       margin-left: 20px;
     }
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       margin-top: 0;
       margin-left: 0;
     }
@@ -162,22 +162,22 @@
   /* for Safari */
   -webkit-text-orientation: upright;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     margin-left: 60px;
   }
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     line-height: 1.7;
     margin-left: 40px;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     margin-bottom: 20px;
     margin-left: 20px;
     letter-spacing: 4px;
   }
 
-  @include mixin.mediaQuery("xs") {
+  @include mixin.media-query("xs") {
     font-size: 1.4rem;
     margin-left: 10px;
   }
@@ -189,11 +189,11 @@
   letter-spacing: 16px;
   text-align: right;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     font-size: 1.8rem;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     letter-spacing: 6px;
   }
 }
@@ -205,7 +205,7 @@
   padding-bottom: 78px;
   padding-top: 106px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     padding-bottom: 50px;
     padding-top: 50px;
   }
@@ -215,11 +215,11 @@
   max-width: 1920px;
   padding: 0;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     width: 90%;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     width: 100%;
   }
 }
@@ -233,7 +233,7 @@
     margin-right: 8%;
     width: 55%;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       margin-right: 0;
       width: 100%;
     }
@@ -245,7 +245,7 @@
     justify-content: center;
     margin-right: 20px;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       color: $color-text-white;
       height: 100%;
       padding: 10px;
@@ -271,22 +271,22 @@
     line-height: 1.72;
     margin-bottom: 67px;
 
-    @include mixin.mediaQuery("xl") {
+    @include mixin.media-query("xl") {
       font-size: 3rem;
       margin-bottom: 42px;
     }
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
       font-size: 1.8rem;
       line-height: 1.5;
       margin-bottom: 15px;
     }
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       font-size: 1.6rem;
     }
 
-    @include mixin.mediaQuery("xs") {
+    @include mixin.media-query("xs") {
       font-size: 1.4rem;
       margin-bottom: 10px;
     }
@@ -297,17 +297,17 @@
     line-height: 2;
     margin-bottom: 73px;
 
-    @include mixin.mediaQuery("xl") {
+    @include mixin.media-query("xl") {
       font-size: 1.4rem;
       line-height: 1.5;
       margin-bottom: 46px;
     }
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
       margin-bottom: 15px;
     }
 
-    @include mixin.mediaQuery("xs") {
+    @include mixin.media-query("xs") {
       font-size: 1.2rem;
       margin-bottom: 10px;
     }
@@ -321,17 +321,17 @@
     width: 200px;
     font-weight: 500;
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
       font-size: 1.4rem;
       line-height: 40px;
       width: 150px;
     }
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       border: 1px solid $color-border-white;
     }
 
-    @include mixin.mediaQuery("xs") {
+    @include mixin.media-query("xs") {
       font-size: 1.2rem;
       line-height: 30px;
       margin-bottom: 10px;
@@ -341,15 +341,15 @@
   & + & {
     margin-top: 122px;
 
-    @include mixin.mediaQuery("xl") {
+    @include mixin.media-query("xl") {
       margin-top: 90px;
     }
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
       margin-top: 60px;
     }
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       margin-top: 30px;
     }
   }
@@ -362,7 +362,7 @@
         margin-left: 8%;
         margin-right: 0;
 
-        @include mixin.mediaQuery("md") {
+        @include mixin.media-query("md") {
           margin-left: 0;
         }
       }
@@ -374,11 +374,11 @@
       &__text {
         margin-bottom: 41px;
 
-        @include mixin.mediaQuery("xl") {
+        @include mixin.media-query("xl") {
           margin-bottom: 26px;
         }
 
-        @include mixin.mediaQuery("xs") {
+        @include mixin.media-query("xs") {
           margin-bottom: 10px;
         }
       }
@@ -396,7 +396,7 @@
   padding-bottom: 142px;
   padding-top: 60px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     padding-bottom: 60px;
   }
 
@@ -410,7 +410,7 @@
   justify-content: space-between;
   width: 100%;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     flex-direction: column;
   }
 
@@ -419,7 +419,7 @@
     flex-direction: column;
     width: calc(100% / 3);
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
     }
 
@@ -439,13 +439,13 @@
       line-height: 1.6;
       margin-bottom: 30px;
 
-      @include mixin.mediaQuery("lg") {
+      @include mixin.media-query("lg") {
         flex: 1;
         min-height: 0;
         margin-bottom: 40px;
       }
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         font-size: 1.6rem;
         margin-bottom: 15px;
       }
@@ -455,11 +455,11 @@
       font-weight: 500;
       line-height: 2;
 
-      @include mixin.mediaQuery("lg") {
+      @include mixin.media-query("lg") {
         flex: 2;
       }
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         font-size: 1.4rem;
       }
     }
@@ -467,15 +467,15 @@
     & + & {
       margin-left: 94px;
 
-      @include mixin.mediaQuery("xl") {
+      @include mixin.media-query("xl") {
         margin-left: 60px;
       }
 
-      @include mixin.mediaQuery("lg") {
+      @include mixin.media-query("lg") {
         margin-left: 30px;
       }
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         margin-left: 0;
         margin-top: 40px;
       }
@@ -520,7 +520,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     flex-direction: column;
   }
 
@@ -535,7 +535,7 @@
     padding: 15px 10px;
     width: 48%;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
     }
 
@@ -571,7 +571,7 @@
     }
 
     & + & {
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         margin-top: 20px;
       }
     }
@@ -609,7 +609,7 @@
   display: flex;
   margin-bottom: 69px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     flex-direction: column;
     margin-bottom: 40px;
   }
@@ -619,7 +619,7 @@
     margin-right: 7%;
     width: 55%;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
       margin-right: 0;
       margin-bottom: 30px;
@@ -633,7 +633,7 @@
   &__text-wrapper {
     width: 45%;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
     }
   }
@@ -643,7 +643,7 @@
       font-weight: 800;
       margin-bottom: 19px;
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         margin-bottom: 10px;
       }
     }
@@ -655,7 +655,7 @@
       &:not(:last-of-type) {
         margin-bottom: 19px;
 
-        @include mixin.mediaQuery("md") {
+        @include mixin.media-query("md") {
           margin-bottom: 10px;
         }
       }
@@ -670,7 +670,7 @@
 .map {
   width: 67%;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     width: 100%;
   }
 }

@@ -12,7 +12,7 @@
 
   @include mixin.z-index(header);
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     height: 60px;
   }
 
@@ -23,7 +23,7 @@
     padding: 0 20px;
     transition: 0.3s;
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       padding: 0 10px;
     }
   }
@@ -36,15 +36,15 @@
 .header-title-wrapper {
   margin-right: 120px;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     margin-right: 100px;
   }
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-right: 40px;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     margin-right: 20px;
   }
 
@@ -63,7 +63,7 @@
 }
 
 .header-nav {
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     background-color: $color-header-nav-bg-black;
 
     &-bg-color-white {
@@ -84,7 +84,7 @@
 .header-nav-list {
   display: flex;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     align-items: center;
     flex-direction: column;
     padding: 30px;
@@ -104,7 +104,7 @@
     & + & {
       margin-left: 33px;
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         margin-left: 0;
         margin-top: 15px;
       }
@@ -123,11 +123,11 @@
   margin-left: auto;
   width: 170px;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     height: 36px;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     font-size: 1.4rem;
     font-weight: 500;
   }
@@ -140,7 +140,7 @@
     margin-right: 10px;
     width: 22px;
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       margin-right: 5px;
     }
   }
@@ -157,7 +157,7 @@
 
   margin-left: 20px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     display: block;
   }
 

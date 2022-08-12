@@ -52,11 +52,11 @@ a:hover {
   line-height: 1.34;
   text-align: center;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     font-size: 2.8rem;
   }
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     font-size: 2.4rem;
   }
 }
@@ -78,7 +78,7 @@ a:hover {
 .br-xl-show {
   display: none;
 
-  @include mixin.mediaQuery("xl") {
+  @include mixin.media-query("xl") {
     display: block;
   }
 }
@@ -86,7 +86,7 @@ a:hover {
 .br-lg-show {
   display: none;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     display: block;
   }
 }
@@ -94,7 +94,7 @@ a:hover {
 .br-lg-hide {
   display: block;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     display: none;
   }
 }
@@ -102,7 +102,7 @@ a:hover {
 .br-sm-show {
   display: none;
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     display: block;
   }
 }
@@ -241,7 +241,7 @@ a:hover {
   padding: 0 10px;
   margin-bottom: 93px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 50px;
   }
 

@@ -12,7 +12,7 @@
     max-width: none;
     padding: 61px 0 59px;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       padding: 40px 0;
     }
   }
@@ -32,7 +32,7 @@
   justify-content: center;
   margin-bottom: 93px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 50px;
   }
 
@@ -54,7 +54,7 @@
   margin-bottom: 65px;
   letter-spacing: 0.18em;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 40px;
   }
 }
@@ -62,7 +62,7 @@
 .footer-access-info {
   font-weight: 500;
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     font-size: 1.4rem;
   }
 
