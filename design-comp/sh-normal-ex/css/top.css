@@ -41,6 +41,7 @@
 }
 .fv-image-list-item__image {
   height: 100vh;
+  max-height: 1079px;
   /* 最初は3枚の画像を非表示にしておく */
   opacity: 0;
   /* アニメーション設定 */
@@ -167,9 +168,8 @@
   font-weight: 500;
   line-height: 2.375;
   letter-spacing: 6px;
-  text-orientation: upright;
   /* for Safari */
-  -webkit-text-orientation: upright;
+  text-orientation: upright;
 }
 @media screen and (max-width: 1024px) {
   .about-text {
