@@ -32,6 +32,8 @@
     text-shadow: 3px 3px 0 $color-text-black;
     writing-mode: vertical-rl;
     letter-spacing: 11px;
+
+    @include mixin.z-index(top-fv-title);
   }
 }
 

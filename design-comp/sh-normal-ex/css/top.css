@@ -28,6 +28,7 @@
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   letter-spacing: 11px;
+  z-index: 5;
 }
 
 .fv-image-list-item {
