@@ -10,31 +10,40 @@ html {
 }
 
 body {
-  color: $color-text-black;
-  font-family: 'Times New Roman', '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho',
-    'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'HiraMinProN-W3', 'HGS明朝E',
-    'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+  font-family:
+    "Times New Roman",
+    "游明朝",
+    "Yu Mincho",
+    "游明朝体",
+    YuMincho,
+    "ヒラギノ明朝 Pro W3",
+    "Hiragino Mincho Pro",
+    "HiraMinProN-W3",
+    "HGS明朝E",
+    "ＭＳ Ｐ明朝",
+    "MS PMincho",
+    serif;
 
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
+  color: $color-text-black;
 }
 
-
 img {
-  object-fit: cover;
-  vertical-align: bottom;
   width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
 }
 
 a:hover {
-  opacity: .7;
-  transition: .3s;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 .content-wrapper {
-  margin: 0 auto;
   max-width: 1200px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -43,11 +52,11 @@ a:hover {
   line-height: 1.34;
   text-align: center;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     font-size: 2.8rem;
   }
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     font-size: 2.4rem;
   }
 }
@@ -58,8 +67,8 @@ a:hover {
 }
 
 .logo-icon {
-  height: 40px;
   width: 40px;
+  height: 40px;
 }
 
 .no-scroll {
@@ -69,7 +78,7 @@ a:hover {
 .br-xl-show {
   display: none;
 
-  @include mixin.mediaQuery("xl") {
+  @include mixin.media-query("xl") {
     display: block;
   }
 }
@@ -77,7 +86,7 @@ a:hover {
 .br-lg-show {
   display: none;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     display: block;
   }
 }
@@ -85,7 +94,7 @@ a:hover {
 .br-lg-hide {
   display: block;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     display: none;
   }
 }
@@ -93,7 +102,7 @@ a:hover {
 .br-sm-show {
   display: none;
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     display: block;
   }
 }
@@ -102,54 +111,55 @@ a:hover {
 // reserve modal
 ////////////////////
 .reserve-modal {
-  visibility: hidden;
-  display: none;
-  opacity: 0;
   position: fixed;
-  @include mixin.z-index(reserve-modal);
   top: 0;
   left: 0;
+  display: none;
   width: 100%;
   height: 100%;
-  transition: .5s;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+
+  @include mixin.z-index(reserve-modal);
 }
 
 .reserve-modal-bg {
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 30, 30, 0.8);
+  background-color: rgb(30 30 30 / 80%);
 }
 
 .reserve-modal-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 90%;
   max-width: 550px;
   height: 95%;
   max-height: 600px;
   padding: 25px 60px 90px;
+  overflow-y: auto;
   background-color: $color-bg-white;
   border: 1px solid $color-border;
-  overflow-y: auto;
+  transform: translate(-50%, -50%);
 }
 
 .close-reserve-modal {
   position: absolute;
   top: 20px;
   right: 22px;
-  cursor: pointer;
   width: 18px;
   height: 18px;
+  cursor: pointer;
 
   &__bar {
-    background-color: $color-bg-black;
-    height: 3px;
-    left: 0;
-    top: 7px;
     position: absolute;
+    top: 7px;
+    left: 0;
     width: 100%;
+    height: 3px;
+    background-color: $color-bg-black;
 
     &.close-modal-bar-top {
       transform: rotate(45deg);
@@ -169,11 +179,11 @@ a:hover {
 }
 
 .reserve-modal-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
   padding-bottom: 26.5px;
   margin-bottom: 32.5px;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
   border-bottom: 1px solid $color-border-reserve-dialog;
 }
 
@@ -192,11 +202,11 @@ a:hover {
 
     &__input,
     &__plan-list {
-      border: 1px solid $color-border-reserve-dialog;
       height: 32px;
       padding: 6px 10px 7px;
       font-size: 1.4rem;
       font-weight: 500;
+      border: 1px solid $color-border-reserve-dialog;
     }
 
     &__plan-list {
@@ -204,7 +214,7 @@ a:hover {
       appearance: auto;
     }
 
-    &+& {
+    & + & {
       margin-top: 11px;
     }
   }
@@ -215,22 +225,22 @@ a:hover {
 }
 
 .form-submit-button {
-  height: 42px;
   width: 198px;
-  border: 1px solid $color-border;
+  height: 42px;
   font-weight: 500;
+  border: 1px solid $color-border;
 }
 
 ////////////////////
 // breadcrumb
 ////////////////////
 .breadcrumb-list {
-  margin: 0 auto;
   max-width: 1200px;
   padding: 0 10px;
+  margin: 0 auto;
   margin-bottom: 93px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 50px;
   }
 
@@ -239,9 +249,9 @@ a:hover {
     display: inline;
 
     &:not(:last-of-type)::after {
-      content: '>';
       padding: 0 5px;
       color: $color-text-black;
+      content: ">";
     }
 
     &__link {

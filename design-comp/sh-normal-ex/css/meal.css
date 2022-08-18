@@ -1,12 +1,12 @@
 @charset "UTF-8";
 .fv {
+  position: relative;
   height: 80vh;
   max-height: 500px;
+  margin-bottom: 33px;
   background-image: url("../image/menu-header.png");
   background-position: center;
   background-size: cover;
-  position: relative;
-  margin-bottom: 33px;
 }
 @media screen and (max-width: 1024px) {
   .fv {
@@ -27,11 +27,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
   font-size: 3.4rem;
   font-weight: 800;
+  color: #fff;
   text-shadow: 3px 3px 0 #000;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .section-meal {
@@ -59,11 +61,11 @@
 }
 
 .meal-title {
-  text-align: center;
-  line-height: 2;
-  font-weight: 500;
-  margin-bottom: 133px;
   padding: 0 10px;
+  margin-bottom: 133px;
+  font-weight: 500;
+  line-height: 2;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .meal-title {
@@ -76,34 +78,34 @@
 }
 .meal-list-item__image-wrapper {
   position: absolute;
-  width: 45%;
-  left: 0;
   top: -57px;
+  left: 0;
+  width: 45%;
 }
 @media screen and (max-width: 768px) {
   .meal-list-item__image-wrapper {
     position: relative;
-    width: 100%;
     top: 0;
+    width: 100%;
   }
 }
 .meal-list-item__text-wrapper {
-  background-image: url("../image/bg.jpg");
   width: 70%;
   height: 381px;
   padding: 55px 60px;
+  background-image: url("../image/bg.jpg");
 }
 @media screen and (max-width: 768px) {
   .meal-list-item__text-wrapper {
-    background-image: none;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 30px 40px;
     width: 100%;
+    padding: 30px 40px;
     color: white;
     /* 文字の影 */
-    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0px 1px #000, 0px 1px 1px #000, -1px 0px 1px #000, 0px -1px 1px #000;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+    background-image: none;
   }
 }
 @media screen and (max-width: 399px) {
@@ -112,14 +114,14 @@
   }
 }
 .meal-list-item__title {
+  margin-bottom: 46px;
   font-size: 2.4rem;
   font-weight: 500;
-  margin-bottom: 46px;
 }
 @media screen and (max-width: 768px) {
   .meal-list-item__title {
-    font-size: 2rem;
     margin-bottom: 30px;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 576px) {
@@ -129,8 +131,8 @@
 }
 @media screen and (max-width: 399px) {
   .meal-list-item__title {
-    font-size: 1.8rem;
     margin-bottom: 15px;
+    font-size: 1.8rem;
   }
 }
 .meal-list-item__text {
@@ -147,9 +149,22 @@
     font-size: 1.4rem;
   }
 }
+.meal-list-item + .meal-list-item {
+  margin-top: 141px;
+}
+@media screen and (max-width: 768px) {
+  .meal-list-item + .meal-list-item {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .meal-list-item + .meal-list-item {
+    margin-top: 40px;
+  }
+}
 .meal-list-item:nth-of-type(2n+1) .meal-list-item__text-wrapper {
-  margin-left: auto;
   padding-left: 238px;
+  margin-left: auto;
 }
 @media screen and (max-width: 1024px) {
   .meal-list-item:nth-of-type(2n+1) .meal-list-item__text-wrapper {
@@ -181,18 +196,5 @@
 @media screen and (max-width: 399px) {
   .meal-list-item:nth-of-type(2n) .meal-list-item__text-wrapper {
     padding-right: 10px;
-  }
-}
-.meal-list-item + .meal-list-item {
-  margin-top: 141px;
-}
-@media screen and (max-width: 768px) {
-  .meal-list-item + .meal-list-item {
-    margin-top: 70px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .meal-list-item + .meal-list-item {
-    margin-top: 40px;
   }
 }

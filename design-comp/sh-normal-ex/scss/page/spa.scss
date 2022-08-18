@@ -5,23 +5,23 @@
 // fv
 ////////////////////
 .fv {
+  position: relative;
   height: 80vh;
   max-height: 500px;
-  background-image: url('../image/onsen-header.png');
+  margin-bottom: 33px;
+  background-image: url("../image/onsen-header.png");
   background-position: center;
   background-size: cover;
-  position: relative;
-  margin-bottom: 33px;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     height: 300px;
   }
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     height: 250px;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     height: 200px;
   }
 
@@ -29,12 +29,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    color: $color-text-white;
     font-size: 3.4rem;
     font-weight: 800;
+    color: $color-text-white;
     text-shadow: 3px 3px 0 $color-text-black;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -44,32 +43,32 @@
 .section-spa {
   margin-bottom: 156.5px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 70px;
   }
 }
 
-.section-spa>.content-wrapper {
+.section-spa > .content-wrapper {
   padding: 0 10px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     width: 90%;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     width: 100%;
     padding: 0;
   }
 }
 
 .spa-title {
-  text-align: center;
-  line-height: 2;
-  font-weight: 500;
-  margin-bottom: 133px;
   padding: 0 10px;
+  margin-bottom: 133px;
+  font-weight: 500;
+  line-height: 2;
+  text-align: center;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 60px;
   }
 }
@@ -80,32 +79,29 @@
 
     &__image-wrapper {
       position: absolute;
-      width: 45%;
-      left: 0;
       top: -57px;
+      left: 0;
+      width: 45%;
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         position: relative;
-        width: 100%;
         top: 0;
+        width: 100%;
       }
     }
 
     &__text-wrapper {
-      background-image: url('../image/bg.jpg');
       width: 70%;
       height: 381px;
       padding: 55px 60px;
+      background-image: url("../image/bg.jpg");
 
-      @include mixin.mediaQuery("md") {
-        background-image: none;
-
+      @include mixin.media-query("md") {
         position: absolute;
         top: 0;
         left: 0;
-
-        padding: 30px 40px;
         width: 100%;
+        padding: 30px 40px;
         color: white;
 
         /* 文字の影 */
@@ -114,34 +110,35 @@
           -1px 1px 1px $color-text-black,
           1px -1px 1px $color-text-black,
           -1px -1px 1px $color-text-black,
-          1px 0px 1px $color-text-black,
-          0px 1px 1px $color-text-black,
-          -1px 0px 1px $color-text-black,
-          0px -1px 1px $color-text-black;
+          1px 0 1px $color-text-black,
+          0 1px 1px $color-text-black,
+          -1px 0 1px $color-text-black,
+          0 -1px 1px $color-text-black;
+        background-image: none;
       }
 
-      @include mixin.mediaQuery("xs") {
+      @include mixin.media-query("xs") {
         padding: 10px;
       }
     }
 
     &__title {
+      margin-bottom: 46px;
       font-size: 2.4rem;
       font-weight: 500;
-      margin-bottom: 46px;
 
-      @include mixin.mediaQuery("md") {
-        font-size: 2rem;
+      @include mixin.media-query("md") {
         margin-bottom: 30px;
+        font-size: 2rem;
       }
 
-      @include mixin.mediaQuery("sm") {
+      @include mixin.media-query("sm") {
         margin-bottom: 15px;
       }
 
-      @include mixin.mediaQuery("xs") {
+      @include mixin.media-query("xs") {
+        margin-bottom: 15px;
         font-size: 1.8rem;
-        margin-bottom: 15px;
       }
     }
 
@@ -149,66 +146,62 @@
       font-weight: 500;
       line-height: 2;
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         line-height: 1.5;
       }
 
-      @include mixin.mediaQuery("xs") {
+      @include mixin.media-query("xs") {
         font-size: 1.4rem;
       }
     }
 
-    &:nth-of-type(2n+1) {
-      .spa-list-item {
-        &__text-wrapper {
-          margin-left: auto;
-          padding-left: 238px;
-
-          @include mixin.mediaQuery("lg") {
-            padding-left: 180px;
-          }
-
-          @include mixin.mediaQuery("md") {
-            padding-left: 40px;
-          }
-
-          @include mixin.mediaQuery("xs") {
-            padding-left: 10px;
-          }
-        }
-      }
-    }
-
-    &:nth-of-type(2n) {
-      .spa-list-item {
-        &__image-wrapper {
-          right: 0;
-          left: initial;
-        }
-
-        &__text-wrapper {
-          padding-right: 150px;
-
-          @include mixin.mediaQuery("md") {
-            padding-right: 40px;
-          }
-
-          @include mixin.mediaQuery("xs") {
-            padding-right: 10px;
-          }
-        }
-      }
-    }
-
-    &+& {
+    & + & {
       margin-top: 141px;
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         margin-top: 70px;
       }
 
-      @include mixin.mediaQuery("sm") {
+      @include mixin.media-query("sm") {
         margin-top: 40px;
+      }
+    }
+
+    &:nth-of-type(2n+1) & {
+      &__text-wrapper {
+        padding-left: 238px;
+        margin-left: auto;
+
+        @include mixin.media-query("lg") {
+          padding-left: 180px;
+        }
+
+        @include mixin.media-query("md") {
+          padding-left: 40px;
+        }
+
+        @include mixin.media-query("xs") {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    &:nth-of-type(2n) & {
+      &__image-wrapper {
+        right: 0;
+        left: initial;
+      }
+
+      &__text-wrapper {
+        padding-right: 150px;
+
+        @include mixin.media-query("md") {
+          padding-right: 40px;
+        }
+
+        @include mixin.media-query("xs") {
+          padding-right: 10px;
+        }
       }
     }
   }
@@ -217,14 +210,13 @@
 ////////////////////
 // efficacy
 ////////////////////
-.section-efficacy>.content-wrapper {
-
+.section-efficacy > .content-wrapper {
   &::before,
   &::after {
-    content: '';
     display: block;
     width: 100%;
     height: 1px;
+    content: "";
     background-color: $color-border-spa-efficacy;
   }
 
@@ -238,31 +230,31 @@
 }
 
 .section-efficacy .section-title {
+  margin-bottom: 47.5px;
   font-size: 2.6rem;
   font-weight: 500;
-  margin-bottom: 47.5px;
 }
 
 .efficacy-list {
-  padding: 0 150px;
   display: flex;
   flex-wrap: wrap;
+  padding: 0 150px;
   margin-bottom: 74px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     padding: 0 50px;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     padding: 0 10px;
   }
 
   &-item {
     &__title {
-      font-size: 1.5rem;
-      font-weight: 500;
       width: 30%;
       padding: 15px 0;
+      font-size: 1.5rem;
+      font-weight: 500;
       border-top: 1px solid $color-border-spa-efficacy;
 
       &:last-of-type {
@@ -271,10 +263,10 @@
     }
 
     &__description {
-      font-size: 1.5rem;
-      font-weight: 500;
       width: 70%;
       padding: 15px 0;
+      font-size: 1.5rem;
+      font-weight: 500;
       border-top: 1px solid $color-border-spa-efficacy;
 
       &:last-of-type {

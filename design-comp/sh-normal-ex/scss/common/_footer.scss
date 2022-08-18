@@ -5,66 +5,64 @@
 // footer
 ////////////////////
 .footer {
-  background-color: $color-bg-black;
   text-align: center;
+  background-color: $color-bg-black;
 
-  &>.content-wrapper {
+  & > .content-wrapper {
     max-width: none;
     padding: 61px 0 59px;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       padding: 40px 0;
     }
   }
 
-  &>.footer-bg {
-    background-image: url('../image/bg3.jpg');
-    background-position: center;
+  & > .footer-bg {
+    background-image: url("../image/bg3.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
 
-
 .footer-nav-list {
-  align-items: flex-start;
   display: flex;
   flex-direction: row-reverse;
+  align-items: flex-start;
   justify-content: center;
   margin-bottom: 93px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 50px;
   }
 
   &-item {
     font-size: 1.8rem;
     font-weight: 500;
-    writing-mode: vertical-rl;
     letter-spacing: 16px;
+    writing-mode: vertical-rl;
 
-    &+& {
+    & + & {
       margin-right: 34px;
     }
   }
 }
 
 .footer .section-title {
+  margin-bottom: 65px;
   font-size: 3.2rem;
   font-weight: 800;
-  margin-bottom: 65px;
   letter-spacing: 0.18em;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     margin-bottom: 40px;
   }
-
 }
 
 .footer-access-info {
   font-weight: 500;
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     font-size: 1.4rem;
   }
 
@@ -93,8 +91,8 @@
 }
 
 .footer-copy-right {
-  color: $color-text-white;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 60px;
+  color: $color-text-white;
 }

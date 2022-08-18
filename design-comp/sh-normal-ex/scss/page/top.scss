@@ -5,66 +5,70 @@
 // fv
 ////////////////////
 .fv {
-  height: 100vh;
   position: relative;
+  height: 100vh;
   max-height: 1079px;
 
   &-inner {
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     height: 100vh;
     max-height: 1079px;
-    justify-content: flex-end;
-    margin: 0 auto;
     padding-right: 25%;
+    margin: 0 auto;
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       justify-content: center;
       padding-right: 0;
     }
   }
 
   &-title {
-    color: $color-text-white;
     font-size: 3.4rem;
     font-weight: 800;
     line-height: 51px + 34px;
+    color: $color-text-white;
     text-shadow: 3px 3px 0 $color-text-black;
-    writing-mode: vertical-rl;
     letter-spacing: 11px;
+    writing-mode: vertical-rl;
+
+    @include mixin.z-index(top-fv-title);
   }
 }
 
 .fv-image-list-item {
-  overflow: hidden;
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
   width: 100%;
+  overflow: hidden;
 
   &__image {
-    /* アニメーション設定 */
-    animation: fadeFv 15s infinite linear;
     height: 100vh;
+    max-height: 1079px;
 
     /* 最初は3枚の画像を非表示にしておく */
     opacity: 0;
+
+    /* アニメーション設定 */
+    animation: fade-fv 15s infinite linear;
   }
 
-  &:nth-child(1)>&__image {
+  &:nth-child(1) > &__image {
     animation-delay: 0s;
   }
 
-  &:nth-child(2)>&__image {
+  &:nth-child(2) > &__image {
     animation-delay: 5s;
   }
 
-  &:nth-child(3)>&__image {
+  &:nth-child(3) > &__image {
     animation-delay: 10s;
   }
 
   /* アニメーション処理  */
-  @keyframes fadeFv {
+  @keyframes fade-fv {
     0% {
       opacity: 0;
       transform: scale(1);
@@ -89,61 +93,61 @@
 // about
 ////////////////////
 .section-about {
-  background-image: url('../image/bg.jpg');
-  padding-bottom: 50px;
-  padding-top: 146px;
   display: flex;
   justify-content: center;
+  padding-top: 146px;
+  padding-bottom: 50px;
+  background-image: url("../image/bg.jpg");
 
-  @include mixin.mediaQuery("sm") {
-    padding-bottom: 50px;
+  @include mixin.media-query("sm") {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
-.section-about>.content-wrapper {
-  writing-mode: vertical-rl;
+.section-about > .content-wrapper {
   height: 450px;
+  writing-mode: vertical-rl;
 
-  @include mixin.mediaQuery("sm") {
-    writing-mode: horizontal-tb;
+  @include mixin.media-query("sm") {
     height: auto;
+    writing-mode: horizontal-tb;
   }
 }
 
 .about-title {
+  margin-left: 118px;
   font-size: 2.8rem;
   font-weight: 500;
-  margin-left: 118px;
   letter-spacing: 16px;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     margin-left: 70px;
   }
 
-  @include mixin.mediaQuery("md") {
-    font-size: 1.8rem;
+  @include mixin.media-query("md") {
     margin-left: 50px;
+    font-size: 1.8rem;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
+    margin-bottom: 10px;
     margin-left: 0;
     line-height: 2;
-    margin-bottom: 10px;
     letter-spacing: 10px;
   }
 
-  &>span {
+  & > span {
+    display: block;
     margin-top: -85px;
     margin-left: 33px;
-    display: block;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       margin-top: -55px;
       margin-left: 20px;
     }
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       margin-top: 0;
       margin-left: 0;
     }
@@ -151,89 +155,89 @@
 }
 
 .about-text {
-  font-weight: 500;
-  letter-spacing: 6px;
-  line-height: 2.375;
   margin-left: 118px;
-  text-orientation: upright;
+  font-weight: 500;
+  line-height: 2.375;
+  letter-spacing: 6px;
+
   /* for Safari */
   -webkit-text-orientation: upright;
+  text-orientation: upright;
 
-  @include mixin.mediaQuery("lg") {
+  @include mixin.media-query("lg") {
     margin-left: 60px;
   }
 
-  @include mixin.mediaQuery("md") {
-    line-height: 1.7;
+  @include mixin.media-query("md") {
     margin-left: 40px;
+    line-height: 1.7;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     margin-bottom: 20px;
     margin-left: 20px;
     letter-spacing: 4px;
   }
 
-  @include mixin.mediaQuery("xs") {
-    font-size: 1.4rem;
+  @include mixin.media-query("xs") {
     margin-left: 10px;
+    font-size: 1.4rem;
   }
 }
 
 .about-name {
   font-size: 2.2rem;
   font-weight: 500;
-  letter-spacing: 16px;
   text-align: right;
+  letter-spacing: 16px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     font-size: 1.8rem;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     letter-spacing: 6px;
   }
 }
-
 
 ////////////////////
 // feature
 ////////////////////
 .section-feature {
-  padding-bottom: 78px;
   padding-top: 106px;
+  padding-bottom: 78px;
 
-  @include mixin.mediaQuery("md") {
-    padding-bottom: 50px;
+  @include mixin.media-query("md") {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
-.section-feature>.content-wrapper {
+.section-feature > .content-wrapper {
   max-width: 1920px;
   padding: 0;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     width: 90%;
   }
 
-  @include mixin.mediaQuery("sm") {
+  @include mixin.media-query("sm") {
     width: 100%;
   }
 }
 
 .feature-list-item {
-  align-items: center;
-  display: flex;
   position: relative;
+  display: flex;
+  align-items: center;
 
   &__image-wrapper {
-    margin-right: 8%;
     width: 55%;
+    margin-right: 8%;
 
-    @include mixin.mediaQuery("md") {
-      margin-right: 0;
+    @include mixin.media-query("md") {
       width: 100%;
+      margin-right: 0;
     }
   }
 
@@ -243,110 +247,111 @@
     justify-content: center;
     margin-right: 20px;
 
-    @include mixin.mediaQuery("md") {
-      color: $color-text-white;
+    @include mixin.media-query("md") {
+      position: absolute;
+      width: 100%;
       height: 100%;
       padding: 10px;
-      position: absolute;
+      color: $color-text-white;
+
       /* 文字の影 */
       text-shadow:
         1px 1px 1px $color-text-black,
         -1px 1px 1px $color-text-black,
         1px -1px 1px $color-text-black,
         -1px -1px 1px $color-text-black,
-        1px 0px 1px $color-text-black,
-        0px 1px 1px $color-text-black,
-        -1px 0px 1px $color-text-black,
-        0px -1px 1px $color-text-black;
-      width: 100%;
+        1px 0 1px $color-text-black,
+        0 1px 1px $color-text-black,
+        -1px 0 1px $color-text-black,
+        0 -1px 1px $color-text-black;
     }
   }
 
   &__title {
+    margin-bottom: 67px;
     font-size: 3.6rem;
     font-weight: 500;
     line-height: 1.72;
-    margin-bottom: 67px;
 
-    @include mixin.mediaQuery("xl") {
-      font-size: 3rem;
+    @include mixin.media-query("xl") {
       margin-bottom: 42px;
+      font-size: 3rem;
     }
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
+      margin-bottom: 15px;
       font-size: 1.8rem;
       line-height: 1.5;
-      margin-bottom: 15px;
     }
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       font-size: 1.6rem;
     }
 
-    @include mixin.mediaQuery("xs") {
-      font-size: 1.4rem;
+    @include mixin.media-query("xs") {
       margin-bottom: 10px;
+      font-size: 1.4rem;
     }
   }
 
   &__text {
+    margin-bottom: 73px;
     font-weight: 500;
     line-height: 2;
-    margin-bottom: 73px;
 
-    @include mixin.mediaQuery("xl") {
+    @include mixin.media-query("xl") {
+      margin-bottom: 46px;
       font-size: 1.4rem;
       line-height: 1.5;
-      margin-bottom: 46px;
     }
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
       margin-bottom: 15px;
     }
 
-    @include mixin.mediaQuery("xs") {
-      font-size: 1.2rem;
+    @include mixin.media-query("xs") {
       margin-bottom: 10px;
+      font-size: 1.2rem;
     }
   }
 
   &__link {
-    border: 1px solid $color-border;
     display: inline-block;
-    line-height: 56px;
-    text-align: center;
     width: 200px;
     font-weight: 500;
+    line-height: 56px;
+    text-align: center;
+    border: 1px solid $color-border;
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
+      width: 150px;
       font-size: 1.4rem;
       line-height: 40px;
-      width: 150px;
     }
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       border: 1px solid $color-border-white;
     }
 
-    @include mixin.mediaQuery("xs") {
+    @include mixin.media-query("xs") {
+      margin-bottom: 10px;
       font-size: 1.2rem;
       line-height: 30px;
-      margin-bottom: 10px;
     }
   }
 
-  &+& {
+  & + & {
     margin-top: 122px;
 
-    @include mixin.mediaQuery("xl") {
+    @include mixin.media-query("xl") {
       margin-top: 90px;
     }
 
-    @include mixin.mediaQuery("lg") {
+    @include mixin.media-query("lg") {
       margin-top: 60px;
     }
 
-    @include mixin.mediaQuery("sm") {
+    @include mixin.media-query("sm") {
       margin-top: 30px;
     }
   }
@@ -356,10 +361,10 @@
 
     .feature-list-item {
       &__image-wrapper {
-        margin-left: 8%;
         margin-right: 0;
+        margin-left: 8%;
 
-        @include mixin.mediaQuery("md") {
+        @include mixin.media-query("md") {
           margin-left: 0;
         }
       }
@@ -371,11 +376,11 @@
       &__text {
         margin-bottom: 41px;
 
-        @include mixin.mediaQuery("xl") {
+        @include mixin.media-query("xl") {
           margin-bottom: 26px;
         }
 
-        @include mixin.mediaQuery("xs") {
+        @include mixin.media-query("xs") {
           margin-bottom: 10px;
         }
       }
@@ -387,13 +392,13 @@
 // plan
 ////////////////////
 .section-plan {
-  background-image: url('../image/bg02.jpg');
+  padding-top: 60px;
+  padding-bottom: 142px;
+  background-image: url("../image/bg02.jpg");
   background-position: center;
   background-size: cover;
-  padding-bottom: 142px;
-  padding-top: 60px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     padding-bottom: 60px;
   }
 
@@ -402,13 +407,12 @@
   }
 }
 
-
 .plan-list {
   display: flex;
   justify-content: space-between;
   width: 100%;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     flex-direction: column;
   }
 
@@ -417,7 +421,7 @@
     flex-direction: column;
     width: calc(100% / 3);
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
     }
 
@@ -427,25 +431,25 @@
 
     &__text-wrapper {
       display: flex;
-      flex-direction: column;
       flex: 1;
+      flex-direction: column;
     }
 
     &__title {
+      margin-bottom: 30px;
       font-size: 2rem;
       font-weight: 500;
       line-height: 1.6;
-      margin-bottom: 30px;
 
-      @include mixin.mediaQuery("lg") {
+      @include mixin.media-query("lg") {
         flex: 1;
         min-height: 0;
         margin-bottom: 40px;
       }
 
-      @include mixin.mediaQuery("md") {
-        font-size: 1.6rem;
+      @include mixin.media-query("md") {
         margin-bottom: 15px;
+        font-size: 1.6rem;
       }
     }
 
@@ -453,29 +457,29 @@
       font-weight: 500;
       line-height: 2;
 
-      @include mixin.mediaQuery("lg") {
+      @include mixin.media-query("lg") {
         flex: 2;
       }
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         font-size: 1.4rem;
       }
     }
 
-    &+& {
+    & + & {
       margin-left: 94px;
 
-      @include mixin.mediaQuery("xl") {
+      @include mixin.media-query("xl") {
         margin-left: 60px;
       }
 
-      @include mixin.mediaQuery("lg") {
+      @include mixin.media-query("lg") {
         margin-left: 30px;
       }
 
-      @include mixin.mediaQuery("md") {
-        margin-left: 0;
+      @include mixin.media-query("md") {
         margin-top: 40px;
+        margin-left: 0;
       }
     }
   }
@@ -491,24 +495,24 @@
 .news-tab-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 47px;
   padding-top: 38px;
+  padding-bottom: 47px;
 
   &-item {
+    padding: 10px 20px;
+    overflow: hidden;
+    font-weight: 500;
     background-color: $color-news-bg;
     border: 1px solid $color-news-border;
     border-radius: 5px 5px 0 0;
-    font-weight: 500;
-    overflow: hidden;
-    padding: 10px 20px;
 
-    &+& {
+    & + & {
       margin-left: 53px;
     }
 
     &.is-active {
-      background-color: lightgray;
       text-decoration: underline $color-border;
+      background-color: lightgray;
     }
   }
 }
@@ -518,45 +522,45 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     flex-direction: column;
   }
 
   &.is-active {
-    animation: fadeInNews .5s;
     display: flex;
+    animation: fade-in-news 0.5s;
   }
 
   &-item {
-    background-color: $color-news-bg;
     display: flex;
-    padding: 15px 10px;
     width: 48%;
+    padding: 15px 10px;
+    background-color: $color-news-bg;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
     }
 
     &__image-wrapper {
-      height: 100px;
       width: 103px;
+      height: 100px;
     }
 
     &__image {
-      background-color: $color-bg-white;
       height: 100%;
+      background-color: $color-bg-white;
       object-fit: contain;
     }
 
     &__text-wrapper {
+      width: calc(100% - 103px); // image分を引く
       padding: 0 30px;
-      width: calc(100% - 103px); // image分を引く 
     }
 
     &__time {
+      margin-bottom: 5px;
       font-size: 1.4rem;
       font-weight: 500;
-      margin-bottom: 5px;
     }
 
     &__text {
@@ -568,14 +572,14 @@
       margin-top: 20px;
     }
 
-    &+& {
-      @include mixin.mediaQuery("md") {
+    & + & {
+      @include mixin.media-query("md") {
         margin-top: 20px;
       }
     }
   }
 
-  @keyframes fadeInNews {
+  @keyframes fade-in-news {
     from {
       opacity: 0;
     }
@@ -590,12 +594,12 @@
 // access
 ////////////////////
 .section-access {
-  background-image: url('../image/bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 110px;
   padding-top: 60px;
+  padding-bottom: 110px;
+  background-image: url("../image/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .section-access .section-title {
@@ -603,21 +607,21 @@
 }
 
 .access-info {
-  align-items: center;
   display: flex;
+  align-items: center;
   margin-bottom: 69px;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     flex-direction: column;
     margin-bottom: 40px;
   }
 
   &__image-wrapper {
+    width: 55%;
     height: 370px;
     margin-right: 7%;
-    width: 55%;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
       margin-right: 0;
       margin-bottom: 30px;
@@ -631,17 +635,17 @@
   &__text-wrapper {
     width: 45%;
 
-    @include mixin.mediaQuery("md") {
+    @include mixin.media-query("md") {
       width: 100%;
     }
   }
 
   &-item {
     &__title {
-      font-weight: 800;
       margin-bottom: 19px;
+      font-weight: 800;
 
-      @include mixin.mediaQuery("md") {
+      @include mixin.media-query("md") {
         margin-bottom: 10px;
       }
     }
@@ -653,7 +657,7 @@
       &:not(:last-of-type) {
         margin-bottom: 19px;
 
-        @include mixin.mediaQuery("md") {
+        @include mixin.media-query("md") {
           margin-bottom: 10px;
         }
       }
@@ -668,7 +672,7 @@
 .map {
   width: 67%;
 
-  @include mixin.mediaQuery("md") {
+  @include mixin.media-query("md") {
     width: 100%;
   }
 }
