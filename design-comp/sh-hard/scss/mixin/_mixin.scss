@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "../common/variables"as *;
+
+@mixin media-query($breakpoint) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin z-index($key) {
+  z-index: map.get($layer, $key);
+}
