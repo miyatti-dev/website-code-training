@@ -27,7 +27,7 @@
     <div class="header-wrapper">
       <h1 class="header-title-wrapper">
         <a href="./" class="header-title-wrapper__link">
-          <img src="./image/top-header-logo.png" alt="" class="header-title-wrapper__logo">
+          <img src="<?php echo esc_url(get_theme_file_uri('/image/logo.png')); ?>" alt="logo" class="header-title-wrapper__logo">
         </a>
       </h1>
 
@@ -63,7 +63,31 @@
   </header>
   <!-- //header -->
 
+  <!-- main -->
+  <main>
 
+    <!-- fv -->
+    <div class="fv">
+      <div class="fv-image-wrapper">
+        <img class="fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/fv.jpg')); ?>" alt="">
+      </div>
+      <div class="fv-text-wrapper">
+        <h2 class="fv-title">
+          TOEFL対策はEngress
+        </h2>
+        <p class="fv-text">
+          日本人へのTOEFL指導歴豊かな講師陣の<br>
+          コーチング型TOEFLスクール
+        </p>
+        <a href="" class="document-request-button">
+          資料請求
+        </a>
+        <a href="" class="contact-button">
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+    <!-- //fv -->
 
   <!--
   <div id=" wrapper">

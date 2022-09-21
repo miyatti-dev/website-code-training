@@ -1,4 +1,5 @@
 # Adobe XDのデザインカンプからコーディング
 
 ## デザインカンプの配布元
-[【中級Ex】 XDデザインからのコーディング実践演習【HTML,CSS,JS実案件レベル】](https://note.com/samuraibrass/n/n8dd48cf8d30f)
+
+[【上級】XD デザインからのコーディング実践演習【WordPress 実案件レベル】](https://note.com/samuraibrass/n/n9faac1c35977)

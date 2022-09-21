@@ -10,19 +10,7 @@ html {
 }
 
 body {
-  font-family:
-    "Times New Roman",
-    "游明朝",
-    "Yu Mincho",
-    "游明朝体",
-    YuMincho,
-    "ヒラギノ明朝 Pro W3",
-    "Hiragino Mincho Pro",
-    "HiraMinProN-W3",
-    "HGS明朝E",
-    "ＭＳ Ｐ明朝",
-    "MS PMincho",
-    serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
@@ -107,155 +95,18 @@ a:hover {
   }
 }
 
-////////////////////
-// reserve modal
-////////////////////
-.reserve-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-
-  @include mixin.z-index(reserve-modal);
-}
-
-.reserve-modal-bg {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(30 30 30 / 80%);
-}
-
-.reserve-modal-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  max-width: 550px;
-  height: 95%;
-  max-height: 600px;
-  padding: 25px 60px 90px;
-  overflow-y: auto;
-  background-color: $color-bg-white;
-  border: 1px solid $color-border;
-  transform: translate(-50%, -50%);
-}
-
-.close-reserve-modal {
-  position: absolute;
-  top: 20px;
-  right: 22px;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-
-  &__bar {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: $color-bg-black;
-
-    &.close-modal-bar-top {
-      transform: rotate(45deg);
-    }
-
-    &.close-modal-bar-bottom {
-      transform: rotate(-45deg);
-    }
-  }
-}
-
-.reserve-modal-show {
-  /* モーダル表示用クラス */
+.document-request-button {
   display: block;
-  visibility: visible;
-  opacity: 1;
-}
-
-.reserve-modal-title {
-  padding-bottom: 26.5px;
-  margin-bottom: 32.5px;
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  border-bottom: 1px solid $color-border-reserve-dialog;
-}
-
-.reserve-form-list {
-  margin-bottom: 64px;
-
-  &-item {
-    display: flex;
-    flex-direction: column;
-
-    &__label {
-      margin-bottom: 12px;
-      font-weight: 500;
-      color: $color-text-black;
-    }
-
-    &__input,
-    &__plan-list {
-      height: 32px;
-      padding: 6px 10px 7px;
-      font-size: 1.4rem;
-      font-weight: 500;
-      border: 1px solid $color-border-reserve-dialog;
-    }
-
-    &__plan-list {
-      // ドロップダウンの下∇を表示するため(destylesで消されている)
-      appearance: auto;
-    }
-
-    & + & {
-      margin-top: 11px;
-    }
-  }
-}
-
-.form-submit-button-wrapper {
-  text-align: center;
-}
-
-.form-submit-button {
-  width: 198px;
-  height: 42px;
-  font-weight: 500;
-  border: 1px solid $color-border;
-}
-
-////////////////////
-// breadcrumb
-////////////////////
-.breadcrumb-list {
-  max-width: 1200px;
-  padding: 0 10px;
+  width: 260px;
+  height: 60px;
   margin: 0 auto;
-  margin-bottom: 93px;
+  font-weight: bold;
+  line-height: 60px;
+  background-color: $color-document-request-button;
+  border-radius: 31px;
+}
 
-  @include mixin.media-query("md") {
-    margin-bottom: 50px;
-  }
-
-  &-item {
-    // 横に並ぶように
-    display: inline;
-
-    &:not(:last-of-type)::after {
-      padding: 0 5px;
-      color: $color-text-black;
-      content: ">";
-    }
-
-    &__link {
-      font-weight: 500;
-    }
-  }
+.contact-button {
+  display: block;
+  text-decoration: underline;
 }
