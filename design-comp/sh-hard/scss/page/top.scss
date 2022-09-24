@@ -55,6 +55,7 @@
 .section-about {
   padding-top: 63px;
   padding-bottom: 54px;
+  margin-bottom: 59px;
   color: $color-text-white;
   text-align: center;
   background-color: $color-section-bg;
@@ -112,5 +113,59 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.333;
+  }
+}
+
+////////////////////
+// feature
+////////////////////
+.section-feature {
+  margin-bottom: 93px;
+
+  & .section-title {
+    margin-bottom: 59px;
+  }
+}
+
+.feature-list-item {
+  display: flex;
+  justify-content: space-between;
+
+  &__text-wrapper {
+    width: 55%;
+  }
+
+  &__number {
+    display: inline-block;
+    padding: 8px 25px;
+    margin-bottom: 35px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $color-text-white;
+    background-color: #f5a623;
+  }
+
+  &__feature {
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: calc(39 / 26);
+    margin-bottom: 39px;
+  }
+
+  &__detail {
+    font-weight: 500;
+    line-height: calc(21 / 16);
+  }
+
+  &__image-wrapper {
+    width: 33%;
+  }
+
+  & + & {
+    margin-top: 60px;
+  }
+
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
   }
 }
