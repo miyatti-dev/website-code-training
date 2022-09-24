@@ -285,6 +285,121 @@
 </section>
 <!-- //faq -->
 
+<!-- blog-and-news -->
+<section class="section-wrapper section-blog-and-news">
+  <div class="content-wrapper">
+
+    <!-- blog -->
+    <div class="blog-wrapper">
+      <h2 class="section-title">
+        ブログ
+      </h2>
+      <ul class="blog-list">
+        <li class="blog-list-item">
+          <a href="" class="blog-list-item__link">
+            <p class="blog-list-item__category">
+              カテゴリー
+            </p>
+            <div class="blog-list-item__image-wrapper">
+              <img src="<?php echo esc_url(get_theme_file_uri('/image/sample01.jpg')); ?>" alt="" class="blog-list-item__image">
+            </div>
+            <div class="blog-list-item__text-wrapper">
+              <p class="blog-list-item__text">
+                Engress説明会in大阪の模様をお伝えします
+              </p>
+              <time class="blog-list-item__date">
+                2020-12-27
+              </time>
+            </div>
+          </a>
+        </li>
+
+        <li class="blog-list-item">
+          <a href="" class="blog-list-item__link">
+            <p class="blog-list-item__category">
+              カテゴリー
+            </p>
+            <div class="blog-list-item__image-wrapper">
+              <img src="<?php echo esc_url(get_theme_file_uri('/image/sample02.jpg')); ?>" alt="" class="blog-list-item__image">
+            </div>
+            <div class="blog-list-item__text-wrapper">
+              <p class="blog-list-item__text">
+                Engressもくもく会でみんなで　TOEFL学習をしませんか？
+              </p>
+              <time class="blog-list-item__date">
+                2020-12-01
+              </time>
+            </div>
+          </a>
+        </li>
+
+        <li class="blog-list-item">
+          <a href="" class="blog-list-item__link">
+            <p class="blog-list-item__category">
+              カテゴリー
+            </p>
+            <div class="blog-list-item__image-wrapper">
+              <img src="<?php echo esc_url(get_theme_file_uri('/image/sample03.jpg')); ?>" alt="" class="blog-list-item__image">
+            </div>
+            <div class="blog-list-item__text-wrapper">
+              <p class="blog-list-item__text">
+                TOEFL学習にはコーチング学習が最強である話
+              </p>
+              <time class="blog-list-item__date">
+                2020-11–20
+              </time>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //blog -->
+
+    <!-- news -->
+    <div class="news-wrapper">
+      <h2 class="section-title">
+        お知らせ
+      </h2>
+      <ul class="news-list">
+        <li class="news-list-item">
+          <a href="">
+            <time class="news-list-item__date">
+              2020-12-01
+            </time>
+            <p class="news-list-item__text">
+              2021年のスケジュールについて
+            </p>
+          </a>
+        </li>
+
+        <li class="news-list-item">
+          <a href="">
+            <time class="news-list-item__date">
+              2019-11-02
+            </time>
+            <p class="news-list-item__text">
+              11月休校日のお知らせ
+            </p>
+          </a>
+
+        </li>
+
+        <li class="news-list-item">
+          <a href="">
+            <time class="news-list-item__date">
+              2020-10-01
+            </time>
+            <p class="news-list-item__text">
+              10月休校日のお知らせ
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //news -->
+  </div>
+</section>
+<!-- //blog-and-news -->
 
 
 <?php get_footer() ?>
