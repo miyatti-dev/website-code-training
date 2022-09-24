@@ -23,7 +23,7 @@ function my_theme_scripts() {
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', [], '', true);
 
 	// js
-	wp_enqueue_script('js-script', get_theme_file_uri('/js/script.js'), ['jquery'], '', true);
+	wp_enqueue_script('js-script', get_theme_file_uri('/js/script.js'), ['jquery'], date("YmdHis"), true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 

@@ -181,6 +181,7 @@
 
 .section-success-story {
   padding: 60px 0;
+  margin-bottom: 58px;
   color: #fff;
   background-color: #1b224c;
 }
@@ -242,8 +243,7 @@
 }
 
 .section-usage-flow {
-  padding-top: 58px;
-  padding-bottom: 75px;
+  margin-bottom: 75px;
 }
 .section-usage-flow .section-title {
   margin-bottom: 53px;
@@ -263,9 +263,9 @@
   width: 64px;
   font-weight: bold;
   line-height: 64px;
+  color: #fff;
   text-align: center;
   background-color: #f5a623;
-  color: #fff;
 }
 .usage-list-item__title {
   width: 24%;
@@ -280,4 +280,72 @@
 }
 .usage-list-item + .usage-list-item {
   margin-top: 8px;
+}
+
+.section-faq {
+  margin-bottom: 90px;
+}
+.section-faq .section-title {
+  margin-bottom: 32px;
+}
+
+.faq-list-item__term {
+  position: relative;
+  padding: 25px 0 15px;
+  font-weight: 500;
+  line-height: 1.3125;
+  border-bottom: 1px solid #1b224c;
+}
+.faq-list-item__term:first-of-type {
+  border-top: 1px solid #1b224c;
+}
+.faq-list-item__term::before, .faq-list-item__term::after {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  display: block;
+  width: 15px;
+  height: 2px;
+  content: "";
+  background-color: #1b224c;
+}
+.faq-list-item__term::after {
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.faq-list-item__term.open {
+  border-bottom: none;
+}
+.faq-list-item__term.open::before {
+  opacity: 0;
+}
+.faq-list-item__term.open::after {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+.faq-list-item__term:hover {
+  text-decoration: underline;
+}
+.faq-list-item__description {
+  height: 0;
+  padding: 0 26px;
+  font-weight: 500;
+  line-height: 0;
+  background-color: #f8f8f8;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.faq-list-item__description.active {
+  height: auto;
+  padding: 25px 26px;
+  line-height: 1.3125;
+  border-bottom: 1px solid #1b224c;
+  opacity: 1;
 }

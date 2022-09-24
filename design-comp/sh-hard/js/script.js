@@ -1,17 +1,3 @@
-// aos
-AOS.init({
-  duration: 1000,
-});
-
-// flatpickr
-flatpickr('#js-datepicker', {
-  locale: 'ja',
-  dateFormat: 'Y.m.d（D）H:i', // [2021.05.24（月）08:00]の形式で表示
-  minDate: "today",
-  enableTime: true,
-  mode: "range",
-  allowInput: true
-});
 
 // ready
 $(function () {
@@ -47,6 +33,20 @@ $(function () {
       hideNavMenu();
     }
   })
+
+  //////////////////////////////////////////////////
+  // faq アコーディオン
+  //////////////////////////////////////////////////
+  $('.faq-list-item__term').click(function () {
+    console.log('faq-list-item__term click');
+    $(this).toggleClass('open');
+    $(this).next().toggleClass('active');
+  });
+  $('.faq-list-item__description').click(function () {
+    console.log('item__description click');
+    $(this).prev().toggleClass('open');
+    $(this).toggleClass('active');
+  });
 
   //////////////////////////////////////////////////
   // news tab

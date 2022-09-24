@@ -249,6 +249,41 @@
 </section>
 <!-- //usage-flow -->
 
+<!-- faq -->
+<section class="section-wrapper section-faq">
+  <div class="content-wrapper">
+    <h2 class="section-title">
+      よくある質問
+    </h2>
+    <dl class="faq-list" data-aos="fade-up">
+      <dt class="faq-list-item__term open">
+        Engressはサラリーマンでも学習を続けられるでしょうか？
+      </dt>
+      <dd class="faq-list-item__description active">
+        Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。
+      </dd>
+      <dt class="faq-list-item__term">
+        教材はオリジナルのものを使用しているのでしょうか？
+      </dt>
+      <dd class="faq-list-item__description">
+        学習に最適されたEngressオリジナルの教材を使用しています。
+      </dd>
+      <dt class="faq-list-item__term">
+        講師に日本人はいますか？
+      </dt>
+      <dd class="faq-list-item__description">
+        講師は日本人の方もいます。講師のご希望がある場合は、指名することも可能です。
+      </dd>
+      <dt class="faq-list-item__term">
+        TOEFL以外の海外大学合格のサポートもしてもらえるのでしょうか？
+      </dt>
+      <dd class="faq-list-item__description">
+        EngressはTOEFLに特化した学習プランを提供しておりますので、海外大学合格のサポートはしておりません。
+      </dd>
+    </dl>
+  </div>
+</section>
+<!-- //faq -->
 
 
 
