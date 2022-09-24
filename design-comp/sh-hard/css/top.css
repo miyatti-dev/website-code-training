@@ -40,3 +40,64 @@
 .fv > .document-request-button {
   margin-bottom: 19px;
 }
+
+.section-about {
+  padding-top: 63px;
+  padding-bottom: 54px;
+  color: #fff;
+  text-align: center;
+  background-color: #1b224c;
+}
+
+.section-about .section-title {
+  margin-bottom: 62px;
+}
+
+.problem-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 80px;
+}
+.problem-list-item {
+  width: 33.3333333333%;
+}
+
+.engress-about {
+  padding: 11px 16px;
+  color: #1b224c;
+  background-color: #fff;
+}
+.engress-about-inner {
+  padding-top: 21px;
+  padding-bottom: 24px;
+  border: 5px solid #1b224c;
+}
+.engress-about__title {
+  margin-bottom: 25px;
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+.engress-about__title > span {
+  position: relative;
+  z-index: 1;
+}
+.engress-about__title > span::after {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 9px;
+  content: "";
+  background-color: #f5a623;
+}
+.engress-about__text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.333;
+}
