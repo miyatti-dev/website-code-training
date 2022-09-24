@@ -266,3 +266,48 @@
     }
   }
 }
+
+////////////////////
+// usage flow
+////////////////////
+.section-usage-flow {
+  padding-top: 58px;
+  padding-bottom: 75px;
+
+  & .section-title {
+    margin-bottom: 53px;
+  }
+}
+
+.usage-list-item {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background-color: #f8f8f8;
+
+  &__number {
+    width: 64px;
+    font-weight: bold;
+    line-height: 64px;
+    text-align: center;
+    background-color: #f5a623;
+    color: $color-text-white;
+  }
+
+  &__title {
+    width: 24%;
+    padding-left: 21px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-right: 1px solid #c3c3c3;
+  }
+
+  &__detail {
+    padding-left: 53px;
+    font-weight: 500;
+  }
+
+  & + & {
+    margin-top: 8px;
+  }
+}

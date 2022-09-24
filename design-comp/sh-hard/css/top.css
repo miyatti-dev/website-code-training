@@ -240,3 +240,44 @@
 .success-story-list-item + .success-story-list-item {
   margin-left: 30px;
 }
+
+.section-usage-flow {
+  padding-top: 58px;
+  padding-bottom: 75px;
+}
+.section-usage-flow .section-title {
+  margin-bottom: 53px;
+}
+
+.usage-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 64px;
+  background-color: #f8f8f8;
+}
+.usage-list-item__number {
+  width: 64px;
+  font-weight: bold;
+  line-height: 64px;
+  text-align: center;
+  background-color: #f5a623;
+  color: #fff;
+}
+.usage-list-item__title {
+  width: 24%;
+  padding-left: 21px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-right: 1px solid #c3c3c3;
+}
+.usage-list-item__detail {
+  padding-left: 53px;
+  font-weight: 500;
+}
+.usage-list-item + .usage-list-item {
+  margin-top: 8px;
+}
