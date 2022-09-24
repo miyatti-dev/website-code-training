@@ -106,40 +106,6 @@
   }
 }
 
-.header-reserve-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 54px;
-  margin-left: auto;
-  font-weight: 800;
-  color: $color-text-white;
-  background-color: $color-header-reserve-button;
-
-  @include mixin.media-query("lg") {
-    height: 36px;
-  }
-
-  @include mixin.media-query("sm") {
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-
-  &::before {
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    margin-right: 10px;
-    content: "";
-    background-image: url("../image/calender.png");
-
-    @include mixin.media-query("sm") {
-      margin-right: 5px;
-    }
-  }
-}
-
 .burger-button {
   position: relative;
   display: none;

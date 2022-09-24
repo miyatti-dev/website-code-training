@@ -101,11 +101,15 @@ a:hover {
   margin: 0 auto;
   font-weight: bold;
   line-height: 60px;
+  color: $color-text-white;
+  text-align: center;
   background-color: $color-document-request-button;
   border-radius: 31px;
 }
 
 .contact-button {
   display: block;
+  font-weight: 500;
+  color: $color-text-white;
   text-decoration: underline;
 }
