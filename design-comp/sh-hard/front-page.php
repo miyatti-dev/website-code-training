@@ -107,4 +107,15 @@
 </section>
 <!-- //feature -->
 
+<!-- price -->
+<section class="section-wrapper section-price">
+  <div class="content-wrapper">
+    <p class="price-text">
+      Engressの料金プランはこちら
+    </p>
+    <a href="" class="price-link">料金を見てみる</a>
+  </div>
+</section>
+<!-- //price -->
+
 <?php get_footer() ?>
