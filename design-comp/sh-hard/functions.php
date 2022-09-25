@@ -28,6 +28,14 @@ function my_theme_scripts() {
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
 
+/* -------------------------------------------- *
+アイキャッチ画像を有効化
+* -------------------------------------------- */
+function setup_post_thumbnails() {
+	add_theme_support('post-thumbnails', ['blog', 'news']);
+}
+add_action('after_setup_theme', 'setup_post_thumbnails');
+
 /*
 // カスタム投稿タイプ【ブログ】：メインクエリの変更（アーカイブページにて表示件数を9件にする）
 function change_set_blog($query) {
