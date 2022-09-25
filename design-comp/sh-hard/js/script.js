@@ -3,10 +3,6 @@
 $(function () {
   // 読み込み時の初回設定
   windowResizeEvent();
-  windowScrollEvent();
-
-  // window scroll event
-  $(window).scroll(windowScrollEvent);
 
   // window resize event
   $(window).resize(windowResizeEvent);
@@ -137,55 +133,5 @@ function windowResizeEvent() {
   } else {
     // メニュー表示(pc、tablet)
     showNavMenu(true);
-  }
-}
-
-//////////////////////////////////////////////////
-// window scroll event
-//////////////////////////////////////////////////
-function windowScrollEvent() {
-  // パスの取得
-  var path = location.pathname;
-  path = path.trim();
-
-  if (path.match(/\/room|meal|spa\/.*/)) {
-    // topページ以外は何もしない
-    return;
-  }
-
-  var scrollValue = $(this).scrollTop();
-  if (scrollValue === 0) {
-    // header bg color
-    $('.header').removeClass('header-bg-color-white');
-
-    // header logo
-    $('.header-title-wrapper__logo').attr('src', './image/top-header-logo.png');
-
-    // header nav
-    $('.header-nav').removeClass('header-nav-bg-color-white');
-
-    // header nav-list-item
-    $('.header-nav-list-item').removeClass('header-nav-list-item-color-black');
-
-    // burger-button
-    $('.burger-button__bar').removeClass('burger-button__bar-bg-color-black');
-
-    // リサイズを読んでメニュー表示/非表示設定
-    windowResizeEvent();
-  } else if ($('.header').hasClass('header-bg-color-white') === false) {
-    // header bg color
-    $('.header').addClass('header-bg-color-white');
-
-    // header logo
-    $('.header-title-wrapper__logo').attr('src', './image/sub-header-logo.png');
-
-    // header nav
-    $('.header-nav').addClass('header-nav-bg-color-white');
-
-    // header nav-list-item
-    $('.header-nav-list-item').addClass('header-nav-list-item-color-black');
-
-    // burger-button
-    $('.burger-button__bar').addClass('burger-button__bar-bg-color-black');
   }
 }

@@ -124,67 +124,41 @@
     <h2 class="section-title">
       TOEFL成功事例
     </h2>
-    <ul class="success-story-list">
-      <li class="success-story-list-item">
-        <p class="success-story-list-item__title">
-          TOEFL iBT 100点を突破してコロンビア大学大学院に進学できました！
-        </p>
-        <div class="success-story-list-item__image-wrapper">
-          <img src="<?php echo esc_url(get_theme_file_uri('/image/model01.png')); ?>" alt="" class="success-story-list-item__image">
-        </div>
-        <div class="success-story-list-item__personal-info-wrapper">
-          <p class="success-story-list-item__profession">
-            会社員
-          </p>
-          <p class="success-story-list-item__name">
-            T.Fujiyamaさん
-          </p>
-        </div>
-        <p class="success-story-list-item__detail">
-          3ヶ月でTOEFL80→108点
-        </p>
-      </li>
 
-      <li class="success-story-list-item">
-        <p class="success-story-list-item__title">
-          半年でTOEFL 40点→100点を達成！コロンビア大学大学院に合格
-        </p>
-        <div class="success-story-list-item__image-wrapper">
-          <img src="<?php echo esc_url(get_theme_file_uri('/image/model02.png')); ?>" alt="" class="success-story-list-item__image">
-        </div>
-        <div class="success-story-list-item__personal-info-wrapper">
-          <p class="success-story-list-item__profession">
-            大学生
-          </p>
-          <p class="success-story-list-item__name">
-            Y.Takiyamaさん
-          </p>
-        </div>
-        <p class="success-story-list-item__detail">
-          6ヶ月でTOEFL40→100点
-        </p>
-      </li>
+    <?php
+    $args = [
+      'post_type' => 'success-story',
+      'posts_per_page' => 3
+    ];
+    $the_query = new WP_Query($args);
+    ?>
+    <?php if ($the_query->have_posts()) : ?>
+      <ul class="success-story-list">
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+          <li class="success-story-list-item">
+            <p class="success-story-list-item__title">
+              <?php echo nl2br(esc_html(get_field('headline'))); ?>
+            </p>
+            <div class="success-story-list-item__image-wrapper">
+              <img src="<?php the_field('photo'); ?>" alt="" class="success-story-list-item__image">
+            </div>
+            <div class="success-story-list-item__personal-info-wrapper">
+              <p class="success-story-list-item__profession">
+                <?php echo nl2br(esc_html(get_field('profession'))); ?>
+              </p>
+              <p class="success-story-list-item__name">
+                <?php echo nl2br(esc_html(get_field('name'))); ?>
+              </p>
+            </div>
+            <p class="success-story-list-item__result">
+              <?php echo nl2br(esc_html(get_field('result'))); ?>
+            </p>
+          </li>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+      </ul>
+    <?php endif; ?>
 
-      <li class="success-story-list-item">
-        <p class="success-story-list-item__title">
-          早稲田大学 国際教養学部AO入試合格！TOEFL iBT 109点
-        </p>
-        <div class="success-story-list-item__image-wrapper">
-          <img src="<?php echo esc_url(get_theme_file_uri('/image/model03.png')); ?>" alt="" class="success-story-list-item__image">
-        </div>
-        <div class="success-story-list-item__personal-info-wrapper">
-          <p class="success-story-list-item__profession">
-            高校生
-          </p>
-          <p class="success-story-list-item__name">
-            M.Yamadaさん
-          </p>
-        </div>
-        <p class="success-story-list-item__detail">
-          5ヶ月でTOEFL68→109点
-        </p>
-      </li>
-    </ul>
   </div>
 </section>
 <!-- //success-story -->
