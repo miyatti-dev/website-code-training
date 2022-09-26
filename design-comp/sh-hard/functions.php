@@ -1,6 +1,8 @@
 <?php
 
-// scriptとcssを読み込む
+/*--------------------------------------------*/
+/* scriptとcssを読み込む
+/*--------------------------------------------*/
 function my_theme_scripts() {
 	// reset css
 	wp_enqueue_style('reset', get_theme_file_uri('/css/destyles.css'));
@@ -27,10 +29,60 @@ function my_theme_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
+/*--------------------------------------------*/
+/* 成功事例の「新規投稿」サブメニューを非表示
+/*--------------------------------------------*/
+function remove_sub_menus() {
+	remove_submenu_page('edit.php?post_type=success-story', 'post-new.php?post_type=success-story');
+}
+add_action('admin_menu', 'remove_sub_menus');
 
-/* -------------------------------------------- *
-アイキャッチ画像を有効化
-* -------------------------------------------- */
+/*--------------------------------------------*/
+/* 成功事例の「新規投稿」項目を非表示
+/*--------------------------------------------*/
+function delete_new_post_item($hook) {
+	if ($hook == 'edit.php' || $hook == 'post.php') {
+
+		$postType = get_post_type();
+		if ($postType == 'success-story') {
+			echo '<style>.wrap .wp-heading-inline + .page-title-action{display: none;}</style>';
+		}
+	}
+}
+add_action('admin_enqueue_scripts', 'delete_new_post_item');
+
+/*--------------------------------------------*/
+/* 成功事例の「ゴミ箱」項目を非表示
+/*--------------------------------------------*/
+function custom_action_row($actions, $post) {
+
+	$postType = get_post_type();
+	if ($postType == 'success-story') {
+		unset($actions['trash']); //ゴミ箱
+	}
+
+	return $actions;
+}
+add_filter('post_row_actions', 'custom_action_row', 10, 2);
+
+/*--------------------------------------------*/
+/* 成功事例の編集画面の「ゴミ箱へ移動」項目を非表示
+/*--------------------------------------------*/
+function admin_preview_css_custom() {
+	$current_screen = get_current_screen();
+	if (
+		isset($current_screen) && ($current_screen->post_type === 'success-story')
+	) {
+		$style = '<style>#preview-action {display: none;}</style>';
+		$style .= '<style>#delete-action{display: none;}</style>';
+		echo $style;
+	}
+}
+add_action('admin_print_styles', 'admin_preview_css_custom');
+
+/*--------------------------------------------*/
+/* アイキャッチ画像を有効化
+/*--------------------------------------------*/
 function setup_post_thumbnails() {
 	add_theme_support('post-thumbnails', ['blog', 'news']);
 }
