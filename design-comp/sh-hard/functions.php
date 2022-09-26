@@ -30,6 +30,19 @@ function my_theme_scripts() {
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
 /*--------------------------------------------*/
+/* 「投稿」メニューを「ブログ」に変更
+/*--------------------------------------------*/
+function aktk_post_type_labels_post($labels) {
+	foreach ($labels as $key => $value) {
+		$labels->$key = str_replace('投稿', 'ブログ', $value);
+	}
+
+	return $labels;
+}
+
+add_filter('post_type_labels_post', 'aktk_post_type_labels_post');
+
+/*--------------------------------------------*/
 /* 成功事例の「新規投稿」サブメニューを非表示
 /*--------------------------------------------*/
 function remove_sub_menus() {
@@ -84,7 +97,7 @@ add_action('admin_print_styles', 'admin_preview_css_custom');
 /* アイキャッチ画像を有効化
 /*--------------------------------------------*/
 function setup_post_thumbnails() {
-	add_theme_support('post-thumbnails', ['blog', 'news']);
+	add_theme_support('post-thumbnails', ['post', 'blog', 'news']);
 }
 add_action('after_setup_theme', 'setup_post_thumbnails');
 
