@@ -48,6 +48,12 @@ a:hover {
   }
 }
 
+.child-page-section-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 .logo-icon-wrapper {
   margin-bottom: 13px;
   text-align: center;
@@ -112,4 +118,58 @@ a:hover {
   font-weight: 500;
   color: $color-text-white;
   text-decoration: underline;
+}
+
+////////////////////
+// breadcrumb
+////////////////////
+.breadcrumb-wrapper {
+  padding: 17px 0;
+  background-color: #f8f8f8;
+}
+
+.breadcrumb {
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  & a {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb-arrow {
+  padding: 0 10px;
+}
+
+////////////////////
+// child page fv
+////////////////////
+.child-page-fv {
+  position: relative;
+  height: 100vh;
+  max-height: calc(221px + 80px); // 221px + 80px(ヘッダー分)
+  color: $color-text-white;
+  text-align: center;
+
+  &-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 80px;  // ヘッダー分
+    transform: translate(-50%, -50%);
+  }
+
+  &-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+}
+
+.child-page-fv-image-wrapper {
+  height: 100%;
+  padding-top: 80px;  // ヘッダー分
+}
+
+.child-page-fv-image {
+  height: 100%;
 }

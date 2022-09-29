@@ -1,7 +1,7 @@
 .fv {
   position: relative;
   height: 100vh;
-  max-height: 476px;
+  max-height: 556px;
   color: #fff;
   text-align: center;
 }
@@ -26,11 +26,12 @@
   margin-bottom: 55px;
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.333;
+  line-height: 1.3333333333;
 }
 
 .fv-image-wrapper {
   height: 100%;
+  padding-top: 80px;
 }
 
 .fv-image {

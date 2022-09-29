@@ -16,6 +16,9 @@ function my_theme_scripts() {
 	if (is_front_page()) {
 		// top
 		wp_enqueue_style('top', get_theme_file_uri('/css/top.css'), ['base'], date("YmdHis"));
+	} else if (is_page('price')) {
+		// price
+		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base'], date("YmdHis"));
 	}
 
 	// 標準jquery削除

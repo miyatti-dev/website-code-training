@@ -67,32 +67,42 @@
   <main>
 
     <!-- fv -->
-    <div class="fv">
-      <div class="fv-image-wrapper">
-        <img class="fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/fv.jpg')); ?>" alt="">
-      </div>
-      <div class="fv-text-wrapper">
-        <h2 class="fv-title">
-          TOEFL対策はEngress
-        </h2>
-        <p class="fv-text">
-          日本人へのTOEFL指導歴豊かな講師陣の<br>
-          コーチング型TOEFLスクール
-        </p>
-        <a href="" class="document-request-button">
-          資料請求
-        </a>
-        <a href="" class="contact-button">
-          お問い合わせ
-        </a>
-      </div>
-    </div>
-    <!-- //fv -->
-
-  <!--
-  <div id=" wrapper">
     <?php if (is_front_page()) { ?>
-      <div class="top_key_visual"></div>
+      <!-- top -->
+      <div class="fv">
+        <div class="fv-image-wrapper">
+          <img class="fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/fv.jpg')); ?>" alt="">
+        </div>
+        <div class="fv-text-wrapper">
+          <h2 class="fv-title">
+            TOEFL対策はEngress
+          </h2>
+          <p class="fv-text">
+            日本人へのTOEFL指導歴豊かな講師陣の<br>
+            コーチング型TOEFLスクール
+          </p>
+          <a href="" class="document-request-button">
+            資料請求
+          </a>
+          <a href="" class="contact-button">
+            お問い合わせ
+          </a>
+        </div>
+      </div>
+
+    <?php } elseif (is_page('price')) { ?>
+      <!-- price -->
+      <div class="child-page-fv">
+        <div class="child-page-fv-image-wrapper">
+          <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/plan.png')); ?>" alt="">
+        </div>
+        <div class="child-page-fv-text-wrapper">
+          <h2 class="child-page-fv-title">
+            コース・料金
+          </h2>
+        </div>
+      </div>
+
     <?php } elseif (is_post_type_archive('course') || is_tax(['school-year', 'period']) || is_singular('course')) { ?>
       <div class="subpage_key_visual header_course"></div>
     <?php } elseif (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_singular('blog')) { ?>
@@ -101,17 +111,20 @@
       <div class="subpage_key_visual header_news"></div>
     <?php } elseif (is_page('school-bldg')) { ?>
       <div class="subpage_key_visual header_school_bldg"></div>
-    <?php } elseif (is_page('contact')) { ?>
-      <div class="subpage_key_visual header_contact"></div>
+
     <?php } else { ?>
       <div class="subpage_key_visual header_sub"></div>
     <?php } ?>
+    <!-- //fv -->
+
+
 
     <?php if (!is_front_page()) { ?>
       <?php if (function_exists('bcn_display')) { ?>
-        <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-          <?php bcn_display(); ?>
+        <div class="breadcrumb-wrapper">
+          <div id="breadcrumb" class="content-wrapper breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <?php bcn_display(); ?>
+          </div>
         </div>
       <?php } ?>
     <?php } ?>
--->

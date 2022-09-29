@@ -1,0 +1,53 @@
+@use "../common/variables"as *;
+@use "../mixin/mixin";
+
+////////////////////
+// fee-structure
+////////////////////
+.section-fee-structure {
+  margin-bottom: 90px;
+
+  & .child-page-section-title {
+    margin-bottom: 60px;
+  }
+}
+
+.fee-structure-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 46px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: $color-text-white;
+  text-align: center;
+}
+
+.admission-fee,
+.monthly-fee {
+  width: 280px;
+  height: 90px;
+  line-height: 90px;
+  background-color: #1b224c;
+  border: 1px solid #1b224c;
+}
+
+.admission-fee {
+  position: relative;
+  margin-right: 98px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: calc(-36px - 25px);
+    width: 25px;
+    height: 2px;
+    content: "";
+    background-color: #1b224c;
+    transform: translate(0, -50%);
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
