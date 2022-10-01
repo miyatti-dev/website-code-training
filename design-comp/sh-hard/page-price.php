@@ -76,9 +76,8 @@
         </ul>
       </li>
 
-      <li class="price-list-item">
+      <li class="price-list-item recommend">
         <p class="price-list-item__plan-name">
-          おすすめ<br>
           志望校対策プラン
         </p>
         <p class="price-list-item__price">

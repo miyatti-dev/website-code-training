@@ -8,5 +8,9 @@
       "enable": true,                             
       "baseUri": "/",                    
       "proxyUri": "http://localhost:80" // ローカルでのアドレス
-  }
+  },
+  "cSpell.words": [
+    "Engress",
+    "Kaku"
+  ]
 }

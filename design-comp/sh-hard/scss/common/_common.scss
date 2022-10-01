@@ -10,7 +10,16 @@ html {
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-family:
+    "游ゴシック体",
+    YuGothic,
+    "游ゴシック",
+    "Yu Gothic",
+    "メイリオ",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Font Awesome 5 Free",
+    sans-serif;
 
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
@@ -125,6 +134,7 @@ a:hover {
 ////////////////////
 .breadcrumb-wrapper {
   padding: 17px 0;
+  margin-bottom: 58px;
   background-color: #f8f8f8;
 }
 

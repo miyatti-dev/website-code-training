@@ -10,6 +10,9 @@ function my_theme_scripts() {
 	// google fonts
 	wp_enqueue_style('google-webfont', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
+	// fontawesome
+	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v6.2.0/css/all.css');
+
 	// base css（バージョンに時刻を入れてキャッシュ対策をする）
 	wp_enqueue_style('base', get_theme_file_uri('/css/styles.css'), ['reset'], date("YmdHis"));
 

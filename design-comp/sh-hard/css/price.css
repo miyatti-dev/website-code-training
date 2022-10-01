@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section-fee-structure {
   margin-bottom: 90px;
 }
@@ -48,4 +49,78 @@
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.section-price-list {
+  margin-bottom: 60px;
+}
+.section-price-list .child-page-section-title {
+  margin-bottom: 70px;
+}
+
+.price-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.price-list-item {
+  position: relative;
+  width: 25%;
+  text-align: center;
+  border: 0.5px solid #1b224c;
+}
+.price-list-item.recommend::before {
+  display: block;
+  height: 36px;
+  padding-top: 17px;
+  font-weight: bold;
+  color: #fff;
+  content: "おすすめ";
+  background-color: #f5a623;
+}
+.price-list-item:not(.recommend) {
+  margin-top: 36px;
+}
+.price-list-item__plan-name {
+  padding: 21px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1b224c;
+}
+.price-list-item.recommend > .price-list-item__plan-name {
+  background-color: #f5a623;
+}
+.price-list-item__price {
+  margin-bottom: 14px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.price-list-item.recommend > .price-list-item__price {
+  color: #f5a623;
+}
+.price-list-item__tax {
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.price-list-item + .price-list-item {
+  margin-left: 7px;
+}
+
+.plan-feature-list {
+  margin-bottom: 92px;
+}
+.plan-feature-list-item {
+  position: relative;
+  font-weight: 500;
+  line-height: 1.3125;
+}
+.plan-feature-list-item::before {
+  margin-right: 13.5px;
+  font-weight: 900;
+  color: #1b224c;
+  content: "\f00c";
+}
+.plan-feature-list-item + .plan-feature-list-item {
+  margin-top: 15px;
 }
