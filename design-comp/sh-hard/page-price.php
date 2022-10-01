@@ -27,12 +27,16 @@
       料金表
     </h2>
     <ul class="price-list">
+      <?php
+      $page = get_page_by_path('price');
+      $id = $page->ID;
+      ?>
       <li class="price-list-item">
         <p class="price-list-item__plan-name">
           基礎プラン
         </p>
         <p class="price-list-item__price">
-          59,000円~
+          <?php echo number_format(get_field('basic-plan', $id)); ?>円~
         </p>
         <p class="price-list-item__tax">
           *月額（税抜価格）
@@ -55,7 +59,7 @@
           演習プラン
         </p>
         <p class="price-list-item__price">
-          75,000円~
+          <?php echo number_format(get_field('practice-plan', $id)); ?>円~
         </p>
         <p class="price-list-item__tax">
           *月額（税抜価格）
@@ -81,7 +85,7 @@
           志望校対策プラン
         </p>
         <p class="price-list-item__price">
-          95,000円~
+          <?php echo number_format(get_field('test-preparation-plan', $id)); ?>円~
         </p>
         <p class="price-list-item__tax">
           *月額（税抜価格）
@@ -110,7 +114,7 @@
           フレックスプラン
         </p>
         <p class="price-list-item__price">
-          60,000円~
+          <?php echo number_format(get_field('flex-plan', $id)); ?>円~
         </p>
         <p class="price-list-item__tax">
           *月額（税抜価格)
