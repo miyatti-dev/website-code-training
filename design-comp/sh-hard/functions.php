@@ -22,6 +22,9 @@ function my_theme_scripts() {
 	} else if (is_page('price')) {
 		// price
 		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base'], date("YmdHis"));
+	} else if (is_home()) {
+		// list page(一覧ページ)
+		wp_enqueue_style('list-page', get_theme_file_uri('/css/list-page.css'), ['base'], date("YmdHis"));
 	}
 
 	// 標準jquery削除
@@ -107,14 +110,13 @@ function setup_post_thumbnails() {
 }
 add_action('after_setup_theme', 'setup_post_thumbnails');
 
-/*
 // カスタム投稿タイプ【ブログ】：メインクエリの変更（アーカイブページにて表示件数を9件にする）
 function change_set_blog($query) {
 	if (is_admin() || !$query->is_main_query()) {
 		return;
 	}
-	if ($query->is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_search()) {
-		$query->set('posts_per_page', '9');
+	if (is_home() || $query->is_post_type_archive('post') || is_tax(['blog_category', 'blog_tag']) || is_search()) {
+		$query->set('posts_per_page', '10');
 		return;
 	}
 }
@@ -123,12 +125,20 @@ add_action('pre_get_posts', 'change_set_blog');
 //　カスタム投稿タイプ【ブログ】：アーカイブページ抜粋文の長さ変更
 function change_excerpt_length() {
 	$length = 80;
-	if (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag'])) {
-		return 50; //リターンした時点で処理は終了する
+	if (is_home() || is_post_type_archive('post') || is_tax(['post', 'blog_tag'])) {
+		return 75; //リターンした時点で処理は終了する
 	}
 	return $length; // デフォルト110文字
 }
 add_filter('excerpt_length', 'change_excerpt_length', 999);
+
+function custom_excerpt_more($more) {
+	return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
+/*
+
 
 
 

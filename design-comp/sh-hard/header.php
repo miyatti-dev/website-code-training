@@ -102,6 +102,18 @@
           </h2>
         </div>
       </div>
+    <?php } elseif (is_home() || is_single()) { ?>
+      <!-- price -->
+      <div class="child-page-fv">
+        <div class="child-page-fv-image-wrapper">
+          <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/blog.png')); ?>" alt="">
+        </div>
+        <div class="child-page-fv-text-wrapper">
+          <h2 class="child-page-fv-title">
+            ブログ
+          </h2>
+        </div>
+      </div>
 
     <?php } elseif (is_post_type_archive('course') || is_tax(['school-year', 'period']) || is_singular('course')) { ?>
       <div class="subpage_key_visual header_course"></div>
