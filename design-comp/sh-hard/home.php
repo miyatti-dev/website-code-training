@@ -11,8 +11,22 @@
         <?php while (have_posts()) : the_post(); ?>
           <li class="post-list-item">
             <a class="post-list-item__link" href="<?php the_permalink(); ?>">
+              <?php if (is_sticky()) : ?>
+                <p class="post-list-item__pinned">
+                  固定された記事
+                </p>
+              <?php endif; ?>
+
               <p class="post-list-item__category">
-                カテゴリー
+                <?php
+                $terms = get_the_terms($post->ID, 'category');
+                $count = count($terms);
+                if ($count > 0) {
+                  echo $terms[0]->name;
+                } else {
+                  echo '未分類';
+                }
+                ?>
               </p>
 
               <div class="post-list-item__image-wrapper">
@@ -46,7 +60,8 @@
     <!-- ============= ページング ============= -->
     <?php
     $args = array(
-      'mid_size' => 2,
+      'mid_size' => 2, // 現在ページの左右に表示するページ番号の数
+      'prev_next' => false, // 「前へ」「次へ」のリンクを非表示
       'screen_reader_text' => 'ページャー'
     );
     the_posts_pagination($args);

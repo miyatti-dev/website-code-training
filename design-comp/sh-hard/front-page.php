@@ -271,6 +271,7 @@
 
       <?php
       $args = [
+        'ignore_sticky_posts' => true,  // 先頭固定記事を除外する
         'post_type' => 'post',
         'posts_per_page' => 3
       ];
@@ -282,7 +283,15 @@
             <li class="blog-list-item">
               <a href="<?php the_permalink(); ?>" class="blog-list-item__link">
                 <p class="blog-list-item__category">
-                  カテゴリー
+                  <?php
+                  $terms = get_the_terms($post->ID, 'category');
+                  $count = count($terms);
+                  if ($count > 0) {
+                    echo $terms[0]->name;
+                  } else {
+                    echo '未分類';
+                  }
+                  ?>
                 </p>
                 <div class="blog-list-item__image-wrapper">
                   <img src="<?php the_post_thumbnail_url('blog'); ?>" alt="" class="blog-list-item__image">
