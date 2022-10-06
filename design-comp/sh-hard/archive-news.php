@@ -3,15 +3,7 @@
 <section class="section-wrapper section-blog">
   <div class="content-wrapper">
     <h2 class="child-page-section-title">
-      <?php
-      $categories = get_the_category();
-      $count = count($categories);
-      if ($count > 0) {
-        echo $categories[0]->name . '一覧';
-      } else {
-        echo '未分類一覧';
-      }
-      ?>
+      新着一覧
     </h2>
 
     <?php if (have_posts()) : ?>
@@ -19,32 +11,13 @@
         <?php while (have_posts()) : the_post(); ?>
           <li class="post-list-item">
             <a class="post-list-item__link" href="<?php the_permalink(); ?>">
-              <?php if (is_sticky()) : ?>
+              <?php if (is_sticky() && !is_paged()) : ?>
                 <p class="post-list-item__pinned">
                   固定された記事
                 </p>
               <?php endif; ?>
 
-              <p class="post-list-item__category">
-                <?php
-                $terms = get_the_terms($post->ID, 'category');
-                $count = count($terms);
-                if ($count > 0) {
-                  echo $terms[0]->name;
-                } else {
-                  echo '未分類';
-                }
-                ?>
-              </p>
-
-              <div class="post-list-item__image-wrapper">
-                <?php if (has_post_thumbnail()) : ?>
-                  <img src="<?php the_post_thumbnail_url('blog'); ?>" alt="" class="post-list-item__image">
-                <?php else : ?>
-                  <img src="<?php echo esc_url(get_theme_file_uri('image/no-image.png')); ?>" alt="" class="post-list-item__image">
-                <?php endif; ?>
-              </div>
-
+        
               <div class="post-list-item__text-wrapper">
                 <p class="post-list-item__date"><?php echo get_the_date('Y.m.d'); ?></p>
                 <p class="post-list-item__title">
@@ -76,5 +49,7 @@
     ?>
   </div>
 </section>
+
+
 
 <?php get_footer(); ?>

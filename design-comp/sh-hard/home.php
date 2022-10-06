@@ -11,7 +11,7 @@
         <?php while (have_posts()) : the_post(); ?>
           <li class="post-list-item">
             <a class="post-list-item__link" href="<?php the_permalink(); ?>">
-              <?php if (is_sticky()) : ?>
+              <?php if (is_sticky() && !is_paged()) : ?>
                 <p class="post-list-item__pinned">
                   固定された記事
                 </p>

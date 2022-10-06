@@ -102,7 +102,7 @@
           </h2>
         </div>
       </div>
-    <?php } elseif (is_home() || is_single()) { ?>
+    <?php } elseif (is_home() || is_single() || is_category()) { ?>
       <!-- price -->
       <div class="child-page-fv">
         <div class="child-page-fv-image-wrapper">
@@ -119,8 +119,6 @@
       <div class="subpage_key_visual header_course"></div>
     <?php } elseif (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_singular('blog')) { ?>
       <div class="subpage_key_visual header_blog"></div>
-    <?php } elseif (is_home() || is_single()) { ?>
-      <div class="subpage_key_visual header_news"></div>
     <?php } elseif (is_page('school-bldg')) { ?>
       <div class="subpage_key_visual header_school_bldg"></div>
 

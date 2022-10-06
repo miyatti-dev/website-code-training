@@ -331,7 +331,7 @@
         <ul class="news-list">
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <li class="news-list-item">
-              <a href="">
+              <a href="<?php the_permalink(); ?>">
                 <time class="news-list-item__date">
                   <?php echo get_the_date('Y-m-d') ?>
                 </time>
