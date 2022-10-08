@@ -91,7 +91,7 @@
       </div>
 
     <?php } elseif (is_page('price')) { ?>
-      <!-- price -->
+      <!-- 固定ページprice -->
       <div class="child-page-fv">
         <div class="child-page-fv-image-wrapper">
           <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/plan.png')); ?>" alt="">
@@ -102,8 +102,8 @@
           </h2>
         </div>
       </div>
-    <?php } elseif (is_home() || is_single() || is_category()) { ?>
-      <!-- price -->
+    <?php } elseif (is_home() || is_singular('post') || is_category()) { ?>
+      <!-- デフォルト投稿タイプのblog -->
       <div class="child-page-fv">
         <div class="child-page-fv-image-wrapper">
           <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/blog.png')); ?>" alt="">
@@ -115,12 +115,23 @@
         </div>
       </div>
 
+    <?php } elseif (is_post_type_archive('news') || is_singular('news') ) { ?>
+      <!-- カスタム投稿タイプのnews -->
+      <div class="child-page-fv">
+        <div class="child-page-fv-image-wrapper">
+          <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/news.png')); ?>" alt="">
+        </div>
+        <div class="child-page-fv-text-wrapper">
+          <h2 class="child-page-fv-title">
+            お知らせ
+          </h2>
+        </div>
+      </div>
+
     <?php } elseif (is_post_type_archive('course') || is_tax(['school-year', 'period']) || is_singular('course')) { ?>
       <div class="subpage_key_visual header_course"></div>
     <?php } elseif (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_singular('blog')) { ?>
       <div class="subpage_key_visual header_blog"></div>
-    <?php } elseif (is_page('school-bldg')) { ?>
-      <div class="subpage_key_visual header_school_bldg"></div>
 
     <?php } else { ?>
       <div class="subpage_key_visual header_sub"></div>

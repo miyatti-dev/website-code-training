@@ -1,37 +1,20 @@
 <?php get_header(); ?>
 
-<section class="section-wrapper section-blog">
+<section class="section-wrapper section-news">
   <div class="content-wrapper">
     <h2 class="child-page-section-title">
-      新着一覧
+      お知らせ一覧
     </h2>
 
     <?php if (have_posts()) : ?>
-      <ul class="post-list">
+      <ul class="news-list">
         <?php while (have_posts()) : the_post(); ?>
-          <li class="post-list-item">
-            <a class="post-list-item__link" href="<?php the_permalink(); ?>">
-              <?php if (is_sticky() && !is_paged()) : ?>
-                <p class="post-list-item__pinned">
-                  固定された記事
-                </p>
-              <?php endif; ?>
-
-        
-              <div class="post-list-item__text-wrapper">
-                <p class="post-list-item__date"><?php echo get_the_date('Y.m.d'); ?></p>
-                <p class="post-list-item__title">
-                  <!--
-                  <?php
-                  // 表示タイトルを40文字以内に丸める
-                  $title = mb_strimwidth($post->post_title, 0, 48, '...', 'UTF-8');
-                  echo $title;
-                  ?>
-                  -->
-                  <?php echo wp_trim_words(get_the_title(), 45, '...'); ?>
-                </p>
-                <p class="post-list-item__content"><?php echo get_the_excerpt(); ?></p>
-              </div>
+          <li class="news-list-item">
+            <a class="news-list-item__link" href="<?php the_permalink(); ?>">
+              <p class="news-list-item__date"><?php echo get_the_date('Y-m-d'); ?></p>
+              <p class="news-list-item__title">
+                <?php echo wp_trim_words(get_the_title(), 45, '...'); ?>
+              </p>
             </a>
           </li>
         <?php endwhile; ?>
@@ -49,7 +32,5 @@
     ?>
   </div>
 </section>
-
-
 
 <?php get_footer(); ?>

@@ -23,8 +23,11 @@ function my_theme_scripts() {
 		// price
 		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base'], date("YmdHis"));
 	} else if (is_home() || is_category()) {
-		// list page(一覧ページ)
+		// blog list (一覧ページ)
 		wp_enqueue_style('list-page', get_theme_file_uri('/css/list-page.css'), ['base'], date("YmdHis"));
+	} else if (is_post_type_archive('news')) {
+		// news list (一覧ページ)
+		wp_enqueue_style('news-list', get_theme_file_uri('/css/news-list.css'), ['base'], date("YmdHis"));
 	}
 
 	// 標準jquery削除
@@ -115,7 +118,7 @@ function change_set_blog($query) {
 	if (is_admin() || !$query->is_main_query()) {
 		return;
 	}
-	if (is_home() || $query->is_post_type_archive('post') || is_tax(['blog_category', 'blog_tag']) || is_search()) {
+	if (is_home() || $query->is_post_type_archive('post') || $query->is_post_type_archive('news') ||is_tax(['blog_category', 'blog_tag']) || is_search()) {
 		$query->set('posts_per_page', '10');
 		return;
 	}
