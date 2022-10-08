@@ -25,9 +25,6 @@
   </div>
 </section>
 
-
-</main>
-
 <footer>
   <!--
  <?php

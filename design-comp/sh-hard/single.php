@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+
+<!-- main -->
+<main>
+
+  <!--
 <div id="container" class="container_single w_inner">
   <main>
     <article class="article">
@@ -48,4 +53,8 @@
   </main>
   <?php get_sidebar(); ?>
 </div>
+              -->
+</main>
+<!-- //main -->
+
 <?php get_footer(); ?>

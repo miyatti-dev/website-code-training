@@ -63,89 +63,87 @@
   </header>
   <!-- //header -->
 
-  <!-- main -->
-  <main>
 
-    <!-- fv -->
-    <?php if (is_front_page()) { ?>
-      <!-- top -->
-      <div class="fv">
-        <div class="fv-image-wrapper">
-          <img class="fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/fv.jpg')); ?>" alt="">
-        </div>
-        <div class="fv-text-wrapper">
-          <h2 class="fv-title">
-            TOEFL対策はEngress
-          </h2>
-          <p class="fv-text">
-            日本人へのTOEFL指導歴豊かな講師陣の<br>
-            コーチング型TOEFLスクール
-          </p>
-          <a href="" class="document-request-button">
-            資料請求
-          </a>
-          <a href="" class="contact-button">
-            お問い合わせ
-          </a>
+  <!-- fv -->
+  <?php if (is_front_page()) { ?>
+    <!-- top -->
+    <div class="fv">
+      <div class="fv-image-wrapper">
+        <img class="fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/fv.jpg')); ?>" alt="">
+      </div>
+      <div class="fv-text-wrapper">
+        <h2 class="fv-title">
+          TOEFL対策はEngress
+        </h2>
+        <p class="fv-text">
+          日本人へのTOEFL指導歴豊かな講師陣の<br>
+          コーチング型TOEFLスクール
+        </p>
+        <a href="" class="document-request-button">
+          資料請求
+        </a>
+        <a href="" class="contact-button">
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+
+  <?php } elseif (is_page('price')) { ?>
+    <!-- 固定ページprice -->
+    <div class="child-page-fv">
+      <div class="child-page-fv-image-wrapper">
+        <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/plan.png')); ?>" alt="">
+      </div>
+      <div class="child-page-fv-text-wrapper">
+        <h2 class="child-page-fv-title">
+          コース・料金
+        </h2>
+      </div>
+    </div>
+  <?php } elseif (is_home() || is_singular('post') || is_category() || is_tag()) { ?>
+    <!-- デフォルト投稿タイプのblog -->
+    <div class="child-page-fv">
+      <div class="child-page-fv-image-wrapper">
+        <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/blog.png')); ?>" alt="">
+      </div>
+      <div class="child-page-fv-text-wrapper">
+        <h2 class="child-page-fv-title">
+          ブログ
+        </h2>
+      </div>
+    </div>
+
+  <?php } elseif (is_post_type_archive('news') || is_singular('news')) { ?>
+    <!-- カスタム投稿タイプのnews -->
+    <div class="child-page-fv">
+      <div class="child-page-fv-image-wrapper">
+        <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/news.png')); ?>" alt="">
+      </div>
+      <div class="child-page-fv-text-wrapper">
+        <h2 class="child-page-fv-title">
+          お知らせ
+        </h2>
+      </div>
+    </div>
+
+  <?php } elseif (is_post_type_archive('course') || is_tax(['school-year', 'period']) || is_singular('course')) { ?>
+    <div class="subpage_key_visual header_course"></div>
+  <?php } elseif (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_singular('blog')) { ?>
+    <div class="subpage_key_visual header_blog"></div>
+
+  <?php } else { ?>
+    <div class="subpage_key_visual header_sub"></div>
+  <?php } ?>
+  <!-- //fv -->
+
+
+
+  <?php if (!is_front_page()) { ?>
+    <?php if (function_exists('bcn_display')) { ?>
+      <div class="breadcrumb-wrapper">
+        <div id="breadcrumb" class="content-wrapper breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+          <?php bcn_display(); ?>
         </div>
       </div>
-
-    <?php } elseif (is_page('price')) { ?>
-      <!-- 固定ページprice -->
-      <div class="child-page-fv">
-        <div class="child-page-fv-image-wrapper">
-          <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/plan.png')); ?>" alt="">
-        </div>
-        <div class="child-page-fv-text-wrapper">
-          <h2 class="child-page-fv-title">
-            コース・料金
-          </h2>
-        </div>
-      </div>
-    <?php } elseif (is_home() || is_singular('post') || is_category() || is_tag()) { ?>
-      <!-- デフォルト投稿タイプのblog -->
-      <div class="child-page-fv">
-        <div class="child-page-fv-image-wrapper">
-          <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/blog.png')); ?>" alt="">
-        </div>
-        <div class="child-page-fv-text-wrapper">
-          <h2 class="child-page-fv-title">
-            ブログ
-          </h2>
-        </div>
-      </div>
-
-    <?php } elseif (is_post_type_archive('news') || is_singular('news') ) { ?>
-      <!-- カスタム投稿タイプのnews -->
-      <div class="child-page-fv">
-        <div class="child-page-fv-image-wrapper">
-          <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/news.png')); ?>" alt="">
-        </div>
-        <div class="child-page-fv-text-wrapper">
-          <h2 class="child-page-fv-title">
-            お知らせ
-          </h2>
-        </div>
-      </div>
-
-    <?php } elseif (is_post_type_archive('course') || is_tax(['school-year', 'period']) || is_singular('course')) { ?>
-      <div class="subpage_key_visual header_course"></div>
-    <?php } elseif (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_singular('blog')) { ?>
-      <div class="subpage_key_visual header_blog"></div>
-
-    <?php } else { ?>
-      <div class="subpage_key_visual header_sub"></div>
     <?php } ?>
-    <!-- //fv -->
-
-
-
-    <?php if (!is_front_page()) { ?>
-      <?php if (function_exists('bcn_display')) { ?>
-        <div class="breadcrumb-wrapper">
-          <div id="breadcrumb" class="content-wrapper breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-            <?php bcn_display(); ?>
-          </div>
-        </div>
-      <?php } ?>
-    <?php } ?>
+  <?php } ?>
