@@ -102,7 +102,7 @@
           </h2>
         </div>
       </div>
-    <?php } elseif (is_home() || is_singular('post') || is_category()) { ?>
+    <?php } elseif (is_home() || is_singular('post') || is_category() || is_tag()) { ?>
       <!-- デフォルト投稿タイプのblog -->
       <div class="child-page-fv">
         <div class="child-page-fv-image-wrapper">

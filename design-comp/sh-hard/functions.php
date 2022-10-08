@@ -22,7 +22,7 @@ function my_theme_scripts() {
 	} else if (is_page('price')) {
 		// price
 		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base'], date("YmdHis"));
-	} else if (is_home() || is_category()) {
+	} else if (is_home() || is_category() || is_tag()) {
 		// blog list (一覧ページ)
 		wp_enqueue_style('blog-list', get_theme_file_uri('/css/blog-list.css'), ['base'], date("YmdHis"));
 	} else if (is_post_type_archive('news')) {

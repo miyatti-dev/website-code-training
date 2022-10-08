@@ -38,7 +38,7 @@
               </div>
 
               <div class="post-list-item__text-wrapper">
-                <p class="post-list-item__date"><?php echo get_the_date('Y.m.d'); ?></p>
+                <p class="post-list-item__date"><?php echo get_the_date('Y-m-d'); ?></p>
                 <p class="post-list-item__title">
                   <!--
                   <?php
