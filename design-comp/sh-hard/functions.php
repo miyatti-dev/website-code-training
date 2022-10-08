@@ -24,7 +24,7 @@ function my_theme_scripts() {
 		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base'], date("YmdHis"));
 	} else if (is_home() || is_category()) {
 		// blog list (一覧ページ)
-		wp_enqueue_style('list-page', get_theme_file_uri('/css/list-page.css'), ['base'], date("YmdHis"));
+		wp_enqueue_style('blog-list', get_theme_file_uri('/css/blog-list.css'), ['base'], date("YmdHis"));
 	} else if (is_post_type_archive('news')) {
 		// news list (一覧ページ)
 		wp_enqueue_style('news-list', get_theme_file_uri('/css/news-list.css'), ['base'], date("YmdHis"));
