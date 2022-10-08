@@ -1,49 +1,33 @@
 <?php get_header(); ?>
 
-<!-- main -->
-<main>
-
-  <!--
-<div id="container" class="container_single w_inner">
+<div class="blog-main-sidebar-wrapper content-wrapper">
+  <!-- main -->
   <main>
     <article class="article">
-
-      <?php if (in_category('important')) : ?>
-        <p class="important_note">重要なお知らせの一覧です。</p>
-      <?php endif; ?>
-
-
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
           <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="date"><?php the_date('Y.m.d') ?></div>
-            <h1><?php the_title(); ?></h1>
+            <p class="post-category">
+              <?php
+              $terms = get_the_terms($post->ID, 'category');
+              $count = count($terms);
+              if ($count > 0) {
+                echo $terms[0]->name;
+              } else {
+                echo '未分類';
+              }
+              ?>
+            </p>
+            <h1 class="post-title"><?php the_title(); ?></h1>
+            <p class="post-date"><?php the_date('Y.m.d') ?></p>
 
+            <div class="post-image-wrapper">
+              <?php if (has_post_thumbnail()) : ?>
+                <img src="<?php the_post_thumbnail_url('blog'); ?>" alt="" class="post-image">
+              <?php endif; ?>
+            </div>
 
-            <?php if (is_singular('post')) : ?>
-              <div class="post_category">カテゴリー：<?php the_category('、'); ?></div>
-              <div class="post_tag"><?php the_tags('タグ：', '、'); ?></div>
-            <?php elseif (is_singular('blog')) : ?>
-              <div class="post_category">カテゴリー：
-                <?php
-                $terms = get_the_terms($post->ID, 'blog_category');
-                foreach ($terms as $term) {
-                  echo '<a href="' . get_term_link($term) . '">' . $term->name . '</a>';
-                }
-                ?>
-              </div>
-              <div class="post_category">タグ：
-                <?php
-                $terms = get_the_terms($post->ID, 'blog_tag');
-                foreach ($terms as $term) {
-                  echo '<a href="' . get_term_link($term) . '">' . $term->name . '</a>、';
-                }
-                ?>
-              </div>
-            <?php endif; ?>
-
-
-            <div class="container">
+            <div class="post-container">
               <?php the_content(); ?>
             </div>
           </div>
@@ -51,10 +35,9 @@
       <?php endif; ?>
     </article>
   </main>
+  <!-- //main -->
+
   <?php get_sidebar(); ?>
 </div>
-              -->
-</main>
-<!-- //main -->
 
 <?php get_footer(); ?>

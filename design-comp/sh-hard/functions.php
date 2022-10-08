@@ -28,6 +28,9 @@ function my_theme_scripts() {
 	} else if (is_post_type_archive('news')) {
 		// news list (一覧ページ)
 		wp_enqueue_style('news-list', get_theme_file_uri('/css/news-list.css'), ['base'], date("YmdHis"));
+	} else if (is_singular('post')) {
+		// blog (投稿ページ)
+		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['base'], date("YmdHis"));
 	}
 
 	// 標準jquery削除
