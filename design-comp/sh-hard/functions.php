@@ -31,6 +31,9 @@ function my_theme_scripts() {
 	} else if (is_singular('post')) {
 		// blog (投稿ページ)
 		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['base'], date("YmdHis"));
+
+		wp_enqueue_script('facebook', 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0', [], date("YmdHis"), true);
+		wp_enqueue_script('twitter', 'https://platform.twitter.com/widgets.js', [], date("YmdHis"), true);
 	}
 
 	// 標準jquery削除
@@ -43,6 +46,18 @@ function my_theme_scripts() {
 	wp_enqueue_script('js-script', get_theme_file_uri('/js/script.js'), ['jquery'], date("YmdHis"), true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+function add_defer($tag, $handle) {
+
+	if ($handle === 'facebook') {
+		return str_replace('src=', 'nonce="MOGLwflV" defer src=', $tag);
+	} else if ($handle == 'twitter') {
+		return str_replace('src=', 'defer src=', $tag);
+	}
+	return $tag;
+}
+
+add_filter('script_loader_tag', 'add_defer', 10, 2);
 
 /*--------------------------------------------*/
 /* 「投稿」メニューを「ブログ」に変更
@@ -121,7 +136,7 @@ function change_set_blog($query) {
 	if (is_admin() || !$query->is_main_query()) {
 		return;
 	}
-	if (is_home() || $query->is_post_type_archive('post') || $query->is_post_type_archive('news') ||is_tax(['blog_category', 'blog_tag']) || is_search()) {
+	if (is_home() || $query->is_post_type_archive('post') || $query->is_post_type_archive('news') || is_tax(['blog_category', 'blog_tag']) || is_search()) {
 		$query->set('posts_per_page', '10');
 		return;
 	}

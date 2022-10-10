@@ -19,7 +19,17 @@
               ?>
             </p>
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <p class="post-date"><?php the_date('Y.m.d') ?></p>
+
+            <div class="sns-date-wrapper">
+              <!-- facebook -->
+              <div class="fb-like" data-href="<?php the_permalink(); ?>" data-width="0" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+
+              <!-- twitter -->
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+
+              <!-- date -->
+              <p class="post-date"><?php the_date('Y-m-d') ?></p>
+            </div>
 
             <div class="post-image-wrapper">
               <?php if (has_post_thumbnail()) : ?>

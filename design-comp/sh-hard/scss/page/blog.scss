@@ -26,8 +26,13 @@ main {
   font-weight: bold;
 }
 
-.post-date {
+.sns-date-wrapper {
+  display: flex;
   margin-bottom: 23px;
+}
+
+.post-date {
+  margin-left: auto;
   font-weight: 500;
 }
 
@@ -35,7 +40,7 @@ main {
   margin-bottom: 40px;
 }
 
-.article {
+.post-container {
   ////////////////////
   // h1,h2,h3,h4,h5,h6
   ////////////////////

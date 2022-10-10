@@ -25,8 +25,15 @@ main {
   font-weight: bold;
 }
 
-.post-date {
+.sns-date-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 23px;
+}
+
+.post-date {
+  margin-left: auto;
   font-weight: 500;
 }
 
@@ -34,54 +41,54 @@ main {
   margin-bottom: 40px;
 }
 
-.article h1, .article h2 {
+.post-container h1, .post-container h2 {
   margin-bottom: 30px;
   font-weight: bold;
   line-height: 1.5;
 }
-.article h1 {
+.post-container h1 {
   font-size: 2.8rem;
   font-weight: bold;
 }
-.article h2 {
+.post-container h2 {
   font-size: 2.6rem;
 }
-.article h3, .article h4, .article h5, .article h6 {
+.post-container h3, .post-container h4, .post-container h5, .post-container h6 {
   padding-left: 10px;
   margin-bottom: 27px;
   font-weight: bold;
   line-height: 1.5;
   border-left: 4px solid #1b224c;
 }
-.article h3 {
+.post-container h3 {
   font-size: 2.2rem;
 }
-.article h4 {
+.post-container h4 {
   font-size: 2rem;
 }
-.article h5, .article h6 {
+.post-container h5, .post-container h6 {
   font-size: 1.8rem;
 }
-.article p {
+.post-container p {
   margin-bottom: 30px;
   font-weight: 500;
   line-height: 1.5;
 }
-.article figure {
+.post-container figure {
   margin-right: 4px;
   margin-bottom: 30px;
   margin-left: 4px;
 }
-.article blockquote {
+.post-container blockquote {
   position: relative;
   padding: 27px 26px 17px 74px;
   margin-bottom: 30px;
   background: #f8f8f8;
 }
-.article blockquote p:last-child {
+.post-container blockquote p:last-child {
   margin-bottom: 0;
 }
-.article blockquote::before {
+.post-container blockquote::before {
   position: absolute;
   top: 16px;
   left: 17px;
@@ -90,16 +97,16 @@ main {
   color: #b4b4b4;
   content: "\f10d";
 }
-.article ul, .article ol {
+.post-container ul, .post-container ol {
   margin-bottom: 30px;
 }
-.article ul li {
+.post-container ul li {
   position: relative;
   padding-left: 21px;
   font-weight: 500;
   line-height: 1.5;
 }
-.article ul li::before {
+.post-container ul li::before {
   position: absolute;
   top: 5px;
   left: 0;
@@ -110,39 +117,39 @@ main {
   background-color: #f5a623;
   border-radius: 50%;
 }
-.article ol {
+.post-container ol {
   counter-reset: item;
 }
-.article ol li {
+.post-container ol li {
   position: relative;
   padding-left: 21px;
   font-weight: 500;
   line-height: 1.5;
 }
-.article ol li::before {
+.post-container ol li::before {
   position: absolute;
   top: 0;
   left: 0;
   content: counter(item) ".";
   counter-increment: item;
 }
-.article table {
+.post-container table {
   width: 100%;
   margin-bottom: 30px;
 }
-.article thead {
+.post-container thead {
   font-weight: bold;
 }
-.article thead th {
+.post-container thead th {
   padding: 10px;
   background-color: lightcyan;
   border: 1px solid #ddd;
 }
-.article tbody th, .article tbody td {
+.post-container tbody th, .post-container tbody td {
   padding: 10px;
   border: 1px solid #ddd;
 }
-.article dl {
+.post-container dl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,26 +157,26 @@ main {
       flex-wrap: wrap;
   margin-bottom: 30px;
 }
-.article dt {
+.post-container dt {
   width: 30%;
   padding: 10px;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
 }
-.article dt:first-of-type {
+.post-container dt:first-of-type {
   border-top: 1px solid #ddd;
 }
-.article dd {
+.post-container dd {
   width: 70%;
   padding: 10px;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
-.article dd:first-of-type {
+.post-container dd:first-of-type {
   border-top: 1px solid #ddd;
 }
-.article a {
+.post-container a {
   font-size: 1.8rem;
   font-weight: 500;
   color: #f5a623;
