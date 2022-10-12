@@ -10,6 +10,10 @@ main {
   margin-right: 35px;
 }
 
+.article {
+  margin-bottom: 60px;
+}
+
 .post-category {
   display: inline-block;
   padding: 8px 31px;
@@ -24,6 +28,7 @@ main {
   margin-bottom: 20px;
   font-size: 2.8rem;
   font-weight: bold;
+  word-wrap: break-word;
 }
 
 .sns-date-wrapper {
@@ -40,6 +45,141 @@ main {
   margin-bottom: 40px;
 }
 
+////////////////////
+// sidebar
+////////////////////
+.related-article-title,
+.category-title {
+  padding: 18px 0;
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: $color-text-white;
+  text-align: center;
+  background-color: #1b224c;
+}
+
+.sidebar {
+  width: 35%;
+
+  & .post-list {
+    margin-bottom: 27px;
+  }
+
+  & .post-list-item {
+    &__link {
+      display: flex;
+      height: 70px;
+    }
+
+    &__image-wrapper {
+      width: 37%;
+      height: 100%;
+      margin-right: 17px;
+    }
+
+    &__image {
+      height: 100%;
+    }
+
+    &__text-wrapper {
+      width: 56%;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: calc(24 / 12);
+      text-decoration: underline;
+      word-wrap: break-word;
+    }
+  }
+
+  & .post-list-item + .post-list-item {
+    margin-top: 42px;
+  }
+}
+
+.category-list {
+  margin-bottom: 27px;
+}
+
+.category-list-item {
+  padding-left: 14px;
+  font-weight: bold;
+
+  & + & {
+    margin-top: 11px;
+  }
+}
+
+////////////////////
+// recommend
+////////////////////
+.recommend-articles-title {
+  margin-bottom: 30px;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.recommend-post-list {
+  margin-bottom: 106px;
+}
+
+.recommend-post-list-item {
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 128px;
+  }
+
+  &__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 19px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $color-text-white;
+    background-color: #1b224c;
+  }
+
+  &__image-wrapper {
+    width: 35%;
+    height: 100%;
+    margin-right: 32px;
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__text-wrapper {
+    width: 59%;
+  }
+
+  &__date {
+    margin-bottom: 27px;
+    font-weight: 500;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: calc(27 / 18);
+    text-decoration: underline;
+  }
+
+  & + & {
+    margin-top: 28px;
+  }
+}
+
+////////////////////
+// post-container
+////////////////////
 .post-container {
   ////////////////////
   // h1,h2,h3,h4,h5,h6

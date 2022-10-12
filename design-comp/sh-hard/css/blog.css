@@ -9,6 +9,10 @@ main {
   margin-right: 35px;
 }
 
+.article {
+  margin-bottom: 60px;
+}
+
 .post-category {
   display: inline-block;
   padding: 8px 31px;
@@ -23,6 +27,7 @@ main {
   margin-bottom: 20px;
   font-size: 2.8rem;
   font-weight: bold;
+  word-wrap: break-word;
 }
 
 .sns-date-wrapper {
@@ -39,6 +44,121 @@ main {
 
 .post-image-wrapper {
   margin-bottom: 40px;
+}
+
+.related-article-title,
+.category-title {
+  padding: 18px 0;
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: #1b224c;
+}
+
+.sidebar {
+  width: 35%;
+}
+.sidebar .post-list {
+  margin-bottom: 27px;
+}
+.sidebar .post-list-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+}
+.sidebar .post-list-item__image-wrapper {
+  width: 37%;
+  height: 100%;
+  margin-right: 17px;
+}
+.sidebar .post-list-item__image {
+  height: 100%;
+}
+.sidebar .post-list-item__text-wrapper {
+  width: 56%;
+}
+.sidebar .post-list-item__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+.sidebar .post-list-item + .post-list-item {
+  margin-top: 42px;
+}
+
+.category-list {
+  margin-bottom: 27px;
+}
+
+.category-list-item {
+  padding-left: 14px;
+  font-weight: bold;
+}
+.category-list-item + .category-list-item {
+  margin-top: 11px;
+}
+
+.recommend-articles-title {
+  margin-bottom: 30px;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.recommend-post-list {
+  margin-bottom: 106px;
+}
+
+.recommend-post-list-item__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 128px;
+}
+.recommend-post-list-item__category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 19px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #1b224c;
+}
+.recommend-post-list-item__image-wrapper {
+  width: 35%;
+  height: 100%;
+  margin-right: 32px;
+}
+.recommend-post-list-item__image {
+  height: 100%;
+}
+.recommend-post-list-item__text-wrapper {
+  width: 59%;
+}
+.recommend-post-list-item__date {
+  margin-bottom: 27px;
+  font-weight: 500;
+}
+.recommend-post-list-item__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: underline;
+}
+.recommend-post-list-item + .recommend-post-list-item {
+  margin-top: 28px;
 }
 
 .post-container h1, .post-container h2 {

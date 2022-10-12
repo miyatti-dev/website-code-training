@@ -47,6 +47,9 @@ function my_theme_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
+/*--------------------------------------------*/
+/* script読み込み時のタグ編集
+/*--------------------------------------------*/
 function add_defer($tag, $handle) {
 
 	if ($handle === 'facebook') {
@@ -131,7 +134,9 @@ function setup_post_thumbnails() {
 }
 add_action('after_setup_theme', 'setup_post_thumbnails');
 
-// カスタム投稿タイプ【ブログ】：メインクエリの変更（アーカイブページにて表示件数を9件にする）
+/*--------------------------------------------*/
+/* アーカイブページの表示件数を10件にする
+/*--------------------------------------------*/
 function change_set_blog($query) {
 	if (is_admin() || !$query->is_main_query()) {
 		return;
@@ -143,7 +148,9 @@ function change_set_blog($query) {
 }
 add_action('pre_get_posts', 'change_set_blog');
 
-//　カスタム投稿タイプ【ブログ】：アーカイブページ抜粋文の長さ変更
+/*--------------------------------------------*/
+/* アーカイブページ抜粋文の長さ変更
+/*--------------------------------------------*/
 function change_excerpt_length() {
 	$length = 80;
 	if (is_home() || is_post_type_archive('post') || is_tax(['post', 'blog_tag'])) {
@@ -153,6 +160,9 @@ function change_excerpt_length() {
 }
 add_filter('excerpt_length', 'change_excerpt_length', 999);
 
+/*--------------------------------------------*/
+/* 省略記号を変更
+/*--------------------------------------------*/
 function custom_excerpt_more($more) {
 	return '...';
 }
