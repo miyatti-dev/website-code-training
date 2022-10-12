@@ -1,0 +1,82 @@
+@use "variables"as *;
+@use "../mixin/mixin";
+
+.blog-main-sidebar-wrapper {
+  display: flex;
+}
+
+main {
+  width: 65%;
+  margin-right: 35px;
+}
+
+.sidebar {
+  width: 35%;
+}
+
+.related-articles-title,
+.category-title {
+  padding: 18px 0;
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: $color-text-white;
+  text-align: center;
+  background-color: #1b224c;
+}
+
+////////////////////
+// sidebar-post-list
+////////////////////
+.sidebar-post-list {
+  margin-bottom: 27px;
+}
+
+.sidebar-post-list-item {
+  &__link {
+    display: flex;
+    height: 70px;
+  }
+
+  &__image-wrapper {
+    width: 37%;
+    height: 100%;
+    margin-right: 17px;
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__text-wrapper {
+    width: 56%;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: calc(24 / 12);
+    text-decoration: underline;
+    word-wrap: break-word;
+  }
+
+  & + & {
+    margin-top: 42px;
+  }
+}
+
+////////////////////
+// category-list
+////////////////////
+.category-list {
+  margin-bottom: 27px;
+}
+
+.category-list-item {
+  padding-left: 14px;
+  font-weight: bold;
+
+  & + & {
+    margin-top: 11px;
+  }
+}

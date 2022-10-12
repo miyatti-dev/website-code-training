@@ -1,7 +1,7 @@
 <aside class="sidebar">
 
-  <!-- related-article -->
-  <div class="related-article">
+  <!-- related-articles -->
+  <div class="related-articles-wrapper">
     <?php
     $category_ids = [];
     $post_id = get_the_ID(); // 記事IDを取得
@@ -18,20 +18,20 @@
     $the_query = new WP_Query($args);
     ?>
     <?php if ($the_query->have_posts()) : ?>
-      <p class="related-article-title">関連記事</p>
-      <ul class="post-list">
+      <p class="related-articles-title">関連記事</p>
+      <ul class="sidebar-post-list">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-          <li class="post-list-item">
-            <a class="post-list-item__link" href="<?php the_permalink(); ?>">
-              <div class="post-list-item__image-wrapper">
+          <li class="sidebar-post-list-item">
+            <a class="sidebar-post-list-item__link" href="<?php the_permalink(); ?>">
+              <div class="sidebar-post-list-item__image-wrapper">
                 <?php if (has_post_thumbnail()) : ?>
-                  <img src="<?php the_post_thumbnail_url('blog'); ?>" alt="" class="post-list-item__image">
+                  <img src="<?php the_post_thumbnail_url('blog'); ?>" alt="" class="sidebar-post-list-item__image">
                 <?php else : ?>
-                  <img src="<?php echo esc_url(get_theme_file_uri('image/no-image.png')); ?>" alt="" class="post-list-item__image">
+                  <img src="<?php echo esc_url(get_theme_file_uri('image/no-image.png')); ?>" alt="" class="sidebar-post-list-item__image">
                 <?php endif; ?>
               </div>
-              <div class="post-list-item__text-wrapper">
-                <p class="post-list-item__title">
+              <div class="sidebar-post-list-item__text-wrapper">
+                <p class="sidebar-post-list-item__title">
                   <?php echo wp_trim_words(get_the_title(), 35, '...'); ?>
                 </p>
               </div>
@@ -44,9 +44,9 @@
       <!-- 投稿が無い場合の内容 -->
     <?php endif; ?>
   </div>
-  <!-- //related-article -->
+  <!-- //related-articles -->
 
-  <!-- category-wrapper -->
+  <!-- category -->
   <div class="category-wrapper">
     <p class="category-title">カテゴリー</p>
     <ul class="category-list">
@@ -63,6 +63,6 @@
       ?>
     </ul>
   </div>
-  <!-- // category-wrapper -->
+  <!-- // category -->
 
 </aside>

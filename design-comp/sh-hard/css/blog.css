@@ -9,6 +9,65 @@ main {
   margin-right: 35px;
 }
 
+.sidebar {
+  width: 35%;
+}
+
+.related-articles-title,
+.category-title {
+  padding: 18px 0;
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: #1b224c;
+}
+
+.sidebar-post-list {
+  margin-bottom: 27px;
+}
+
+.sidebar-post-list-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+}
+.sidebar-post-list-item__image-wrapper {
+  width: 37%;
+  height: 100%;
+  margin-right: 17px;
+}
+.sidebar-post-list-item__image {
+  height: 100%;
+}
+.sidebar-post-list-item__text-wrapper {
+  width: 56%;
+}
+.sidebar-post-list-item__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+.sidebar-post-list-item + .sidebar-post-list-item {
+  margin-top: 42px;
+}
+
+.category-list {
+  margin-bottom: 27px;
+}
+
+.category-list-item {
+  padding-left: 14px;
+  font-weight: bold;
+}
+.category-list-item + .category-list-item {
+  margin-top: 11px;
+}
+
 .article {
   margin-bottom: 60px;
 }
@@ -37,63 +96,6 @@ main {
 
 .post-image-wrapper {
   margin-bottom: 40px;
-}
-
-.related-article-title,
-.category-title {
-  padding: 18px 0;
-  margin-bottom: 30px;
-  font-size: 2.1rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  background-color: #1b224c;
-}
-
-.sidebar {
-  width: 35%;
-}
-.sidebar .post-list {
-  margin-bottom: 27px;
-}
-.sidebar .post-list-item__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 70px;
-}
-.sidebar .post-list-item__image-wrapper {
-  width: 37%;
-  height: 100%;
-  margin-right: 17px;
-}
-.sidebar .post-list-item__image {
-  height: 100%;
-}
-.sidebar .post-list-item__text-wrapper {
-  width: 56%;
-}
-.sidebar .post-list-item__title {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 2;
-  text-decoration: underline;
-  word-wrap: break-word;
-}
-.sidebar .post-list-item + .post-list-item {
-  margin-top: 42px;
-}
-
-.category-list {
-  margin-bottom: 27px;
-}
-
-.category-list-item {
-  padding-left: 14px;
-  font-weight: bold;
-}
-.category-list-item + .category-list-item {
-  margin-top: 11px;
 }
 
 .recommend-articles-title {

@@ -1,14 +1,6 @@
 @use "../common/variables"as *;
+@use "../common/sidebar";
 @use "../mixin/mixin";
-
-.blog-main-sidebar-wrapper {
-  display: flex;
-}
-
-main {
-  width: 65%;
-  margin-right: 35px;
-}
 
 .article {
   margin-bottom: 60px;
@@ -36,74 +28,6 @@ main {
 
 .post-image-wrapper {
   margin-bottom: 40px;
-}
-
-////////////////////
-// sidebar
-////////////////////
-.related-article-title,
-.category-title {
-  padding: 18px 0;
-  margin-bottom: 30px;
-  font-size: 2.1rem;
-  font-weight: bold;
-  color: $color-text-white;
-  text-align: center;
-  background-color: #1b224c;
-}
-
-.sidebar {
-  width: 35%;
-
-  & .post-list {
-    margin-bottom: 27px;
-  }
-
-  & .post-list-item {
-    &__link {
-      display: flex;
-      height: 70px;
-    }
-
-    &__image-wrapper {
-      width: 37%;
-      height: 100%;
-      margin-right: 17px;
-    }
-
-    &__image {
-      height: 100%;
-    }
-
-    &__text-wrapper {
-      width: 56%;
-    }
-
-    &__title {
-      font-size: 1.2rem;
-      font-weight: 500;
-      line-height: calc(24 / 12);
-      text-decoration: underline;
-      word-wrap: break-word;
-    }
-  }
-
-  & .post-list-item + .post-list-item {
-    margin-top: 42px;
-  }
-}
-
-.category-list {
-  margin-bottom: 27px;
-}
-
-.category-list-item {
-  padding-left: 14px;
-  font-weight: bold;
-
-  & + & {
-    margin-top: 11px;
-  }
 }
 
 ////////////////////
