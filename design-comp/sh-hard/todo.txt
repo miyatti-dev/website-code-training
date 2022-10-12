@@ -43,6 +43,9 @@ topページ 9/26
 
 お知らせ詳細
   single-news.php
+  css整理
+  ・サイドバー
+
 
 お知らせのカテゴリー/タグ一覧　無し
   taxonomy.php

@@ -1,0 +1,22 @@
+.article {
+  margin-bottom: 53px;
+}
+
+.post-title {
+  margin-bottom: 33px;
+  line-height: 1.3214285714;
+}
+
+.post-date {
+  margin-bottom: 58px;
+  text-align: right;
+}
+
+.post-container figure {
+  width: 44%;
+  margin-right: 0;
+  margin-left: 0;
+}
+.post-container a {
+  font-size: 1.6rem;
+}

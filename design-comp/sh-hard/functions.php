@@ -30,10 +30,15 @@ function my_theme_scripts() {
 		wp_enqueue_style('news-list', get_theme_file_uri('/css/news-list.css'), ['base'], date("YmdHis"));
 	} else if (is_singular('post')) {
 		// blog (投稿ページ)
-		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['base'], date("YmdHis"));
+		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
+		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['single'], date("YmdHis"));
 
 		wp_enqueue_script('facebook', 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0', [], date("YmdHis"), true);
 		wp_enqueue_script('twitter', 'https://platform.twitter.com/widgets.js', [], date("YmdHis"), true);
+	} else if (is_singular('news')) {
+		// news (投稿ページ)
+		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
+		wp_enqueue_style('news', get_theme_file_uri('/css/news.css'), ['single'], date("YmdHis"));
 	}
 
 	// 標準jquery削除

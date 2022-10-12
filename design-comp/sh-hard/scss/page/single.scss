@@ -1,0 +1,215 @@
+@use "../common/variables"as *;
+@use "../mixin/mixin";
+
+.post-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.post-date {
+  margin-left: auto;
+  font-weight: 500;
+}
+
+////////////////////
+// post-container
+////////////////////
+.post-container {
+  ////////////////////
+  // h1,h2,h3,h4,h5,h6
+  ////////////////////
+  & h1,
+  & h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    line-height: calc(39 / 26);
+  }
+
+  & h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+
+  & h2 {
+    font-size: 2.6rem;
+  }
+
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    padding-left: 10px;
+    margin-bottom: 27px;
+    font-weight: bold;
+    line-height: calc(33 / 22);
+    border-left: 4px solid #1b224c;
+  }
+
+  & h3 {
+    font-size: 2.2rem;
+  }
+
+  & h4 {
+    font-size: 2rem;
+  }
+
+  & h5,
+  & h6 {
+    font-size: 1.8rem;
+  }
+
+  ////////////////////
+  // p
+  ////////////////////
+  & p {
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: calc(24 / 16);
+  }
+
+  ////////////////////
+  // figure
+  ////////////////////
+  & figure {
+    margin-right: 4px;
+    margin-bottom: 30px;
+    margin-left: 4px;
+  }
+
+  ////////////////////
+  // blockquote
+  ////////////////////
+  & blockquote {
+    position: relative;
+    padding: 27px 26px 17px 74px;
+    margin-bottom: 30px;
+    background: #f8f8f8;
+
+    & p:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 16px;
+      left: 17px;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #b4b4b4;
+      content: "\f10d";
+    }
+  }
+
+  ////////////////////
+  // ul,ol,li
+  ////////////////////
+  & ul,
+  & ol {
+    margin-bottom: 30px;
+  }
+
+  & ul li {
+    position: relative;
+    padding-left: 21px;
+    font-weight: 500;
+    line-height: calc(24 / 16);
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      content: "";
+      background-color: #f5a623;
+      border-radius: 50%;
+    }
+  }
+
+  & ol {
+    counter-reset: item;
+  }
+
+  & ol li {
+    position: relative;
+    padding-left: 21px;
+    font-weight: 500;
+    line-height: calc(24 / 16);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: counter(item) ".";
+      counter-increment: item;
+    }
+  }
+
+  ////////////////////
+  // table
+  ////////////////////
+  & table {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  & thead {
+    font-weight: bold;
+  }
+
+  & thead th {
+    padding: 10px;
+    background-color: lightcyan;
+    border: 1px solid #ddd;
+  }
+
+  & tbody th,
+  & tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  ////////////////////
+  // dl,dt,dd
+  ////////////////////
+  & dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  & dt {
+    width: 30%;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+
+    &:first-of-type {
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  & dd {
+    width: 70%;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    &:first-of-type {
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  ////////////////////
+  // a
+  ////////////////////
+  & a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #f5a623;
+    text-decoration: underline;
+  }
+}

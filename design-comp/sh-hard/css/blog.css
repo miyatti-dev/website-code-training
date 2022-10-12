@@ -25,9 +25,7 @@ main {
 
 .post-title {
   margin-bottom: 20px;
-  font-size: 2.8rem;
-  font-weight: bold;
-  word-wrap: break-word;
+  line-height: 1.5;
 }
 
 .sns-date-wrapper {
@@ -35,11 +33,6 @@ main {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 23px;
-}
-
-.post-date {
-  margin-left: auto;
-  font-weight: 500;
 }
 
 .post-image-wrapper {
@@ -159,146 +152,4 @@ main {
 }
 .recommend-post-list-item + .recommend-post-list-item {
   margin-top: 28px;
-}
-
-.post-container h1, .post-container h2 {
-  margin-bottom: 30px;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.post-container h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-}
-.post-container h2 {
-  font-size: 2.6rem;
-}
-.post-container h3, .post-container h4, .post-container h5, .post-container h6 {
-  padding-left: 10px;
-  margin-bottom: 27px;
-  font-weight: bold;
-  line-height: 1.5;
-  border-left: 4px solid #1b224c;
-}
-.post-container h3 {
-  font-size: 2.2rem;
-}
-.post-container h4 {
-  font-size: 2rem;
-}
-.post-container h5, .post-container h6 {
-  font-size: 1.8rem;
-}
-.post-container p {
-  margin-bottom: 30px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.post-container figure {
-  margin-right: 4px;
-  margin-bottom: 30px;
-  margin-left: 4px;
-}
-.post-container blockquote {
-  position: relative;
-  padding: 27px 26px 17px 74px;
-  margin-bottom: 30px;
-  background: #f8f8f8;
-}
-.post-container blockquote p:last-child {
-  margin-bottom: 0;
-}
-.post-container blockquote::before {
-  position: absolute;
-  top: 16px;
-  left: 17px;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #b4b4b4;
-  content: "\f10d";
-}
-.post-container ul, .post-container ol {
-  margin-bottom: 30px;
-}
-.post-container ul li {
-  position: relative;
-  padding-left: 21px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.post-container ul li::before {
-  position: absolute;
-  top: 5px;
-  left: 0;
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  content: "";
-  background-color: #f5a623;
-  border-radius: 50%;
-}
-.post-container ol {
-  counter-reset: item;
-}
-.post-container ol li {
-  position: relative;
-  padding-left: 21px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.post-container ol li::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: counter(item) ".";
-  counter-increment: item;
-}
-.post-container table {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.post-container thead {
-  font-weight: bold;
-}
-.post-container thead th {
-  padding: 10px;
-  background-color: lightcyan;
-  border: 1px solid #ddd;
-}
-.post-container tbody th, .post-container tbody td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-.post-container dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-.post-container dt {
-  width: 30%;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-}
-.post-container dt:first-of-type {
-  border-top: 1px solid #ddd;
-}
-.post-container dd {
-  width: 70%;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-.post-container dd:first-of-type {
-  border-top: 1px solid #ddd;
-}
-.post-container a {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #f5a623;
-  text-decoration: underline;
 }
