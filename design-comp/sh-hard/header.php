@@ -31,29 +31,31 @@
         </a>
       </h1>
 
-      <!--
-        管理画面からメニュー追加
+      <!-- 管理画面からメニュー追加  -->
       <?php
       $args = [
         'theme_location' => 'header_menu'
       ];
       wp_nav_menu($args);
       ?>
-      -->
 
-      <nav class="header-nav" id="js-global-menu" area-hidden="false">
-        <ul class="header-nav-list">
-          <li class="header-nav-list-item">
-            <a class="header-nav-list-item__link" href="./room/">お部屋</a>
-          </li>
-          <li class="header-nav-list-item">
-            <a class="header-nav-list-item__link" href="./meal/">お料理</a>
-          </li>
-          <li class="header-nav-list-item">
-            <a class="header-nav-list-item__link" href="./spa/">温泉</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header-info-and-button-wrapper">
+        <div class="header-info-wrapper">
+          <p class="header-business-hours">
+            平日 08:00~20:00
+          </p>
+          <p class="header-phone-number">
+            0123-456-7890
+          </p>
+        </div>
+        <a href="" class="header-document-request-button">
+          資料請求
+        </a>
+        <a href="" class="header-contact-button">
+          お問い合わせ
+        </a>
+      </div>
+
       <button type="button" id="js-burger" class="burger-button" aria-controls="js-glabal-menu" aria-expanded="true" area-label="メニューを開閉する">
         <span class="burger-button__bar bar-top"></span>
         <span class="burger-button__bar bar-middle"></span>
@@ -100,6 +102,7 @@
         </h2>
       </div>
     </div>
+
   <?php } elseif (is_home() || is_singular('post') || is_category() || is_tag()) { ?>
     <!-- デフォルト投稿タイプのblog -->
     <div class="child-page-fv">
@@ -126,18 +129,22 @@
       </div>
     </div>
 
-  <?php } elseif (is_post_type_archive('course') || is_tax(['school-year', 'period']) || is_singular('course')) { ?>
-    <div class="subpage_key_visual header_course"></div>
-  <?php } elseif (is_post_type_archive('blog') || is_tax(['blog_category', 'blog_tag']) || is_singular('blog')) { ?>
-    <div class="subpage_key_visual header_blog"></div>
-
-  <?php } else { ?>
-    <div class="subpage_key_visual header_sub"></div>
+  <?php } elseif (is_page('contact')) { ?>
+    <!-- 固定ページcontact -->
+    <div class="child-page-fv">
+      <div class="child-page-fv-image-wrapper">
+        <img class="child-page-fv-image" src="<?php echo esc_url(get_theme_file_uri('/image/cta.png')); ?>" alt="">
+      </div>
+      <div class="child-page-fv-text-wrapper">
+        <h2 class="child-page-fv-title">
+          お問い合わせ・資料請求
+        </h2>
+      </div>
+    </div>
   <?php } ?>
   <!-- //fv -->
 
-
-
+  <!-- breadcrumb -->
   <?php if (!is_front_page()) { ?>
     <?php if (function_exists('bcn_display')) { ?>
       <div class="breadcrumb-wrapper">
@@ -147,3 +154,4 @@
       </div>
     <?php } ?>
   <?php } ?>
+  <!-- //breadcrumb -->

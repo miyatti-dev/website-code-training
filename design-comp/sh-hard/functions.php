@@ -39,6 +39,9 @@ function my_theme_scripts() {
 		// news (投稿ページ)
 		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
 		wp_enqueue_style('news', get_theme_file_uri('/css/news.css'), ['single'], date("YmdHis"));
+	} else if (is_page('contact')) {
+		// contact
+		wp_enqueue_style('contact', get_theme_file_uri('/css/contact.css'), ['base'], date("YmdHis"));
 	}
 
 	// 標準jquery削除
@@ -173,10 +176,19 @@ function custom_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
+/*--------------------------------------------*/
+/* 管理画面にメニュー編集機能を追加する
+/*--------------------------------------------*/
+function register_my_menus() {
+	$args = [
+		'header_menu' => 'ヘッダー',
+		'footer_menu' => 'フッター'
+	];
+	register_nav_menus($args);
+}
+add_action('after_setup_theme', 'register_my_menus');
+
 /*
-
-
-
 
 // カスタム投稿タイプ【コース】
 function cpt_register_course() {
@@ -277,15 +289,6 @@ function setup_html5_form() {
 add_action('after_setup_theme', 'setup_html5_form');
 
 
-// 管理画面にメニュー編集機能を追加する
-function register_my_menus() {
-	$args = [
-		'header_menu' => 'ヘッダー',
-		'footer_menu' => 'フッター'
-	];
-	register_nav_menus($args);
-}
-add_action('after_setup_theme', 'register_my_menus');
 
 
 

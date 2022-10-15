@@ -61,19 +61,27 @@
   & > .content-wrapper {
     display: flex;
   }
-}
 
-.footer-nav-list {
-  display: flex;
-  align-items: flex-start;
-  width: 80%;
+  & .menu-global-menu-container {
+    width: 80%;
 
-  &-item {
-    padding: 0 26px;
-    font-weight: bold;
+    & .menu {
+      display: flex;
+      justify-content: flex-start;
 
-    & + & {
-      border-left: 1px solid #fff;
+      &-item {
+        margin: 0;
+        font-weight: bold;
+
+        &:first-of-type {
+          padding-right: 26px;
+        }
+
+        &:not(:first-of-type) {
+          padding: 0 26px;
+          border-left: 1px solid #fff;
+        }
+      }
     }
   }
 }
@@ -94,6 +102,7 @@
 
   &::before {
     margin-right: 7px;
+    vertical-align: middle;
     content: url("../image/phone-white.png");
   }
 }

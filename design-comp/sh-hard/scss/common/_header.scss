@@ -20,30 +20,20 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 15px;
     transition: 0.3s;
 
     @include mixin.media-query("sm") {
       padding: 0 10px;
     }
   }
-
-  &-bg-color-white {
-    background-color: $color-bg-white;
-  }
 }
 
 .header-title-wrapper {
-  &__link {
-    display: flex;
-    align-items: center;
-  }
-
-  &__logo {
-    margin-right: 28px;
-  }
+  margin-right: 40px;
 }
 
+// TODO:スマホメニュー
 .header-nav {
   @include mixin.media-query("md") {
     position: fixed;
@@ -62,7 +52,7 @@
   }
 }
 
-.header-nav-list {
+.menu {
   display: flex;
 
   @include mixin.media-query("md") {
@@ -72,17 +62,10 @@
   }
 
   &-item {
-    font-weight: 800;
-    color: $color-text-white;
-    text-shadow: 1px 1px 0 $color-text-black;
-
-    &-color-black {
-      color: $color-text-black;
-      text-shadow: 1px 1px 0 $color-text-white;
-    }
+    font-weight: bold;
 
     & + & {
-      margin-left: 33px;
+      margin-left: 38px;
 
       @include mixin.media-query("md") {
         margin-top: 15px;
@@ -90,6 +73,62 @@
       }
     }
   }
+}
+
+.header-info-and-button-wrapper {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 24px;
+}
+
+.header-business-hours {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.header-phone-number {
+  font-weight: bold;
+
+  &::before {
+    margin-right: 5px;
+    vertical-align: middle;
+    content: url("../image/phone-blue.png");
+  }
+}
+
+.header-document-request-button {
+  display: block;
+  width: 142px;
+  height: 50px;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 50px;
+  color: $color-text-white;
+  text-align: center;
+  background-color: $color-document-request-button;
+  border-radius: 5px;
+}
+
+.header-contact-button {
+  display: block;
+  width: 137px;
+  height: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 50px;
+  color: $color-text-white;
+  text-align: center;
+  background-color: #1b224c;
+  border-radius: 5px;
 }
 
 .burger-button {

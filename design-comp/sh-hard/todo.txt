@@ -19,6 +19,8 @@
 10/11 1時間
 10/12 2時間
 10/13 1時間
+10/14 1.5時間 計34.5時間
+10/15 2時間
 
 【作業内容】
 topページ 9/26
@@ -45,14 +47,21 @@ topページ 9/26
 お知らせ詳細 10/13
   single-news.php
 
-お知らせのカテゴリー/タグ一覧　無し
+お知らせのカテゴリー/タグ一覧 無し
   taxonomy.php
 
-お問い合わせ
+お問い合わせ 10/14
 
 送信完了
 
-ヘッダー / フッター
+ヘッダー / フッター 10/15
+
+リンク
+
+
+各タイトルはphpファイルに直書きではなく、wordpress関数で取得する
+（ブログ一覧、お知らせ一覧など）
+
 
 レスポンシブ
 
@@ -87,9 +96,6 @@ topページ成功事例の画像の高さ幅の調整
 参考例：https://tokyofreelance.jp/simplelp/
 また、スクロールヒントを出すようにお願いします（https://appleple.github.io/scroll-hint/）
 
-プラグインWP Social Bookmarking Lightについて
-古くなってきたので、見た目がデザイン通りなら他のプラグインや埋め込みコードを使用してもらって構いません。
-
 https://unazuki.online/theme/wordpress/intermediate/D0U
 中級18
 サブディレクトリでWPを管理
@@ -98,5 +104,4 @@ https://unazuki.online/theme/wordpress/intermediate/D0U
 ・画像の配置
 ・アイキャッチ画像
 
-各タイトルはphpファイルに直書きではなく、wordpress関数で取得する
-（ブログ一覧、お知らせ一覧など）
+問い合わせ送信完了後の画面
