@@ -116,7 +116,7 @@
       <p class="price-text">
         Engressの料金プランはこちら
       </p>
-      <a href="" class="price-link">料金を見てみる</a>
+      <a href="<?php echo esc_url(home_url('/price')); ?>" class="price-link">料金を見てみる</a>
     </div>
   </section>
   <!-- //price -->
@@ -269,7 +269,8 @@
       <!-- blog -->
       <div class="blog-wrapper">
         <h2 class="section-title">
-          ブログ
+          <!-- 管理画面の「表示設定」で投稿ページに指定した物 -->
+          <?php echo get_the_title(get_option('page_for_posts')); ?>
         </h2>
 
         <?php

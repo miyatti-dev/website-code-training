@@ -6,15 +6,7 @@
   <section class="section-wrapper section-blog">
     <div class="content-wrapper">
       <h2 class="child-page-section-title">
-        <?php
-        $categories = get_the_category();
-        $count = count($categories);
-        if ($count > 0) {
-          echo $categories[0]->name . '一覧';
-        } else {
-          echo '未分類一覧';
-        }
-        ?>
+        <?php single_term_title(); ?>一覧
       </h2>
 
       <?php if (have_posts()) : ?>

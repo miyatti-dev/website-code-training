@@ -6,7 +6,7 @@
   <section class="section-wrapper section-news">
     <div class="content-wrapper">
       <h2 class="child-page-section-title">
-        お知らせ一覧
+        <?php post_type_archive_title('', true); ?>一覧
       </h2>
 
       <?php if (have_posts()) : ?>

@@ -26,7 +26,7 @@
   <header class="header">
     <div class="header-wrapper">
       <h1 class="header-title-wrapper">
-        <a href="./" class="header-title-wrapper__link">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="header-title-wrapper__link">
           <img src="<?php echo esc_url(get_theme_file_uri('/image/logo.png')); ?>" alt="logo" class="header-title-wrapper__logo">
         </a>
       </h1>
@@ -48,10 +48,10 @@
             0123-456-7890
           </p>
         </div>
-        <a href="" class="header-document-request-button">
+        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="header-document-request-button">
           資料請求
         </a>
-        <a href="" class="header-contact-button">
+        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="header-contact-button">
           お問い合わせ
         </a>
       </div>
@@ -81,10 +81,10 @@
           日本人へのTOEFL指導歴豊かな講師陣の<br>
           コーチング型TOEFLスクール
         </p>
-        <a href="" class="document-request-button">
+        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="document-request-button">
           資料請求
         </a>
-        <a href="" class="contact-button">
+        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="contact-button">
           お問い合わせ
         </a>
       </div>
@@ -98,7 +98,7 @@
       </div>
       <div class="child-page-fv-text-wrapper">
         <h2 class="child-page-fv-title">
-          コース・料金
+          <?php the_title(); ?>
         </h2>
       </div>
     </div>
@@ -111,7 +111,8 @@
       </div>
       <div class="child-page-fv-text-wrapper">
         <h2 class="child-page-fv-title">
-          ブログ
+          <!-- 管理画面の「表示設定」で投稿ページに指定した物 -->
+          <?php echo get_the_title(get_option('page_for_posts')); ?>
         </h2>
       </div>
     </div>

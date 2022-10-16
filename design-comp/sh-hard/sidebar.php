@@ -56,7 +56,7 @@
       ];
       $categories = get_terms($args);
       foreach ($categories as $category) {
-        echo '<li class="category-list-item"><a href="' . get_category_link($category->term_id) . '">';
+        echo '<li class="category-list-item"><a href="' . esc_url(get_category_link($category->term_id)). '">';
         echo '・' . $category->name;
         echo '</a></li>';
       }

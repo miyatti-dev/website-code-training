@@ -6,10 +6,10 @@
         <p class="section-title">
           まずは無料で資料請求から
         </p>
-        <a href="" class="document-request-button">
+        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="document-request-button">
           資料請求
         </a>
-        <a href="" class="contact-button">
+        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="contact-button">
           お問い合わせ
         </a>
       </div>
