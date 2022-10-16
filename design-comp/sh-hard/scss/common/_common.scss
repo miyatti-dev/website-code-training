@@ -23,6 +23,7 @@ body {
 
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
+  font-weight: 500;
   color: $color-text;
 }
 
@@ -38,7 +39,7 @@ a:hover {
 }
 
 .content-wrapper {
-  max-width: 906px;
+  width: 940px; // 900px + 左右padding40px
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -124,7 +125,6 @@ a:hover {
 
 .contact-button {
   display: block;
-  font-weight: 500;
   color: $color-text-white;
   text-decoration: underline;
 }
@@ -140,7 +140,6 @@ a:hover {
 
 .breadcrumb {
   font-size: 1.2rem;
-  font-weight: 500;
 
   & a {
     text-decoration: underline;
@@ -149,6 +148,13 @@ a:hover {
 
 .breadcrumb-arrow {
   padding: 0 10px;
+}
+
+////////////////////
+// fv
+////////////////////
+.fv {
+  min-height: 80px;
 }
 
 ////////////////////
@@ -182,4 +188,10 @@ a:hover {
 
 .child-page-fv-image {
   height: 100%;
+}
+
+.error404-text {
+  margin: 50px 0;
+  font-size: 1.8rem;
+  text-align: center;
 }

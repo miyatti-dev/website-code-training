@@ -9,7 +9,6 @@
 
 .post-date {
   margin-left: auto;
-  font-weight: 500;
 }
 
 ////////////////////
@@ -64,7 +63,6 @@
   ////////////////////
   & p {
     margin-bottom: 30px;
-    font-weight: 500;
     line-height: calc(24 / 16);
   }
 
@@ -112,7 +110,6 @@
   & ul li {
     position: relative;
     padding-left: 21px;
-    font-weight: 500;
     line-height: calc(24 / 16);
 
     &::before {
@@ -135,7 +132,6 @@
   & ol li {
     position: relative;
     padding-left: 21px;
-    font-weight: 500;
     line-height: calc(24 / 16);
 
     &::before {
@@ -208,7 +204,6 @@
   ////////////////////
   & a {
     font-size: 1.8rem;
-    font-weight: 500;
     color: #f5a623;
     text-decoration: underline;
   }

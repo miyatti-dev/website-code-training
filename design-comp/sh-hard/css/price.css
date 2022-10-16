@@ -101,7 +101,6 @@
 }
 .price-list-item__tax {
   margin-bottom: 48px;
-  font-weight: 500;
 }
 .price-list-item + .price-list-item {
   margin-left: 7px;
@@ -112,7 +111,6 @@
 }
 .plan-feature-list-item {
   position: relative;
-  font-weight: 500;
   line-height: 1.3125;
 }
 .plan-feature-list-item::before {

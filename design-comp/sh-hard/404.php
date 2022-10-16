@@ -1,9 +1,11 @@
 <?php get_header(); ?>
-<div id="container" class="container_404">
-  <main>
-    <div id="error">
-      お探しのページが見つかりません。
-    </div>
-  </main>
-</div>
+
+<main>
+  <div class="content-wrapper">
+    <p class="error404-text">
+    お探しのページが見つかりません。
+    </p>
+  </div>
+</main>
+
 <?php get_footer(); ?>

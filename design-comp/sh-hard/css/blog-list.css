@@ -28,7 +28,6 @@
   left: 0;
   padding: 6px 19px;
   font-size: 1.2rem;
-  font-weight: 500;
   color: #fff;
   background-color: #f5a623;
 }
@@ -38,7 +37,6 @@
   left: 0;
   padding: 6px 19px;
   font-size: 1.2rem;
-  font-weight: 500;
   color: #fff;
   background-color: #1b224c;
 }
@@ -55,7 +53,6 @@
 }
 .post-list-item__date {
   margin-bottom: 18px;
-  font-weight: 500;
 }
 .post-list-item__title {
   margin-bottom: 20px;
@@ -65,7 +62,6 @@
   text-decoration: underline;
 }
 .post-list-item__content {
-  font-weight: 500;
   line-height: 1.5;
 }
 .post-list-item + .post-list-item {

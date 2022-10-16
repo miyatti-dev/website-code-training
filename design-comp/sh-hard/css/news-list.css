@@ -20,11 +20,10 @@
   padding-bottom: 22px;
 }
 .news-list-item__date {
+  min-width: 85px;
   margin-right: 54px;
-  font-weight: 500;
 }
 .news-list-item__title {
-  font-weight: 500;
   text-decoration: underline;
 }
 

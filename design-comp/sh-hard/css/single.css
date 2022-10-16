@@ -6,7 +6,6 @@
 
 .post-date {
   margin-left: auto;
-  font-weight: 500;
 }
 
 .post-container h1, .post-container h2 {
@@ -39,7 +38,6 @@
 }
 .post-container p {
   margin-bottom: 30px;
-  font-weight: 500;
   line-height: 1.5;
 }
 .post-container figure {
@@ -71,7 +69,6 @@
 .post-container ul li {
   position: relative;
   padding-left: 21px;
-  font-weight: 500;
   line-height: 1.5;
 }
 .post-container ul li::before {
@@ -91,7 +88,6 @@
 .post-container ol li {
   position: relative;
   padding-left: 21px;
-  font-weight: 500;
   line-height: 1.5;
 }
 .post-container ol li::before {
@@ -146,7 +142,6 @@
 }
 .post-container a {
   font-size: 1.8rem;
-  font-weight: 500;
   color: #f5a623;
   text-decoration: underline;
 }

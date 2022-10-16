@@ -112,7 +112,6 @@
 
     &__tax {
       margin-bottom: 48px;
-      font-weight: 500;
     }
 
     & + & {
@@ -126,7 +125,6 @@
 
   &-item {
     position: relative;
-    font-weight: 500;
     line-height: calc(21 / 16);
 
     &::before {

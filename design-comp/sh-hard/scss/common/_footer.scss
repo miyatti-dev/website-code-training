@@ -45,10 +45,6 @@
   font-weight: bold;
 }
 
-.business-hours {
-  font-weight: 500;
-}
-
 ////////////////////
 // footer
 ////////////////////
@@ -87,6 +83,7 @@
 }
 
 .footer-phone-number-wrapper {
+  margin-left: auto;
   text-align: right;
 }
 
@@ -109,7 +106,6 @@
 
 .footer-business-hours {
   font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .footer-copyright {

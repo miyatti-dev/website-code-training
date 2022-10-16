@@ -31,7 +31,6 @@
     left: 0;
     padding: 6px 19px;
     font-size: 1.2rem;
-    font-weight: 500;
     color: $color-text-white;
     background-color: #f5a623;
   }
@@ -42,7 +41,6 @@
     left: 0;
     padding: 6px 19px;
     font-size: 1.2rem;
-    font-weight: 500;
     color: $color-text-white;
     background-color: #1b224c;
   }
@@ -63,7 +61,6 @@
 
   &__date {
     margin-bottom: 18px;
-    font-weight: 500;
   }
 
   &__title {
@@ -75,7 +72,6 @@
   }
 
   &__content {
-    font-weight: 500;
     line-height: calc(24 / 16);
   }
 

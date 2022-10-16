@@ -8,6 +8,7 @@ body {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Font Awesome 5 Free", sans-serif;
   /* bodyのフォントサイズを1.6em（16px）に設定 */
   font-size: 1.6em;
+  font-weight: 500;
   color: #1b224c;
 }
 
@@ -26,7 +27,7 @@ a:hover {
 }
 
 .content-wrapper {
-  max-width: 906px;
+  width: 940px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -118,7 +119,6 @@ a:hover {
 
 .contact-button {
   display: block;
-  font-weight: 500;
   color: #fff;
   text-decoration: underline;
 }
@@ -131,7 +131,6 @@ a:hover {
 
 .breadcrumb {
   font-size: 1.2rem;
-  font-weight: 500;
 }
 .breadcrumb a {
   text-decoration: underline;
@@ -139,6 +138,10 @@ a:hover {
 
 .breadcrumb-arrow {
   padding: 0 10px;
+}
+
+.fv {
+  min-height: 80px;
 }
 
 .child-page-fv {
@@ -169,6 +172,12 @@ a:hover {
 
 .child-page-fv-image {
   height: 100%;
+}
+
+.error404-text {
+  margin: 50px 0;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .header {
@@ -276,7 +285,6 @@ a:hover {
 .header-business-hours {
   margin-bottom: 5px;
   font-size: 1.2rem;
-  font-weight: 500;
   text-align: right;
 }
 
@@ -412,10 +420,6 @@ a:hover {
   font-weight: bold;
 }
 
-.business-hours {
-  font-weight: 500;
-}
-
 .footer-content-wrapper {
   padding-top: 46px;
   padding-bottom: 66px;
@@ -451,6 +455,7 @@ a:hover {
 }
 
 .footer-phone-number-wrapper {
+  margin-left: auto;
   text-align: right;
 }
 
@@ -472,7 +477,6 @@ a:hover {
 
 .footer-business-hours {
   font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .footer-copyright {

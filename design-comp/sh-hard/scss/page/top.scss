@@ -32,7 +32,6 @@
   &-text {
     margin-bottom: 55px;
     font-size: 1.8rem;
-    font-weight: 500;
     line-height: calc(24 / 18);
   }
 }
@@ -112,7 +111,6 @@
 
   &__text {
     font-size: 1.8rem;
-    font-weight: 500;
     line-height: 1.333;
   }
 }
@@ -133,7 +131,8 @@
   justify-content: space-between;
 
   &__text-wrapper {
-    width: 55%;
+    max-width: 500px;
+    margin-right: 50px;
   }
 
   &__number {
@@ -141,7 +140,6 @@
     padding: 8px 25px;
     margin-bottom: 35px;
     font-size: 1.2rem;
-    font-weight: 500;
     color: $color-text-white;
     background-color: #f5a623;
   }
@@ -154,12 +152,11 @@
   }
 
   &__detail {
-    font-weight: 500;
     line-height: calc(21 / 16);
   }
 
   &__image-wrapper {
-    width: 33%;
+    max-width: 350px;
   }
 
   & + & {
@@ -168,6 +165,13 @@
 
   &:nth-of-type(2n) {
     flex-direction: row-reverse;
+
+    .feature-list-item {
+      &__text-wrapper {
+        margin-right: 0;
+        margin-left: 50px;
+      }
+    }
   }
 }
 
@@ -179,10 +183,12 @@
 }
 
 .section-price > .content-wrapper {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: $color-text-white;
   text-align: center;
-  background: url("../image/price.png") center / cover;
+  background: url("../image/price.png") center / cover no-repeat;
+  background-size: calc(100% - 40px) 100%; // padding分を減らす
 }
 
 .price-text {
@@ -305,7 +311,6 @@
 
   &__detail {
     padding-left: 53px;
-    font-weight: 500;
   }
 
   & + & {
@@ -328,7 +333,6 @@
   &__term {
     position: relative;
     padding: 25px 0 15px;
-    font-weight: 500;
     line-height: calc(21 / 16);
     border-bottom: 1px solid #1b224c;
 
@@ -375,7 +379,6 @@
   &__description {
     height: 0;
     padding: 0 26px;
-    font-weight: 500;
 
     // アコーディオン開く前
     line-height: 0;
@@ -435,7 +438,6 @@
     left: 0;
     padding: 3px 26px 3px 9px;
     font-size: 1.2rem;
-    font-weight: 500;
     color: $color-text-white;
     background-color: #1b224c;
     border: 1px solid #707070;
@@ -464,7 +466,6 @@
 
   &__date {
     font-size: 1.2rem;
-    font-weight: 500;
   }
 
   & + & {
@@ -479,11 +480,9 @@
   &__date {
     margin-bottom: 14px;
     font-size: 1.2rem;
-    font-weight: 500;
   }
 
   &__text {
-    font-weight: 500;
     line-height: calc(27 / 16);
   }
 

@@ -25,7 +25,6 @@
 .fv-text {
   margin-bottom: 55px;
   font-size: 1.8rem;
-  font-weight: 500;
   line-height: 1.3333333333;
 }
 
@@ -100,7 +99,6 @@
 }
 .engress-about__text {
   font-size: 1.8rem;
-  font-weight: 500;
   line-height: 1.333;
 }
 
@@ -120,14 +118,14 @@
           justify-content: space-between;
 }
 .feature-list-item__text-wrapper {
-  width: 55%;
+  max-width: 500px;
+  margin-right: 50px;
 }
 .feature-list-item__number {
   display: inline-block;
   padding: 8px 25px;
   margin-bottom: 35px;
   font-size: 1.2rem;
-  font-weight: 500;
   color: #fff;
   background-color: #f5a623;
 }
@@ -138,11 +136,10 @@
   line-height: 1.5;
 }
 .feature-list-item__detail {
-  font-weight: 500;
   line-height: 1.3125;
 }
 .feature-list-item__image-wrapper {
-  width: 33%;
+  max-width: 350px;
 }
 .feature-list-item + .feature-list-item {
   margin-top: 60px;
@@ -153,16 +150,22 @@
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+.feature-list-item:nth-of-type(2n) .feature-list-item__text-wrapper {
+  margin-right: 0;
+  margin-left: 50px;
+}
 
 .section-price {
   margin-bottom: 39px;
 }
 
 .section-price > .content-wrapper {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: #fff;
   text-align: center;
-  background: url("../image/price.png") center/cover;
+  background: url("../image/price.png") center/cover no-repeat;
+  background-size: calc(100% - 40px) 100%;
 }
 
 .price-text {
@@ -277,7 +280,6 @@
 }
 .usage-list-item__detail {
   padding-left: 53px;
-  font-weight: 500;
 }
 .usage-list-item + .usage-list-item {
   margin-top: 8px;
@@ -293,7 +295,6 @@
 .faq-list-item__term {
   position: relative;
   padding: 25px 0 15px;
-  font-weight: 500;
   line-height: 1.3125;
   border-bottom: 1px solid #1b224c;
 }
@@ -335,7 +336,6 @@
 .faq-list-item__description {
   height: 0;
   padding: 0 26px;
-  font-weight: 500;
   line-height: 0;
   background-color: #f8f8f8;
   opacity: 0;
@@ -387,7 +387,6 @@
   left: 0;
   padding: 3px 26px 3px 9px;
   font-size: 1.2rem;
-  font-weight: 500;
   color: #fff;
   background-color: #1b224c;
   border: 1px solid #707070;
@@ -418,7 +417,6 @@
 }
 .blog-list-item__date {
   font-size: 1.2rem;
-  font-weight: 500;
 }
 .blog-list-item + .blog-list-item {
   margin-top: 31px;
@@ -427,10 +425,8 @@
 .news-list-item__date {
   margin-bottom: 14px;
   font-size: 1.2rem;
-  font-weight: 500;
 }
 .news-list-item__text {
-  font-weight: 500;
   line-height: 1.6875;
 }
 .news-list-item + .news-list-item {

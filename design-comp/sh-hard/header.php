@@ -4,11 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
-  <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。
-    伝統的「和」の息づく空間で、至極のひとときをお過ごしください。" />
+  <meta name="description" content="  <?php bloginfo('description'); ?>" />
   <meta name="robots" content="noindex">
-  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('/image/logo.png')); ?>">
+  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('/image/favicon.png')); ?>">
 
   <title>
     <?php
@@ -142,11 +140,13 @@
         </h2>
       </div>
     </div>
+  <?php } else { ?>
+    <div class="fv"></div>
   <?php } ?>
   <!-- //fv -->
 
   <!-- breadcrumb -->
-  <?php if (!is_front_page()) { ?>
+  <?php if (!is_front_page() && !is_404()) { ?>
     <?php if (function_exists('bcn_display')) { ?>
       <div class="breadcrumb-wrapper">
         <div id="breadcrumb" class="content-wrapper breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
