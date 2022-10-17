@@ -54,6 +54,21 @@
         </a>
       </div>
 
+      <div class="burger-nav">
+        <div class="burger-nav-logo-wrapper">
+          <img src="<?php echo esc_url(get_theme_file_uri('/image/logo.png')); ?>" alt="logo" class="burger-nav-logo-wrapper__logo">
+        </div>
+
+        <!-- 管理画面からメニュー追加  -->
+        <?php
+        $args = [
+          'theme_location' => 'header_menu',
+          'container_class' => 'burger-menu-container'
+        ];
+        wp_nav_menu($args);
+        ?>
+      </div>
+
       <button type="button" id="js-burger" class="burger-button" aria-controls="js-glabal-menu" aria-expanded="true" area-label="メニューを開閉する">
         <span class="burger-button__bar bar-top"></span>
         <span class="burger-button__bar bar-middle"></span>

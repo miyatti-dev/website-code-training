@@ -39,7 +39,7 @@ a:hover {
 }
 
 .content-wrapper {
-  width: 940px; // 900px + 左右padding40px
+  max-width: 940px; // 900px + 左右padding40px
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -167,11 +167,20 @@ a:hover {
   color: $color-text-white;
   text-align: center;
 
+  @include mixin.media-query("md") {
+    max-height: calc(221px + 60px); // 221px + 60px(ヘッダー分)
+  }
+
   &-text-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     padding-top: 80px;  // ヘッダー分
+
+    @include mixin.media-query("md") {
+      padding-top: 60px;  // ヘッダー分
+    }
+
     transform: translate(-50%, -50%);
   }
 
@@ -184,6 +193,10 @@ a:hover {
 .child-page-fv-image-wrapper {
   height: 100%;
   padding-top: 80px;  // ヘッダー分
+
+  @include mixin.media-query("md") {
+    padding-top: 60px;  // ヘッダー分
+  }
 }
 
 .child-page-fv-image {

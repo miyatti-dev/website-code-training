@@ -5,6 +5,11 @@
   color: #fff;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .fv {
+    max-height: 536px;
+  }
+}
 .fv-text-wrapper {
   position: absolute;
   top: 50%;
@@ -13,6 +18,11 @@
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .fv-text-wrapper {
+    padding-top: 60px;
+  }
 }
 .fv-text-wrapper > .document-request-button {
   margin-bottom: 19px;
@@ -31,6 +41,11 @@
 .fv-image-wrapper {
   height: 100%;
   padding-top: 80px;
+}
+@media screen and (max-width: 768px) {
+  .fv-image-wrapper {
+    padding-top: 60px;
+  }
 }
 
 .fv-image {

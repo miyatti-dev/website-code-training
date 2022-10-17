@@ -89,7 +89,7 @@ function reserveModalSetup() {
 //////////////////////////////////////////////////
 function showNavMenu(resize) {
   const $burgerButton = $('.burger-button');
-  const $headerNav = $('.header-nav');
+  const $headerNav = $('.burger-nav');
   if ($burgerButton.attr('aria-expanded') === 'false') {
     // burgerButton
     if (resize != true) {
@@ -97,26 +97,35 @@ function showNavMenu(resize) {
     }
     $burgerButton.attr('aria-expanded', true);
 
+    $menuWidth =  $headerNav.outerWidth();
+
     // headerNav
-    $headerNav.slideDown(300);
+    $headerNav.animate({
+      right: 0, opacity: 1
+    }, 500 );
     $headerNav.attr('area-hidden', 'false');
   }
 }
 
 function hideNavMenu(resize) {
   const $burgerButton = $('.burger-button');
-  const $headerNav = $('.header-nav');
+  const $headerNav = $('.burger-nav');
   if ($burgerButton.attr('aria-expanded') === 'true') {
     // burgerButton
     $burgerButton.removeClass('open');
     $burgerButton.attr('aria-expanded', false);
-
+    
+    $menuWidth =  $headerNav.outerWidth();
     // headerNav
     if (resize == true) {
       // リサイズ時はすぐ閉じる
-      $headerNav.slideUp(0);
+      $headerNav.animate({
+        right: -$menuWidth, opacity: 1
+      }, 0 );
     } else {
-      $headerNav.slideUp(300);
+      $headerNav.animate({
+        right: -$menuWidth, opacity: 1
+      }, 500 );
     }
     $headerNav.attr('area-hidden', 'true');
   }

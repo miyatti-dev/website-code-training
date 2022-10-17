@@ -26,58 +26,51 @@
     @include mixin.media-query("sm") {
       padding: 0 10px;
     }
+
+    & .menu-global-menu-container {
+      @include mixin.media-query("md") {
+        display: none;
+      }
+
+      & .menu {
+        display: flex;
+
+        &-item {
+          font-weight: bold;
+
+          @include mixin.media-query("lg") {
+            font-size: 1.4rem;
+          }
+
+          &:not(:first-of-type) {
+            margin-left: 38px;
+
+            @include mixin.media-query("lg") {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 .header-title-wrapper {
   margin-right: 40px;
-}
 
-// TODO:スマホメニュー
-.header-nav {
-  @include mixin.media-query("md") {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100vw;
-    overflow: hidden;
-    background-color: $color-header-nav-bg-black;
-
-    &-bg-color-white {
-      background-color: $color-header-nav-bg-white;
-    }
-
-    @include mixin.z-index(header-nav);
-  }
-}
-
-.menu {
-  display: flex;
-
-  @include mixin.media-query("md") {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-  }
-
-  &-item {
-    font-weight: bold;
-
-    & + & {
-      margin-left: 38px;
-
-      @include mixin.media-query("md") {
-        margin-top: 15px;
-        margin-left: 0;
-      }
-    }
+  @include mixin.media-query("lg") {
+    width: 110px;
+    margin-right: 15px;
   }
 }
 
 .header-info-and-button-wrapper {
   display: flex;
   margin-left: auto;
+
+  @include mixin.media-query("md") {
+    display: none;
+  }
 }
 
 .header-info-wrapper {
@@ -85,6 +78,10 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-right: 24px;
+
+  @include mixin.media-query("lg") {
+    margin-right: 5px;
+  }
 }
 
 .header-business-hours {
@@ -95,6 +92,10 @@
 
 .header-phone-number {
   font-weight: bold;
+
+  @include mixin.media-query("lg") {
+    font-size: 1.4rem;
+  }
 
   &::before {
     margin-right: 5px;
@@ -115,6 +116,15 @@
   text-align: center;
   background-color: $color-document-request-button;
   border-radius: 5px;
+
+  @include mixin.media-query("xsm") {
+    width: 110px;
+  }
+
+  @include mixin.media-query("lg") {
+    width: 80px;
+    margin-right: 5px;
+  }
 }
 
 .header-contact-button {
@@ -128,6 +138,52 @@
   text-align: center;
   background-color: #1b224c;
   border-radius: 5px;
+
+  @include mixin.media-query("xsm") {
+    width: 120px;
+  }
+
+  @include mixin.media-query("lg") {
+    width: 110px;
+  }
+}
+
+.burger-nav {
+  position: fixed;
+  top: 60px;
+  right: -230px;
+  display: none;
+  width: 230px;
+  height: calc(100vh - 60px); // ヘッダー分を現在
+  padding: 30px;
+  overflow: hidden;
+  color: $color-text-white;
+  background-color: #1b224c;
+
+  @include mixin.z-index(header-nav);
+
+  @include mixin.media-query("md") {
+    display: block;
+  }
+
+  &-logo-wrapper {
+    width: 130px;
+    padding: 10px;
+    margin-bottom: 40px;
+    background-color: white;
+  }
+
+  & .burger-menu-container {
+    & .menu {
+      &-item {
+        font-weight: bold;
+
+        &:not(:first-of-type) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 }
 
 .burger-button {
@@ -135,7 +191,7 @@
   display: none;
   width: 40px;
   height: 36px;
-  margin-left: 20px;
+  margin-left: auto;
   transition: all 0.3s;
 
   @include mixin.z-index(burger-button);
@@ -150,7 +206,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: $color-burger-button-white;
+    background-color: black;
     border-radius: 2.5px;
     transition: 0.3s;
 
@@ -159,11 +215,11 @@
     }
 
     &.bar-middle {
-      top: 17px;
+      top: 15px;
     }
 
     &.bar-bottom {
-      top: 34px;
+      top: 30px;
     }
   }
 
