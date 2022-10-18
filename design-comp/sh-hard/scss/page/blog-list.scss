@@ -32,7 +32,7 @@
     padding: 6px 19px;
     font-size: 1.2rem;
     color: $color-text-white;
-    background-color: #f5a623;
+    background-color: $color-bg-yellow;
   }
 
   &__category {
@@ -42,7 +42,7 @@
     padding: 6px 19px;
     font-size: 1.2rem;
     color: $color-text-white;
-    background-color: #1b224c;
+    background-color: $color-bg;
   }
 
   &__image-wrapper {
@@ -95,11 +95,11 @@
 
   &.current {
     color: $color-text-white;
-    background-color: #1b224c;
+    background-color: $color-bg;
   }
 
   &:not(.dots) {
-    border: 1px solid #1b224c;
+    border: 1px solid $color-border;
   }
 
   & + & {

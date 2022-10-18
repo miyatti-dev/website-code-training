@@ -52,7 +52,7 @@
   padding-top: 46px;
   padding-bottom: 66px;
   color: #f8f8f8;
-  background-color: #1b224c;
+  background-color: $color-bg;
 
   & > .content-wrapper {
     display: flex;
@@ -75,7 +75,7 @@
 
         &:not(:first-of-type) {
           padding: 0 26px;
-          border-left: 1px solid #fff;
+          border-left: 1px solid $color-border-white;
         }
       }
     }

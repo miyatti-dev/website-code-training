@@ -116,7 +116,7 @@
       </div>
     </div>
 
-  <?php } elseif (is_home() || is_singular('post') || is_category() || is_tag()) { ?>
+  <?php } elseif (is_home() || is_category() || is_tag()) { ?>
     <!-- デフォルト投稿タイプのblog -->
     <div class="child-page-fv">
       <div class="child-page-fv-image-wrapper">
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-  <?php } elseif (is_post_type_archive('news') || is_singular('news')) { ?>
+  <?php } elseif (is_post_type_archive('news')) { ?>
     <!-- カスタム投稿タイプのnews -->
     <div class="child-page-fv">
       <div class="child-page-fv-image-wrapper">

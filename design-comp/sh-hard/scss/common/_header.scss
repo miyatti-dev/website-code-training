@@ -136,7 +136,7 @@
   line-height: 50px;
   color: $color-text-white;
   text-align: center;
-  background-color: #1b224c;
+  background-color: $color-bg;
   border-radius: 5px;
 
   @include mixin.media-query("xsm") {
@@ -158,7 +158,7 @@
   padding: 30px;
   overflow: hidden;
   color: $color-text-white;
-  background-color: #1b224c;
+  background-color: $color-bg;
 
   @include mixin.z-index(header-nav);
 
@@ -209,10 +209,6 @@
     background-color: black;
     border-radius: 2.5px;
     transition: 0.3s;
-
-    &-bg-color-black {
-      background-color: $color-burger-button-black;
-    }
 
     &.bar-middle {
       top: 15px;

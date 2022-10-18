@@ -27,8 +27,8 @@
   width: 280px;
   height: 90px;
   line-height: 90px;
-  background-color: #1b224c;
-  border: 1px solid #1b224c;
+  background-color: $color-bg;
+  border: 1px solid $color-border;
 }
 
 .admission-fee {
@@ -43,7 +43,7 @@
     width: 25px;
     height: 2px;
     content: "";
-    background-color: #1b224c;
+    background-color: $color-bg;
     transform: translate(0, -50%);
   }
 
@@ -70,7 +70,7 @@
     position: relative;
     width: calc(100% / 4);
     text-align: center;
-    border: 0.5px solid #1b224c;
+    border: 0.5px solid $color-border;
 
     &.recommend {
       &::before {
@@ -80,7 +80,7 @@
         font-weight: bold;
         color: $color-text-white;
         content: "おすすめ";
-        background-color: #f5a623;
+        background-color: $color-bg-yellow;
       }
     }
 
@@ -93,11 +93,11 @@
       margin-bottom: 30px;
       font-weight: bold;
       color: $color-text-white;
-      background-color: #1b224c;
+      background-color: $color-bg;
     }
 
     &.recommend > &__plan-name {
-      background-color: #f5a623;
+      background-color: $color-bg-yellow;
     }
 
     &__price {
@@ -107,7 +107,7 @@
     }
 
     &.recommend > &__price {
-      color: #f5a623;
+      color: $color-text-yellow;
     }
 
     &__tax {
@@ -130,7 +130,7 @@
     &::before {
       margin-right: 13.5px;
       font-weight: 900;
-      color: #1b224c;
+      color: $color-text;
       content: "\f00c";
     }
 

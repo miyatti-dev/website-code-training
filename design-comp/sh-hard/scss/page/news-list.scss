@@ -52,11 +52,11 @@
 
   &.current {
     color: $color-text-white;
-    background-color: #1b224c;
+    background-color: $color-bg;
   }
 
   &:not(.dots) {
-    border: 1px solid #1b224c;
+    border: 1px solid $color-border;
   }
 
   & + & {

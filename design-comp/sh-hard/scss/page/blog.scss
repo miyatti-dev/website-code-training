@@ -12,7 +12,7 @@
   margin-bottom: 30px;
   font-size: 1.2rem;
   color: $color-text-white;
-  background-color: #1b224c;
+  background-color: $color-bg;
 }
 
 .post-title {
@@ -58,7 +58,7 @@
     padding: 6px 19px;
     font-size: 1.2rem;
     color: $color-text-white;
-    background-color: #1b224c;
+    background-color: $color-bg;
   }
 
   &__image-wrapper {

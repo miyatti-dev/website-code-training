@@ -14,6 +14,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 80%;
   padding-top: 80px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -32,10 +33,25 @@
   font-size: 4.8rem;
   font-weight: bold;
 }
+@media screen and (max-width: 1024px) {
+  .fv-title {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fv-title {
+    font-size: 3.5rem;
+  }
+}
 .fv-text {
   margin-bottom: 55px;
   font-size: 1.8rem;
   line-height: 1.3333333333;
+}
+@media screen and (max-width: 768px) {
+  .fv-text {
+    font-size: 1.6rem;
+  }
 }
 
 .fv-image-wrapper {

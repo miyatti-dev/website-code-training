@@ -42,7 +42,7 @@
     margin-bottom: 27px;
     font-weight: bold;
     line-height: calc(33 / 22);
-    border-left: 4px solid #1b224c;
+    border-left: 4px solid $color-border;
   }
 
   & h3 {
@@ -120,7 +120,7 @@
       width: 11px;
       height: 11px;
       content: "";
-      background-color: #f5a623;
+      background-color: $color-bg-yellow;
       border-radius: 50%;
     }
   }
@@ -204,7 +204,7 @@
   ////////////////////
   & a {
     font-size: 1.8rem;
-    color: #f5a623;
+    color: $color-text-yellow;
     text-decoration: underline;
   }
 }
