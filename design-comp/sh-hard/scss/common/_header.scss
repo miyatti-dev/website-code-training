@@ -114,7 +114,7 @@
   line-height: 50px;
   color: $color-text-white;
   text-align: center;
-  background-color: $color-document-request-button;
+  background-color: $color-bg-yellow;
   border-radius: 5px;
 
   @include mixin.media-query("xsm") {

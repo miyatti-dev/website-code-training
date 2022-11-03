@@ -19,6 +19,14 @@
     margin-bottom: 16px;
     font-size: 3.2rem;
     color: #f8f8f8;
+
+    @include mixin.media-query("lg") {
+      font-size: 2.8rem;
+    }
+
+    @include mixin.media-query("md") {
+      font-size: 2.4rem;
+    }
   }
 
   & .document-request-button {
@@ -32,17 +40,37 @@
   justify-content: center;
   padding-top: 13px;
   padding-bottom: 19px;
+
+  @include mixin.media-query("md") {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .phone-number-text {
   margin-right: 38px;
   font-weight: bold;
+
+  @include mixin.media-query("md") {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .phone-number {
   margin-right: 21px;
   font-size: 3.6rem;
   font-weight: bold;
+
+  @include mixin.media-query("lg") {
+    font-size: 2.8rem;
+  }
+
+  @include mixin.media-query("md") {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+  }
 }
 
 ////////////////////
@@ -56,18 +84,33 @@
 
   & > .content-wrapper {
     display: flex;
+
+    @include mixin.media-query("md") {
+      flex-direction: column;
+    }
   }
 
   & .menu-global-menu-container {
     width: 80%;
 
+    @include mixin.media-query("md") {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
     & .menu {
       display: flex;
       justify-content: flex-start;
+      width: 100%;
 
       &-item {
         margin: 0;
         font-weight: bold;
+
+        @include mixin.media-query("md") {
+          flex-wrap: wrap;
+          width: 50%;
+        }
 
         &:first-of-type {
           padding-right: 26px;
@@ -85,6 +128,10 @@
 .footer-phone-number-wrapper {
   margin-left: auto;
   text-align: right;
+
+  @include mixin.media-query("md") {
+    margin: auto;
+  }
 }
 
 .footer-logo-wrapper {

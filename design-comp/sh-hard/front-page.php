@@ -7,25 +7,22 @@
   <section class="section-wrapper section-about">
     <div class="content-wrapper">
       <h2 class="section-title">
-        TOEFL学習でこんな悩みありませんか？
+        TOEFL学習で<br class="br-sm-show">こんな悩みありませんか？
       </h2>
       <ul class="problem-list">
         <li class="problem-list-item">
           <p class="problem-list-item__text">
-            勉強の習慣が<br>
-            身についていない
+            勉強の習慣が<br class="br-sm-hide">身についていない
           </p>
         </li>
         <li class="problem-list-item">
           <p class="problem-list-item__text">
-            勉強しているはず<br>
-            なのに点数が伸びない
+            勉強しているはず<br class="br-sm-hide">なのに点数が伸びない
           </p>
         </li>
         <li class="problem-list-item">
           <p class="problem-list-item__text">
-            正しい勉強方法が<br>
-            わからない
+            正しい勉強方法が<br class="br-sm-hide">わからない
           </p>
         </li>
       </ul>
@@ -36,7 +33,7 @@
             <span>TOEFLに特化したスクール</span>です
           </p>
           <p class="engress-about__text">
-            完全オーダーメイドで、１人１人の悩みに合わせた最適な指導で<br>
+            完全オーダーメイドで、<br class="br-md-show">１人１人の悩みに合わせた最適な指導で<br>
             TOEFLの苦手分野を克服します。
           </p>
         </div>
@@ -50,7 +47,7 @@
   <section class="section-wrapper section-feature">
     <div class="content-wrapper">
       <h2 class="section-title">
-        TOEFL対策に特化したEngress3つの強み
+        TOEFL対策に特化した<br class="br-sm-show">Engress3つの強み
       </h2>
       <ul class="feature-list">
         <li class="feature-list-item">
@@ -142,20 +139,27 @@
               <p class="success-story-list-item__title">
                 <?php echo nl2br(esc_html(get_field('headline'))); ?>
               </p>
-              <div class="success-story-list-item__image-wrapper">
-                <img src="<?php the_field('photo'); ?>" alt="" class="success-story-list-item__image">
+              <div class="success-story-list-item__image-text-wrapper">
+                <div class="success-story-list-item__image-wrapper">
+                  <img src="<?php the_field('photo'); ?>" alt="" class="success-story-list-item__image">
+                </div>
+                <div class="success-story-list-item__text-wrapper">
+                  <p class="success-story-list-item__title--mb">
+                    <?php echo nl2br(esc_html(get_field('headline'))); ?>
+                  </p>
+                  <div class="success-story-list-item__personal-info-wrapper">
+                    <p class="success-story-list-item__profession">
+                      <?php echo nl2br(esc_html(get_field('profession'))); ?>
+                    </p>
+                    <p class="success-story-list-item__name">
+                      <?php echo nl2br(esc_html(get_field('name'))); ?>
+                    </p>
+                  </div>
+                  <p class="success-story-list-item__result">
+                    <?php echo nl2br(esc_html(get_field('result'))); ?>
+                  </p>
+                </div>
               </div>
-              <div class="success-story-list-item__personal-info-wrapper">
-                <p class="success-story-list-item__profession">
-                  <?php echo nl2br(esc_html(get_field('profession'))); ?>
-                </p>
-                <p class="success-story-list-item__name">
-                  <?php echo nl2br(esc_html(get_field('name'))); ?>
-                </p>
-              </div>
-              <p class="success-story-list-item__result">
-                <?php echo nl2br(esc_html(get_field('result'))); ?>
-              </p>
             </li>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
