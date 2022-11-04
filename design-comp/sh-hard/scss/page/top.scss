@@ -111,6 +111,15 @@
         margin-bottom: 15px;
       }
     }
+
+    &__text {
+      font-size: 1.8rem;
+      font-weight: bold;
+
+      @include mixin.media-query("md") {
+        font-size: 1.6rem;
+      }
+    }
   }
 }
 
@@ -605,6 +614,7 @@
   &__term {
     position: relative;
     padding: 25px 50px 15px 0;
+    font-weight: 500;
     line-height: calc(21 / 16);
     border-bottom: 1px solid $color-border;
 
@@ -764,8 +774,8 @@
     text-decoration: underline;
 
     @include mixin.media-query("sm") {
-      font-size: 1.4rem;
       margin-bottom: 10px;
+      font-size: 1.4rem;
     }
   }
 
@@ -783,11 +793,13 @@
 ////////////////////
 .news-list-item {
   &__date {
+    display: block;
     margin-bottom: 14px;
     font-size: 1.2rem;
   }
 
   &__text {
+    min-height: 59px;
     line-height: calc(27 / 16);
     text-decoration: underline;
   }

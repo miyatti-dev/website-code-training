@@ -117,6 +117,15 @@
     margin-bottom: 15px;
   }
 }
+.problem-list-item__text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .problem-list-item__text {
+    font-size: 1.6rem;
+  }
+}
 
 .engress-about {
   padding: 11px 16px;
@@ -639,6 +648,7 @@
 .faq-list-item__term {
   position: relative;
   padding: 25px 50px 15px 0;
+  font-weight: 500;
   line-height: 1.3125;
   border-bottom: 1px solid #1b224c;
 }
@@ -801,8 +811,8 @@
 }
 @media screen and (max-width: 576px) {
   .blog-list-item__text {
-    font-size: 1.4rem;
     margin-bottom: 10px;
+    font-size: 1.4rem;
   }
 }
 .blog-list-item__date {
@@ -813,10 +823,12 @@
 }
 
 .news-list-item__date {
+  display: block;
   margin-bottom: 14px;
   font-size: 1.2rem;
 }
 .news-list-item__text {
+  min-height: 59px;
   line-height: 1.6875;
   text-decoration: underline;
 }
