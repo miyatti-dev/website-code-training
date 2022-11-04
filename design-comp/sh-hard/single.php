@@ -96,7 +96,7 @@
                   <p class="recommend-post-list-item__date"><?php echo get_the_date('Y-m-d'); ?></p>
 
                   <p class="recommend-post-list-item__title">
-                    <?php echo wp_trim_words(get_the_title(), 45, '...'); ?>
+                    <?php echo wp_trim_words(get_the_title(), 40, '...'); ?>
                   </p>
                 </div>
               </a>

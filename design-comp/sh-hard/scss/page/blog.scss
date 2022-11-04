@@ -23,6 +23,19 @@
 .sns-date-wrapper {
   display: flex;
   margin-bottom: 23px;
+
+  @include mixin.media-query("xs") {
+    flex-direction: column;
+  }
+}
+
+.twitter-share-button {
+  margin-right: 5px;
+
+  @include mixin.media-query("xs") {
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
 }
 
 .post-image-wrapper {
@@ -49,6 +62,11 @@
     align-items: flex-start;
     justify-content: space-between;
     height: 128px;
+
+    @include mixin.media-query("md") {
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   &__category {
@@ -64,19 +82,35 @@
   &__image-wrapper {
     width: 35%;
     height: 100%;
+    max-height: 128px;
     margin-right: 32px;
+
+    @include mixin.media-query("md") {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__image {
     height: 100%;
+    max-height: 128px;
   }
 
   &__text-wrapper {
     width: 59%;
+
+    @include mixin.media-query("md") {
+      width: 100%;
+    }
   }
 
   &__date {
     margin-bottom: 27px;
+
+    @include mixin.media-query("md") {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -88,5 +122,9 @@
 
   & + & {
     margin-top: 28px;
+
+    @include mixin.media-query("md") {
+      margin-top: 35px;
+    }
   }
 }
