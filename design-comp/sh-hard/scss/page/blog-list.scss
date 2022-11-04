@@ -18,11 +18,28 @@
   display: block;
 
   &__link {
-    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     height: 179px;
+
+    @include mixin.media-query("md") {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    max-height: 179px;
+    margin-right: 50px;
+
+    @include mixin.media-query("md") {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
 
   &__pinned {
@@ -45,22 +62,29 @@
     background-color: $color-bg;
   }
 
-  &__image-wrapper {
-    width: 25%;
-    height: 100%;
-    margin-right: 50px;
-  }
-
   &__image {
     height: 100%;
+    max-height: 179px;
   }
 
   &__text-wrapper {
     width: 70%;
+
+    @include mixin.media-query("md") {
+      width: 100%;
+    }
   }
 
   &__date {
     margin-bottom: 18px;
+
+    @include mixin.media-query("md") {
+      margin-bottom: 10px;
+    }
+
+    @include mixin.media-query("sm") {
+      margin-bottom: 5px;
+    }
   }
 
   &__title {
@@ -69,6 +93,20 @@
     font-weight: bold;
     line-height: calc(39 / 26);
     text-decoration: underline;
+
+    @include mixin.media-query("lg") {
+      margin-bottom: 15px;
+      font-size: 2.3rem;
+    }
+
+    @include mixin.media-query("md") {
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    @include mixin.media-query("sm") {
+      font-size: 1.8rem;
+    }
   }
 
   &__content {
@@ -93,6 +131,10 @@
   padding: 14px 20px;
   font-weight: bold;
 
+  @include mixin.media-query("sm") {
+    padding: 10px 15px;
+  }
+
   &.current {
     color: $color-text-white;
     background-color: $color-bg;
@@ -104,5 +146,9 @@
 
   & + & {
     margin-left: 19px;
+
+    @include mixin.media-query("sm") {
+      margin-left: 5px;
+    }
   }
 }
