@@ -25,11 +25,19 @@
     display: flex;
     padding-top: 20px;
     padding-bottom: 22px;
+
+    @include mixin.media-query("md") {
+      flex-direction: column;
+    }
   }
 
   &__date {
     min-width: 85px;
     margin-right: 54px;
+
+    @include mixin.media-query("md") {
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -50,6 +58,10 @@
   padding: 14px 20px;
   font-weight: bold;
 
+  @include mixin.media-query("sm") {
+    padding: 10px 15px;
+  }
+
   &.current {
     color: $color-text-white;
     background-color: $color-bg;
@@ -61,5 +73,9 @@
 
   & + & {
     margin-left: 19px;
+
+    @include mixin.media-query("sm") {
+      margin-left: 5px;
+    }
   }
 }
