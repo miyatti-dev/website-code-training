@@ -20,6 +20,12 @@
   font-weight: bold;
   color: $color-text-white;
   text-align: center;
+
+  @include mixin.media-query("md") {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+  }
 }
 
 .admission-fee,
@@ -45,10 +51,32 @@
     content: "";
     background-color: $color-bg;
     transform: translate(0, -50%);
+
+    @include mixin.media-query("md") {
+      top: auto;
+      right: auto;
+      bottom: -40px;
+      left: 50%;
+    }
+  }
+
+  &::before {
+    @include mixin.media-query("md") {
+      transform: translate(-50%, 0);
+    }
   }
 
   &::after {
     transform: rotate(90deg);
+
+    @include mixin.media-query("md") {
+      transform: translate(-50%, 0) rotate(90deg);
+    }
+  }
+
+  @include mixin.media-query("md") {
+    margin-right: 0;
+    margin-bottom: 82px;
   }
 }
 
@@ -66,11 +94,20 @@
 .price-list {
   display: flex;
 
+  @include mixin.media-query("md") {
+    overflow-x: scroll;
+  }
+
   &-item {
     position: relative;
     width: calc(100% / 4);
     text-align: center;
     border: 0.5px solid $color-border;
+
+    @include mixin.media-query("md") {
+      flex-shrink: 0;
+      width: 180px;
+    }
 
     &.recommend {
       &::before {

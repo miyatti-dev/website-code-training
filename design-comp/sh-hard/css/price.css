@@ -19,6 +19,18 @@
   color: #fff;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .fee-structure-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.8rem;
+  }
+}
 
 .admission-fee,
 .monthly-fee {
@@ -45,10 +57,38 @@
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
+@media screen and (max-width: 768px) {
+  .admission-fee::before, .admission-fee::after {
+    top: auto;
+    right: auto;
+    bottom: -40px;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .admission-fee::before {
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
 .admission-fee::after {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+@media screen and (max-width: 768px) {
+  .admission-fee::after {
+    -webkit-transform: translate(-50%, 0) rotate(90deg);
+        -ms-transform: translate(-50%, 0) rotate(90deg);
+            transform: translate(-50%, 0) rotate(90deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .admission-fee {
+    margin-right: 0;
+    margin-bottom: 82px;
+  }
 }
 
 .section-price-list {
@@ -63,11 +103,23 @@
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .price-list {
+    overflow-x: scroll;
+  }
+}
 .price-list-item {
   position: relative;
   width: 25%;
   text-align: center;
   border: 0.5px solid #1b224c;
+}
+@media screen and (max-width: 768px) {
+  .price-list-item {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 180px;
+  }
 }
 .price-list-item.recommend::before {
   display: block;

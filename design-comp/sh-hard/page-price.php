@@ -12,7 +12,6 @@
         <p class="admission-fee">
           入会金 39,800円
         </p>
-
         <p class="monthly-fee">
           月額費用
         </p>
@@ -28,7 +27,7 @@
       <h2 class="child-page-section-title">
         料金表
       </h2>
-      <ul class="price-list">
+      <ul class="price-list js-scrollable">
         <?php
         $page = get_page_by_path('price');
         $id = $page->ID;
