@@ -1,9 +1,3 @@
-new ScrollHint('.js-scrollable', {
-  i18n: {
-    scrollable: 'スクロールできます'
-  }
-});
-
 // ready
 $(function () {
   // 読み込み時の初回設定
