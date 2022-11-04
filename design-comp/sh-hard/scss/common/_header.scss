@@ -19,8 +19,10 @@
   &-wrapper {
     display: flex;
     align-items: center;
+    max-width: 1400px;
     height: 100%;
     padding: 0 15px;
+    margin: 0 auto;
     transition: 0.3s;
 
     @include mixin.media-query("sm") {

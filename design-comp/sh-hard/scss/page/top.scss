@@ -762,6 +762,11 @@
     font-weight: bold;
     line-height: calc(21 / 16);
     text-decoration: underline;
+
+    @include mixin.media-query("sm") {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
   }
 
   &__date {

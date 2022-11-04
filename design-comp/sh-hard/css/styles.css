@@ -131,9 +131,27 @@ a:hover {
   }
 }
 
+.br-xs-show {
+  display: none;
+}
+@media screen and (max-width: 399px) {
+  .br-xs-show {
+    display: block;
+  }
+}
+
+.br-xs-hide {
+  display: block;
+}
+@media screen and (max-width: 399px) {
+  .br-xs-hide {
+    display: none;
+  }
+}
+
 .document-request-button {
   display: block;
-  width: 260px;
+  max-width: 260px;
   height: 60px;
   margin: 0 auto;
   font-weight: bold;
@@ -241,8 +259,10 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1400px;
   height: 100%;
   padding: 0 15px;
+  margin: 0 auto;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;

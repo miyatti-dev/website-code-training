@@ -30,7 +30,7 @@
         <div class="engress-about-inner">
           <p class="engress-about__title">
             Engressは<br>
-            <span>TOEFLに特化したスクール</span>です
+            <span>TOEFLに特化した</span><br class="br-xs-show"><span>スクール</span>です
           </p>
           <p class="engress-about__text">
             完全オーダーメイドで、<br class="br-md-show">１人１人の悩みに合わせた最適な指導で<br>

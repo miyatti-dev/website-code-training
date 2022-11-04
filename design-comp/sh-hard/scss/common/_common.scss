@@ -134,9 +134,25 @@ a:hover {
   }
 }
 
+.br-xs-show {
+  display: none;
+
+  @include mixin.media-query("xs") {
+    display: block;
+  }
+}
+
+.br-xs-hide {
+  display: block;
+
+  @include mixin.media-query("xs") {
+    display: none;
+  }
+}
+
 .document-request-button {
   display: block;
-  width: 260px;
+  max-width: 260px;
   height: 60px;
   margin: 0 auto;
   font-weight: bold;
