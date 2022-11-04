@@ -41,16 +41,19 @@
       wp_nav_menu($args);
       ?>
 
-      <div class="footer-phone-number-wrapper">
+      <div class="footer-company-info-wrapper">
         <div class="footer-logo-wrapper">
           <img src="<?php echo esc_url(get_theme_file_uri('/image/logo.png')); ?>" alt="logo" class="footer-logo">
         </div>
-        <p class="footer-phone-number">
-          0123-456-7890
-        </p>
-        <p class="footer-business-hours">
-          平日 08:00~20:00
-        </p>
+        <div class="footer-text-wrapper">
+          <p class="footer-phone-number">
+            0123-456-7890
+          </p>
+          <p class="footer-business-hours">
+            平日 08:00~20:00
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
