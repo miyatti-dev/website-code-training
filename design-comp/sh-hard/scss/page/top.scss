@@ -511,28 +511,78 @@
 .usage-list-item {
   display: flex;
   align-items: center;
-  height: 64px;
   background-color: #f8f8f8;
 
+  @include mixin.media-query("md") {
+    align-items: stretch;
+  }
+
   &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 64px;
+    min-height: 64px;
     font-weight: bold;
-    line-height: 64px;
     color: $color-text-white;
-    text-align: center;
     background-color: $color-bg-yellow;
   }
 
+  &__text-wrapper {
+    display: flex;
+    width: 100%;
+
+    @include mixin.media-query("md") {
+      flex-direction: column;
+      padding: 15px 0;
+    }
+  }
+
   &__title {
+    position: relative;
     width: 24%;
     padding-left: 21px;
     font-size: 1.8rem;
     font-weight: bold;
-    border-right: 1px solid #c3c3c3;
+
+    @include mixin.media-query("lg") {
+      padding: 0 15px;
+      font-size: 1.6rem;
+    }
+
+    @include mixin.media-query("md") {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 1px;
+      height: 30px;
+      content: "";
+      background-color: #c3c3c3;
+      transform: translate(0, -50%);
+
+      @include mixin.media-query("md") {
+        display: none;
+      }
+    }
   }
 
   &__detail {
+    padding-right: 10px;
     padding-left: 53px;
+
+    @include mixin.media-query("lg") {
+      padding-left: 30px;
+    }
+
+    @include mixin.media-query("md") {
+      padding: 0 15px;
+    }
   }
 
   & + & {

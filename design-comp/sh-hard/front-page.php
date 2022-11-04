@@ -182,48 +182,56 @@
           <p class="usage-list-item__number">
             01
           </p>
-          <p class="usage-list-item__title">
-            お問い合わせ
-          </p>
-          <p class="usage-list-item__detail">
-            まずはフォームまたはお電話からお申し込みください。
-          </p>
+          <div class="usage-list-item__text-wrapper">
+            <p class="usage-list-item__title">
+              お問い合わせ
+            </p>
+            <p class="usage-list-item__detail">
+              まずはフォームまたはお電話からお申し込みください。
+            </p>
+          </div>
         </li>
 
         <li class="usage-list-item">
           <p class="usage-list-item__number">
             02
           </p>
-          <p class="usage-list-item__title">
-            ヒアリング
-          </p>
-          <p class="usage-list-item__detail">
-            現在の学習状況やTOEFLスコア、目標のスコアをお聞きします。
-          </p>
+          <div class="usage-list-item__text-wrapper">
+            <p class="usage-list-item__title">
+              ヒアリング
+            </p>
+            <p class="usage-list-item__detail">
+              現在の学習状況やTOEFLスコア、目標のスコアをお聞きします。
+            </p>
+          </div>
         </li>
 
         <li class="usage-list-item">
           <p class="usage-list-item__number">
             03
           </p>
-          <p class="usage-list-item__title">
-            学習プランのご提供
-          </p>
-          <p class="usage-list-item__detail">
-            目標達成のために最適な学習プランをご提案致します。
-          </p>
+          <div class="usage-list-item__text-wrapper">
+            <p class="usage-list-item__title">
+              学習プランのご提供
+            </p>
+            <p class="usage-list-item__detail">
+              目標達成のために最適な学習プランをご提案致します。
+            </p>
+          </div>
         </li>
 
         <li class="usage-list-item">
           <p class="usage-list-item__number">
             04
           </p>
-          <p class="usage-list-item__title">
-            ご入会
-          </p>
-          <p class="usage-list-item__detail">
-            お申込み完了後、レッスンがスタートします。
-          </p>
+          <div class="usage-list-item__text-wrapper">
+            <p class="usage-list-item__title">
+              ご入会
+            </p>
+            <p class="usage-list-item__detail">
+              お申込み完了後、レッスンがスタートします。
+            </p>
+          </div>
         </li>
       </ul>
     </div>
