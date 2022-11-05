@@ -373,6 +373,8 @@
   }
 
   &-item {
+    display: flex;
+    flex-direction: column;
     width: calc(100% / 3);
 
     @include mixin.media-query("md") {
@@ -380,6 +382,7 @@
     }
 
     &__title {
+      flex: 1;
       margin-bottom: 9px;
       font-weight: bold;
       line-height: calc(29 / 16);
