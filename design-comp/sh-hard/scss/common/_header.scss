@@ -51,6 +51,14 @@
               margin-left: 15px;
             }
           }
+
+          &-2290 {
+            display: none;
+
+            @include mixin.media-query("md") {
+              display: block;
+            }
+          }
         }
       }
     }
