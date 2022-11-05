@@ -43,6 +43,19 @@ textarea {
   }
 }
 
+.label-contact-type {
+  margin-bottom: 16px;
+  line-height: calc(21 / 16);
+
+  & > span {
+    font-weight: bold;
+  }
+}
+
+.privacy-policy-check + span {
+  font-weight: 500;
+}
+
 input[type="text"],
 input[type="email"] {
   width: 100%;
@@ -69,13 +82,17 @@ input[type="email"] {
   margin-bottom: 21px;
 }
 
-.label-contact-type {
-  margin-bottom: 16px;
-}
-
 .mwform-radio-field.vertical-item {
   & input {
     margin-right: 19px;
+
+    @include mixin.media-query("sm") {
+      margin-right: 10px;
+    }
+  }
+
+  & span {
+    font-weight: 500;
   }
 
   &:last-of-type {

@@ -34,6 +34,18 @@ textarea + span {
   margin-bottom: 27px;
 }
 
+.label-contact-type {
+  margin-bottom: 16px;
+  line-height: 1.3125;
+}
+.label-contact-type > span {
+  font-weight: bold;
+}
+
+.privacy-policy-check + span {
+  font-weight: 500;
+}
+
 input[type=text],
 input[type=email] {
   width: 100%;
@@ -57,12 +69,16 @@ input[type=email] + span {
   margin-bottom: 21px;
 }
 
-.label-contact-type {
-  margin-bottom: 16px;
-}
-
 .mwform-radio-field.vertical-item input {
   margin-right: 19px;
+}
+@media screen and (max-width: 576px) {
+  .mwform-radio-field.vertical-item input {
+    margin-right: 10px;
+  }
+}
+.mwform-radio-field.vertical-item span {
+  font-weight: 500;
 }
 .mwform-radio-field.vertical-item:last-of-type {
   margin-bottom: 21px;
