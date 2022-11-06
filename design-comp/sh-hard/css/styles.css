@@ -176,6 +176,8 @@ a:hover {
 
 .breadcrumb {
   font-size: 1.2rem;
+  line-height: 1.5;
+  word-wrap: break-word;
 }
 .breadcrumb a {
   text-decoration: underline;
@@ -205,6 +207,7 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 80%;
   padding-top: 80px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -232,6 +235,12 @@ a:hover {
 
 .child-page-fv-image {
   height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .child-page-dot-sm-hide {
+    display: none;
+  }
 }
 
 .error404-text {

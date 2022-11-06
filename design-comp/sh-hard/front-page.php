@@ -33,8 +33,7 @@
             <span>TOEFLに特化した</span><br class="br-xs-show"><span>スクール</span>です
           </p>
           <p class="engress-about__text">
-            完全オーダーメイドで、<br class="br-md-show">１人１人の悩みに合わせた最適な指導で<br>
-            TOEFLの苦手分野を克服します。
+            完全オーダーメイドで、１人１人の悩みに合わせた最適な指導で<br class="br-md-hide">TOEFLの苦手分野を克服します。
           </p>
         </div>
 

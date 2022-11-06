@@ -179,6 +179,8 @@ a:hover {
 
 .breadcrumb {
   font-size: 1.2rem;
+  line-height: 1.5;
+  word-wrap: break-word;
 
   & a {
     text-decoration: underline;
@@ -214,13 +216,13 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 80%;
     padding-top: 80px;  // ヘッダー分
+    transform: translate(-50%, -50%);
 
     @include mixin.media-query("md") {
       padding-top: 60px;  // ヘッダー分
     }
-
-    transform: translate(-50%, -50%);
   }
 
   &-title {
@@ -240,6 +242,12 @@ a:hover {
 
 .child-page-fv-image {
   height: 100%;
+}
+
+.child-page-dot-sm-hide {
+  @include mixin.media-query("sm") {
+    display: none;
+  }
 }
 
 .error404-text {

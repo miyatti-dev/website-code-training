@@ -126,6 +126,11 @@
     font-size: 1.6rem;
   }
 }
+@media screen and (max-width: 576px) {
+  .problem-list-item__text {
+    font-size: 1.4rem;
+  }
+}
 
 .engress-about {
   padding: 11px 16px;
@@ -149,7 +154,7 @@
 }
 @media screen and (max-width: 768px) {
   .engress-about__title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 .engress-about__title > span {
@@ -182,6 +187,11 @@
   padding: 0 10px;
   font-size: 1.8rem;
   line-height: 1.333;
+}
+@media screen and (max-width: 768px) {
+  .engress-about__text {
+    font-size: 1.6rem;
+  }
 }
 
 .section-feature {

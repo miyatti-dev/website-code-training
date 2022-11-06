@@ -151,7 +151,7 @@
       </div>
       <div class="child-page-fv-text-wrapper">
         <h2 class="child-page-fv-title">
-          お問い合わせ・資料請求
+          お問い合わせ<span class="child-page-dot-sm-hide">・</span><br class="br-sm-show">資料請求
         </h2>
       </div>
     </div>
