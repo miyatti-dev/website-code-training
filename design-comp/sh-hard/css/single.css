@@ -7,6 +7,16 @@
 .post-date {
   margin-left: auto;
 }
+@media screen and (max-width: 768px) {
+  .post-date {
+    font-size: 1.4rem;
+  }
+}
+
+.post-date-xs {
+  font-size: 1.4rem;
+  text-align: right;
+}
 
 .post-container h1, .post-container h2 {
   margin-bottom: 30px;

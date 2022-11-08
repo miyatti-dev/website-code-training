@@ -9,6 +9,15 @@
 
 .post-date {
   margin-left: auto;
+
+  @include mixin.media-query("md") {
+    font-size: 1.4rem;
+  }
+}
+
+.post-date-xs {
+  font-size: 1.4rem;
+  text-align: right;
 }
 
 ////////////////////

@@ -36,6 +36,7 @@
     margin-bottom: 19px;
     font-size: 4.8rem;
     font-weight: bold;
+    text-shadow: 0 3px 6px rgba($color: #000, $alpha: 16%);
 
     @include mixin.media-query("lg") {
       font-size: 4rem;

@@ -33,9 +33,14 @@
               <p class="post-date"><?php the_date('Y-m-d') ?></p>
             </div>
 
+            <!-- date -->
+            <p class="post-date-xs"><?php echo get_the_date('Y-m-d') ?></p>
+
             <div class="post-image-wrapper">
               <?php if (has_post_thumbnail()) : ?>
                 <img src="<?php the_post_thumbnail_url('blog'); ?>" alt="" class="post-image">
+              <?php else : ?>
+                <img src="<?php echo esc_url(get_theme_file_uri('image/no-image.png')); ?>" alt="" class="post-image">
               <?php endif; ?>
             </div>
 

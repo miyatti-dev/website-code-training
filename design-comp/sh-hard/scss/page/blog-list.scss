@@ -94,6 +94,7 @@
     font-weight: bold;
     line-height: calc(39 / 26);
     text-decoration: underline;
+    word-wrap: break-word;
 
     @include mixin.media-query("lg") {
       margin-bottom: 15px;

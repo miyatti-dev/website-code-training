@@ -93,6 +93,7 @@
   font-weight: bold;
   line-height: 1.5;
   text-decoration: underline;
+  word-wrap: break-word;
 }
 @media screen and (max-width: 1024px) {
   .post-list-item__title {

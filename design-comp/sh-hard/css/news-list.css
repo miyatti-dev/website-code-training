@@ -38,6 +38,7 @@
 }
 .news-list-item__title {
   text-decoration: underline;
+  word-wrap: break-word;
 }
 
 .pagination .nav-links {

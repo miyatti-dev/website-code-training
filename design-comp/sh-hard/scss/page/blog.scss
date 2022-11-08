@@ -20,26 +20,42 @@
   line-height: calc(42 / 28);
 }
 
+.fb-like > span {
+  height: 20px !important;
+}
+
 .sns-date-wrapper {
   display: flex;
   margin-bottom: 23px;
 
   @include mixin.media-query("xs") {
-    flex-direction: column;
+    margin-bottom: 10px;
   }
 }
 
-.twitter-share-button {
-  margin-right: 5px;
+.post-date {
+  align-self: center;
 
   @include mixin.media-query("xs") {
-    margin-bottom: 10px;
-    margin-left: 5px;
+    display: none;
+  }
+}
+
+.post-date-xs {
+  display: none;
+
+  @include mixin.media-query("xs") {
+    display: block;
+    margin-bottom: 23px;
   }
 }
 
 .post-image-wrapper {
   margin-bottom: 40px;
+}
+
+.post-image {
+  max-height: 370px;
 }
 
 ////////////////////
@@ -118,6 +134,7 @@
     font-weight: bold;
     line-height: calc(27 / 18);
     text-decoration: underline;
+    word-wrap: break-word;
   }
 
   & + & {
