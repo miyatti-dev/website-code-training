@@ -196,6 +196,10 @@ a:hover {
 ////////////////////
 .fv {
   min-height: 80px;
+
+  @include mixin.media-query("md") {
+    min-height: 60px;
+  }
 }
 
 ////////////////////
