@@ -25,7 +25,7 @@ function my_theme_scripts() {
 
 		// scroll-hint
 		wp_enqueue_style('scroll-hint', "https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css", ['base']);
-		wp_enqueue_script('scroll-hint', 'https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js', [], date("YmdHis"), true);
+		wp_enqueue_script('scroll-hint', 'https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js', [], '', true);
 
 		// js
 		wp_enqueue_script('js-price-script', get_theme_file_uri('/js/price-script.js'), ['jquery'], date("YmdHis"), true);
@@ -40,8 +40,8 @@ function my_theme_scripts() {
 		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
 		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['single'], date("YmdHis"));
 
-		wp_enqueue_script('facebook', 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0', [], date("YmdHis"), true);
-		wp_enqueue_script('twitter', 'https://platform.twitter.com/widgets.js', [], date("YmdHis"), true);
+		wp_enqueue_script('facebook', 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0', [], '', true);
+		wp_enqueue_script('twitter', 'https://platform.twitter.com/widgets.js', [], '', true);
 	} else if (is_singular('news')) {
 		// news (投稿ページ)
 		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
@@ -60,6 +60,7 @@ function my_theme_scripts() {
 	// js
 	wp_enqueue_script('js-script', get_theme_file_uri('/js/script.js'), ['jquery'], date("YmdHis"), true);
 }
+
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
 /*--------------------------------------------*/
@@ -96,6 +97,7 @@ add_filter('post_type_labels_post', 'aktk_post_type_labels_post');
 function remove_sub_menus() {
 	remove_submenu_page('edit.php?post_type=success-story', 'post-new.php?post_type=success-story');
 }
+
 add_action('admin_menu', 'remove_sub_menus');
 
 /*--------------------------------------------*/
@@ -110,6 +112,7 @@ function delete_new_post_item($hook) {
 		}
 	}
 }
+
 add_action('admin_enqueue_scripts', 'delete_new_post_item');
 
 /*--------------------------------------------*/
@@ -124,6 +127,7 @@ function custom_action_row($actions, $post) {
 
 	return $actions;
 }
+
 add_filter('post_row_actions', 'custom_action_row', 10, 2);
 
 /*--------------------------------------------*/
@@ -139,6 +143,7 @@ function admin_preview_css_custom() {
 		echo $style;
 	}
 }
+
 add_action('admin_print_styles', 'admin_preview_css_custom');
 
 /*--------------------------------------------*/
@@ -147,6 +152,7 @@ add_action('admin_print_styles', 'admin_preview_css_custom');
 function setup_post_thumbnails() {
 	add_theme_support('post-thumbnails', ['post', 'blog', 'news']);
 }
+
 add_action('after_setup_theme', 'setup_post_thumbnails');
 
 /*--------------------------------------------*/
@@ -161,6 +167,7 @@ function change_set_blog($query) {
 		return;
 	}
 }
+
 add_action('pre_get_posts', 'change_set_blog');
 
 /*--------------------------------------------*/
@@ -173,6 +180,7 @@ function change_excerpt_length() {
 	}
 	return $length; // デフォルト110文字
 }
+
 add_filter('excerpt_length', 'change_excerpt_length', 999);
 
 /*--------------------------------------------*/
@@ -181,6 +189,7 @@ add_filter('excerpt_length', 'change_excerpt_length', 999);
 function custom_excerpt_more($more) {
 	return '...';
 }
+
 add_filter('excerpt_more', 'custom_excerpt_more');
 
 /*--------------------------------------------*/
@@ -193,130 +202,5 @@ function register_my_menus() {
 	];
 	register_nav_menus($args);
 }
+
 add_action('after_setup_theme', 'register_my_menus');
-
-/*
-
-// カスタム投稿タイプ【コース】
-function cpt_register_course() {
-	$args = [
-		'label' => 'コース',
-		'labels' => [
-			'singular_name' => 'コース',
-			// 'edit_item' => 'コースを編集',
-			// 'add_new_item' => '新規コースを追加'
-		],
-		'public' => true, //カスタム投稿タイプを一般に公開するかどうか
-		'show_in_rest' => true, //REST APIにカスタム投稿タイプを含めるかどうか → カスタム投稿タイプでブロックエディタを使うならtrue
-		'has_archive' => true, //アーカイブページを持つかどうか
-		'delete_with_user' => false, //ユーザーを削除した後、コンテンツも削除するかどうか
-		'exclude_from_search' => false, //検索から除外するかどうか
-		'hierarchical' => false, //階層化するかどうか
-		'query_var' => true, //クエリパラメーターを使えるようにする → プレビュー画面を使うためにはtrue
-		'menu_position' => 5, //管理画面に表示するメニューの位置
-		'supports' => [
-			'title', 'editor', 'thumbnail', 'custom-fields'
-		], //カスタム投稿タイプがサポートする機能
-	];
-	register_post_type('course', $args);
-}
-add_action('init', 'cpt_register_course');
-
-
-function tax_register_school_year() {
-	$args = [
-		'label' => '学年',
-		'labels' => [
-			'singular_name' => '学年',
-			'edit_item' => '学年を編集',
-			'add_new_item' => '新規学年を追加'
-		],
-		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
-		'query_var' => true, //クエリパラメーターを使えるようにする
-		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
-	];
-	register_taxonomy('school-year', 'course', $args);
-}
-add_action('init', 'tax_register_school_year');
-
-
-function tax_register_period() {
-	$args = [
-		'label' => '期間',
-		'labels' => [
-			'singular_name' => '期間',
-			'edit_item' => '期間を編集',
-			'add_new_item' => '新規期間を追加'
-		],
-		'hierarchical' => true,
-		'query_var' => true,
-		'show_in_rest' => true
-	];
-	register_taxonomy('period', 'course', $args);
-}
-add_action('init', 'tax_register_period');
-
-
-// カスタム投稿タイプ【コース】：アーカイブページにて全件表示する
-function change_set_course($query) {
-	if (is_admin() || !$query->is_main_query()) {
-		return;
-	}
-	if ($query->is_post_type_archive('course')) {
-		$query->set('posts_per_page', '-1');
-		return;
-	}
-}
-add_action('pre_get_posts', 'change_set_course');
-*/
-
-
-/* -------------------------------------------- *
-アイキャッチ画像を有効化
-* -------------------------------------------- */
-/*
-function setup_post_thumbnails() {
-	add_theme_support('post-thumbnails', ['blog', 'course']);
-	add_image_size('blog', 270, 200, true);
-	add_image_size('blog2', 540, 400, true); // 高解像度用の物
-}
-add_action('after_setup_theme', 'setup_post_thumbnails');
-
-
-function img_uncompressed() {
-	return 100;
-}
-add_filter('jpeg_quality', 'img_uncompressed');
-
-
-//　検索フォームのHTML5仕様
-function setup_html5_form() {
-	add_theme_support('html5', ['search-form']);
-}
-add_action('after_setup_theme', 'setup_html5_form');
-
-
-
-
-
-// 管理画面にウィジェットを追加する
-function my_widgets_register() {
-	$args = [
-		'name' => 'サイドバーウィジェット',
-		'id' => 'sidebar-widgets',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => 'サイドバーに表示されます'
-	];
-	register_sidebar($args);
-	$args = [
-		'name' => 'フッターウィジェット',
-		'id' => 'footer-widgets',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => 'フッターに表示されます'
-	];
-	register_sidebar($args);
-}
-add_action('widgets_init', 'my_widgets_register');
-*/
