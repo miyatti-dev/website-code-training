@@ -176,6 +176,10 @@
       @include mixin.media-query("md") {
         top: 17px;
       }
+
+      @include mixin.media-query("xs") {
+        top: 20px;
+      }
     }
   }
 

@@ -184,6 +184,11 @@
     top: 17px;
   }
 }
+@media screen and (max-width: 399px) {
+  .engress-about__title > span::after {
+    top: 20px;
+  }
+}
 .engress-about__text {
   padding: 0 10px;
   font-size: 1.8rem;
