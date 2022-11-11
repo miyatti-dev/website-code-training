@@ -185,6 +185,12 @@ main {
   max-height: 370px;
 }
 
+@media screen and (max-width: 768px) {
+  .post-container figure {
+    margin-left: 0;
+  }
+}
+
 .recommend-articles-title {
   margin-bottom: 30px;
   font-size: 2.6rem;

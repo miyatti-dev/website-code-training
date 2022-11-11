@@ -24,7 +24,6 @@
   ////////////////////
   & figure {
     width: 44%;
-    margin-right: 0;
     margin-left: 0;
 
     @include mixin.media-query("md") {

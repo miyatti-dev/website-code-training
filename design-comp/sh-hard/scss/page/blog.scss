@@ -59,6 +59,20 @@
 }
 
 ////////////////////
+// post-container
+////////////////////
+.post-container {
+  ////////////////////
+  // figure
+  ////////////////////
+  & figure {
+    @include mixin.media-query("md") {
+      margin-left: 0;
+    }
+  }
+}
+
+////////////////////
 // recommend
 ////////////////////
 .recommend-articles-title {
