@@ -1,4 +1,4 @@
-<?php if (!is_page('contact')) : ?>
+<?php if (!is_page('contact') && !is_page('thanks') ) : ?>
 
   <section class="section-wrapper section-contact">
     <div class="contact-bg">

@@ -1,0 +1,22 @@
+.page_head {
+  display: none;
+}
+
+.contact-mail-success-text {
+  padding-top: 25px;
+  margin-bottom: 80px;
+  line-height: 1.3125;
+  text-align: center;
+}
+@media screen and (max-width: 399px) {
+  .contact-mail-success-text {
+    text-align: left;
+  }
+}
+
+.contact-mail-success-home-link {
+  display: block;
+  margin-bottom: 78px;
+  text-align: center;
+  text-decoration: underline;
+}

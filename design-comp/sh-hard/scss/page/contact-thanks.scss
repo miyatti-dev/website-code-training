@@ -1,0 +1,24 @@
+@use "../common/variables"as *;
+@use "../mixin/mixin";
+
+.page_head {
+  display: none;
+}
+
+.contact-mail-success-text {
+  padding-top: 25px;  // 83px-ばんくずmargin-bottom58px
+  margin-bottom: 80px;
+  line-height: calc(21 / 16);
+  text-align: center;
+
+  @include mixin.media-query("xs") {
+    text-align: left;
+  }
+}
+
+.contact-mail-success-home-link {
+  display: block;
+  margin-bottom: 78px;
+  text-align: center;
+  text-decoration: underline;
+}

@@ -49,6 +49,9 @@ function my_theme_scripts() {
 	} else if (is_page('contact')) {
 		// contact
 		wp_enqueue_style('contact', get_theme_file_uri('/css/contact.css'), ['base']);
+	} else if (is_page('thanks')) {
+		// contact thanks
+		wp_enqueue_style('contact-thanks', get_theme_file_uri('/css/contact-thanks.css'), ['base']);
 	}
 
 	// 標準jquery削除
