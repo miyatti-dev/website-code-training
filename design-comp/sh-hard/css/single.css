@@ -51,7 +51,8 @@
   line-height: 1.5;
 }
 .post-container figure {
-  width: calc(100% - 4px);
+  width: auto;
+  max-width: calc(100% - 4px);
   margin-bottom: 30px;
   margin-left: 4px;
 }
@@ -155,4 +156,19 @@
   font-size: 1.8rem;
   color: #f5a623;
   text-decoration: underline;
+}
+.post-container pre {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  overflow-x: scroll;
+  color: #fff;
+  background: darkslategrey;
+  border-radius: 5px;
+}
+.post-container code {
+  padding: 3px;
+  color: #fff;
+  background: darkslategrey;
+  border-radius: 3px;
 }

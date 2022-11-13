@@ -79,7 +79,8 @@
   // figure
   ////////////////////
   & figure {
-    width: calc(100% - 4px);
+    width: auto;
+    max-width: calc(100% - 4px);
     margin-bottom: 30px;
     margin-left: 4px;
   }
@@ -216,5 +217,28 @@
     font-size: 1.8rem;
     color: $color-text-yellow;
     text-decoration: underline;
+  }
+
+  ////////////////////
+  // pre
+  ////////////////////
+  & pre {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+    color: $color-text-white;
+    background: darkslategrey;
+    border-radius: 5px;
+  }
+
+  ////////////////////
+  // code
+  ////////////////////
+  & code {
+    padding: 3px;
+    color: $color-text-white;
+    background: darkslategrey;
+    border-radius: 3px;
   }
 }
