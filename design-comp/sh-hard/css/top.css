@@ -47,11 +47,12 @@
 .fv-text {
   margin-bottom: 55px;
   font-size: 1.8rem;
-  line-height: 1.3333333333;
+  line-height: 1.7222222222;
 }
 @media screen and (max-width: 768px) {
   .fv-text {
     font-size: 1.6rem;
+    line-height: 1.3125;
   }
 }
 
@@ -121,6 +122,7 @@
 .problem-list-item__text {
   font-size: 1.8rem;
   font-weight: bold;
+  line-height: 2.1666666667;
 }
 @media screen and (max-width: 768px) {
   .problem-list-item__text {
@@ -147,6 +149,7 @@
   margin-bottom: 25px;
   font-size: 3.6rem;
   font-weight: bold;
+  line-height: 1.3888888889;
 }
 @media screen and (max-width: 1024px) {
   .engress-about__title {
@@ -192,7 +195,7 @@
 .engress-about__text {
   padding: 0 10px;
   font-size: 1.8rem;
-  line-height: 1.333;
+  line-height: 1.7222222222;
 }
 @media screen and (max-width: 768px) {
   .engress-about__text {
@@ -278,7 +281,7 @@
   }
 }
 .feature-list-item__detail {
-  line-height: 1.3125;
+  line-height: 1.6875;
 }
 .feature-list-item__image-wrapper {
   max-width: 350px;
@@ -832,7 +835,7 @@
       -ms-flex: 1;
           flex: 1;
   font-weight: bold;
-  line-height: 1.3125;
+  line-height: 1.6875;
   text-decoration: underline;
 }
 @media screen and (max-width: 576px) {

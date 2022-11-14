@@ -50,10 +50,11 @@
   &-text {
     margin-bottom: 55px;
     font-size: 1.8rem;
-    line-height: calc(24 / 18);
+    line-height: calc(31 / 18);
 
     @include mixin.media-query("md") {
       font-size: 1.6rem;
+      line-height: calc(21 / 16);
     }
   }
 }
@@ -116,6 +117,7 @@
     &__text {
       font-size: 1.8rem;
       font-weight: bold;
+      line-height: calc(39 / 18);
 
       @include mixin.media-query("md") {
         font-size: 1.6rem;
@@ -143,6 +145,7 @@
     margin-bottom: 25px;
     font-size: 3.6rem;
     font-weight: bold;
+    line-height: calc(50 / 36);
 
     @include mixin.media-query("lg") {
       font-size: 2.8rem;
@@ -186,7 +189,7 @@
   &__text {
     padding: 0 10px;
     font-size: 1.8rem;
-    line-height: 1.333;
+    line-height: calc(31 / 18);
 
     @include mixin.media-query("md") {
       font-size: 1.6rem;
@@ -270,7 +273,7 @@
   }
 
   &__detail {
-    line-height: calc(21 / 16);
+    line-height: calc(27 / 16);
   }
 
   &__image-wrapper {
@@ -786,7 +789,7 @@
   &__text {
     flex: 1;
     font-weight: bold;
-    line-height: calc(21 / 16);
+    line-height: calc(27 / 16);
     text-decoration: underline;
 
     @include mixin.media-query("sm") {

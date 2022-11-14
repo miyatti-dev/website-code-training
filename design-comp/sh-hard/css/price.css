@@ -91,6 +91,10 @@
   }
 }
 
+.supplementary-text {
+  line-height: 1.6875;
+}
+
 .section-price-list {
   margin-bottom: 60px;
 }
