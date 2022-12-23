@@ -1,0 +1,211 @@
+@use "../common/variables"as *;
+@use "../mixin/mixin";
+
+////////////////////
+// fv
+////////////////////
+.fv {
+  position: relative;
+  height: 100vh;
+  max-height: 1079px;
+  margin-bottom: 50px;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-height: 1079px;
+    margin: 0 auto;
+
+    @include mixin.media-query("sm") {
+      justify-content: center;
+      padding-right: 0;
+    }
+  }
+
+  &-title {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 51px + 34px;
+    color: $color-text-white;
+    text-shadow: 3px 3px 0 $color-text-black;
+    letter-spacing: 11px;
+
+    @include mixin.z-index(top-fv-title);
+  }
+
+  &-title-sub {
+    font-family: Pacifico, cursive;
+    font-size: 3.4rem;
+    line-height: 51px + 34px;
+    color: $color-text-white;
+    text-shadow: 3px 3px 0 $color-text-black;
+    letter-spacing: 11px;
+
+    @include mixin.z-index(top-fv-title);
+  }
+}
+
+.fv-image-list-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &__image {
+    height: 100vh;
+    max-height: 1079px;
+
+    /* 最初は3枚の画像を非表示にしておく */
+    opacity: 0;
+
+    /* アニメーション設定 */
+    animation: fade-fv 15s infinite linear;
+  }
+
+  &:nth-child(1) > &__image {
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) > &__image {
+    animation-delay: 5s;
+  }
+
+  &:nth-child(3) > &__image {
+    animation-delay: 10s;
+  }
+
+  /* アニメーション処理  */
+  @keyframes fade-fv {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+
+    5% {
+      opacity: 1;
+    }
+
+    35% {
+      opacity: 1;
+    }
+
+    40% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+}
+
+////////////////////
+// profile
+////////////////////
+.section-profile {
+  margin-bottom: 50px;
+}
+
+.profile-list {
+  display: flex;
+  justify-content: space-between;
+
+  @include mixin.media-query("md") {
+    flex-direction: column;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 2);
+    padding: 0 20px;
+
+    @include mixin.media-query("md") {
+      width: 100%;
+
+      &:first-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__profile-image-wrapper {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    &__profile-image {
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    &__name {
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    &__detail {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.personal-info-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    width: 50%;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+////////////////////
+// schedule
+////////////////////
+.section-schedule {
+  margin-bottom: 50px;
+
+  & > .content-wrapper {
+    width: 30%;
+
+    @include mixin.media-query("lg") {
+      width: 45%;
+    }
+
+    @include mixin.media-query("md") {
+      width: 60%;
+    }
+  }
+}
+
+.schedule-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__time {
+    width: 50%;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+  }
+}
