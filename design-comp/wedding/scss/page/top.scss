@@ -104,7 +104,7 @@
 // profile
 ////////////////////
 .section-profile {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .profile-list {
@@ -176,7 +176,7 @@
 // schedule
 ////////////////////
 .section-schedule {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 
   & > .content-wrapper {
     width: 30%;
@@ -207,5 +207,65 @@
     width: 50%;
     padding: 10px;
     border-bottom: 1px solid lightgrey;
+  }
+}
+
+////////////////////
+// seat
+////////////////////
+.section-seat {
+  margin-bottom: 100px;
+}
+
+////////////////////
+// menu
+////////////////////
+.section-menu {
+  margin-bottom: 100px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-item {
+    &__title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+}
+
+////////////////////
+// program
+////////////////////
+.section-program {
+  margin-bottom: 100px;
+
+  & > .content-wrapper {
+    padding: 20px;
+    border: solid 1px #bba63f;
+    outline: solid 2px #bba63f;
+    outline-offset: 4px;
+  }
+}
+
+.program-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-item {
+    & + & {
+      margin-top: 20px;
+    }
   }
 }
