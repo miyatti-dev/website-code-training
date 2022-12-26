@@ -3,11 +3,6 @@ AOS.init({
   duration: 1000,
 });
 
-// lightbox
-lightbox.option({
-  'disableScrolling': true
-})
-
 // flatpickr
 flatpickr('#js-datepicker', {
   locale: 'ja',
