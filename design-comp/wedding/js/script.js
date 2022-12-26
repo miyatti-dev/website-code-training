@@ -81,14 +81,17 @@ function reserveModalSetup() {
   $openModalButton.click(function () {
     console.log("######## reserveModalSetup openModalButton.click");
     $modal.addClass('reserve-modal-show');
+    $('body').addClass('no-scroll');
   });
 
   // modal非表示
   $closeModalButton.click(function () {
     $modal.removeClass('reserve-modal-show');
+      $('body').removeClass('no-scroll');
   });
   $modalBg.click(function () {
     $modal.removeClass('reserve-modal-show');
+    $('body').removeClass('no-scroll');
   });
 }
 

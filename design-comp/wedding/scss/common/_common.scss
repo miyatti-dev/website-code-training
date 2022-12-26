@@ -75,6 +75,7 @@ a:hover {
 
 .no-scroll {
   overflow: hidden;
+  touch-action: none;
 }
 
 .br-xl-show {
@@ -171,7 +172,6 @@ a:hover {
   max-height: 600px;
   padding: 25px 60px 90px;
   overflow-y: auto;
-  touch-action: none;
   background-color: $color-bg-white;
   border: 1px solid $color-border;
   transform: translate(-50%, -50%);
