@@ -15,9 +15,6 @@ flatpickr('#js-datepicker', {
 
 // ready
 $(function () {
-  var elements = document.querySelectorAll( '.fullscreen-image' );
-  Intense( elements );
-
   // 読み込み時の初回設定
   windowResizeEvent();
   windowScrollEvent();
@@ -27,6 +24,9 @@ $(function () {
 
   // window resize event
   $(window).resize(windowResizeEvent);
+
+  // reserve modal
+  reserveModalSetup();
 
   // burger button click
   $('.burger-button').on('click', function () {
@@ -67,6 +67,30 @@ $(function () {
   });
 })
 
+//////////////////////////////////////////////////
+// reserve modal
+//////////////////////////////////////////////////
+function reserveModalSetup() {
+  console.log("######## reserveModalSetup");
+  var $openModalButton = $('#js-open-reserve-modal');
+  var $closeModalButton = $('#js-close-reserve-modal');
+  var $modal = $('#js-reserve-modal');
+  var $modalBg = $('#js-reserve-modal-bg');
+
+  // modal表示
+  $openModalButton.click(function () {
+    console.log("######## reserveModalSetup openModalButton.click");
+    $modal.addClass('reserve-modal-show');
+  });
+
+  // modal非表示
+  $closeModalButton.click(function () {
+    $modal.removeClass('reserve-modal-show');
+  });
+  $modalBg.click(function () {
+    $modal.removeClass('reserve-modal-show');
+  });
+}
 
 //////////////////////////////////////////////////
 // ハンバーガーメニュー
