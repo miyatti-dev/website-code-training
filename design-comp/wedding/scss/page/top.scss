@@ -215,6 +215,10 @@
 ////////////////////
 .section-seat {
   margin-bottom: 100px;
+
+  & > .content-wrapper {
+    width: 80%;
+  }
 }
 
 ////////////////////
@@ -229,6 +233,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  &:first-of-type {
+    margin-bottom: 30px;
+  }
 
   &-item {
     &__title {
@@ -249,11 +257,15 @@
 .section-program {
   margin-bottom: 100px;
 
-  & > .content-wrapper {
+  & .content-wrapper {
     padding: 20px;
-    border: solid 1px #bba63f;
-    outline: solid 2px #bba63f;
-    outline-offset: 4px;
+
+    &-inner {
+      padding: 20px;
+      border: solid 1px #bba63f;
+      outline: solid 2px #bba63f;
+      outline-offset: 4px;
+    }
   }
 }
 

@@ -242,6 +242,9 @@
 .section-seat {
   margin-bottom: 100px;
 }
+.section-seat > .content-wrapper {
+  width: 80%;
+}
 
 .section-menu {
   margin-bottom: 100px;
@@ -262,6 +265,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.menu-list:first-of-type {
+  margin-bottom: 30px;
+}
 .menu-list-item__title {
   margin-bottom: 10px;
   font-weight: bold;
@@ -274,7 +280,10 @@
 .section-program {
   margin-bottom: 100px;
 }
-.section-program > .content-wrapper {
+.section-program .content-wrapper {
+  padding: 20px;
+}
+.section-program .content-wrapper-inner {
   padding: 20px;
   border: solid 1px #bba63f;
   outline: solid 2px #bba63f;

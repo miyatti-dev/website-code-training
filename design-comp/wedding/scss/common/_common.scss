@@ -29,6 +29,11 @@ body {
   color: $color-text-black;
 }
 
+.fullscreen-image {
+  display: inline-block;   /* 横方向に並べる指定 */
+  margin: 0 5px 5px 0; /* 周囲の余白量(右と下に5pxずつ) */
+}
+
 img {
   width: 100%;
   vertical-align: bottom;

@@ -3,6 +3,11 @@ AOS.init({
   duration: 1000,
 });
 
+// lightbox
+lightbox.option({
+  'disableScrolling': true
+})
+
 // flatpickr
 flatpickr('#js-datepicker', {
   locale: 'ja',
@@ -15,6 +20,9 @@ flatpickr('#js-datepicker', {
 
 // ready
 $(function () {
+  var elements = document.querySelectorAll( '.fullscreen-image' );
+  Intense( elements );
+
   // 読み込み時の初回設定
   windowResizeEvent();
   windowScrollEvent();
