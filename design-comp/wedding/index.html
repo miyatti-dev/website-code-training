@@ -4,9 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
-    <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。
-    伝統的「和」の息づく空間で、至極のひとときをお過ごしください。" />
+    <title>結婚式</title>
     <meta name="robots" content="noindex">
     <link rel="icon" href="./image/logo02.png">
 
@@ -21,14 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Stalemate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Pacifico&family=Stalemate&display=swap" rel="stylesheet">
+
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
-    <!-- flatpickr -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-    <!-- fontawesome css -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+    <!-- photoswipe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.4/photoswipe.min.css" integrity="sha512-TdCx5ObKpq3+lwUdiXFgFLhqwTB98YsdaQWSJrwkOz084qaeO86+NMYfU/pnpPo1pDVah0a7yvFmbcvI8ZiGAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- my css -->
     <link rel="stylesheet" href="css/styles.css" type="text/css" charset="utf-8" />
@@ -58,9 +54,6 @@
             </li>
           </ul>
         </nav>
-        <button type="button" id="js-open-reserve-modal" class="header-reserve-button">
-          宿泊予約
-        </button>
         <button type="button" id="js-burger" class="burger-button" aria-controls="js-glabal-menu" aria-expanded="true" area-label="メニューを開閉する">
           <span class="burger-button__bar bar-top"></span>
           <span class="burger-button__bar bar-middle"></span>
@@ -169,7 +162,7 @@
               </dl>
             </li>
           </ul>
-        
+
         </div>
       </section>
       <!-- //profile -->
@@ -204,7 +197,15 @@
           <h2 class="section-title" data-aos="fade-up" data-aos-once="true">
             Seat
           </h2>
-          <a href="https://miyattiblog.com/wp-content/uploads/2021/11/blog-header_pc.jpg" data-aos="fade-up" data-aos-once="true"><img src="https://miyattiblog.com/wp-content/uploads/2021/11/blog-header_pc.jpg"  data-aos="fade-up" data-aos-once="true"></a>  
+          <div id="photoGallery">
+            <a href="https://miyattiblog.com/wp-content/uploads/2021/11/blog-header_pc.jpg" data-aos="fade-up" data-aos-once="true" data-pswp-width="1060" data-pswp-height="300">
+              <img src="https://miyattiblog.com/wp-content/uploads/2021/11/blog-header_pc.jpg" data-aos="fade-up" data-aos-once="true">
+            </a>
+          </div>
+          <a href="https://miyattiblog.com/wp-content/uploads/2021/11/blog-header_pc.jpg" data-aos="fade-up" data-aos-once="true">
+            <img src="https://miyattiblog.com/wp-content/uploads/2021/11/blog-header_pc.jpg" data-aos="fade-up" data-aos-once="true">
+          </a>
+
         </div>
       </section>
       <!-- //seat -->
@@ -215,7 +216,7 @@
           <h2 class="section-title" data-aos="fade-up" data-aos-once="true">
             Menu
           </h2>
-          <ul class="menu-list"  data-aos="fade-up" data-aos-once="true">
+          <ul class="menu-list" data-aos="fade-up" data-aos-once="true">
             <li class="menu-list-item">
               <p class="menu-list-item__title">
                 ~ 前菜 ~
@@ -265,7 +266,7 @@
           <h2 class="section-title" data-aos="fade-up" data-aos-once="true">
             Drink
           </h2>
-          <ul class="menu-list"  data-aos="fade-up" data-aos-once="true">
+          <ul class="menu-list" data-aos="fade-up" data-aos-once="true">
             <li class="menu-list-item">
               <p class="menu-list-item__title">
                 ~ アルコール ~
@@ -288,51 +289,50 @@
       </section>
       <!-- //menu -->
 
-    <!-- program -->
-    <section class="section-wrapper section-program" id="program">
-      <div class="content-wrapper">
-        <div class="content-wrapper-inner">
-          <h2 class="section-title" data-aos="fade-up" data-aos-once="true">
-            Program
-          </h2>
-          <ul class="program-list" data-aos="fade-up" data-aos-once="true">
-            <li class="program-list-item">
-              <p class="program-list-item__text">
-                祝杯
-              </p>
-            </li>
-            <li class="program-list-item">
-              <p class="program-list-item__text">
-                開宴
-              </p>
-            </li>
-            <li class="program-list-item">
-              <p class="program-list-item__text">
-                友人スピーチ
-              </p>
-            </li>
-            <li class="program-list-item">
-              <p class="program-list-item__text">
-                両親への記念品贈呈
-              </p>
-            </li>
-            <li class="program-list-item">
-              <p class="program-list-item__text">
-                両家代表謝辞
-              </p>
-            </li>
-            <li class="program-list-item">
-              <p class="program-list-item__text">
-                お披楽喜
-              </p>
-            </li>
-          </ul>
+      <!-- program -->
+      <section class="section-wrapper section-program" id="program">
+        <div class="content-wrapper">
+          <div class="content-wrapper-inner">
+            <h2 class="section-title" data-aos="fade-up" data-aos-once="true">
+              Program
+            </h2>
+            <ul class="program-list" data-aos="fade-up" data-aos-once="true">
+              <li class="program-list-item">
+                <p class="program-list-item__text">
+                  祝杯
+                </p>
+              </li>
+              <li class="program-list-item">
+                <p class="program-list-item__text">
+                  開宴
+                </p>
+              </li>
+              <li class="program-list-item">
+                <p class="program-list-item__text">
+                  友人スピーチ
+                </p>
+              </li>
+              <li class="program-list-item">
+                <p class="program-list-item__text">
+                  両親への記念品贈呈
+                </p>
+              </li>
+              <li class="program-list-item">
+                <p class="program-list-item__text">
+                  両家代表謝辞
+                </p>
+              </li>
+              <li class="program-list-item">
+                <p class="program-list-item__text">
+                  お披楽喜
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- //program -->
-  
-    
+      </section>
+      <!-- //program -->
+
     </main>
     <!-- //main -->
 
@@ -342,70 +342,11 @@
     </footer>
     <!-- //footer -->
 
-       <!-- reserve modal -->
-       <section id="js-reserve-modal" class="reserve-modal">
-        <div id="js-reserve-modal-bg" class="reserve-modal-bg"></div>
-        <div class="reserve-modal-wrapper">
-          <div class="reserve-modal-content">
-            <h2 class="reserve-modal-title">宿泊予約</h2>
-            <form action="">
-              <ul class="reserve-form-list">
-                <li class="reserve-form-list-item">
-                  <label for="form-name" class="reserve-form-list-item__label">
-                    お名前
-                  </label>
-                  <input id="form-name" type="text" class="reserve-form-list-item__input" required placeholder="例：石井正悟">
-                </li>
-                <li class="reserve-form-list-item">
-                  <label for="form-mail-address" class="reserve-form-list-item__label">
-                    メールアドレス
-                  </label>
-                  <input id="form-mail-address" type="text" class="reserve-form-list-item__input" required placeholder="例：Example@example.com">
-                </li>
-                <li class="reserve-form-list-item">
-                  <label for="form-plan-list" class="reserve-form-list-item__label">
-                    ご希望プラン（空いているプランのみ表示されます）
-                  </label>
-                  <select id="form-plan-list" required name="plan" class="reserve-form-list-item__plan-list">
-                    <option value="">
-                      プランを選択してください
-                    </option>
-                    <option value="1">
-                      ①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン
-                    </option>
-                    <option value="2">
-                      ②平日に優雅に楽しむ、特別宿泊プラン
-                    </option>
-                    <option value="3">
-                      ③絶景貸切露天と個室会席を満喫できるファミリープラン
-                    </option>
-                  </select>
-                </li>
-                <li class="reserve-form-list-item">
-                  <label for="js-datepicker" class="reserve-form-list-item__label">
-                    日時選択
-                  </label>
-                  <input type="text" class="reserve-form-list-item__input" name="datepicker" id="js-datepicker" required placeholder="日時を選択してください">
-                </li>
-              </ul>
-              <div class="form-submit-button-wrapper">
-                <input type="submit" class="form-submit-button" value="送信する">
-              </div>
-            </form>
-          </div>
-          <div id="js-close-reserve-modal" class="close-reserve-modal">
-            <span class="close-reserve-modal__bar close-modal-bar-top"></span>
-            <span class="close-reserve-modal__bar close-modal-bar-bottom"></span>
-          </div>
-        </div>
-      </section>
-      <!-- //modal -->
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <script type="module" src="./js/photoSwipe.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
 
 </html>

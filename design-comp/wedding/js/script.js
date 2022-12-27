@@ -3,18 +3,9 @@ AOS.init({
   duration: 1000,
 });
 
-// flatpickr
-flatpickr('#js-datepicker', {
-  locale: 'ja',
-  dateFormat: 'Y.m.d（D）H:i', // [2021.05.24（月）08:00]の形式で表示
-  minDate: "today",
-  enableTime: true,
-  mode: "range",
-  allowInput: true
-});
-
 // ready
 $(function () {
+  
   // 読み込み時の初回設定
   windowResizeEvent();
   windowScrollEvent();
@@ -24,9 +15,6 @@ $(function () {
 
   // window resize event
   $(window).resize(windowResizeEvent);
-
-  // reserve modal
-  reserveModalSetup();
 
   // burger button click
   $('.burger-button').on('click', function () {
@@ -66,34 +54,6 @@ $(function () {
     return false;
   });
 })
-
-//////////////////////////////////////////////////
-// reserve modal
-//////////////////////////////////////////////////
-function reserveModalSetup() {
-  console.log("######## reserveModalSetup");
-  var $openModalButton = $('#js-open-reserve-modal');
-  var $closeModalButton = $('#js-close-reserve-modal');
-  var $modal = $('#js-reserve-modal');
-  var $modalBg = $('#js-reserve-modal-bg');
-
-  // modal表示
-  $openModalButton.click(function () {
-    console.log("######## reserveModalSetup openModalButton.click");
-    $modal.addClass('reserve-modal-show');
-    $('body').addClass('no-scroll');
-  });
-
-  // modal非表示
-  $closeModalButton.click(function () {
-    $modal.removeClass('reserve-modal-show');
-      $('body').removeClass('no-scroll');
-  });
-  $modalBg.click(function () {
-    $modal.removeClass('reserve-modal-show');
-    $('body').removeClass('no-scroll');
-  });
-}
 
 //////////////////////////////////////////////////
 // ハンバーガーメニュー
@@ -151,15 +111,6 @@ function windowResizeEvent() {
 // window scroll event
 //////////////////////////////////////////////////
 function windowScrollEvent() {
-  // パスの取得
-  var path = location.pathname;
-  path = path.trim();
-
-  if (path.match(/\/room|meal|spa\/.*/)) {
-    // topページ以外は何もしない
-    return;
-  }
-
   var scrollValue = $(this).scrollTop();
   if (scrollValue === 0) {
     // header bg color
