@@ -116,6 +116,26 @@
   }
 }
 
+.section-about {
+  margin-bottom: 100px;
+}
+.section-about .content-wrapper {
+  position: relative;
+  max-width: 800px;
+  padding: 20px;
+}
+.section-about .content-wrapper-inner {
+  padding: 100px 30px;
+  background: url("../image/sakura.png");
+  background-size: contain;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3), 0 0 6px rgba(128, 128, 128, 0.1);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3), 0 0 6px rgba(128, 128, 128, 0.1);
+}
+
+.about-image-wrapper {
+  margin-bottom: 30px;
+}
+
 .section-profile {
   margin-bottom: 100px;
 }

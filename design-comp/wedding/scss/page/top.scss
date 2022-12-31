@@ -101,6 +101,30 @@
 }
 
 ////////////////////
+// about
+////////////////////
+.section-about {
+  margin-bottom: 100px;
+
+  & .content-wrapper {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+
+    &-inner {
+      padding: 100px 30px;
+      background: url("../image/sakura.png");
+      background-size: contain;
+      box-shadow: 0 2px 3px rgb(0 0 0 / 30%), 0 0 6px rgb(128 128 128 / 10%);
+    }
+  }
+}
+
+.about-image-wrapper {
+  margin-bottom: 30px;
+}
+
+////////////////////
 // profile
 ////////////////////
 .section-profile {
