@@ -1,0 +1,46 @@
+// テキスト色
+$color-text-black: #000;
+$color-text-white: #fff;
+
+// burger-button色
+$color-burger-button-black: #000;
+$color-burger-button-white: #fff;
+
+// background-color
+$color-bg-black: #000;
+$color-bg-white: #fff;
+
+// header-reserve-button色
+$color-header-reserve-button: #978f10;
+
+// header-nav-bg色
+$color-header-nav-bg-black: rgb(0 0 0 / 95%);
+$color-header-nav-bg-white: rgb(255 255 255 / 95%);
+
+// border
+$color-border: #707070;
+$color-border-white: #fff;
+$color-border-reserve-dialog: #e7e7e7;
+$color-border-spa-efficacy: #e7e7e7;
+
+// news
+$color-news-bg: #f6f6f6;
+$color-news-border: #ccc;
+
+// breakpoints
+$breakpoints: (
+  "xs": "screen and (max-width: 399px)",
+  "sm": "screen and (max-width: 576px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1024px)",
+  "xl": "screen and (max-width: 1280px)",
+);
+
+// layer z-index
+$layer: (
+  reserve-modal: 100,
+  header-nav: 20,
+  burger-button: 20,
+  header: 10,
+  top-fv-title: 5,
+);
