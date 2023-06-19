@@ -1,5 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import "@/styles/page/top.scss";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import React, { useState, useEffect } from "react";
+import "react-tabs/style/react-tabs.css";
+import styles from "@/styles/page/top.scss";
 
 export default function Home() {
   return (
@@ -304,210 +310,175 @@ export default function Home() {
             お知らせ
           </h2>
 
-          <ul className="news-tab-list" data-aos="fade-up" data-aos-once="true">
-            <li
-              className="news-tab-list-item js-news-tab-trigger is-active"
-              data-id="news-tab1"
-            >
-              {" "}
-              営業情報
-            </li>
-            <li
-              className="news-tab-list-item js-news-tab-trigger"
-              data-id="news-tab2"
-            >
-              その他
-            </li>
-          </ul>
+          <Tabs data-aos="fade-up" data-aos-once="true">
+            <TabList>
+              <Tab>営業情報</Tab>
+              <Tab>その他</Tab>
+            </TabList>
 
-          <ul className="news-list js-news-tab-target is-active" id="news-tab1">
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-                <Image
-                  src="/image/news01.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.12.24</time>
-                <p className="news-list-item__text">
-                  年末最後の営業日は27日になります。
-                </p>
-              </div>
-            </li>
+            <TabPanel>
+              <ul
+                className="news-list js-news-tab-target is-active"
+                id="news-tab1"
+              >
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/news01.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.12.24</time>
+                    <p className="news-list-item__text">
+                      年末最後の営業日は27日になります。
+                    </p>
+                  </div>
+                </li>
 
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-              <Image
-                  src="/image/news02.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.12.24</time>
-                <p className="news-list-item__text">
-                  年末最後の営業日のお知らせ
-                </p>
-              </div>
-            </li>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/news02.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.12.24</time>
+                    <p className="news-list-item__text">
+                      年末最後の営業日のお知らせ
+                    </p>
+                  </div>
+                </li>
 
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-              <Image
-                  src="/image/news02.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.12.11</time>
-                <p className="news-list-item__text">
-                  12.21は臨時休業とさせていただきますので、よろしくお願いします。
-                </p>
-              </div>
-            </li>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/news02.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.12.11</time>
+                    <p className="news-list-item__text">
+                      12.21は臨時休業とさせていただきますので、よろしくお願いします。
+                    </p>
+                  </div>
+                </li>
 
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-              <Image
-                  src="/image/news01.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.12.24</time>
-                <p className="news-list-item__text">
-                  年末最後の営業日のお知らせ
-                </p>
-              </div>
-            </li>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/news01.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.12.24</time>
+                    <p className="news-list-item__text">
+                      年末最後の営業日のお知らせ
+                    </p>
+                  </div>
+                </li>
 
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-              <Image
-                  src="/image/news01.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.12.01</time>
-                <p className="news-list-item__text">
-                  和室の改装を行いますため、12.10はお休みさせていただきます。
-                </p>
-              </div>
-            </li>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/news01.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.12.01</time>
+                    <p className="news-list-item__text">
+                      和室の改装を行いますため、12.10はお休みさせていただきます。
+                    </p>
+                  </div>
+                </li>
 
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-              <Image
-                  src="/image/news02.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.12.24</time>
-                <p className="news-list-item__text">
-                  年末最後の営業日のお知らせ
-                </p>
-              </div>
-            </li>
-          </ul>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/news02.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.12.24</time>
+                    <p className="news-list-item__text">
+                      年末最後の営業日のお知らせ
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </TabPanel>
+            <TabPanel>
+              <ul className="news-list js-news-tab-target" id="news-tab2">
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/food_hiyashi_chuka_hajimemashita.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.07.01</time>
+                    <p className="news-list-item__text">
+                      冷やし中華はじめました！
+                    </p>
+                  </div>
+                </li>
 
-          <ul className="news-list js-news-tab-target" id="news-tab2">
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-                <Image
-                  src="/image/food_hiyashi_chuka_hajimemashita.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.07.01</time>
-                <p className="news-list-item__text">冷やし中華はじめました！</p>
-              </div>
-            </li>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/kinshi_mark_tabako_kinen.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.04.01</time>
+                    <p className="news-list-item__text">
+                      2020年4月1日より全客室禁煙とさせて頂きます。
+                    </p>
+                  </div>
+                </li>
 
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-                <Image
-                  src="/image/kinshi_mark_tabako_kinen.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.04.01</time>
-                <p className="news-list-item__text">
-                  2020年4月1日より全客室禁煙とさせて頂きます。
-                </p>
-              </div>
-            </li>
-
-            <li
-              className="news-list-item"
-              data-aos="fade-up"
-              data-aos-once="true"
-            >
-              <div className="news-list-item__image-wrapper">
-                <Image
-                  src="/image/point_shock_man.png"
-                  className="news-list-item__image"
-                  alt=""
-                  fill
-                />
-              </div>
-              <div className="news-list-item__text-wrapper">
-                <time className="news-list-item__time">2020.01.01</time>
-                <p className="news-list-item__text">ポイント付与サービス停止</p>
-              </div>
-            </li>
-          </ul>
+                <li className="news-list-item">
+                  <div className="news-list-item__image-wrapper">
+                    <Image
+                      src="/image/point_shock_man.png"
+                      className="news-list-item__image"
+                      alt=""
+                      fill
+                    />
+                  </div>
+                  <div className="news-list-item__text-wrapper">
+                    <time className="news-list-item__time">2020.01.01</time>
+                    <p className="news-list-item__text">
+                      ポイント付与サービス停止
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </TabPanel>
+          </Tabs>
         </div>
       </section>
 
@@ -533,11 +504,11 @@ export default function Home() {
           <div className="access-info" data-aos="fade-up" data-aos-once="true">
             <div className="access-info__image-wrapper">
               <Image
-                  src="/image/acess.png"
-                  className="access-info__image"
-                  alt=""
-                  fill
-                />
+                src="/image/acess.png"
+                className="access-info__image"
+                alt=""
+                fill
+              />
             </div>
             <div className="access-info__text-wrapper">
               <dl className="access-info-list">
