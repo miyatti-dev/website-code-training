@@ -1,13 +1,13 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       tmp chile page
-      <div class="fv">
-        <ul class="fv-image-list">
-          <li class="fv-image-list-item">
+      <div className="fv">
+        <ul className="fv-image-list">
+          <li className="fv-image-list-item">
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -17,7 +17,7 @@ export default function Home() {
               priority
             />
           </li>
-          <li class="fv-image-list-item">
+          <li className="fv-image-list-item">
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -27,7 +27,7 @@ export default function Home() {
               priority
             />
           </li>
-          <li class="fv-image-list-item">
+          <li className="fv-image-list-item">
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -38,14 +38,14 @@ export default function Home() {
             />
           </li>
         </ul>
-        <div class="fv-inner">
-          <p class="fv-title">
-            頑張る人の<br/>頑張らない時間
+        <div className="fv-inner">
+          <p className="fv-title">
+            頑張る人の
+            <br />
+            頑張らない時間
           </p>
         </div>
       </div>
-
-
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -57,7 +57,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -69,7 +69,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-
       <div className={styles.center}>
         <Image
           className={styles.logo}
@@ -80,7 +79,6 @@ export default function Home() {
           priority
         />
       </div>
-
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -133,5 +131,6 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
+
