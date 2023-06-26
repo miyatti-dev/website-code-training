@@ -26,16 +26,14 @@ export default function NavMenu({ navId, openMenuFlag, isScrollTop }) {
   }, [isScrollTop, openMenuFlag]);
 
   return (
-    <>
-      <nav
-        id={navId}
-        className={`${styles.headerNav} ${
-          isScrollTop ? undefined : styles.headerNavBgColorWhite
-        }`}
-        aria-hidden={!openMenuFlag}
-      >
-        <ul className={styles.headerNavList}>{listItems}</ul>
-      </nav>
-    </>
+    <nav
+      id={navId}
+      className={`${styles.headerNav} ${
+        isScrollTop ? undefined : styles.headerNavBgColorWhite
+      }`}
+      aria-hidden={!openMenuFlag}
+    >
+      <ul className={styles.headerNavList}>{listItems}</ul>
+    </nav>
   );
 }

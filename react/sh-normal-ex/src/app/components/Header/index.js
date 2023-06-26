@@ -49,47 +49,45 @@ export default function Header() {
   const navId = "GlobalMenu";
 
   return (
-    <>
-      <header
-        className={`${styles.header} ${
-          isScrollTop ? undefined : styles.headerBgColorWhite
-        }`}
-      >
-        <div className={styles.headerWrapper}>
-          <h1 className={styles.headerTitleWrapper}>
-            <a href="./" className={styles.headerTitleWrapperLink}>
-              <Image
-                src={
-                  isScrollTop
-                    ? "/image/top-header-logo.png"
-                    : "/image/sub-header-logo.png"
-                }
-                className={styles.headerTitleWrapperLogo}
-                alt=""
-                fill
-              />
-            </a>
-          </h1>
-          <NavMenu
-            navId={navId}
-            openMenuFlag={openMenuFlag}
-            isScrollTop={isScrollTop}
-          />
-          <button
-            type="button"
-            id="js-open-reserve-modal"
-            className={styles.headerReserveButton}
-          >
-            宿泊予約
-          </button>
-          <BurgerButton
-            navId={navId}
-            openMenuFlag={openMenuFlag}
-            isScrollTop={isScrollTop}
-            onClick={onClickBurgerButton}
-          />
-        </div>
-      </header>
-    </>
+    <header
+      className={`${styles.header} ${
+        isScrollTop ? undefined : styles.headerBgColorWhite
+      }`}
+    >
+      <div className={styles.headerWrapper}>
+        <h1 className={styles.headerTitleWrapper}>
+          <a href="./" className={styles.headerTitleWrapperLink}>
+            <Image
+              src={
+                isScrollTop
+                  ? "/image/top-header-logo.png"
+                  : "/image/sub-header-logo.png"
+              }
+              className={styles.headerTitleWrapperLogo}
+              alt=""
+              fill
+            />
+          </a>
+        </h1>
+        <NavMenu
+          navId={navId}
+          openMenuFlag={openMenuFlag}
+          isScrollTop={isScrollTop}
+        />
+        <button
+          type="button"
+          id="js-open-reserve-modal"
+          className={styles.headerReserveButton}
+        >
+          宿泊予約
+        </button>
+        <BurgerButton
+          navId={navId}
+          openMenuFlag={openMenuFlag}
+          isScrollTop={isScrollTop}
+          onClick={onClickBurgerButton}
+        />
+      </div>
+    </header>
   );
 }
