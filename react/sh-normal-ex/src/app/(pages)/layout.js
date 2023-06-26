@@ -1,15 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-// AOS
+// aos
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// font
-const inter = Inter({ subsets: ["latin"] });
-import { Inter } from "next/font/google";
-
+// component
 import Header from "@/components/Header/index.js";
 import Footer from "@/components/Footer/index.js";
 
@@ -24,7 +21,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  React.useEffect(() => {
+  useEffect(() => {
     AOS.init({
       once: true,
       duration: 1000,
@@ -32,8 +29,8 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html>
+      <body>
         <Header />
         {children}
         <Footer />

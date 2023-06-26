@@ -6,20 +6,9 @@ import NavMenu from "./NavMenu";
 import BurgerButton from "./BurgerButton";
 import styles from "./style.module.scss";
 
-const isScrollTopPosition = () => {
-  // ブラウザによってとり方が違うようなので全部もってきてMaxをとる
-  const scrollPosition = Math.max(
-    typeof window === "object" ? window.scrollY : 0,
-    typeof document === "object" ? document.documentElement.scrollTop : 0,
-    typeof document === "object" ? document.body.scrollTop : 0
-  );
-
-  return scrollPosition === 0;
-};
-
 export default function Header() {
   const [openMenuFlag, setOpenMenuFlag] = useState(false);
-  const [isScrollTop, setIsScrollTop] = useState(isScrollTopPosition());
+  const [isScrollTop, setIsScrollTop] = useState(true);
 
   // resize
   useEffect(() => {
@@ -33,10 +22,22 @@ export default function Header() {
 
   // scroll
   useEffect(() => {
+    const isScrollTopPosition = () => {
+      // ブラウザによってとり方が違うようなので全部もってきてMaxをとる
+      const scrollPosition = Math.max(
+        window.scrollY,
+        document.documentElement.scrollTop,
+        document.body.scrollTop
+      );
+
+      return scrollPosition === 0;
+    };
+
     const onScrollHandler = () => {
       setIsScrollTop(isScrollTopPosition());
     };
 
+    setIsScrollTop(isScrollTopPosition());
     document.addEventListener("scroll", onScrollHandler);
     return () => document.removeEventListener("scroll", onScrollHandler);
   }, []);
