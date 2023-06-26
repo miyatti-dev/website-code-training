@@ -8,7 +8,7 @@ import styles from "./style.module.scss";
 const getScrollPosition = () => {
   // ブラウザによってとり方が違うようなので全部もってきてMaxをとる
   return Math.max(
-    window.screenY,
+    window.scrollY,
     document.documentElement.scrollTop,
     document.body.scrollTop
   );
