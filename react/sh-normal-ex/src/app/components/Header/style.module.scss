@@ -28,10 +28,9 @@
     }
   }
 
-  &-bg-color-white {
+  &BgColorWhite {
     background-color: $color-bg-white;
   }
-
 }
 
 
@@ -70,12 +69,16 @@
     width: 100vw;
     overflow: hidden;
     background-color: $color-header-nav-bg-black;
-
-    &-bg-color-white {
+    transition: display 5s;
+    &BgColorWhite {
       background-color: $color-header-nav-bg-white;
     }
-
     @include mixin.z-index(header-nav);
+  }
+
+  &[aria-hidden="false"] {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -93,7 +96,7 @@
     color: $color-text-white;
     text-shadow: 1px 1px 0 $color-text-black;
 
-    &-color-black {
+    &ColorBlack {
       color: $color-text-black;
       text-shadow: 1px 1px 0 $color-text-white;
     }
@@ -167,7 +170,7 @@
     border-radius: 2.5px;
     transition: 0.3s;
 
-    &-bg-color-black {
+    &BgColorBlack {
       background-color: $color-burger-button-black;
     }
 
@@ -180,8 +183,8 @@
     }
   }
 
-  &.open & {
-    &__bar {
+  &[aria-expanded="true"] & {
+    &Bar {
       &.barTop {
         top: 18px;
         transform: rotate(45deg);
