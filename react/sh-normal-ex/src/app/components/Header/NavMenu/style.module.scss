@@ -1,5 +1,6 @@
 @use "@/styles/common/variables" as *;
 @use "@/styles/mixin/mixin";
+@use "@/styles/global.module.scss";
 
 .headerNav {
   @include mixin.media-query("md") {

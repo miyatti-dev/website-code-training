@@ -15,6 +15,7 @@ import Footer from "@/components/Footer/index.js";
 
 // style
 import "@/styles/destyles.css";
+import "@/styles/global.scss";
 import "@/styles/styles.scss";
 
 export const metadata = {
@@ -40,4 +41,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
