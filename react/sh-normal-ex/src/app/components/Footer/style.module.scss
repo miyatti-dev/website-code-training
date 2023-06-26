@@ -1,0 +1,129 @@
+@use "@/styles/common/variables" as *;
+@use "@/styles/mixin/mixin";
+
+.footer {
+  text-align: center;
+  background-color: $color-bg-black;
+
+  & > .contentWrapper {
+    // TODO:common側の定義（ここから）
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    // TODO:common側の定義（ここまで）
+
+    max-width: none;
+    padding: 61px 0 59px;
+
+    @include mixin.media-query("md") {
+      padding: 40px 0;
+    }
+  }
+
+  & > .footerBg {
+    background-image: url("/image/bg3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.footerNavList {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 93px;
+
+  @include mixin.media-query("md") {
+    margin-bottom: 50px;
+  }
+
+  &Item {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 16px;
+    writing-mode: vertical-rl;
+
+    & + & {
+      margin-right: 34px;
+    }
+  }
+}
+
+// TODO:common側の定義（ここから）
+.sectionTitle {
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 1.34;
+  text-align: center;
+
+  @include mixin.media-query("lg") {
+    font-size: 2.8rem;
+  }
+
+  @include mixin.media-query("md") {
+    font-size: 2.4rem;
+  }
+}
+
+.logoIconWrapper {
+  margin-bottom: 13px;
+  text-align: center;
+  
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+}
+// TODO:common側の定義（ここまで）
+
+.footer .sectionTitle {
+  margin-bottom: 65px;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+
+  @include mixin.media-query("md") {
+    margin-bottom: 40px;
+  }
+}
+
+.footerAccessInfo {
+  font-weight: 500;
+
+  @include mixin.media-query("sm") {
+    font-size: 1.4rem;
+  }
+
+  &AddressWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  &PostCode {
+    margin-right: 16px;
+  }
+
+  &Address {
+    letter-spacing: 0.18em;
+  }
+
+  &TelFaxWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &Tel {
+    margin-right: 21px;
+  }
+}
+
+.footerCopyRight {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 60px;
+  color: $color-text-white;
+}

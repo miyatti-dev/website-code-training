@@ -9,9 +9,9 @@ import styles from "./style.module.scss";
 const isScrollTopPosition = () => {
   // ブラウザによってとり方が違うようなので全部もってきてMaxをとる
   const scrollPosition = Math.max(
-    window.scrollY,
-    document.documentElement.scrollTop,
-    document.body.scrollTop
+    typeof window === "object" ? window.scrollY : 0,
+    typeof document === "object" ? document.documentElement.scrollTop : 0,
+    typeof document === "object" ? document.body.scrollTop : 0
   );
 
   return scrollPosition === 0;
