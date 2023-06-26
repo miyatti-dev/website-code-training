@@ -1,0 +1,58 @@
+@use "@/styles/common/variables" as *;
+@use "@/styles/mixin/mixin";
+
+.burgerButton {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 36px;
+  margin-left: 20px;
+  transition: all 0.3s;
+
+  @include mixin.z-index(burger-button);
+
+  @include mixin.media-query("md") {
+    display: block;
+  }
+
+  &Bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-burger-button-white;
+    border-radius: 2.5px;
+    transition: 0.3s;
+
+    &BgColorBlack {
+      background-color: $color-burger-button-black;
+    }
+
+    &.barMiddle {
+      top: 17px;
+    }
+
+    &.barBottom {
+      top: 34px;
+    }
+  }
+
+  &[aria-expanded="true"] & {
+    &Bar {
+      &.barTop {
+        top: 18px;
+        transform: rotate(45deg);
+      }
+
+      &.barMiddle {
+        opacity: 0;
+      }
+
+      &.barBottom {
+        top: 18px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

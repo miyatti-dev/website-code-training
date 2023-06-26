@@ -1,25 +1,27 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import NavMenu from "./NavMenu";
+import BurgerButton from "./BurgerButton";
 import styles from "./style.module.scss";
 
-const getScrollPosition = () => {
+const isScrollTopPosition = () => {
   // ブラウザによってとり方が違うようなので全部もってきてMaxをとる
-  return Math.max(
+  const scrollPosition = Math.max(
     window.scrollY,
     document.documentElement.scrollTop,
     document.body.scrollTop
   );
+
+  return scrollPosition === 0;
 };
 
 export default function Header() {
   const [openMenuFlag, setOpenMenuFlag] = useState(false);
-  const [isScrollTop, setIsScrollTop] = useState(
-    getScrollPosition() === 0 ? true : false
-  );
+  const [isScrollTop, setIsScrollTop] = useState(isScrollTopPosition());
 
+  // resize
   useEffect(() => {
     const onResizeHandler = () => {
       // リサイズ時はメニュー閉じる
@@ -29,26 +31,25 @@ export default function Header() {
     return () => window.removeEventListener("resize", onResizeHandler);
   }, []);
 
+  // scroll
   useEffect(() => {
     const onScrollHandler = () => {
-      const scrollPosition = getScrollPosition();
-      if (scrollPosition === 0) {
-        setIsScrollTop(true);
-      } else {
-        setIsScrollTop(false);
-      }
+      setIsScrollTop(isScrollTopPosition());
     };
 
     document.addEventListener("scroll", onScrollHandler);
     return () => document.removeEventListener("scroll", onScrollHandler);
   }, []);
 
+  // onClick
   const onClickBurgerButton = useCallback(() => {
     setOpenMenuFlag((prevState) => !prevState);
   }, [setOpenMenuFlag]);
 
+  const navId = "GlobalMenu";
+
   return (
-    <React.Fragment>
+    <>
       <header
         className={`${styles.header} ${
           isScrollTop ? undefined : styles.headerBgColorWhite
@@ -69,37 +70,11 @@ export default function Header() {
               />
             </a>
           </h1>
-          <nav
-            id="js-global-menu"
-            className={`${styles.headerNav} ${
-              isScrollTop ? undefined : styles.headerNavBgColorWhite
-            }`}
-            aria-hidden={!openMenuFlag}
-          >
-            <ul className={styles.headerNavList}>
-              <li
-                className={`${styles.headerNavListItem} ${
-                  isScrollTop ? undefined : styles.headerNavListItemColorBlack
-                }`}
-              >
-                <Link href="./room/">お部屋</Link>
-              </li>
-              <li
-                className={`${styles.headerNavListItem} ${
-                  isScrollTop ? undefined : styles.headerNavListItemColorBlack
-                }`}
-              >
-                <Link href="./meal/">お料理</Link>
-              </li>
-              <li
-                className={`${styles.headerNavListItem} ${
-                  isScrollTop ? undefined : styles.headerNavListItemColorBlack
-                }`}
-              >
-                <Link href="./spa/">温泉</Link>
-              </li>
-            </ul>
-          </nav>
+          <NavMenu
+            navId={navId}
+            openMenuFlag={openMenuFlag}
+            isScrollTop={isScrollTop}
+          />
           <button
             type="button"
             id="js-open-reserve-modal"
@@ -107,33 +82,14 @@ export default function Header() {
           >
             宿泊予約
           </button>
-          <button
-            type="button"
-            id="js-burger"
-            className={styles.burgerButton}
-            aria-controls="js-glabal-menu"
-            aria-expanded={openMenuFlag}
-            area-label="メニューを開閉する"
+          <BurgerButton
+            navId={navId}
+            openMenuFlag={openMenuFlag}
+            isScrollTop={isScrollTop}
             onClick={onClickBurgerButton}
-          >
-            <span
-              className={`${styles.burgerButtonBar} ${styles.barTop} ${
-                isScrollTop ? undefined : styles.burgerButtonBarBgColorBlack
-              }`}
-            ></span>
-            <span
-              className={`${styles.burgerButtonBar} ${styles.barMiddle} ${
-                isScrollTop ? undefined : styles.burgerButtonBarBgColorBlack
-              }`}
-            ></span>
-            <span
-              className={`${styles.burgerButtonBar} ${styles.barBottom} ${
-                isScrollTop ? undefined : styles.burgerButtonBarBgColorBlack
-              }`}
-            ></span>
-          </button>
+          />
         </div>
       </header>
-    </React.Fragment>
+    </>
   );
 }

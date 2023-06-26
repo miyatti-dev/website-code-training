@@ -1,0 +1,54 @@
+@use "@/styles/common/variables" as *;
+@use "@/styles/mixin/mixin";
+
+.headerNav {
+  @include mixin.media-query("md") {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    overflow: hidden;
+    background-color: $color-header-nav-bg-black;
+    transition: display 5s;
+    &BgColorWhite {
+      background-color: $color-header-nav-bg-white;
+    }
+    @include mixin.z-index(header-nav);
+  }
+
+  &[aria-hidden="false"] {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.headerNavList {
+  display: flex;
+
+  @include mixin.media-query("md") {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  &Item {
+    font-weight: 800;
+    color: $color-text-white;
+    text-shadow: 1px 1px 0 $color-text-black;
+
+    &ColorBlack {
+      color: $color-text-black;
+      text-shadow: 1px 1px 0 $color-text-white;
+    }
+
+    & + & {
+      margin-left: 33px;
+
+      @include mixin.media-query("md") {
+        margin-top: 15px;
+        margin-left: 0;
+      }
+    }
+  }
+}
