@@ -541,9 +541,9 @@ export default function Home() {
               width="600"
               height="450"
               style={{ border: 0 }}
-              allowfullscreen=""
+              allowFullScreen={false}
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
               className="map"
             ></iframe>
           </div>
@@ -552,4 +552,3 @@ export default function Home() {
     </main>
   );
 }
-
