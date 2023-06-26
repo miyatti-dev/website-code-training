@@ -14,6 +14,7 @@ export default function NavMenu({ navId, openMenuFlag, isScrollTop }) {
 
     const listItems = navMenuItemList.map((navMenuItem) => (
       <li
+        key={navMenuItem.path}
         className={`${styles.headerNavListItem} ${
           isScrollTop ? undefined : styles.headerNavListItemColorBlack
         }`}
