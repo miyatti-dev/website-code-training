@@ -5,6 +5,7 @@ import styles from "./style.module.scss";
 export default function BurgerButton({
   navId,
   openMenuFlag,
+  isTopPage,
   isScrollTop,
   onClick,
 }) {
@@ -19,17 +20,23 @@ export default function BurgerButton({
     >
       <span
         className={`${styles.burgerButtonBar} ${styles.barTop} ${
-          isScrollTop ? undefined : styles.burgerButtonBarBgColorBlack
+          isTopPage && isScrollTop
+            ? undefined
+            : styles.burgerButtonBarBgColorBlack
         }`}
       ></span>
       <span
         className={`${styles.burgerButtonBar} ${styles.barMiddle} ${
-          isScrollTop ? undefined : styles.burgerButtonBarBgColorBlack
+          isTopPage && isScrollTop
+            ? undefined
+            : styles.burgerButtonBarBgColorBlack
         }`}
       ></span>
       <span
         className={`${styles.burgerButtonBar} ${styles.barBottom} ${
-          isScrollTop ? undefined : styles.burgerButtonBarBgColorBlack
+          isTopPage && isScrollTop
+            ? undefined
+            : styles.burgerButtonBarBgColorBlack
         }`}
       ></span>
     </button>

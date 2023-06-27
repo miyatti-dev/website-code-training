@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 // aos
 import AOS from "aos";
@@ -28,10 +29,12 @@ export default function RootLayout({ children }) {
     });
   }, []);
 
+  const pathname = usePathname();
+
   return (
     <html>
       <body>
-        <Header />
+        <Header isTopPage={pathname === "/"} />
         {children}
         <Footer />
       </body>

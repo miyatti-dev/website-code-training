@@ -4,7 +4,12 @@ import { useMemo } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
 
-export default function NavMenu({ navId, openMenuFlag, isScrollTop }) {
+export default function NavMenu({
+  navId,
+  openMenuFlag,
+  isTopPage,
+  isScrollTop,
+}) {
   const listItems = useMemo(() => {
     const navMenuItemList = [
       { path: "./room", content: "お部屋" },
@@ -16,7 +21,9 @@ export default function NavMenu({ navId, openMenuFlag, isScrollTop }) {
       <li
         key={navMenuItem.path}
         className={`${styles.headerNavListItem} ${
-          isScrollTop ? undefined : styles.headerNavListItemColorBlack
+          isTopPage && isScrollTop
+            ? undefined
+            : styles.headerNavListItemColorBlack
         }`}
       >
         <Link href={navMenuItem.path}>{navMenuItem.content}</Link>
@@ -24,13 +31,13 @@ export default function NavMenu({ navId, openMenuFlag, isScrollTop }) {
     ));
 
     return listItems;
-  }, [isScrollTop, openMenuFlag]);
+  }, [isTopPage, isScrollTop, openMenuFlag]);
 
   return (
     <nav
       id={navId}
       className={`${styles.headerNav} ${
-        isScrollTop ? undefined : styles.headerNavBgColorWhite
+        isTopPage && isScrollTop ? undefined : styles.headerNavBgColorWhite
       }`}
       aria-hidden={!openMenuFlag}
     >

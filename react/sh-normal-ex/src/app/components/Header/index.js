@@ -6,7 +6,7 @@ import NavMenu from "./NavMenu";
 import BurgerButton from "./BurgerButton";
 import styles from "./style.module.scss";
 
-export default function Header() {
+export default function Header({ isTopPage }) {
   const [openMenuFlag, setOpenMenuFlag] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(true);
 
@@ -52,7 +52,7 @@ export default function Header() {
   return (
     <header
       className={`${styles.header} ${
-        isScrollTop ? undefined : styles.headerBgColorWhite
+        isTopPage && isScrollTop ? undefined : styles.headerBgColorWhite
       }`}
     >
       <div className={styles.headerWrapper}>
@@ -60,7 +60,7 @@ export default function Header() {
           <a href="./" className={styles.headerTitleWrapperLink}>
             <Image
               src={
-                isScrollTop
+                isTopPage && isScrollTop
                   ? "/image/top-header-logo.png"
                   : "/image/sub-header-logo.png"
               }
@@ -73,6 +73,7 @@ export default function Header() {
         <NavMenu
           navId={navId}
           openMenuFlag={openMenuFlag}
+          isTopPage={isTopPage}
           isScrollTop={isScrollTop}
         />
         <button
@@ -85,6 +86,7 @@ export default function Header() {
         <BurgerButton
           navId={navId}
           openMenuFlag={openMenuFlag}
+          isTopPage={isTopPage}
           isScrollTop={isScrollTop}
           onClick={onClickBurgerButton}
         />
