@@ -1,44 +1,43 @@
 "use client";
 
 import Image from "next/image";
-import "@/styles/page/top.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import React, { useState, useEffect } from "react";
 import "react-tabs/style/react-tabs.css";
-import styles from "@/styles/page/top.scss";
+import styles from "./style.module.scss";
 
 export default function Home() {
   return (
     <main>
-      <div className="fv">
-        <ul className="fv-image-list">
-          <li className="fv-image-list-item">
+      <div className={styles.fv}>
+        <ul>
+          <li className={styles.fvImageListItem}>
             <Image
               src="/image/mainbg01.jpg"
-              className="fv-image-list-item__image"
+              className={styles.fvImageListItemImage}
               alt=""
               fill
             />
           </li>
-          <li className="fv-image-list-item">
+          <li className={styles.fvImageListItem}>
             <Image
               src="/image/mainbg02.jpg"
-              className="fv-image-list-item__image"
+              className={styles.fvImageListItemImage}
               alt=""
               fill
             />
           </li>
-          <li className="fv-image-list-item">
+          <li className={styles.fvImageListItem}>
             <Image
               src="/image/mainbg03.jpg"
-              className="fv-image-list-item__image"
+              className={styles.fvImageListItemImage}
               alt=""
               fill
             />
           </li>
         </ul>
-        <div className="fv-inner">
-          <p className="fv-title">
+        <div className={styles.fvInner}>
+          <p className={styles.fvTitle}>
             頑張る人の
             <br />
             頑張らない時間
@@ -46,111 +45,108 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="section-wrapper section-about">
+      <section className={`${styles.sectionWrapper} ${styles.sectionAbout}`}>
         <div
-          className="content-wrapper"
+          className={styles.contentWrapper}
           data-aos="fade-up"
           data-aos-once="true"
         >
-          <p className="about-title">
+          <p className={styles.aboutTitle}>
             <span>
               温海温泉の
               <br />
             </span>
             美しさに癒やされて
           </p>
-          <p className="about-text">
+          <p className={styles.aboutText}>
             東北の奥座敷である温海温泉郷
             <br />
             開湯は約1300年前とされ、
             <br />
             役小角が発見したと伝えられます
           </p>
-          <p className="about-text">
+          <p className={styles.aboutText}>
             石井花壇は江戸より続く由緒ある旅館で
             <br />
             クラシックな作りの中に大正ロマンあふれる
             <br />
             内装を残しております
           </p>
-          <p className="about-text">
+          <p className={styles.aboutText}>
             圧倒的癒やしの空間で
             <br />
             頑張る現代人に
             <br />
             頑張らない圧倒的な非日常をご提供します
           </p>
-          <p className="about-name">石井花壇</p>
+          <p className={styles.aboutName}>石井花壇</p>
         </div>
       </section>
 
-      <section className="section-wrapper section-feature">
-        <div className="content-wrapper">
-          <ul className="feature-list">
-            <li className="feature-list-item">
+      <section className={`${styles.sectionWrapper} ${styles.sectionFeature}`}>
+        <div className={styles.contentWrapper}>
+          <ul>
+            <li className={styles.featureListItem}>
               <figure
-                className="feature-list-item__image-wrapper"
+                className={styles.featureListItemImageWrapper}
                 data-aos="fade-up"
                 data-aos-once="true"
               >
                 <Image
                   src="/image/oheya-top.png"
-                  className="feature-list-item__image"
+                  className={styles.featureListItemImage}
                   alt=""
                   fill
                 />
               </figure>
               <div
-                className="feature-list-item__text-wrapper"
+                className={styles.featureListItemTextWrapper}
                 data-aos="fade-up"
                 data-aos-once="true"
               >
-                <p className="feature-list-item__title">
+                <p className={styles.featureListItemTitle}>
                   喧騒から離れた空間
                   <br />
                   心落ち着く至極のひととき
                 </p>
-                <p className="feature-list-item__text">
+                <p className={styles.featureListItemText}>
                   まるで時が止まったかのような、
-                  <br className="br-lg-show" />
+                  <br className={styles.brLgShow} />
                   圧倒的な静寂のなかで、
                   <br />
                   ひたすらにゆったりと…。
                   <br />
                   最高級の「何もしない時間」をお過ごしください。
                 </p>
-                <a
-                  href="./room/"
-                  className="feature-list-item__link button-link"
-                >
+                <a href="./room/" className={styles.featureListItemLink}>
                   お部屋について
                 </a>
               </div>
             </li>
-            <li className="feature-list-item">
+            <li className={styles.featureListItem}>
               <figure
-                className="feature-list-item__image-wrapper"
+                className={styles.featureListItemImageWrapper}
                 data-aos="fade-up"
                 data-aos-once="true"
               >
                 <Image
                   src="/image/menu-top.png"
-                  className="feature-list-item__image"
+                  className={styles.featureListItemImage}
                   alt=""
                   fill
                 />
               </figure>
               <div
-                className="feature-list-item__text-wrapper"
+                className={styles.featureListItemTextWrapper}
                 data-aos="fade-up"
                 data-aos-once="true"
               >
-                <p className="feature-list-item__title">
+                <p className={styles.featureListItemTitle}>
                   出迎えるのは
                   <br />
                   極上の温海料理
                 </p>
-                <p className="feature-list-item__text">
+                <p className={styles.featureListItemText}>
                   最も旬の食材を愉しむ、最高の贅沢を
                   <br />
                   最高級A5ランクの米沢牛と共に頂く。
@@ -159,53 +155,47 @@ export default function Home() {
                   <br />
                   お約束します。
                 </p>
-                <a
-                  href="./meal/"
-                  className="feature-list-item__link button-link"
-                >
+                <a href="./meal/" className={styles.featureListItemLink}>
                   料理について
                 </a>
               </div>
             </li>
-            <li className="feature-list-item">
+            <li className={styles.featureListItem}>
               <figure
-                className="feature-list-item__image-wrapper"
+                className={styles.featureListItemImageWrapper}
                 data-aos="fade-up"
                 data-aos-once="true"
               >
                 <Image
                   src="/image/onsen-top.png"
-                  className="feature-list-item__image"
+                  className={styles.featureListItemImage}
                   alt=""
                   fill
                 />
               </figure>
               <div
-                className="feature-list-item__text-wrapper"
+                className={styles.featureListItemTextWrapper}
                 data-aos="fade-up"
                 data-aos-once="true"
               >
-                <p className="feature-list-item__title">
+                <p className={styles.featureListItemTitle}>
                   疲れ切った身体にやすらぎを
                   <br />
                   温海の源泉に癒やされて
                   <br />
                 </p>
-                <p className="feature-list-item__text">
+                <p className={styles.featureListItemText}>
                   古くは弘法大師の病をも治療したと言われる
-                  <br className="br-lg-show" />
+                  <br className={styles.brLgShow} />
                   熱海の泉質。
                   <br />
                   現代人の疲弊しきった身体を修復する
-                  <br className="br-lg-show" />
+                  <br className={styles.brLgShow} />
                   最高級の湯治場として
-                  <br className="br-lg-hide" />
+                  <br className={styles.brLgHide} />
                   ご活用ください。
                 </p>
-                <a
-                  href="./spa/"
-                  className="feature-list-item__link button-link"
-                >
+                <a href="./spa/" className={styles.featureListItemLink}>
                   温泉について
                 </a>
               </div>
@@ -214,10 +204,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-wrapper section-plan">
-        <div className="content-wrapper">
+      <section className={`${styles.sectionWrapper} ${styles.sectionPlan}`}>
+        <div className={styles.contentWrapper}>
           <div
-            className="logo-icon-wrapper"
+            className={styles.logoIconWrapper}
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -229,60 +219,68 @@ export default function Home() {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <h2 className="section-title" data-aos="fade-up" data-aos-once="true">
+          <h2
+            className={styles.sectionTitle}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
             おすすめご宿泊プラン
           </h2>
-          <ul className="plan-list" data-aos="fade-up" data-aos-once="true">
-            <li className="plan-list-item">
-              <div className="plan-list-item__image-wrapper">
+          <ul
+            className={styles.planList}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            <li className={styles.planListItem}>
+              <div className={styles.planListItemImageWrapper}>
                 <Image
                   src="/image/recommended01.png"
-                  className="plan-list-item__image"
+                  className={styles.planListItemImage}
                   alt=""
                   fill
                 />
               </div>
-              <div className="plan-list-item__text-wrapper">
-                <p className="plan-list-item__title">
+              <div className={styles.planListItemTextWrapper}>
+                <p className={styles.planListItemTitle}>
                   朝食付きプラン、日本近海で取れたのどぐろを朝食として…
                 </p>
-                <p className="plan-list-item__text">
+                <p className={styles.planListItemText}>
                   最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味
                 </p>
               </div>
             </li>
-            <li className="plan-list-item">
-              <div className="plan-list-item__image-wrapper">
+            <li className={styles.planListItem}>
+              <div className={styles.planListItemImageWrapper}>
                 <Image
                   src="/image/recommended02.png"
-                  className="plan-list-item__image"
+                  className={styles.planListItemImage}
                   alt=""
                   fill
                 />
               </div>
-              <div className="plan-list-item__text-wrapper">
-                <p className="plan-list-item__title">
+              <div className={styles.planListItemTextWrapper}>
+                <p className={styles.planListItemTitle}>
                   【期間限定】熱海蟹をたっぷりと愉しむプラン。
                 </p>
-                <p className="plan-list-item__text">
+                <p className={styles.planListItemText}>
                   温海で水揚げされた蟹は「温海蟹」として知られ、嗜好品として愛されてきました。この宿泊プランでは存分に
                 </p>
               </div>
             </li>
-            <li className="plan-list-item">
-              <div className="plan-list-item__image-wrapper">
+            <li className={styles.planListItem}>
+              <div className={styles.planListItemImageWrapper}>
                 <Image
                   src="/image/recommended03.png"
-                  className="plan-list-item__image"
+                  className={styles.planListItemImage}
                   alt=""
                   fill
                 />
               </div>
-              <div className="plan-list-item__text-wrapper">
-                <p className="plan-list-item__title">
+              <div className={styles.planListItemTextWrapper}>
+                <p className={styles.planListItemTitle}>
                   【平日限定】贅沢美味懐石プラン。海辺の四季旬彩プラン。
                 </p>
-                <p className="plan-list-item__text">
+                <p className={styles.planListItemText}>
                   熱海近海で取れた魚を鮮度そのままに舟盛りにしてご提供。生きた味をお楽しみください。
                 </p>
               </div>
@@ -291,10 +289,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-wrapper section-news">
-        <div className="content-wrapper">
+      <section className={`${styles.sectionWrapper} ${styles.sectionNews}`}>
+        <div className={styles.contentWrapper}>
           <div
-            className="logo-icon-wrapper"
+            className={styles.logoIconWrapper}
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -306,118 +304,123 @@ export default function Home() {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <h2 className="section-title" data-aos="fade-up" data-aos-once="true">
+          <h2
+            className={styles.sectionTitle}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
             お知らせ
           </h2>
 
-          <Tabs data-aos="fade-up" data-aos-once="true">
+          <Tabs
+            className={styles.reactTabs}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
             <TabList>
               <Tab>営業情報</Tab>
               <Tab>その他</Tab>
             </TabList>
 
             <TabPanel>
-              <ul
-                className="news-list js-news-tab-target is-active"
-                id="news-tab1"
-              >
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+              <ul className={styles.newsList}>
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/news01.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.12.24</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.12.24</time>
+                    <p className={styles.newsListItemText}>
                       年末最後の営業日は27日になります。
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/news02.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.12.24</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.12.24</time>
+                    <p className={styles.newsListItemText}>
                       年末最後の営業日のお知らせ
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/news02.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.12.11</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.12.11</time>
+                    <p className={styles.newsListItemText}>
                       12.21は臨時休業とさせていただきますので、よろしくお願いします。
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/news01.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.12.24</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.12.24</time>
+                    <p className={styles.newsListItemText}>
                       年末最後の営業日のお知らせ
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/news01.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.12.01</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.12.01</time>
+                    <p className={styles.newsListItemText}>
                       和室の改装を行いますため、12.10はお休みさせていただきます。
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/news02.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.12.24</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.12.24</time>
+                    <p className={styles.newsListItemText}>
                       年末最後の営業日のお知らせ
                     </p>
                   </div>
@@ -425,53 +428,53 @@ export default function Home() {
               </ul>
             </TabPanel>
             <TabPanel>
-              <ul className="news-list js-news-tab-target" id="news-tab2">
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+              <ul className={styles.newsList}>
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/food_hiyashi_chuka_hajimemashita.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.07.01</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.07.01</time>
+                    <p className={styles.newsListItemText}>
                       冷やし中華はじめました！
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/kinshi_mark_tabako_kinen.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.04.01</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.04.01</time>
+                    <p className={styles.newsListItemText}>
                       2020年4月1日より全客室禁煙とさせて頂きます。
                     </p>
                   </div>
                 </li>
 
-                <li className="news-list-item">
-                  <div className="news-list-item__image-wrapper">
+                <li className={styles.newsListItem}>
+                  <div className={styles.newsListItemImageWrapper}>
                     <Image
                       src="/image/point_shock_man.png"
-                      className="news-list-item__image"
+                      className={styles.newsListItemImage}
                       alt=""
                       fill
                     />
                   </div>
-                  <div className="news-list-item__text-wrapper">
-                    <time className="news-list-item__time">2020.01.01</time>
-                    <p className="news-list-item__text">
+                  <div className={styles.newsListItemTextWrapper}>
+                    <time className={styles.newsListItemTime}>2020.01.01</time>
+                    <p className={styles.newsListItemText}>
                       ポイント付与サービス停止
                     </p>
                   </div>
@@ -482,10 +485,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-wrapper section-access">
-        <div className="content-wrapper">
+      <section className={`${styles.sectionWrapper} ${styles.sectionAccess}`}>
+        <div className={styles.contentWrapper}>
           <div
-            className="logo-icon-wrapper"
+            className={styles.logoIconWrapper}
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -497,34 +500,42 @@ export default function Home() {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <h2 className="section-title" data-aos="fade-up" data-aos-once="true">
+          <h2
+            className={styles.sectionTitle}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
             アクセス
           </h2>
 
-          <div className="access-info" data-aos="fade-up" data-aos-once="true">
-            <div className="access-info__image-wrapper">
+          <div
+            className={styles.accessInfo}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            <div className={styles.accessInfoImageWrapper}>
               <Image
                 src="/image/acess.png"
-                className="access-info__image"
+                className={styles.accessInfoImage}
                 alt=""
                 fill
               />
             </div>
-            <div className="access-info__text-wrapper">
-              <dl className="access-info-list">
-                <dl className="access-info-item__title">住所</dl>
-                <dd className="access-info-item__text">
+            <div className={styles.accessInfoTextWrapper}>
+              <dl>
+                <dl className={styles.accessInfoItemTitle}>住所</dl>
+                <dd className={styles.accessInfoItemText}>
                   〒000-0000
                   <br />
                   山形県鶴岡市xxxxxxxxxx
                 </dd>
-                <dl className="access-info-item__title">TEL/FAX</dl>
-                <dd className="access-info-item__text">
+                <dl className={styles.accessInfoItemTitle}>TEL/FAX</dl>
+                <dd className={styles.accessInfoItemText}>
                   000-0000-0000/00-0000-0000
                 </dd>
-                <dl className="access-info-item__title">営業時間</dl>
-                <dd className="access-info-item__text">14:00-23:00</dd>
-                <dd className="access-info-item__text">
+                <dl className={styles.accessInfoItemTitle}>営業時間</dl>
+                <dd className={styles.accessInfoItemText}>14:00-23:00</dd>
+                <dd className={styles.accessInfoItemText}>
                   ＊4名以上のご予約の場合は、最寄り駅の「鶴岡駅」より送迎が可能ですので、ご連絡ください。
                 </dd>
               </dl>
@@ -532,7 +543,7 @@ export default function Home() {
           </div>
 
           <div
-            className="access-map-wrapper"
+            className={styles.accessMapWrapper}
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -544,7 +555,7 @@ export default function Home() {
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="map"
+              className={styles.map}
             ></iframe>
           </div>
         </div>
