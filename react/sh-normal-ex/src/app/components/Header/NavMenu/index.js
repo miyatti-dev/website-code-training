@@ -1,14 +1,23 @@
 "use client";
 
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
+
+const LinkButton = React.forwardRef(({ onClickNavMenu, content }, ref) => {
+  return (
+    <a onClick={onClickNavMenu} ref={ref}>
+      {content}
+    </a>
+  );
+});
 
 export default function NavMenu({
   navId,
   openMenuFlag,
   isTopPage,
   isScrollTop,
+  onClickNavMenu,
 }) {
   const listItems = useMemo(() => {
     const navMenuItemList = [
@@ -26,7 +35,9 @@ export default function NavMenu({
             : styles.headerNavListItemColorBlack
         }`}
       >
-        <Link href={navMenuItem.path}>{navMenuItem.content}</Link>
+        <Link href={navMenuItem.path}>
+          <LinkButton onClickNavMenu content={navMenuItem.content} />
+        </Link>
       </li>
     ));
 

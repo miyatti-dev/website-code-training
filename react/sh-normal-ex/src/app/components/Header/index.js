@@ -47,6 +47,12 @@ export default function Header({ isTopPage }) {
     setOpenMenuFlag((prevState) => !prevState);
   }, [setOpenMenuFlag]);
 
+  // onClick
+  const onClickNavMenu = useCallback(() => {
+    // バーガーメニューを閉じる
+    setOpenMenuFlag(false);
+  }, [setOpenMenuFlag]);
+
   const navId = "GlobalMenu";
 
   return (
@@ -75,6 +81,7 @@ export default function Header({ isTopPage }) {
           openMenuFlag={openMenuFlag}
           isTopPage={isTopPage}
           isScrollTop={isScrollTop}
+          onClickNavMenu={onClickNavMenu}
         />
         <button
           type="button"
