@@ -2,11 +2,22 @@
 
 import Image from "next/image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import "react-tabs/style/react-tabs.css";
 import styles from "./style.module.scss";
 
 export default function Home() {
+  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+
+  // onSelectTab
+  const onSelectTab = useCallback(
+    (index) => {
+      console.log("## select index = ", index);
+      setSelectedTabIndex(index);
+    },
+    [setSelectedTabIndex]
+  );
+
   return (
     <main>
       <div className={styles.fv}>
@@ -314,12 +325,29 @@ export default function Home() {
 
           <Tabs
             className={styles.reactTabs}
+            onSelect={onSelectTab}
             data-aos="fade-up"
             data-aos-once="true"
           >
             <TabList>
-              <Tab>営業情報</Tab>
-              <Tab>その他</Tab>
+              <Tab
+                className={
+                  selectedTabIndex === 0
+                    ? `${styles.reactTab} ${styles.tabActive}`
+                    : styles.reactTab
+                }
+              >
+                営業情報
+              </Tab>
+              <Tab
+                className={
+                  selectedTabIndex === 1
+                    ? `${styles.reactTab} ${styles.tabActive}`
+                    : styles.reactTab
+                }
+              >
+                その他
+              </Tab>
             </TabList>
 
             <TabPanel>

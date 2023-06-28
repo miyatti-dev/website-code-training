@@ -505,6 +505,30 @@
   padding-bottom: 47px;
 }
 
+.reactTab {
+  font-weight: 500;
+  border-radius: 5px 5px 0 0;
+  border-color: #aaa;
+  display: inline-block;
+  cursor: pointer;
+
+  padding: 10px 20px;
+  background-color: $color-news-bg;
+  border: 1px solid $color-news-border;
+
+  bottom: -1px;
+  position: relative;
+
+  &.tabActive {
+    text-decoration: underline $color-border;
+    background-color: lightgray;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
 .newsList {
   display: none;
   flex-wrap: wrap;
