@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import "react-tabs/style/react-tabs.css";
 import styles from "./style.module.scss";
 
@@ -17,6 +17,97 @@ export default function Home() {
     },
     [setSelectedTabIndex]
   );
+
+  const { newsListItems, othersNewsListItems } = useMemo(() => {
+    const NewsItem = ({ imageSrc, time, text }) => {
+      return (
+        <li className={styles.newsListItem}>
+          <div className={styles.newsListItemImageWrapper}>
+            <Image
+              src={imageSrc}
+              className={styles.newsListItemImage}
+              alt=""
+              fill
+            />
+          </div>
+          <div className={styles.newsListItemTextWrapper}>
+            <time className={styles.newsListItemTime}>{time}</time>
+            <p className={styles.newsListItemText}>{text}</p>
+          </div>
+        </li>
+      );
+    };
+
+    const newsList = [
+      {
+        imagePath: "/image/news01.png",
+        time: "2020.12.24",
+        content: "年末最後の営業日は27日になります。",
+      },
+      {
+        imagePath: "/image/news02.png",
+        time: "2020.12.24",
+        content: "年末最後の営業日のお知らせ",
+      },
+      {
+        imagePath: "/image/news02.png",
+        time: "2020.12.11",
+        content:
+          "12.21は臨時休業とさせていただきますので、よろしくお願いします。",
+      },
+      {
+        imagePath: "/image/news01.png",
+        time: "2020.12.24",
+        content: "年末最後の営業日のお知らせ",
+      },
+      {
+        imagePath: "/image/news01.png",
+        time: "2020.12.01",
+        content: "和室の改装を行いますため、12.10はお休みさせていただきます。",
+      },
+      {
+        imagePath: "/image/news02.png",
+        time: "2020.12.24",
+        content: "年末最後の営業日のお知らせ",
+      },
+    ];
+
+    const otherNewsList = [
+      {
+        imagePath: "/image/food_hiyashi_chuka_hajimemashita.png",
+        time: "2020.07.01",
+        content: "冷やし中華はじめました！",
+      },
+      {
+        imagePath: "/image/kinshi_mark_tabako_kinen.png",
+        time: "2020.04.01",
+        content: "2020年4月1日より全客室禁煙とさせて頂きます。",
+      },
+      {
+        imagePath: "/image/point_shock_man.png",
+        time: "2020.01.01",
+        content: "ポイント付与サービス停止",
+      },
+    ];
+
+    const newsListItems = newsList.map((news) => (
+      <NewsItem
+        imageSrc={news.imagePath}
+        time={news.time}
+        text={news.content}
+      />
+    ));
+
+    const othersNewsListItems = otherNewsList.map((news) => (
+      <NewsItem
+        imageSrc={news.imagePath}
+        time={news.time}
+        text={news.content}
+      />
+    ));
+
+    return { newsListItems, othersNewsListItems };
+  }, []);
 
   return (
     <main>
@@ -351,163 +442,10 @@ export default function Home() {
             </TabList>
 
             <TabPanel>
-              <ul className={styles.newsList}>
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/news01.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.12.24</time>
-                    <p className={styles.newsListItemText}>
-                      年末最後の営業日は27日になります。
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/news02.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.12.24</time>
-                    <p className={styles.newsListItemText}>
-                      年末最後の営業日のお知らせ
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/news02.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.12.11</time>
-                    <p className={styles.newsListItemText}>
-                      12.21は臨時休業とさせていただきますので、よろしくお願いします。
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/news01.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.12.24</time>
-                    <p className={styles.newsListItemText}>
-                      年末最後の営業日のお知らせ
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/news01.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.12.01</time>
-                    <p className={styles.newsListItemText}>
-                      和室の改装を行いますため、12.10はお休みさせていただきます。
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/news02.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.12.24</time>
-                    <p className={styles.newsListItemText}>
-                      年末最後の営業日のお知らせ
-                    </p>
-                  </div>
-                </li>
-              </ul>
+              <ul className={styles.newsList}>{newsListItems}</ul>
             </TabPanel>
             <TabPanel>
-              <ul className={styles.newsList}>
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/food_hiyashi_chuka_hajimemashita.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.07.01</time>
-                    <p className={styles.newsListItemText}>
-                      冷やし中華はじめました！
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/kinshi_mark_tabako_kinen.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.04.01</time>
-                    <p className={styles.newsListItemText}>
-                      2020年4月1日より全客室禁煙とさせて頂きます。
-                    </p>
-                  </div>
-                </li>
-
-                <li className={styles.newsListItem}>
-                  <div className={styles.newsListItemImageWrapper}>
-                    <Image
-                      src="/image/point_shock_man.png"
-                      className={styles.newsListItemImage}
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className={styles.newsListItemTextWrapper}>
-                    <time className={styles.newsListItemTime}>2020.01.01</time>
-                    <p className={styles.newsListItemText}>
-                      ポイント付与サービス停止
-                    </p>
-                  </div>
-                </li>
-              </ul>
+              <ul className={styles.newsList}>{othersNewsListItems}</ul>
             </TabPanel>
           </Tabs>
         </div>
