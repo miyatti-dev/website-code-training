@@ -191,32 +191,3 @@
   font-weight: 500;
   border: 1px solid $color-border;
 }
-
-////////////////////
-// breadcrumb
-////////////////////
-.breadcrumb-list {
-  max-width: 1200px;
-  padding: 0 10px;
-  margin: 0 auto;
-  margin-bottom: 93px;
-
-  @include mixin.media-query("md") {
-    margin-bottom: 50px;
-  }
-
-  &-item {
-    // 横に並ぶように
-    display: inline;
-
-    &:not(:last-of-type)::after {
-      padding: 0 5px;
-      color: $color-text-black;
-      content: ">";
-    }
-
-    &__link {
-      font-weight: 500;
-    }
-  }
-}

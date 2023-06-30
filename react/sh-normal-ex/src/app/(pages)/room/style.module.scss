@@ -1,0 +1,75 @@
+@use "@/styles/common/variables" as *;
+@use "@/styles/mixin/mixin";
+@use "@/styles/global.module.scss";
+
+////////////////////
+// fv
+////////////////////
+.fv {
+  position: relative;
+  height: 80vh;
+  max-height: 500px;
+  margin-bottom: 33px;
+  background-image: url("/image/oheya-header.png");
+  background-position: center;
+  background-size: cover;
+
+  @include mixin.media-query("lg") {
+    height: 300px;
+  }
+
+  @include mixin.media-query("md") {
+    height: 250px;
+  }
+
+  @include mixin.media-query("sm") {
+    height: 200px;
+  }
+
+  &Title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: $color-text-white;
+    text-shadow: 3px 3px 0 $color-text-black;
+    transform: translate(-50%, -50%);
+  }
+}
+
+////////////////////
+// room
+////////////////////
+.sectionRoom {
+  margin-bottom: 150px;
+
+  @include mixin.media-query("md") {
+    margin-bottom: 70px;
+  }
+}
+
+.sectionRoom > .contentWrapper {
+  padding: 0 10px;
+
+  @include mixin.media-query("md") {
+    width: 90%;
+  }
+
+  @include mixin.media-query("sm") {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.roomTitle {
+  padding: 0 10px;
+  margin-bottom: 133px;
+  font-weight: 500;
+  line-height: 2;
+  text-align: center;
+
+  @include mixin.media-query("md") {
+    margin-bottom: 60px;
+  }
+}

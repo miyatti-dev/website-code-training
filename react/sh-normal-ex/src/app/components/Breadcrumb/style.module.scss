@@ -1,0 +1,29 @@
+@use "@/styles/common/variables" as *;
+@use "@/styles/mixin/mixin";
+@use "@/styles/global.module.scss";
+
+.breadcrumbList {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-bottom: 93px;
+
+  @include mixin.media-query("md") {
+    margin-bottom: 50px;
+  }
+
+  &Item {
+    // 横に並ぶように
+    display: inline;
+
+    &:not(:last-of-type)::after {
+      padding: 0 5px;
+      color: $color-text-black;
+      content: ">";
+    }
+
+    &Link {
+      font-weight: 500;
+    }
+  }
+}
