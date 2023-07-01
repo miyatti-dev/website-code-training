@@ -15,6 +15,7 @@ export default function Breadcrumb({ pathList }) {
     for (let i = 0; i < pathListCount; i++) {
       listItems.push(
         <li
+          key={i}
           className={styles.breadcrumbListItem}
           itemProp="itemListElement"
           itemScope
