@@ -15,6 +15,9 @@ export const metadata = {
   robots: {
     index: false,
   },
+  icons: {
+    icon: "/image/logo02.png",
+  },
   viewport: {
     width: "device-width",
     initialScale: 1,
