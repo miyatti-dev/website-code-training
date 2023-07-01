@@ -48,7 +48,7 @@ export default function NavMenu({
     ));
 
     return listItems;
-  }, [isTopPage, isScrollTop, openMenuFlag, onClickNavMenu]);
+  }, [isTopPage, isScrollTop, onClickNavMenu]);
 
   return (
     <nav

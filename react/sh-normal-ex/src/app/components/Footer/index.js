@@ -37,7 +37,11 @@ export default function Footer() {
             height={40}
           />
         </div>
-        <h2 className={styles.sectionTitle} data-aos="fade-up" data-aos-once="true">
+        <h2
+          className={styles.sectionTitle}
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
           石井花壇
         </h2>
         <div

@@ -36,10 +36,15 @@ export default function AppWrapper({ children }) {
 
   return (
     <>
-      <Header isTopPage={pathname === "/"} onClickReserveModal={onClickReserveModal}/>
+      <Header
+        isTopPage={pathname === "/"}
+        onClickReserveModal={onClickReserveModal}
+      />
       {children}
       <Footer />
-      {openReserveModalFlag && <ReserveModal hideReserveModal={hideReserveModal}/>}
+      {openReserveModalFlag && (
+        <ReserveModal hideReserveModal={hideReserveModal} />
+      )}
     </>
   );
 }
