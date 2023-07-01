@@ -16,18 +16,18 @@ export default function Breadcrumb({ pathList }) {
       listItems.push(
         <li
           className={styles.breadcrumbListItem}
-          itemprop="itemListElement"
-          itemscope
-          itemtype="https://schema.org/ListItem"
+          itemProp="itemListElement"
+          itemScope
+          itemType="https://schema.org/ListItem"
         >
           <a
             className={styles.breadcrumbListItemLink}
-            itemprop="item"
+            itemProp="item"
             href={pathList[i].path}
           >
-            <span itemprop="name">{pathList[i].content}</span>
+            <span itemProp="name">{pathList[i].content}</span>
           </a>
-          <meta itemprop="position" content={i + 1} />
+          <meta itemProp="position" content={i + 1} />
         </li>
       );
     }
@@ -41,8 +41,8 @@ export default function Breadcrumb({ pathList }) {
   return (
     <ul
       className={styles.breadcrumbList}
-      itemscope
-      itemtype="https://schema.org/BreadcrumbList"
+      itemScope
+      itemProp="https://schema.org/BreadcrumbList"
     >
       {breadcrumbListItems}
     </ul>

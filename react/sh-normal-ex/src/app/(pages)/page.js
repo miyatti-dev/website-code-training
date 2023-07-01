@@ -19,9 +19,9 @@ export default function Home() {
   );
 
   const { newsListItems, othersNewsListItems } = useMemo(() => {
-    const NewsItem = ({ imageSrc, time, text }) => {
+    const NewsItem = ({ index, imageSrc, time, text }) => {
       return (
-        <li className={styles.newsListItem}>
+        <li className={styles.newsListItem} key={index}>
           <div className={styles.newsListItemImageWrapper}>
             <Image
               src={imageSrc}
@@ -40,32 +40,38 @@ export default function Home() {
 
     const newsList = [
       {
+        index: 0,
         imagePath: "/image/news01.png",
         time: "2020.12.24",
         content: "年末最後の営業日は27日になります。",
       },
       {
+        index: 1,
         imagePath: "/image/news02.png",
         time: "2020.12.24",
         content: "年末最後の営業日のお知らせ",
       },
       {
+        index: 2,
         imagePath: "/image/news02.png",
         time: "2020.12.11",
         content:
           "12.21は臨時休業とさせていただきますので、よろしくお願いします。",
       },
       {
+        index: 3,
         imagePath: "/image/news01.png",
         time: "2020.12.24",
         content: "年末最後の営業日のお知らせ",
       },
       {
+        index: 4,
         imagePath: "/image/news01.png",
         time: "2020.12.01",
         content: "和室の改装を行いますため、12.10はお休みさせていただきます。",
       },
       {
+        index: 5,
         imagePath: "/image/news02.png",
         time: "2020.12.24",
         content: "年末最後の営業日のお知らせ",
@@ -74,16 +80,19 @@ export default function Home() {
 
     const otherNewsList = [
       {
+        index: 0,
         imagePath: "/image/food_hiyashi_chuka_hajimemashita.png",
         time: "2020.07.01",
         content: "冷やし中華はじめました！",
       },
       {
+        index: 1,
         imagePath: "/image/kinshi_mark_tabako_kinen.png",
         time: "2020.04.01",
         content: "2020年4月1日より全客室禁煙とさせて頂きます。",
       },
       {
+        index: 2,
         imagePath: "/image/point_shock_man.png",
         time: "2020.01.01",
         content: "ポイント付与サービス停止",
@@ -92,6 +101,7 @@ export default function Home() {
 
     const newsListItems = newsList.map((news) => (
       <NewsItem
+        key={news.index}
         imageSrc={news.imagePath}
         time={news.time}
         text={news.content}
@@ -100,6 +110,7 @@ export default function Home() {
 
     const othersNewsListItems = otherNewsList.map((news) => (
       <NewsItem
+        key={news.index}
         imageSrc={news.imagePath}
         time={news.time}
         text={news.content}

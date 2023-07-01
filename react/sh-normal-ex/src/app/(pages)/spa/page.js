@@ -4,6 +4,10 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ChildPageInfoListItem from "@/components/ChildPageInfoListItem";
 import styles from "./style.module.scss";
 
+export const metadata = {
+  title: "温泉",
+};
+
 export default function SpaPage() {
   const pathList = useMemo(() => {
     return [
@@ -35,6 +39,7 @@ export default function SpaPage() {
           </p>
           <ul className={styles.childPageInfoList}>
             <ChildPageInfoListItem
+              index={0}
               imageSrc="/image/onsen01.png"
               title={"貸し切り露天風呂「雲居の湯」"}
               textComp={
@@ -48,6 +53,7 @@ export default function SpaPage() {
               }
             />
             <ChildPageInfoListItem
+              index={1}
               imageSrc="/image/onsen02.png"
               title={"  美肌を促す乳白色の硫黄泉を"}
               textComp={
@@ -66,10 +72,18 @@ export default function SpaPage() {
 
       <section className={`${styles.sectionWrapper} ${styles.sectionEfficacy}`}>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.sectionTitle} data-aos="fade-up" data-aos-once="true">
+          <h2
+            className={styles.sectionTitle}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
             温泉の効能
           </h2>
-          <dl className={styles.efficacyList} data-aos="fade-up" data-aos-once="true">
+          <dl
+            className={styles.efficacyList}
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
             <dt className={styles.efficacyListItemTitle}>効能</dt>
             <dd className={styles.efficacyListItemDescription}>
               神経痛・慢性関節リューマチ・腰痛・冷え性・慢性婦人病・うちみなど

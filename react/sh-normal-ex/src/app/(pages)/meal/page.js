@@ -4,6 +4,10 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ChildPageInfoListItem from "@/components/ChildPageInfoListItem";
 import styles from "./style.module.scss";
 
+export const metadata = {
+  title: "お料理",
+};
+
 export default function MealPage() {
   const pathList = useMemo(() => {
     return [
@@ -39,6 +43,7 @@ export default function MealPage() {
           </p>
           <ul className={styles.childPageInfoList}>
             <ChildPageInfoListItem
+              index={0}
               imageSrc="/image/menu01.png"
               title={"地元食材にこだわった会席料理"}
               textComp={
@@ -52,6 +57,7 @@ export default function MealPage() {
               }
             />
             <ChildPageInfoListItem
+              index={1}
               imageSrc="/image/menu02.png"
               title={"熱海の漁港で目利きの品を"}
               textComp={
@@ -65,6 +71,7 @@ export default function MealPage() {
               }
             />
             <ChildPageInfoListItem
+              index={2}
               imageSrc="/image/menu03.png"
               title={"食材が一流、職人も一流"}
               textComp={

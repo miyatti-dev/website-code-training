@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 
 export default function ChildPageInfoListItem({
+  index,
   imageSrc,
   title,
   textComp,
@@ -12,6 +13,7 @@ export default function ChildPageInfoListItem({
 }) {
   return (
     <li
+      key={index}
       className={styles.childPageInfoListItem}
       data-aos="fade-up"
       data-aos-once="true"

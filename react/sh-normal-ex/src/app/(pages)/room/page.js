@@ -4,6 +4,10 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ChildPageInfoListItem from "@/components/ChildPageInfoListItem";
 import styles from "./style.module.scss";
 
+export const metadata = {
+  title: "お部屋",
+};
+
 export default function RoomPage() {
   const pathList = useMemo(() => {
     return [
@@ -35,6 +39,7 @@ export default function RoomPage() {
           </p>
           <ul className={styles.childPageInfoList}>
             <ChildPageInfoListItem
+              index={0}
               imageSrc="/image/oheya01.png"
               title={"温泉付き客室"}
               textComp={
@@ -53,6 +58,7 @@ export default function RoomPage() {
               }
             />
             <ChildPageInfoListItem
+              index={1}
               imageSrc="/image/oheya02.png"
               title={"庭園付き客室"}
               textComp={
@@ -73,6 +79,7 @@ export default function RoomPage() {
               }
             />
             <ChildPageInfoListItem
+              index={2}
               imageSrc="/image/oheya03.png"
               title={"一般客室"}
               textComp={
