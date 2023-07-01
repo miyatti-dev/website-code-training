@@ -78,8 +78,8 @@ export default function Header({ isTopPage, onClickReserveModal }) {
               }
               className={styles.headerTitleWrapperLogo}
               alt=""
-              fill
-              sizes="30vw"
+              width={201}
+              height={43}
             />
           </Link>
         </h1>

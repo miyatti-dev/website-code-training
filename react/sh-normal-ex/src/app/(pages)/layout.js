@@ -15,9 +15,6 @@ export const metadata = {
   robots: {
     index: false,
   },
-  icons: {
-    icon: "/image/logo02.png",
-  },
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -27,6 +24,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
+      <head>
+        <link rel="icon" href="/image/logo02.png" />
+      </head>
       <body>
         <AppWrapper>{children}</AppWrapper>
       </body>
