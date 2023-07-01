@@ -50,14 +50,14 @@
   }
 
   &Link {
+    position: relative !important;
     display: flex;
     align-items: center;
-    position: relative !important;
   }
 
   &Logo {
-    margin-right: 16px;
     position: relative !important;
+    margin-right: 16px;
   }
 }
 

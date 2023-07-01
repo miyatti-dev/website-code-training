@@ -12,9 +12,11 @@
     overflow: hidden;
     background-color: $color-header-nav-bg-black;
     transition: display 5s;
+
     &BgColorWhite {
       background-color: $color-header-nav-bg-white;
     }
+
     @include mixin.z-index(header-nav);
   }
 

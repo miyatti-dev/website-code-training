@@ -231,9 +231,9 @@
   align-items: center;
 
   &ImageWrapper {
+    position: relative !important;
     width: 55%;
     margin-right: 8%;
-    position: relative !important;
 
     @include mixin.media-query("md") {
       width: 100%;
@@ -430,11 +430,10 @@
     }
 
     &ImageWrapper {
-      margin-bottom: 28px;
       position: relative !important;
+      margin-bottom: 28px;
     }
 
-    
     &Image {
       position: relative !important;
     }
@@ -508,18 +507,16 @@
 }
 
 .reactTab {
-  font-weight: 500;
-  border-radius: 5px 5px 0 0;
-  border-color: #aaa;
+  position: relative;
+  bottom: -1px;
   display: inline-block;
-  cursor: pointer;
-
   padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
   background-color: $color-news-bg;
   border: 1px solid $color-news-border;
-
-  bottom: -1px;
-  position: relative;
+  border-color: #aaa;
+  border-radius: 5px 5px 0 0;
 
   &.tabActive {
     text-decoration: underline $color-border;
@@ -532,11 +529,10 @@
 }
 
 .newsList {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  display: flex;
-  animation: fade-in-news 0.5s;
+  animation: fadeInNews 0.5s;
 
   @include mixin.media-query("md") {
     flex-direction: column;
@@ -553,14 +549,14 @@
     }
 
     &ImageWrapper {
+      position: relative !important;
       width: 103px;
       height: 100px;
-      position: relative !important;
     }
 
     &Image {
-      height: 100%;
       position: relative !important;
+      height: 100%;
       background-color: $color-bg-white;
       object-fit: contain;
     }
@@ -592,7 +588,7 @@
     }
   }
 
-  @keyframes fade-in-news {
+  @keyframes fadeInNews {
     from {
       opacity: 0;
     }
@@ -630,10 +626,10 @@
   }
 
   &ImageWrapper {
+    position: relative !important;
     width: 55%;
     height: 370px;
     margin-right: 7%;
-    position: relative !important;
 
     @include mixin.media-query("md") {
       width: 100%;
@@ -643,9 +639,8 @@
   }
 
   &Image {
-    height: 100%;
     position: relative !important;
-    
+    height: 100%;
   }
 
   &TextWrapper {
