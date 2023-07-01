@@ -7,7 +7,7 @@ import NavMenu from "./NavMenu";
 import BurgerButton from "./BurgerButton";
 import styles from "./style.module.scss";
 
-export default function Header({ isTopPage }) {
+export default function Header({ isTopPage, onClickReserveModal }) {
   const [openMenuFlag, setOpenMenuFlag] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(true);
 
@@ -54,6 +54,11 @@ export default function Header({ isTopPage }) {
     setOpenMenuFlag(false);
   }, [setOpenMenuFlag]);
 
+  // onClick
+  const onClickReserveButton = useCallback(() => {
+    onClickReserveModal?.();
+  }, [onClickReserveModal]);
+
   const navId = "GlobalMenu";
 
   return (
@@ -89,6 +94,7 @@ export default function Header({ isTopPage }) {
           type="button"
           id="js-open-reserve-modal"
           className={styles.headerReserveButton}
+          onClick={onClickReserveButton}
         >
           宿泊予約
         </button>

@@ -1,0 +1,118 @@
+@use "@/styles/common/variables" as *;
+@use "@/styles/common/mixin";
+@use "@/styles/global.module.scss";
+
+////////////////////
+// reserve modal
+////////////////////
+.reserveModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+
+  @include mixin.z-index(reserve-modal);
+}
+
+.reserveModalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(30 30 30 / 80%);
+}
+
+.reserveModalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 550px;
+  height: 95%;
+  max-height: 600px;
+  padding: 25px 60px 90px;
+  overflow-y: auto;
+  background-color: $color-bg-white;
+  border: 1px solid $color-border;
+  transform: translate(-50%, -50%);
+}
+
+.closeReserveModal {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+
+  &Bar {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-bg-black;
+
+    &.closeModalBarTop {
+      transform: rotate(45deg);
+    }
+
+    &.closeModalBarBottom {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.reserveModalTitle {
+  padding-bottom: 26.5px;
+  margin-bottom: 32.5px;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid $color-border-reserve-dialog;
+}
+
+.reserveFormList {
+  margin-bottom: 64px;
+
+  &Item {
+    display: flex;
+    flex-direction: column;
+
+    &Label {
+      margin-bottom: 12px;
+      font-weight: 500;
+      color: $color-text-black;
+    }
+
+    &Input,
+    &PlanList {
+      height: 32px;
+      padding: 6px 10px 7px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      border: 1px solid $color-border-reserve-dialog;
+    }
+
+    &PlanList {
+      // ドロップダウンの下∇を表示するため(destylesで消されている)
+      appearance: auto;
+    }
+
+    & + & {
+      margin-top: 11px;
+    }
+  }
+}
+
+.formSubmitButtonWrapper {
+  text-align: center;
+}
+
+.formSubmitButton {
+  width: 198px;
+  height: 42px;
+  font-weight: 500;
+  border: 1px solid $color-border;
+}
