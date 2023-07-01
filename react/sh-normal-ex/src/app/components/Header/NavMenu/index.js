@@ -4,15 +4,16 @@ import React, { useMemo } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
 
-const LinkButton = React.forwardRef(
-  ({ onClickNavMenu, href, content }, ref) => {
-    return (
-      <a href={href} onClick={onClickNavMenu} ref={ref}>
-        {content}
-      </a>
-    );
-  }
-);
+const LinkButton = React.forwardRef(function LinkButton(
+  { onClickNavMenu, href, content },
+  ref
+) {
+  return (
+    <a href={href} onClick={onClickNavMenu} ref={ref}>
+      {content}
+    </a>
+  );
+});
 
 export default function NavMenu({
   navId,
@@ -47,7 +48,7 @@ export default function NavMenu({
     ));
 
     return listItems;
-  }, [isTopPage, isScrollTop, openMenuFlag]);
+  }, [isTopPage, isScrollTop, openMenuFlag, onClickNavMenu]);
 
   return (
     <nav

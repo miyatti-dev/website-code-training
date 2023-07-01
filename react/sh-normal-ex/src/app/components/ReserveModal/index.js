@@ -10,7 +10,7 @@ import Flatpickr from "react-flatpickr";
 export default function ReserveModal({ hideReserveModal }) {
   const onHideReserveModal = useCallback(() => {
     hideReserveModal?.();
-  }, []);
+  }, [onClickNavMenu]);
 
   return (
     <section className={styles.reserveModal}>
