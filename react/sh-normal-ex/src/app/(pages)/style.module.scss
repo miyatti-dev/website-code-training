@@ -233,6 +233,7 @@
   &ImageWrapper {
     width: 55%;
     margin-right: 8%;
+    position: relative !important;
 
     @include mixin.media-query("md") {
       width: 100%;
@@ -430,6 +431,7 @@
 
     &ImageWrapper {
       margin-bottom: 28px;
+      position: relative !important;
     }
 
     
@@ -553,6 +555,7 @@
     &ImageWrapper {
       width: 103px;
       height: 100px;
+      position: relative !important;
     }
 
     &Image {
@@ -630,6 +633,7 @@
     width: 55%;
     height: 370px;
     margin-right: 7%;
+    position: relative !important;
 
     @include mixin.media-query("md") {
       width: 100%;

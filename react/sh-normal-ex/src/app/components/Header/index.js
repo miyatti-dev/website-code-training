@@ -73,6 +73,7 @@ export default function Header({ isTopPage }) {
               className={styles.headerTitleWrapperLogo}
               alt=""
               fill
+              sizes="30vw"
             />
           </a>
         </h1>

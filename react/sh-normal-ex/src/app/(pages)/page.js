@@ -12,7 +12,6 @@ export default function Home() {
   // onSelectTab
   const onSelectTab = useCallback(
     (index) => {
-      console.log("## select index = ", index);
       setSelectedTabIndex(index);
     },
     [setSelectedTabIndex]
@@ -28,6 +27,7 @@ export default function Home() {
               className={styles.newsListItemImage}
               alt=""
               fill
+              sizes="30vw"
             />
           </div>
           <div className={styles.newsListItemTextWrapper}>
@@ -210,6 +210,7 @@ export default function Home() {
                   className={styles.featureListItemImage}
                   alt=""
                   fill
+                  sizes="70vw"
                 />
               </figure>
               <div
@@ -247,6 +248,7 @@ export default function Home() {
                   className={styles.featureListItemImage}
                   alt=""
                   fill
+                  sizes="70vw"
                 />
               </figure>
               <div
@@ -284,6 +286,7 @@ export default function Home() {
                   className={styles.featureListItemImage}
                   alt=""
                   fill
+                  sizes="70vw"
                 />
               </figure>
               <div
@@ -326,10 +329,10 @@ export default function Home() {
           >
             <Image
               src="/image/logo02.png"
+              className={styles.logoIcon}
               alt=""
               width={40}
               height={40}
-              style={{ objectFit: "contain" }}
             />
           </div>
           <h2
@@ -351,6 +354,7 @@ export default function Home() {
                   className={styles.planListItemImage}
                   alt=""
                   fill
+                  sizes="33vw"
                 />
               </div>
               <div className={styles.planListItemTextWrapper}>
@@ -369,6 +373,7 @@ export default function Home() {
                   className={styles.planListItemImage}
                   alt=""
                   fill
+                  sizes="33vw"
                 />
               </div>
               <div className={styles.planListItemTextWrapper}>
@@ -387,6 +392,7 @@ export default function Home() {
                   className={styles.planListItemImage}
                   alt=""
                   fill
+                  sizes="33vw"
                 />
               </div>
               <div className={styles.planListItemTextWrapper}>
@@ -411,10 +417,10 @@ export default function Home() {
           >
             <Image
               src="/image/logo02.png"
+              className={styles.logoIcon}
               alt=""
               width={40}
               height={40}
-              style={{ objectFit: "contain" }}
             />
           </div>
           <h2
@@ -471,10 +477,10 @@ export default function Home() {
           >
             <Image
               src="/image/logo02.png"
+              className={styles.logoIcon}
               alt=""
               width={40}
               height={40}
-              style={{ objectFit: "contain" }}
             />
           </div>
           <h2
@@ -496,6 +502,7 @@ export default function Home() {
                 className={styles.accessInfoImage}
                 alt=""
                 fill
+                sizes="70vw"
               />
             </div>
             <div className={styles.accessInfoTextWrapper}>

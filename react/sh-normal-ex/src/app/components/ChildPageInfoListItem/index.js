@@ -24,6 +24,7 @@ export default function ChildPageInfoListItem({
           className={styles.childPageInfoListItemImage}
           alt=""
           fill
+          sizes="50vw"
         />
       </div>
       <div className={styles.childPageInfoListItemTextWrapper}>
