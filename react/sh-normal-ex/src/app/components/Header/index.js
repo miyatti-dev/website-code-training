@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import NavMenu from "./NavMenu";
 import BurgerButton from "./BurgerButton";
@@ -63,7 +64,7 @@ export default function Header({ isTopPage }) {
     >
       <div className={styles.headerWrapper}>
         <h1 className={styles.headerTitleWrapper}>
-          <a href="./" className={styles.headerTitleWrapperLink}>
+          <Link href="./" className={styles.headerTitleWrapperLink}>
             <Image
               src={
                 isTopPage && isScrollTop
@@ -75,7 +76,7 @@ export default function Header({ isTopPage }) {
               fill
               sizes="30vw"
             />
-          </a>
+          </Link>
         </h1>
         <NavMenu
           navId={navId}

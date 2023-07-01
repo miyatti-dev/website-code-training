@@ -1,9 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import React, { useState, useCallback, useMemo } from "react";
+
+import Link from "next/link";
+import Image from "next/image";
+
+// tab
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+
 import styles from "./style.module.scss";
 
 export default function Home() {
@@ -232,9 +237,9 @@ export default function Home() {
                   <br />
                   最高級の「何もしない時間」をお過ごしください。
                 </p>
-                <a href="./room/" className={styles.featureListItemLink}>
+                <Link href="./room/" className={styles.featureListItemLink}>
                   お部屋について
-                </a>
+                </Link>
               </div>
             </li>
             <li className={styles.featureListItem}>
@@ -270,9 +275,9 @@ export default function Home() {
                   <br />
                   お約束します。
                 </p>
-                <a href="./meal/" className={styles.featureListItemLink}>
+                <Link href="./meal/" className={styles.featureListItemLink}>
                   料理について
-                </a>
+                </Link>
               </div>
             </li>
             <li className={styles.featureListItem}>
@@ -311,9 +316,9 @@ export default function Home() {
                   <br className={styles.brLgHide} />
                   ご活用ください。
                 </p>
-                <a href="./spa/" className={styles.featureListItemLink}>
+                <Link href="./spa/" className={styles.featureListItemLink}>
                   温泉について
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

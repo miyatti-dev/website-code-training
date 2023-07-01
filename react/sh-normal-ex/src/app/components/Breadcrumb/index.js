@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
+import Link from "next/link";
 import styles from "./style.module.scss";
 
 export default function Breadcrumb({ pathList }) {
@@ -21,13 +22,13 @@ export default function Breadcrumb({ pathList }) {
           itemScope
           itemType="https://schema.org/ListItem"
         >
-          <a
+          <Link
             className={styles.breadcrumbListItemLink}
             itemProp="item"
             href={pathList[i].path}
           >
             <span itemProp="name">{pathList[i].content}</span>
-          </a>
+          </Link>
           <meta itemProp="position" content={i + 1} />
         </li>
       );
