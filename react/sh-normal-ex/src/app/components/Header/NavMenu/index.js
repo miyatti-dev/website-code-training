@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import Link from "next/link";
 import styles from "./style.module.scss";
 
@@ -18,6 +20,7 @@ const LinkButton = React.forwardRef(function LinkButton(
 export default function NavMenu({
   navId,
   openMenuFlag,
+  showBurgerMenuFlag,
   isTopPage,
   isScrollTop,
   onClickNavMenu,
@@ -50,6 +53,29 @@ export default function NavMenu({
     return listItems;
   }, [isTopPage, isScrollTop, onClickNavMenu]);
 
+  if (showBurgerMenuFlag) {
+    return (
+      // motionあり
+      <AnimatePresence>
+        <motion.nav
+          initial={openMenuFlag ? { y: "-200px" } : { y: "0px" }}
+          animate={openMenuFlag ? { y: "0px" } : { y: "-200px" }}
+          exit={openMenuFlag ? { y: "-200px" } : { y: "0px" }}
+          transition={{ duration: 0.3 }}
+          id={navId}
+          className={`${styles.headerNav} ${
+            isTopPage && isScrollTop ? undefined : styles.headerNavBgColorWhite
+          }`}
+          aria-hidden={!openMenuFlag}
+          key={openMenuFlag}
+        >
+          <ul className={styles.headerNavList}>{listItems}</ul>
+        </motion.nav>
+      </AnimatePresence>
+    );
+  }
+
+  // motionなし
   return (
     <nav
       id={navId}

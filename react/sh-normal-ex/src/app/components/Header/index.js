@@ -9,6 +9,7 @@ import styles from "./style.module.scss";
 
 export default function Header({ isTopPage, onClickReserveModal }) {
   const [openMenuFlag, setOpenMenuFlag] = useState(false);
+  const [showBurgerMenuFlag, setShowBurgerMenuFlag] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(true);
 
   // resize
@@ -16,7 +17,19 @@ export default function Header({ isTopPage, onClickReserveModal }) {
     const onResizeHandler = () => {
       // リサイズ時はメニュー閉じる
       setOpenMenuFlag(false);
+
+      const windowWidth = window.innerWidth;
+      if (windowWidth <= 768) {
+        // バーガー表示(sp/tablet)
+        setShowBurgerMenuFlag(true);
+      } else {
+        // バーガー非表示(pc、tablet)
+        setShowBurgerMenuFlag(false);
+      }
     };
+
+    onResizeHandler();
+
     window.addEventListener("resize", onResizeHandler);
     return () => window.removeEventListener("resize", onResizeHandler);
   }, []);
@@ -86,6 +99,7 @@ export default function Header({ isTopPage, onClickReserveModal }) {
         <NavMenu
           navId={navId}
           openMenuFlag={openMenuFlag}
+          showBurgerMenuFlag={showBurgerMenuFlag}
           isTopPage={isTopPage}
           isScrollTop={isScrollTop}
           onClickNavMenu={onClickNavMenu}
