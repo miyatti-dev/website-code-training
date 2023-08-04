@@ -188,7 +188,6 @@
   line-height: 2.375;
   letter-spacing: 6px;
   /* for Safari */
-  -webkit-text-orientation: upright;
   text-orientation: upright;
 }
 @media screen and (max-width: 1024px) {

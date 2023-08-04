@@ -118,7 +118,7 @@
             <?php echo number_format(get_field('flex-plan', $id)); ?>円~
           </p>
           <p class="price-list-item__tax">
-            *月額（税抜価格)
+            *月額（税抜価格）
           </p>
           <p class="price-list-item__supplementary-text">
             ＊別途ご相談ください

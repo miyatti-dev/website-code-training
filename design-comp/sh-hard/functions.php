@@ -14,44 +14,44 @@ function my_theme_scripts() {
 	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v6.2.0/css/all.css');
 
 	// base css（バージョンに時刻date("YmdHis")を入れてキャッシュ対策をする）
-	wp_enqueue_style('base', get_theme_file_uri('/css/styles.css'), ['reset']);
+	wp_enqueue_style('base', get_theme_file_uri('/css/styles.css'), ['reset'], date("YmdHis"));
 
 	if (is_front_page()) {
 		// top
-		wp_enqueue_style('top', get_theme_file_uri('/css/top.css'), ['base']);
+		wp_enqueue_style('top', get_theme_file_uri('/css/top.css'), ['base'], date("YmdHis"));
 	} else if (is_page('price')) {
 		// price
-		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base']);
+		wp_enqueue_style('price', get_theme_file_uri('/css/price.css'), ['base'], date("YmdHis"));
 
 		// scroll-hint
-		wp_enqueue_style('scroll-hint', "https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css", ['base']);
+		wp_enqueue_style('scroll-hint', "https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css", ['base'], date("YmdHis"));
 		wp_enqueue_script('scroll-hint', 'https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js', [], '', true);
 
 		// js
 		wp_enqueue_script('js-price-script', get_theme_file_uri('/js/price-script.js'), ['jquery'], '', true);
 	} else if (is_home() || is_category() || is_tag()) {
 		// blog list (一覧ページ)
-		wp_enqueue_style('blog-list', get_theme_file_uri('/css/blog-list.css'), ['base']);
+		wp_enqueue_style('blog-list', get_theme_file_uri('/css/blog-list.css'), ['base'], date("YmdHis"));
 	} else if (is_post_type_archive('news')) {
 		// news list (一覧ページ)
-		wp_enqueue_style('news-list', get_theme_file_uri('/css/news-list.css'), ['base']);
+		wp_enqueue_style('news-list', get_theme_file_uri('/css/news-list.css'), ['base'], date("YmdHis"));
 	} else if (is_singular('post')) {
 		// blog (投稿ページ)
-		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base']);
-		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['single']);
+		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
+		wp_enqueue_style('blog', get_theme_file_uri('/css/blog.css'), ['single'], date("YmdHis"));
 
 		wp_enqueue_script('facebook', 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0', [], '', true);
 		wp_enqueue_script('twitter', 'https://platform.twitter.com/widgets.js', [], '', true);
 	} else if (is_singular('news')) {
 		// news (投稿ページ)
-		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base']);
-		wp_enqueue_style('news', get_theme_file_uri('/css/news.css'), ['single']);
+		wp_enqueue_style('single', get_theme_file_uri('/css/single.css'), ['base'], date("YmdHis"));
+		wp_enqueue_style('news', get_theme_file_uri('/css/news.css'), ['single'], date("YmdHis"));
 	} else if (is_page('contact')) {
 		// contact
-		wp_enqueue_style('contact', get_theme_file_uri('/css/contact.css'), ['base']);
+		wp_enqueue_style('contact', get_theme_file_uri('/css/contact.css'), ['base'], date("YmdHis"));
 	} else if (is_page('thanks')) {
 		// contact thanks
-		wp_enqueue_style('contact-thanks', get_theme_file_uri('/css/contact-thanks.css'), ['base']);
+		wp_enqueue_style('contact-thanks', get_theme_file_uri('/css/contact-thanks.css'), ['base'], date("YmdHis"));
 	}
 
 	// 標準jquery削除
@@ -97,15 +97,18 @@ add_filter('post_type_labels_post', 'aktk_post_type_labels_post');
 /*--------------------------------------------*/
 /* 成功事例の「新規投稿」サブメニューを非表示
 /*--------------------------------------------*/
+/*
 function remove_sub_menus() {
 	remove_submenu_page('edit.php?post_type=success-story', 'post-new.php?post_type=success-story');
 }
 
 add_action('admin_menu', 'remove_sub_menus');
+*/
 
 /*--------------------------------------------*/
 /* 成功事例の「新規投稿」項目を非表示
 /*--------------------------------------------*/
+/*
 function delete_new_post_item($hook) {
 	if ($hook == 'edit.php' || $hook == 'post.php') {
 
@@ -117,10 +120,12 @@ function delete_new_post_item($hook) {
 }
 
 add_action('admin_enqueue_scripts', 'delete_new_post_item');
+*/
 
 /*--------------------------------------------*/
 /* 成功事例の「ゴミ箱」項目を非表示
 /*--------------------------------------------*/
+/*
 function custom_action_row($actions, $post) {
 
 	$postType = get_post_type();
@@ -132,10 +137,12 @@ function custom_action_row($actions, $post) {
 }
 
 add_filter('post_row_actions', 'custom_action_row', 10, 2);
+*/
 
 /*--------------------------------------------*/
 /* 成功事例の編集画面の「ゴミ箱へ移動」項目を非表示
 /*--------------------------------------------*/
+/*
 function admin_preview_css_custom() {
 	$current_screen = get_current_screen();
 	if (
@@ -148,6 +155,7 @@ function admin_preview_css_custom() {
 }
 
 add_action('admin_print_styles', 'admin_preview_css_custom');
+*/
 
 /*--------------------------------------------*/
 /* アイキャッチ画像を有効化
