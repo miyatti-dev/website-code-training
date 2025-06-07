@@ -1,0 +1,780 @@
+@charset "UTF-8";
+html {
+  /* ルートのフォントサイズを10pxに設定 */
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  /* bodyのフォントサイズを1.6em（16px）に設定 */
+  font-size: 1.6em;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.section-wrapper {
+  margin-bottom: 120px;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+.section-title-wrapper {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  background-color: #333;
+  bottom: -20px;
+  content: '';
+  display: inline-block;
+  height: 3px;
+  left: calc(50% - 50px);
+  position: absolute;
+  width: 100px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  transition: .3s;
+  width: 100%;
+}
+
+.header-logo {
+  display: block;
+  margin-left: 50px;
+  margin-top: 40px;
+  height: 56.39px;
+  width: 100.19px;
+}
+
+.header-nav {
+  background-color: #FF2A2A;
+  display: none;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+
+.header-nav > .header-logo {
+  margin-bottom: 30px;
+}
+
+.header-nav-list-item {
+  color: #fff;
+  text-align: center;
+}
+
+.header-nav-list-item__link {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.header-nav-list-item__link:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.header-nav-list-item + .header-nav-list-item {
+  margin-top: 20px;
+}
+
+.header-nav-list-item.try-english {
+  margin-top: 40px;
+}
+
+.header-nav-list-item__link.try-english {
+  border: 1px solid white;
+  padding: 15px 45px;
+  position: relative;
+}
+
+.header-nav-list-item__link.try-english::after {
+  border-bottom: solid 1px #fff;
+  border-right: solid 1px #fff;
+  bottom: -6px;
+  content: '';
+  height: 100%;
+  padding: 15px 0;
+  position: absolute;
+  right: -6px;
+  width: 100%;
+}
+
+.burger-button {
+  background-color: #FF2A2A;
+  height: 100px;
+  position: fixed;
+  right: 0;
+  transition: all .3s;
+  width: 100px;
+  z-index: 3;
+}
+
+.burger-button__bar {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  margin: 0 25px;
+  transition: .3s;
+  width: 50px;
+}
+
+.burger-button__bar.bar-top {
+  margin-bottom: 14px;
+}
+
+.burger-button__bar.bar-middle {
+  margin-bottom: 14px;
+}
+
+.burger-button.open .burger-button__bar {
+  transition: .3s;
+}
+
+.burger-button.open .burger-button__bar.bar-top {
+  transform: rotate(-45deg) translate(-14px, 14px);
+}
+
+.burger-button.open .burger-button__bar.bar-middle {
+  opacity: 0;
+}
+
+.burger-button.open .burger-button__bar.bar-bottom {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.burger-button:hover {
+  opacity: 0.7;
+  transition: .3s;
+}
+
+.fv {
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.fv-image-list {
+  height: 720px;
+}
+
+.fv-image-list-item {
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75%;
+  /* 最初は3枚の画像を非表示にしておく */
+  opacity: 0;
+  /*
+    アニメーションを実行
+    fade：下で定義している「@keyframes fade」を実行
+    15s：「@keyframes fade」の処理を15秒かけて実行
+    infinite：アニメーションの処理を無限に繰り返す
+  */
+  animation: fade 15s infinite;
+  /*
+    「box-shadow」で画像のまわりをぼかす
+  */
+  /*
+    1枚目の画像のアニメーション実行タイミングを設定
+    「animation-delay: 0s;」ですぐに実行
+  */
+  /*
+    2枚目の画像のアニメーション実行タイミングを設定
+    「animation-delay: 5s;」で5秒後に実行
+  */
+  /*
+    3枚目の画像のアニメーション実行タイミングを設定
+    「animation-delay: 10s;」で10秒後に実行
+  */
+}
+
+.fv-image-list-item::after {
+  content: "";
+  bottom: 0;
+  box-shadow: inset 0px 0px 20px 20px #fff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fv-image-list-item__image {
+  height: 720px;
+}
+
+.fv-image-list-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fv-image-list-item:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.fv-image-list-item:nth-child(3) {
+  animation-delay: 10s;
+}
+
+/*
+  アニメーション処理
+  上の「animation」で15sを指定しているので下記の処理を15秒かけて実行
+  0%が0秒を表し、100%が15秒後を表す。
+
+  0%の「opacity: 0;」で非表示の状態からスタートし、
+  15%になるまでの間に少しづつ画像を表示（フェードイン）させる。
+  そこから30%の時点までは画像を表示させたままの状態を維持し、
+  45%の時点に向けて画像を非表示（フェードアウト）する。
+  そこから100%まで非表示の状態を維持する。
+*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fv-text-wrapper {
+  left: 10%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.fv-title {
+  font-size: 4.6rem;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 6px #fff;
+}
+
+.fv-link {
+  background-color: #FF0033;
+  box-shadow: 0 6px #7A051C;
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  font-size: 2.4rem;
+  padding: 15px 0;
+  position: relative;
+  text-align: center;
+  transition: .3s;
+}
+
+.fv-link::after {
+  border-right: solid 3px #fff;
+  border-top: solid 3px #fff;
+  content: "";
+  height: 16px;
+  position: absolute;
+  right: 30px;
+  top: 26px;
+  transform: rotate(45deg);
+  width: 16px;
+}
+
+.fv-link:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.bbb-about-list {
+  background-color: #FF2A2A;
+}
+
+.bbb-about-list {
+  padding: 80px 0;
+}
+
+.bbb-about-list-item {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+  opacity: 0;
+  width: 50%;
+}
+
+.bbb-about-list-item__image-wrapper {
+  height: 60px;
+  margin-right: 30px;
+}
+
+.bbb-about-list-item__image {
+  max-height: 100%;
+}
+
+.bbb-about-list-item__title {
+  color: #FF2A2A;
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.bbb-about-list-item__description {
+  font-size: 1.8rem;
+}
+
+.bbb-about-list-item:nth-child(2n + 1) {
+  border-radius: 0 20px 20px 0;
+}
+
+.bbb-about-list-item:nth-child(2n) {
+  border-radius: 20px 0 0 20px;
+  margin-left: auto;
+}
+
+.bbb-about-list-item + .bbb-about-list-item {
+  margin-top: 40px;
+}
+
+.slide-in-from-left {
+  animation: slideInFromLeft 1s forwards;
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 1s forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.review-list-item {
+  align-items: center;
+  display: flex;
+  opacity: 0;
+}
+
+.review-list-item + .review-list-item {
+  margin-top: 60px;
+}
+
+.review-list-item:nth-child(2n + 1) .reviewer-info {
+  margin-right: 25px;
+}
+
+.review-list-item:nth-child(2n + 1) .review-text::before {
+  border: 15px solid transparent;
+  border-right: 15px solid #e9f1fb;
+  content: "";
+  left: -30px;
+  position: absolute;
+  top: 60%;
+}
+
+.review-list-item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.review-list-item:nth-child(2n) .reviewer-info {
+  margin-left: 25px;
+}
+
+.review-list-item:nth-child(2n) .review-text::before {
+  border: 15px solid transparent;
+  border-left: 15px solid #e9f1fb;
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: 60%;
+}
+
+.reviewer-info {
+  text-align: center;
+}
+
+.reviewer-info__image-wrapper {
+  height: 120px;
+  margin-bottom: 10px;
+  width: 120px;
+}
+
+.reviewer-info__image {
+  background-color: #CCC;
+  border-radius: 50%;
+}
+
+.reviewer-info__name {
+  font-size: 1.2rem;
+}
+
+.reviewer-info__profession {
+  font-size: 1.2rem;
+}
+
+.review-text {
+  background: #e9f1fb;
+  display: flex;
+  border-radius: 15px;
+  justify-content: center;
+  line-height: 1.6875;
+  padding: 20px;
+  position: relative;
+  width: 60%;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.section-wrapper.section-school-overview {
+  padding: 60px 0;
+}
+
+.section-school-overview {
+  animation: bgLoop 10s linear infinite;
+  background-image: url("../image/bg.gif");
+  background-repeat: repeat;
+}
+
+.overview-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.overview-list-item {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: calc(100% / 20) calc(100% / 15);
+  width: 46.5%;
+}
+
+.overview-list-item__title-ja {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.overview-list-item__title-en {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.overview-list-item__description {
+  font-size: 1.6rem;
+  line-height: 1.68;
+}
+
+.overview-list-item:nth-last-of-type(n+3) {
+  margin-bottom: 32px;
+}
+
+@keyframes bgLoop {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -700px 700px;
+  }
+}
+
+.try-english-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.try-english-subtitle {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.try-english-link {
+  background-color: #FF0033;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  display: block;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: bold;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.try-english-link:hover {
+  background-color: #fff;
+  color: #FF0033;
+  border: 3px solid #FF0033;
+}
+
+.section-wrapper.footer-menu {
+  background-color: #E8E8E8;
+  margin-bottom: 0;
+  padding: 60px 0;
+}
+
+.footer-menu-list {
+  display: flex;
+}
+
+.footer-menu-list-item {
+  width: 25%;
+}
+
+.footer-menu-list-item__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-menu-list-item__link {
+  display: block;
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: #E8E8E8;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .section-wrapper {
+    margin-bottom: 80px;
+  }
+  .content-wrapper {
+    padding: 0 15px;
+  }
+  .section-title-wrapper {
+    margin-bottom: 60px;
+  }
+  .section-title {
+    font-size: 2.8rem;
+  }
+  .section-title::after {
+    width: 80px;
+  }
+  .header-logo {
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+  .burger-button {
+    height: 75px;
+    width: 75px;
+  }
+  .burger-button__bar {
+    margin: 0 20px;
+    width: 35px;
+  }
+  .burger-button__bar.bar-top {
+    margin-bottom: 11px;
+  }
+  .burger-button__bar.bar-middle {
+    margin-bottom: 11px;
+  }
+  .fv {
+    height: auto;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  .fv-image-list {
+    height: 300px;
+  }
+  .fv-image-list-item {
+    width: 100%;
+  }
+  .fv-image-list-item__image {
+    height: 300px;
+    width: 100%;
+  }
+  .fv-text-wrapper {
+    display: block;
+    padding: 0 16px;
+    position: initial;
+    transform: translate(0, 0);
+  }
+  .fv-title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+  .bbb-about-list {
+    background-color: #FF2A2A;
+  }
+  .bbb-about-list {
+    padding: 40px 0;
+  }
+  .bbb-about-list-item {
+    padding: 18px 21px;
+    width: auto;
+  }
+  .bbb-about-list-item__title {
+    font-size: 2.4rem;
+    line-height: 1.7;
+  }
+  .bbb-about-list-item__description {
+    line-height: 1.6;
+  }
+  .bbb-about-list-item:nth-child(2n + 1) {
+    border-radius: 0 20px 20px 0;
+    margin-right: 16px;
+  }
+  .bbb-about-list-item:nth-child(2n) {
+    border-radius: 20px 0 0 20px;
+    margin-left: 16px;
+  }
+  .review-list-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .review-list-item + .review-list-item {
+    margin-top: 40px;
+  }
+  .review-list-item:nth-child(2n + 1) .reviewer-info {
+    margin-right: 0;
+  }
+  .review-list-item:nth-child(2n + 1) .review-text::before {
+    border: 15px solid transparent;
+    border-top: 15px solid #e9f1fb;
+    content: "";
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+  }
+  .review-list-item:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+  .review-list-item:nth-child(2n) .reviewer-info {
+    margin-left: 0;
+  }
+  .review-list-item:nth-child(2n) .review-text::before {
+    border: 15px solid transparent;
+    border-top: 15px solid #e9f1fb;
+    content: "";
+    right: 50%;
+    top: 100%;
+    transform: translate(50%, 0);
+  }
+  .reviewer-info {
+    text-align: center;
+  }
+  .reviewer-info__image-wrapper {
+    height: 120px;
+    margin-bottom: 10px;
+    width: 120px;
+  }
+  .reviewer-info__image {
+    background-color: #CCC;
+    border-radius: 50%;
+  }
+  .reviewer-info__name {
+    font-size: 1.2rem;
+  }
+  .reviewer-info__profession {
+    font-size: 1.2rem;
+  }
+  .review-text {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .overview-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .overview-list-item {
+    width: auto;
+  }
+  .overview-list-item__title-ja {
+    font-size: 2.4rem;
+  }
+  .overview-list-item__title-en {
+    font-size: 1.6rem;
+  }
+  .overview-list-item:nth-last-of-type(n+1) {
+    margin-bottom: 32px;
+  }
+  .try-english-title {
+    font-size: 2.4rem;
+  }
+  .try-english-subtitle {
+    font-size: 1.6 rem;
+  }
+  .try-english-link {
+    font-size: 2.4rem;
+  }
+  .footer-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-menu-list-item {
+    width: 48%;
+  }
+  .footer-menu-list-item__title {
+    font-size: 1.5rem;
+  }
+  .footer-menu-list-item__link {
+    font-size: 1.2rem;
+  }
+  .footer-menu-list-item:nth-last-of-type(n+3) {
+    margin-bottom: 30px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
